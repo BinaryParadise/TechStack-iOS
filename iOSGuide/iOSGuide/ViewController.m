@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "GCDDemo.h"
-
 @interface ViewController ()
 
 @end
@@ -18,11 +16,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //[GCDDemo asyncConcurrent];
-    //[GCDDemo asyncSerial];
-    //[GCDDemo syncConcurrent];
-    //[GCDDemo syncSerial];
-    [GCDDemo syncMain];
 }
 
 

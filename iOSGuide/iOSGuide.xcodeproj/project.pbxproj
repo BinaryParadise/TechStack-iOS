@@ -14,6 +14,10 @@
 		C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4171F889834009E38CA /* LaunchScreen.storyboard */; };
 		C532E41C1F889834009E38CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E41B1F889834009E38CA /* main.m */; };
 		C532E4251F88997B009E38CA /* GCDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E4241F88997B009E38CA /* GCDDemo.m */; };
+		C5ECF4D31F89BF5C00CECF8B /* MemoryConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4D21F89BF5C00CECF8B /* MemoryConstruction.m */; };
+		C5ECF4D71F89C53600CECF8B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4D51F89C53600CECF8B /* GCDViewController.m */; };
+		C5ECF4DB1F89D74700CECF8B /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4DA1F89D74700CECF8B /* MemoryViewController.m */; };
+		C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,14 @@
 		C532E41B1F889834009E38CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C532E4231F88997B009E38CA /* GCDDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDDemo.h; sourceTree = "<group>"; };
 		C532E4241F88997B009E38CA /* GCDDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDDemo.m; sourceTree = "<group>"; };
+		C5ECF4D11F89BF5C00CECF8B /* MemoryConstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryConstruction.h; sourceTree = "<group>"; };
+		C5ECF4D21F89BF5C00CECF8B /* MemoryConstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryConstruction.m; sourceTree = "<group>"; };
+		C5ECF4D41F89C53600CECF8B /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDViewController.h; path = iOSGuide/GCD/GCDViewController.h; sourceTree = SOURCE_ROOT; };
+		C5ECF4D51F89C53600CECF8B /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDViewController.m; path = iOSGuide/GCD/GCDViewController.m; sourceTree = SOURCE_ROOT; };
+		C5ECF4D91F89D74700CECF8B /* MemoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryViewController.h; sourceTree = "<group>"; };
+		C5ECF4DA1F89D74700CECF8B /* MemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
+		C5ECF4DD1F89D84500CECF8B /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +60,7 @@
 			children = (
 				C532E40B1F889834009E38CA /* iOSGuide */,
 				C532E40A1F889834009E38CA /* Products */,
+				C5ECF4DE1F8A0BE800CECF8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,11 +80,11 @@
 				C532E40F1F889834009E38CA /* ViewController.h */,
 				C532E4101F889834009E38CA /* ViewController.m */,
 				C532E4121F889834009E38CA /* Main.storyboard */,
+				C5ECF4D01F89BF4700CECF8B /* ObjectMemory */,
 				C532E4221F889877009E38CA /* GCD */,
 				C532E4151F889834009E38CA /* Assets.xcassets */,
 				C532E4171F889834009E38CA /* LaunchScreen.storyboard */,
-				C532E41A1F889834009E38CA /* Info.plist */,
-				C532E41B1F889834009E38CA /* main.m */,
+				C5ECF4DC1F89D82800CECF8B /* Support File */,
 			);
 			path = iOSGuide;
 			sourceTree = "<group>";
@@ -78,10 +92,41 @@
 		C532E4221F889877009E38CA /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				C5ECF4D41F89C53600CECF8B /* GCDViewController.h */,
+				C5ECF4D51F89C53600CECF8B /* GCDViewController.m */,
 				C532E4231F88997B009E38CA /* GCDDemo.h */,
 				C532E4241F88997B009E38CA /* GCDDemo.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		C5ECF4D01F89BF4700CECF8B /* ObjectMemory */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECF4D91F89D74700CECF8B /* MemoryViewController.h */,
+				C5ECF4DA1F89D74700CECF8B /* MemoryViewController.m */,
+				C5ECF4D11F89BF5C00CECF8B /* MemoryConstruction.h */,
+				C5ECF4D21F89BF5C00CECF8B /* MemoryConstruction.m */,
+			);
+			path = ObjectMemory;
+			sourceTree = "<group>";
+		};
+		C5ECF4DC1F89D82800CECF8B /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				C532E41B1F889834009E38CA /* main.m */,
+				C532E41A1F889834009E38CA /* Info.plist */,
+				C5ECF4DD1F89D84500CECF8B /* Header.h */,
+			);
+			name = "Support File";
+			sourceTree = "<group>";
+		};
+		C5ECF4DE1F8A0BE800CECF8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +160,7 @@
 				TargetAttributes = {
 					C532E4081F889834009E38CA = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -156,9 +201,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
+				C5ECF4D71F89C53600CECF8B /* GCDViewController.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
+				C5ECF4D31F89BF5C00CECF8B /* MemoryConstruction.m in Sources */,
 				C532E4251F88997B009E38CA /* GCDDemo.m in Sources */,
+				C5ECF4DB1F89D74700CECF8B /* MemoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,10 +341,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K7HSM7PHS7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOSGuide/Header.h;
 				INFOPLIST_FILE = iOSGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycode.iOSGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjlp.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08121f3d-6f0d-489b-9743-30d5602ac7e7";
+				PROVISIONING_PROFILE_SPECIFIER = "com.zjlp.*(Wildcard App ID)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -306,10 +359,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOSGuide/Header.h;
 				INFOPLIST_FILE = iOSGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycode.iOSGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjlp.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -37,27 +37,40 @@
  */
 + (void)syncSerial;
 
+/**
+ 异步执行+主队列
+ */
++ (void)asyncMain;
 
 /**
- 同步执行+主队列(Dead Lock)
+ 同步执行+主队列(Deadlock)
  */
 + (void)syncMain;
 
+/**
+ 全局并行队列
+
+ @param async 是否异步执行
+ */
++ (void)gloabConcurrent:(BOOL)async;
+
+/**
+ 分组任务
+
+ @param serial 是否串行队列
+ */
++ (void)dispatchGroup:(BOOL)serial;
+
+/**
+ 屏蔽
+
+ @param async 是否异步执行
+ */
++ (void)dispatchBarrier:(BOOL)async;
+
+/**
+ 信号量
+ */
++ (void)dispatchSemaphore:(BOOL)useSemap;
+
 @end
-
-#if DEBUG
-#define XCODE_COLORS_ESCAPE @"\033["
-
-#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
-#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
-#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
-
-#define LogInfo(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg85,85,75;%s+%d " frmt XCODE_COLORS_RESET),__func__,__LINE__, ##__VA_ARGS__)
-#define LogWarn(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg153,102,51;%s+%d " frmt XCODE_COLORS_RESET),__func__,__LINE__, ##__VA_ARGS__)
-#define LogError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;%s+%d " frmt XCODE_COLORS_RESET),__func__,__LINE__, ##__VA_ARGS__)
-#else
-#define LogInfo(frmt, ...)
-#define LogWarn(frmt, ...)
-#define LogError(frmt, ...)
-#define NSLog(...)
-#endif
