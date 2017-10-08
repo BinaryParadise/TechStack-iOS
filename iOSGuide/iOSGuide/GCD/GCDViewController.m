@@ -10,7 +10,9 @@
 #import "GCDDemo.h"
 
 
-@interface GCDViewController ()
+@interface GCDViewController () {
+    GCDDemo *gcdDemo;
+}
 
 @end
 
@@ -19,11 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    //[GCDDemo asyncConcurrent];
-    //[GCDDemo asyncSerial];
-    //[GCDDemo syncConcurrent];
-    //[GCDDemo syncSerial];
-    //[GCDDemo syncMain];
+    gcdDemo = [GCDDemo new];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,9 +79,9 @@
         }
     }else if (section == 6) {
         if (row == 0) {
-            [GCDDemo dispatchSemaphore:YES];
+            [gcdDemo dispatchSemaphore:YES];
         }else {
-            [GCDDemo dispatchSemaphore:NO];
+            [gcdDemo dispatchSemaphore:NO];
         }
     }
 }

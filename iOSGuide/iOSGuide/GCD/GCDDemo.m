@@ -10,7 +10,23 @@
 #import <AddressBook/AddressBook.h>
 #import <UIKit/UIKit.h>
 
+@interface GCDDemo ()
+
+@property (nonatomic, strong) NSMutableArray *marr;
+@property (nonatomic, strong) NSObject *object;
+
+@end
+
 @implementation GCDDemo
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _marr = [NSMutableArray array];
+    }
+    return self;
+}
 
 + (void)asyncConcurrent {
     //创建一个并行队列
@@ -229,7 +245,7 @@
     LogInfo(@"-----------");
 }
 
-+ (void)dispatchSemaphore:(BOOL)useSemap {
+- (void)dispatchSemaphore:(BOOL)useSemap {
     /*
      通过dispatch_semaphore_create 函数创建一个Semaphore并初始化信号的总量。
      通过dispatch_semaphore_signal 函数发送一个信号，让信号总量加1。
@@ -242,33 +258,48 @@
     
     dispatch_queue_t queue = dispatch_queue_create("arraySafeQueue", DISPATCH_QUEUE_CONCURRENT);
     
-    NSMutableArray *marr = [NSMutableArray array];
-    for (int i=0; i<10000000; i++) {
-           [marr addObject:[NSObject new]];
+    for (int i=0; i<2000000; i++) {
+           [self.marr addObject:[GCDDemo new]];
     }
-    NSMutableArray *nmarr = [NSMutableArray array];
     dispatch_async(queue, ^{
         NSDate *date = [NSDate date];
-        //这里导致crash
-        [nmarr addObjectsFromArray:marr];
-        LogInfo(@"耗时：%fms, %zd", [[NSDate date] timeIntervalSinceDate:date], nmarr.count);
-    });
-    dispatch_async(queue, ^{
-        sleep(1);
         if (useSemap) {
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         }
         
-        //[marr addObject:@(1000001)];增加不会导致crash
-        //会导致崩溃，252行开始添加到数组时技术为1000万个，但是添加过程中移除了一个，添加最后一个原始是会触发对象已释放的异常
-        [marr removeLastObject];
+        //这里导致crash
+        //*** -[GCDDemo retain]: message sent to deallocated instance 0x608002c142d0
+        NSMutableArray *nmarr = [NSMutableArray array];
+        [nmarr addObjectsFromArray:self.marr];
         
-        LogInfo(@"count=%zd %@", nmarr.count, [NSThread currentThread]);
-        
+        LogInfo(@"循环耗时：%.3fs, %zd/%zd", [[NSDate date] timeIntervalSinceDate:date], self.marr.count, nmarr.count);
         if (useSemap) {
             dispatch_semaphore_signal(semaphore);
         }
     });
+    dispatch_async(queue, ^{
+        NSDate *date = [NSDate date];
+        if (useSemap) {
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        }else {
+            [NSThread sleepForTimeInterval:0.1];
+        }
+        
+        //增加不会导致crash
+        //[marr addObject:@(1000001)];
+        //会导致崩溃，275行开始添加到数组时的元素为200万个，但是添加过程中移除了一个，添加最后一个原始是会触发对象已释放的异常
+        //self.object = [self.marr lastObject];
+        [self.marr removeLastObject];
+        
+        if (useSemap) {
+            dispatch_semaphore_signal(semaphore);
+        }
+        LogInfo(@"修改耗时：%.3fs, %zd", [[NSDate date] timeIntervalSinceDate:date], self.marr.count);
+    });
+}
+
+- (void)dealloc {
+    LogWarn(@"");
 }
 
 @end

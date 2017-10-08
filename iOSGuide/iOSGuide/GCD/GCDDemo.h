@@ -71,6 +71,6 @@
 /**
  信号量
  */
-+ (void)dispatchSemaphore:(BOOL)useSemap;
+- (void)dispatchSemaphore:(BOOL)useSemap;
 
 @end
