@@ -18,6 +18,8 @@
 		C5ECF4D71F89C53600CECF8B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4D51F89C53600CECF8B /* GCDViewController.m */; };
 		C5ECF4DB1F89D74700CECF8B /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4DA1F89D74700CECF8B /* MemoryViewController.m */; };
 		C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */; };
+		C5ECF4E41F8B19E500CECF8B /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4E31F8B19E500CECF8B /* ARCViewController.m */; };
+		C5ECF4E71F8B1AFF00CECF8B /* ARCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4E61F8B1AFF00CECF8B /* ARCDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		C5ECF4DA1F89D74700CECF8B /* MemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
 		C5ECF4DD1F89D84500CECF8B /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		C5ECF4E21F8B19E500CECF8B /* ARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCViewController.h; sourceTree = "<group>"; };
+		C5ECF4E31F8B19E500CECF8B /* ARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
+		C5ECF4E51F8B1AFF00CECF8B /* ARCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCDemo.h; sourceTree = "<group>"; };
+		C5ECF4E61F8B1AFF00CECF8B /* ARCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				C532E40F1F889834009E38CA /* ViewController.h */,
 				C532E4101F889834009E38CA /* ViewController.m */,
 				C532E4121F889834009E38CA /* Main.storyboard */,
+				C5ECF4E11F8B19C800CECF8B /* ARC */,
 				C5ECF4D01F89BF4700CECF8B /* ObjectMemory */,
 				C532E4221F889877009E38CA /* GCD */,
 				C532E4151F889834009E38CA /* Assets.xcassets */,
@@ -127,6 +134,17 @@
 				C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5ECF4E11F8B19C800CECF8B /* ARC */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECF4E21F8B19E500CECF8B /* ARCViewController.h */,
+				C5ECF4E31F8B19E500CECF8B /* ARCViewController.m */,
+				C5ECF4E51F8B1AFF00CECF8B /* ARCDemo.h */,
+				C5ECF4E61F8B1AFF00CECF8B /* ARCDemo.m */,
+			);
+			path = ARC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5ECF4E71F8B1AFF00CECF8B /* ARCDemo.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				C5ECF4D71F89C53600CECF8B /* GCDViewController.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
+				C5ECF4E41F8B19E500CECF8B /* ARCViewController.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				C5ECF4D31F89BF5C00CECF8B /* MemoryConstruction.m in Sources */,
 				C532E4251F88997B009E38CA /* GCDDemo.m in Sources */,
@@ -349,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjlp.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "08121f3d-6f0d-489b-9743-30d5602ac7e7";
-				PROVISIONING_PROFILE_SPECIFIER = "com.zjlp.*(Wildcard App ID)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
