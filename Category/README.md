@@ -1,0 +1,4 @@
+# Category
+category被附加到类上面是在map_images的时候发生的，在new-ABI的标准下，_objc_init里面的调用的map_images最终会调用objc-runtime-new.mm里面的_read_images方法，而在_read_images方法的结尾
+
+覆盖方法：新方法会在前面

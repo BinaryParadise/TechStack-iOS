@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "NSNumber+Addition.h"
+
 @interface ViewController ()
 
 @end
@@ -16,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSNumber *num = @(1.86);
+    num.centNumber = @"186";
+    LogInfo(@"%@", num.centNumber);
 }
 
 
