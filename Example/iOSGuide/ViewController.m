@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "NSNumber+Addition.h"
+#import "TestModel1+Addition.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -19,9 +20,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSNumber *num = @(1.86);
-    num.centNumber = @"186";
-    LogInfo(@"%@", num.centNumber);
+    [[TestModel1 new] testMethod];
+    
+    unsigned int outCount = 0;
+    objc_property_t *proplist = class_copyPropertyList([TestModel1 class], &outCount);
+    for (int i=0; i<outCount; i++) {
+        objc_property_t property = proplist[i];
+        LogWarn(@"属性：%s", property_getName(property));
+    }
+    
+    Ivar *ivars = class_copyIvarList([TestModel1 class], &outCount);
+    for (int i=0; i<outCount; i++) {
+        Ivar ivar = ivars[i];
+        LogWarn(@"字段：%s", ivar_getName(ivar));
+    }
+    
+    Method *methods = class_copyMethodList([TestModel1 class], &outCount);
+    for (int i=0; i<outCount; i++) {
+        Method method = methods[i];
+        LogWarn(@"方法：%@", NSStringFromSelector(method_getName(method)));
+    }
 }
 
 

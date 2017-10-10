@@ -20,9 +20,10 @@
 		C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */; };
 		C5ECF4E41F8B19E500CECF8B /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4E31F8B19E500CECF8B /* ARCViewController.m */; };
 		C5ECF4E71F8B1AFF00CECF8B /* ARCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4E61F8B1AFF00CECF8B /* ARCDemo.m */; };
+		C5ECF4EA1F8C5D4100CECF8B /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4E91F8C5D4100CECF8B /* TestModel1.m */; };
+		C5ECF4ED1F8C5D6100CECF8B /* TestModel1+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4EC1F8C5D6100CECF8B /* TestModel1+Addition.m */; };
 		C5FB165D1F8B998400350055 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* WebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
-		C5FB16631F8BB0F500350055 /* NSNumber+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB16621F8BB0F500350055 /* NSNumber+Addition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,11 +51,13 @@
 		C5ECF4E31F8B19E500CECF8B /* ARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
 		C5ECF4E51F8B1AFF00CECF8B /* ARCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCDemo.h; sourceTree = "<group>"; };
 		C5ECF4E61F8B1AFF00CECF8B /* ARCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCDemo.m; sourceTree = "<group>"; };
+		C5ECF4E81F8C5D4100CECF8B /* TestModel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel1.h; sourceTree = "<group>"; };
+		C5ECF4E91F8C5D4100CECF8B /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
+		C5ECF4EB1F8C5D6100CECF8B /* TestModel1+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestModel1+Addition.h"; sourceTree = "<group>"; };
+		C5ECF4EC1F8C5D6100CECF8B /* TestModel1+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestModel1+Addition.m"; sourceTree = "<group>"; };
 		C5FB165B1F8B998400350055 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C5FB165C1F8B998400350055 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
-		C5FB16611F8BB0F500350055 /* NSNumber+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Addition.h"; sourceTree = "<group>"; };
-		C5FB16621F8BB0F500350055 /* NSNumber+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Addition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +173,10 @@
 		C5FB16601F8BB0CD00350055 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				C5FB16611F8BB0F500350055 /* NSNumber+Addition.h */,
-				C5FB16621F8BB0F500350055 /* NSNumber+Addition.m */,
+				C5ECF4E81F8C5D4100CECF8B /* TestModel1.h */,
+				C5ECF4E91F8C5D4100CECF8B /* TestModel1.m */,
+				C5ECF4EB1F8C5D6100CECF8B /* TestModel1+Addition.h */,
+				C5ECF4EC1F8C5D6100CECF8B /* TestModel1+Addition.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -248,11 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5FB16631F8BB0F500350055 /* NSNumber+Addition.m in Sources */,
 				C5ECF4E71F8B1AFF00CECF8B /* ARCDemo.m in Sources */,
+				C5ECF4ED1F8C5D6100CECF8B /* TestModel1+Addition.m in Sources */,
 				C5FB165D1F8B998400350055 /* WebViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				C5ECF4D71F89C53600CECF8B /* GCDViewController.m in Sources */,
+				C5ECF4EA1F8C5D4100CECF8B /* TestModel1.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				C5ECF4E41F8B19E500CECF8B /* ARCViewController.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
