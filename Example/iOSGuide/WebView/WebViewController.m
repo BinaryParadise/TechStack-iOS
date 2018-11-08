@@ -61,12 +61,14 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     //加载之前或者重定向的时候调用
+    LogInfo(@"");
     if ([request.URL.absoluteString hasPrefix:@"mc://"]) {
         LogWarn(@"来自JS的调用");
         if ([request.URL.absoluteString isEqualToString:@"mc://1"]) {
             //调用JS方法
             NSString *result = [webView stringByEvaluatingJavaScriptFromString:@"callJSFunc('来自OC的调用!')"];
             LogWarn(@"结果：%@", result);
+            LogError(@"不是真的发生Error只是为了演示效果!");
         }else {
             self.title = @"标题被JS代码修改了哦!";
         }

@@ -20,11 +20,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     arcObject = [ARCDemo new];
+    NSLog(@"🍺%s +%d", __FUNCTION__, __LINE__);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"🍺%s +%d", __FUNCTION__, __LINE__);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"🍺%s +%d", __FUNCTION__, __LINE__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"🍺%s +%d", __FUNCTION__, __LINE__);
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"🍺%s +%d", __FUNCTION__, __LINE__);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    NSLog(@"%s +%d", __FUNCTION__, __LINE__);
 }
 
 #pragma mark - Table view data source

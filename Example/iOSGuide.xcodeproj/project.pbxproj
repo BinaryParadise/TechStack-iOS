@@ -24,6 +24,7 @@
 		C5ECF4ED1F8C5D6100CECF8B /* TestModel1+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF4EC1F8C5D6100CECF8B /* TestModel1+Addition.m */; };
 		C5FB165D1F8B998400350055 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* WebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
+		CE861E072176DA5A009927A8 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE861E052176DA5A009927A8 /* AutoLayoutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		C5FB165B1F8B998400350055 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C5FB165C1F8B998400350055 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		CE861E042176DA5A009927A8 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
+		CE861E052176DA5A009927A8 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 		C532E40B1F889834009E38CA /* iOSGuide */ = {
 			isa = PBXGroup;
 			children = (
+				CE861DF421762F19009927A8 /* Autolayout */,
 				C532E40C1F889834009E38CA /* AppDelegate.h */,
 				C532E40D1F889834009E38CA /* AppDelegate.m */,
 				C532E40F1F889834009E38CA /* ViewController.h */,
@@ -181,6 +185,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		CE861DF421762F19009927A8 /* Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				CE861E042176DA5A009927A8 /* AutoLayoutViewController.h */,
+				CE861E052176DA5A009927A8 /* AutoLayoutViewController.m */,
+			);
+			path = Autolayout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,7 +220,7 @@
 		C532E4011F889834009E38CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = mylcode;
 				TargetAttributes = {
 					C532E4081F889834009E38CA = {
@@ -256,6 +269,7 @@
 				C5ECF4E71F8B1AFF00CECF8B /* ARCDemo.m in Sources */,
 				C5ECF4ED1F8C5D6100CECF8B /* TestModel1+Addition.m in Sources */,
 				C5FB165D1F8B998400350055 /* WebViewController.m in Sources */,
+				CE861E072176DA5A009927A8 /* AutoLayoutViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				C5ECF4D71F89C53600CECF8B /* GCDViewController.m in Sources */,
 				C5ECF4EA1F8C5D4100CECF8B /* TestModel1.m in Sources */,
@@ -304,6 +318,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -311,6 +326,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -338,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -359,6 +375,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -366,6 +383,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -387,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -402,6 +420,11 @@
 				DEVELOPMENT_TEAM = K7HSM7PHS7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSGuide/Header.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"UseXcodeColors=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = iOSGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjlp.iOSGuide;
