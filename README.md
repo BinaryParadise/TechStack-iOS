@@ -7,4 +7,4 @@ iOS重要知识点介绍、演示
 - 分类、协议
 - GCD、Block
 - UI
-  - [UIView](wiki/UIView.md)
+  - [UIView](/wiki/UIView.md)
