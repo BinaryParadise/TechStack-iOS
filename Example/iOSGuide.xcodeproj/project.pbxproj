@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* PGDemoView.m */; };
+		249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25421E1F408009B8781 /* PGUIViewController.m */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
 		C532E4111F889834009E38CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E4101F889834009E38CA /* ViewController.m */; };
 		C532E4141F889834009E38CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4121F889834009E38CA /* Main.storyboard */; };
@@ -28,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		249DD25021E1EF92009B8781 /* PGDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDemoView.h; sourceTree = "<group>"; };
+		249DD25121E1EF92009B8781 /* PGDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGDemoView.m; sourceTree = "<group>"; };
+		249DD25321E1F408009B8781 /* PGUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGUIViewController.h; sourceTree = "<group>"; };
+		249DD25421E1F408009B8781 /* PGUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGUIViewController.m; sourceTree = "<group>"; };
 		C532E4091F889834009E38CA /* iOSGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C532E40C1F889834009E38CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C532E40D1F889834009E38CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +81,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		249DD24E21E1EF1F009B8781 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				249DD24F21E1EF2D009B8781 /* UIView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		249DD24F21E1EF2D009B8781 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				249DD25021E1EF92009B8781 /* PGDemoView.h */,
+				249DD25121E1EF92009B8781 /* PGDemoView.m */,
+				249DD25321E1F408009B8781 /* PGUIViewController.h */,
+				249DD25421E1F408009B8781 /* PGUIViewController.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		C532E4001F889834009E38CA = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +120,7 @@
 		C532E40B1F889834009E38CA /* iOSGuide */ = {
 			isa = PBXGroup;
 			children = (
+				249DD24E21E1EF1F009B8781 /* UI */,
 				CE861DF421762F19009927A8 /* Autolayout */,
 				C532E40C1F889834009E38CA /* AppDelegate.h */,
 				C532E40D1F889834009E38CA /* AppDelegate.m */,
@@ -220,6 +246,7 @@
 		C532E4011F889834009E38CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PG;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = mylcode;
 				TargetAttributes = {
@@ -277,7 +304,9 @@
 				C5ECF4E41F8B19E500CECF8B /* ARCViewController.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				C5ECF4D31F89BF5C00CECF8B /* MemoryConstruction.m in Sources */,
+				249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */,
 				C532E4251F88997B009E38CA /* GCDDemo.m in Sources */,
+				249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */,
 				C5ECF4DB1F89D74700CECF8B /* MemoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
