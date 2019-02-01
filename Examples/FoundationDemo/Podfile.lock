@@ -1,0 +1,15 @@
+PODS:
+  - Expecta (1.0.6)
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - Expecta
+  - Specta
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: 2de1cf8b90a8d73a181ba5b7b263e3ed155010f2
+
+COCOAPODS: 1.4.0
