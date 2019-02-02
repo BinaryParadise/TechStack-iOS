@@ -19,6 +19,16 @@
 		CE6E270F2202F94C003AB8FB /* JSFloatNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E270E2202F94C003AB8FB /* JSFloatNumberViewController.m */; };
 		CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */; };
 		CE6E27182203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */; };
+		CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272522043EC8003AB8FB /* GCDViewController.m */; };
+		CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272722043EC8003AB8FB /* GCDDemo.m */; };
+		CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */; };
+		CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272C22043EC8003AB8FB /* TestModel1.m */; };
+		CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272E22043EC8003AB8FB /* ARCViewController.m */; };
+		CE6E273C22043EC9003AB8FB /* ARCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273022043EC8003AB8FB /* ARCDemo.m */; };
+		CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273322043EC8003AB8FB /* MemoryViewController.m */; };
+		CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273622043EC8003AB8FB /* MemoryConstruction.m */; };
+		CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */; };
+		CE6E274622057335003AB8FB /* JSNSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274522057335003AB8FB /* JSNSArrayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,27 @@
 		CE6E27142203E750003AB8FB /* TestPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPrefix.h; sourceTree = "<group>"; };
 		CE6E27152203E88C003AB8FB /* NSNumber+JSConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JSConvert.h"; sourceTree = "<group>"; };
 		CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JSConvert.m"; sourceTree = "<group>"; };
+		CE6E272422043EC8003AB8FB /* GCDDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDDemo.h; sourceTree = "<group>"; };
+		CE6E272522043EC8003AB8FB /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		CE6E272622043EC8003AB8FB /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		CE6E272722043EC8003AB8FB /* GCDDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDDemo.m; sourceTree = "<group>"; };
+		CE6E272922043EC8003AB8FB /* TestModel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel1.h; sourceTree = "<group>"; };
+		CE6E272A22043EC8003AB8FB /* TestModel1+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestModel1+Addition.h"; sourceTree = "<group>"; };
+		CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestModel1+Addition.m"; sourceTree = "<group>"; };
+		CE6E272C22043EC8003AB8FB /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
+		CE6E272E22043EC8003AB8FB /* ARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
+		CE6E272F22043EC8003AB8FB /* ARCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCDemo.h; sourceTree = "<group>"; };
+		CE6E273022043EC8003AB8FB /* ARCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCDemo.m; sourceTree = "<group>"; };
+		CE6E273122043EC8003AB8FB /* ARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCViewController.h; sourceTree = "<group>"; };
+		CE6E273322043EC8003AB8FB /* MemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
+		CE6E273422043EC8003AB8FB /* MemoryConstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryConstruction.h; sourceTree = "<group>"; };
+		CE6E273522043EC8003AB8FB /* MemoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryViewController.h; sourceTree = "<group>"; };
+		CE6E273622043EC8003AB8FB /* MemoryConstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryConstruction.m; sourceTree = "<group>"; };
+		CE6E273F22043F7E003AB8FB /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		CE6E274122057144003AB8FB /* NSMutableArray+JSSafety.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JSSafety.h"; sourceTree = "<group>"; };
+		CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JSSafety.m"; sourceTree = "<group>"; };
+		CE6E274422057335003AB8FB /* JSNSArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNSArrayViewController.h; sourceTree = "<group>"; };
+		CE6E274522057335003AB8FB /* JSNSArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNSArrayViewController.m; sourceTree = "<group>"; };
 		E5D422805D85CBDAF30EDDB1 /* Pods-FoundationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +147,16 @@
 				CE6E26EC2202F743003AB8FB /* ViewController.m */,
 				CE6E26EE2202F743003AB8FB /* Main.storyboard */,
 				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
+				CE6E274022057076003AB8FB /* NSArray */,
+				CE6E272D22043EC8003AB8FB /* ARC */,
+				CE6E272822043EC8003AB8FB /* Category */,
+				CE6E272322043EC8003AB8FB /* GCD */,
+				CE6E273222043EC8003AB8FB /* ObjectMemory */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
 				CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */,
 				CE6E26F62202F745003AB8FB /* Info.plist */,
 				CE6E26F72202F745003AB8FB /* main.m */,
+				CE6E273F22043F7E003AB8FB /* Header.h */,
 			);
 			path = FoundationDemo;
 			sourceTree = "<group>";
@@ -143,6 +180,61 @@
 				CE6E270E2202F94C003AB8FB /* JSFloatNumberViewController.m */,
 			);
 			path = FloatNumber;
+			sourceTree = "<group>";
+		};
+		CE6E272322043EC8003AB8FB /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E272422043EC8003AB8FB /* GCDDemo.h */,
+				CE6E272522043EC8003AB8FB /* GCDViewController.m */,
+				CE6E272622043EC8003AB8FB /* GCDViewController.h */,
+				CE6E272722043EC8003AB8FB /* GCDDemo.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		CE6E272822043EC8003AB8FB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E272922043EC8003AB8FB /* TestModel1.h */,
+				CE6E272A22043EC8003AB8FB /* TestModel1+Addition.h */,
+				CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */,
+				CE6E272C22043EC8003AB8FB /* TestModel1.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CE6E272D22043EC8003AB8FB /* ARC */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E273122043EC8003AB8FB /* ARCViewController.h */,
+				CE6E272E22043EC8003AB8FB /* ARCViewController.m */,
+				CE6E272F22043EC8003AB8FB /* ARCDemo.h */,
+				CE6E273022043EC8003AB8FB /* ARCDemo.m */,
+			);
+			path = ARC;
+			sourceTree = "<group>";
+		};
+		CE6E273222043EC8003AB8FB /* ObjectMemory */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E273522043EC8003AB8FB /* MemoryViewController.h */,
+				CE6E273322043EC8003AB8FB /* MemoryViewController.m */,
+				CE6E273422043EC8003AB8FB /* MemoryConstruction.h */,
+				CE6E273622043EC8003AB8FB /* MemoryConstruction.m */,
+			);
+			path = ObjectMemory;
+			sourceTree = "<group>";
+		};
+		CE6E274022057076003AB8FB /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E274422057335003AB8FB /* JSNSArrayViewController.h */,
+				CE6E274522057335003AB8FB /* JSNSArrayViewController.m */,
+				CE6E274122057144003AB8FB /* NSMutableArray+JSSafety.h */,
+				CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */,
+			);
+			path = NSArray;
 			sourceTree = "<group>";
 		};
 		EAB987934CFB5DBFE4F9FBAF /* Pods */ = {
@@ -362,11 +454,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */,
 				CE6E26ED2202F743003AB8FB /* ViewController.m in Sources */,
+				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
+				CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */,
+				CE6E273C22043EC9003AB8FB /* ARCDemo.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
+				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
 				CE6E270F2202F94C003AB8FB /* JSFloatNumberViewController.m in Sources */,
+				CE6E274622057335003AB8FB /* JSNSArrayViewController.m in Sources */,
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
+				CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */,
+				CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */,
+				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,
+				CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -513,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,8 +629,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FoundationDemo/Header.h;
 				INFOPLIST_FILE = FoundationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,8 +648,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FoundationDemo/Header.h;
 				INFOPLIST_FILE = FoundationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,8 +1,8 @@
 //
-//  JSFloatNumberViewController.h
+//  JSNSArrayViewController.h
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/1/31.
+//  Created by lingjing on 2019/2/2.
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- 浮点数
- */
-@interface JSFloatNumberViewController : UIViewController
+@interface JSNSArrayViewController : UIViewController
 
 @end
 

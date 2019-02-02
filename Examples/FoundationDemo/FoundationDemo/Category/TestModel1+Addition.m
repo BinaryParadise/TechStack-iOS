@@ -2,8 +2,8 @@
 //  TestModel1+Addition.m
 //  iOSGuide
 //
-//  Created by odyang on 2017/10/10.
-//  Copyright © 2017年 mylcode. All rights reserved.
+//  Created by joengzi on 2017/10/10.
+//  Copyright © 2017年 joenggaa. All rights reserved.
 //
 
 #import "TestModel1+Addition.h"

@@ -2,7 +2,7 @@
 //  NSNumber+JSConvert.m
 //  FoundationDemo
 //
-//  Created by lingjing on 2019/2/1.
+//  Created by joengzi on 2019/2/1.
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 

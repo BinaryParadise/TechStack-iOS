@@ -40,6 +40,34 @@ CGFloat是在UIKit中定义的，CG代表CoreGraphic
 typedef CGFLOAT_TYPE CGFloat;
 ```
 
+## NSValue
+
+NSValue是个可以和各种基本数据类型互转的类。包括CGPoint、CGRect、CGSize等等。例如
+
+```ObjC
+[NSValue valueWithCGSize:CGSizeMake(100, 100)];
+[NSValue valueWithRange:NSMakeRange(0, 10)];
+
+```
+
+# NSNumber
+
+NSNumber与上面不同的是，NSNumber不是基本数据类型，而是对象。
+NSNumber 继承自 NSValue，而NSValue继承自NSObject。
+NSNumber支持和基本数据类型的互转。
+
+另外NSNumber支持和NSString一样的@符号简写
+
+```objc
+NSNumber * number = @(123);
+NSNumber * number1 = @(3.1415);
+NSNumber * number2 = @(YES);
+
+NSInteger intValue = [number integerValue];
+CGFloat floatValue = [number1 doubleValue];
+BOOL boolValue = [number2 boolValue];
+```
+
 ## 精确计算浮点数
 
 ```ObjC
@@ -78,22 +106,4 @@ typedef CGFLOAT_TYPE CGFloat;
     //1.23456789876 * 0.00000000001 = 0.0000000000123456789876
 
     //1.23456789876 / 0.00000000001 = 123456789876
-```
-
-# NSNumber
-
-NSNumber与上面不同的是，NSNumber不是基本数据类型，而是对象。
-NSNumber 继承自 NSValue，而NSValue继承自NSObject。
-NSNumber支持和基本数据类型的互转。
-
-另外NSNumber支持和NSString一样的@符号简写
-
-```objc
-NSNumber * number = @(123);
-NSNumber * number1 = @(3.1415);
-NSNumber * number2 = @(YES);
-
-NSInteger intValue = [number integerValue];
-CGFloat floatValue = [number1 doubleValue];
-BOOL boolValue = [number2 boolValue];
 ```

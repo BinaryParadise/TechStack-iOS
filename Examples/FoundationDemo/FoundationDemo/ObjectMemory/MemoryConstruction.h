@@ -2,8 +2,8 @@
 //  MemoryConstruction.h
 //  iOSGuide
 //
-//  Created by odyang on 2017/10/8.
-//  Copyright © 2017年 mylcode. All rights reserved.
+//  Created by joengzi on 2017/10/8.
+//  Copyright © 2017年 joenggaa. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
