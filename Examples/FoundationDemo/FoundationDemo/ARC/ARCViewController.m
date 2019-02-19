@@ -7,10 +7,11 @@
 //
 
 #import "ARCViewController.h"
-#import "ARCDemo.h"
+#import "JSARCDemoA.h"
+#import "JSARCDemoB.h"
 
 @interface ARCViewController () {
-    ARCDemo *arcObject;//默认为strong
+    JSARCDemoA *arcObject;//默认为strong
 }
 
 @end
@@ -19,9 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    arcObject = [[ARCDemo alloc] initWithNumber:999];
+    arcObject = [[JSARCDemoA alloc] initWithTag:@"主要对象"];
+    JSARCDemoB *demoB = [[JSARCDemoB alloc] initWithTag:@"附属对象"];
+    demoB.arcDemo = arcObject;
+    arcObject.demoB = demoB;
     [arcObject testAssign];
     [arcObject testWeak];
+
+    //block retain cycle
+    [arcObject doSomething:^{
+        [demoB doSomething];
+    }];
+
     LogInfo(@"");
 }
 
@@ -43,6 +53,10 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     LogInfo(@"");
+}
+
+- (IBAction)releaseObj:(id)sender {
+    arcObject = nil;
 }
 
 - (void)didReceiveMemoryWarning {

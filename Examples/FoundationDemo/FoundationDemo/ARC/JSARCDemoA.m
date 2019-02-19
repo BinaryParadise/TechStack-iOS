@@ -10,30 +10,29 @@
 
 @implementation JSARCDemoA
 
-- (instancetype)initWithNumber:(NSInteger)number {
-    if (self = [super init]) {
-        _number = number;
-    }
-    return self;
-}
-
 - (void)testAssign {
-    self.assignDemo = [[JSARCDemoA alloc] initWithNumber:99];
+    self.assignDemo = [[JSARCDemoA alloc] initWithTag:@"立即释放"];
     
     LogWarn(@"使用assign修饰对象，会在方法执行完成后立即释放,造成野指针");
 }
 
 - (void)testWeak {
-    self.weakDemo = [[JSARCDemoA alloc] initWithNumber:9];
+    self.weakDemo = [[JSARCDemoA alloc] initWithTag:@"弱引用对象"];
+}
+
+- (void)doSomething:(void (^)(void))block {
+    if (block) {
+        //block();
+    }
+}
+
+- (void)doNothing {
+    
 }
 
 - (id)copyWithZone:(NSZone *)zone {
     //浅拷贝实现
     return self;
-}
-
-- (void)dealloc {
-    LogInfo(@"%ld", self.number);
 }
 
 @end

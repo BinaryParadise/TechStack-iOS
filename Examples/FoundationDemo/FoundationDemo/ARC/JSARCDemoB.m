@@ -10,4 +10,8 @@
 
 @implementation JSARCDemoB
 
+- (void)doSomething {
+    
+}
+
 @end

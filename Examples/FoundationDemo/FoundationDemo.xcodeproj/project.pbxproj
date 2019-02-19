@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8115A8D1D2A913C652306B5F /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */; };
 		B119E6897EE90DF6C5EC5B61 /* libPods-FoundationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */; };
+		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
+		CE32B928221C066E00567417 /* JSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B927221C066E00567417 /* JSModel.m */; };
 		CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* AppDelegate.m */; };
 		CE6E26ED2202F743003AB8FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26EC2202F743003AB8FB /* ViewController.m */; };
 		CE6E26F02202F743003AB8FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26EE2202F743003AB8FB /* Main.storyboard */; };
@@ -24,7 +26,7 @@
 		CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */; };
 		CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272C22043EC8003AB8FB /* TestModel1.m */; };
 		CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272E22043EC8003AB8FB /* ARCViewController.m */; };
-		CE6E273C22043EC9003AB8FB /* ARCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273022043EC8003AB8FB /* ARCDemo.m */; };
+		CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273022043EC8003AB8FB /* JSARCDemoA.m */; };
 		CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273322043EC8003AB8FB /* MemoryViewController.m */; };
 		CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273622043EC8003AB8FB /* MemoryConstruction.m */; };
 		CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */; };
@@ -47,6 +49,10 @@
 		4F6E80BAF777C5F259F0A014 /* Pods-FoundationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		732AAF20ED0031F8A4F84515 /* Pods-FoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE32B923221BFDE900567417 /* JSARCDemoB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSARCDemoB.h; sourceTree = "<group>"; };
+		CE32B924221BFDE900567417 /* JSARCDemoB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSARCDemoB.m; sourceTree = "<group>"; };
+		CE32B926221C066E00567417 /* JSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSModel.h; sourceTree = "<group>"; };
+		CE32B927221C066E00567417 /* JSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSModel.m; sourceTree = "<group>"; };
 		CE6E26E52202F743003AB8FB /* FoundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6E26E82202F743003AB8FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE6E26E92202F743003AB8FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,8 +80,8 @@
 		CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestModel1+Addition.m"; sourceTree = "<group>"; };
 		CE6E272C22043EC8003AB8FB /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
 		CE6E272E22043EC8003AB8FB /* ARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
-		CE6E272F22043EC8003AB8FB /* ARCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCDemo.h; sourceTree = "<group>"; };
-		CE6E273022043EC8003AB8FB /* ARCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCDemo.m; sourceTree = "<group>"; };
+		CE6E272F22043EC8003AB8FB /* JSARCDemoA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSARCDemoA.h; sourceTree = "<group>"; };
+		CE6E273022043EC8003AB8FB /* JSARCDemoA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSARCDemoA.m; sourceTree = "<group>"; };
 		CE6E273122043EC8003AB8FB /* ARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCViewController.h; sourceTree = "<group>"; };
 		CE6E273322043EC8003AB8FB /* MemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
 		CE6E273422043EC8003AB8FB /* MemoryConstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryConstruction.h; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 				CE6E26F62202F745003AB8FB /* Info.plist */,
 				CE6E26F72202F745003AB8FB /* main.m */,
 				CE6E273F22043F7E003AB8FB /* Header.h */,
+				CE32B926221C066E00567417 /* JSModel.h */,
+				CE32B927221C066E00567417 /* JSModel.m */,
 			);
 			path = FoundationDemo;
 			sourceTree = "<group>";
@@ -209,8 +217,10 @@
 			children = (
 				CE6E273122043EC8003AB8FB /* ARCViewController.h */,
 				CE6E272E22043EC8003AB8FB /* ARCViewController.m */,
-				CE6E272F22043EC8003AB8FB /* ARCDemo.h */,
-				CE6E273022043EC8003AB8FB /* ARCDemo.m */,
+				CE6E272F22043EC8003AB8FB /* JSARCDemoA.h */,
+				CE6E273022043EC8003AB8FB /* JSARCDemoA.m */,
+				CE32B923221BFDE900567417 /* JSARCDemoB.h */,
+				CE32B924221BFDE900567417 /* JSARCDemoB.m */,
 			);
 			path = ARC;
 			sourceTree = "<group>";
@@ -455,10 +465,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */,
+				CE32B928221C066E00567417 /* JSModel.m in Sources */,
+				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
 				CE6E26ED2202F743003AB8FB /* ViewController.m in Sources */,
 				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
 				CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */,
-				CE6E273C22043EC9003AB8FB /* ARCDemo.m in Sources */,
+				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
 				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
@@ -631,6 +643,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FoundationDemo/Header.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MCLoggerEnable=1",
+				);
 				INFOPLIST_FILE = FoundationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

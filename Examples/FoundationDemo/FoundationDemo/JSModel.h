@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSModel : NSObject
 
+@property (nonatomic, copy) NSString *tag;
+
+- (instancetype)initWithTag:(NSString *)tag;
+
 @end
 
 NS_ASSUME_NONNULL_END

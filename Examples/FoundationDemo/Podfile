@@ -6,6 +6,7 @@ target 'FoundationDemo' do
   # use_frameworks!
 
   # Pods for FoundationDemo
+  pod 'MCLogger', :path => '../../../MCLogger'
 
   target 'FoundationDemoTests' do
     inherit! :search_paths

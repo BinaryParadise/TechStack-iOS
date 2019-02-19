@@ -6,18 +6,17 @@
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
+#import <MCLogger/MCLogger.h>
+
 #ifndef Header_h
 #define Header_h
 
 #if DEBUG
-
-    #define PGLog(frmt, ...) NSLog(frmt,__func__,__LINE__, ##__VA_ARGS__);
-
-    #define LogSpec(frmt, ...) PGLog(@"⌘ %s+%d " frmt, ##__VA_ARGS__)
-    #define LogInfo(frmt, ...) PGLog(@"⌗ %s+%d " frmt, ##__VA_ARGS__)
-    #define LogWarn(frmt, ...) PGLog(@"⚠️ %s+%d " frmt, ##__VA_ARGS__)
-    #define LogError(frmt, ...) PGLog(@"‼️ %s+%d " frmt, ##__VA_ARGS__)
-
+    #define LogInfo(frmt, ...) MCLogInfo(@"✢ " frmt, ##__VA_ARGS__);
+    #define LogDebug(frmt, ...) MCLogDebug(@"◦ " frmt, ##__VA_ARGS__);
+    #define LogWarn(frmt, ...) MCLogWarn(@"⚡︎ " frmt, ##__VA_ARGS__);
+    #define LogError(frmt, ...) MCLogError(@"‼️ " frmt, ##__VA_ARGS__);
+    #define LogVerbose(frmt, ...) MCLogVerbose(frmt, ##_VA_ARGS__);
 #else
     #define LogInfo(frmt, ...)
     #define LogWarn(frmt, ...)

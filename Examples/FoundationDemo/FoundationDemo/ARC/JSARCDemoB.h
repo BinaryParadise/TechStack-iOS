@@ -6,11 +6,15 @@
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "JSModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSARCDemoB : NSObject
+@interface JSARCDemoB : JSModel
+
+@property (nonatomic, strong) id arcDemo;
+
+- (void)doSomething;
 
 @end
 

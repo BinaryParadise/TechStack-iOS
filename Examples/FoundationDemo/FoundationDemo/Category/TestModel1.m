@@ -11,7 +11,7 @@
 @implementation TestModel1
 
 - (void)testMethod {
-    LogWarn(@"");
+    MCLogWarn(@"");
 }
 
 @end

@@ -189,13 +189,24 @@
                     <view key="view" contentMode="scaleToFill" id="CQ9-rq-oBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QB-3w-n1o">
+                                <rect key="frame" x="24" y="92" width="108" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="释放"/>
+                                <connections>
+                                    <action selector="releaseObj:" destination="93e-ly-ALR" eventType="touchUpInside" id="CWd-ng-IYg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="ARC" id="v0F-eY-ej8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3m-TK-Z80" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="15"/>
+            <point key="canvasLocation" x="789.60000000000002" y="14.842578710644679"/>
         </scene>
         <!--NSArray-->
         <scene sceneID="iuA-gf-Zge">
