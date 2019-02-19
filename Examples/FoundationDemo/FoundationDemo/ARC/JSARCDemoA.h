@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 //自动内存管理演示
-@interface ARCDemo : NSObject<NSCopying>
+@interface JSARCDemoA : NSObject<NSCopying>
 
 @property (nonatomic, assign) NSInteger number;
-@property (nonatomic, assign) ARCDemo *assignDemo;
-@property (nonatomic, weak) ARCDemo *weakDemo;
+@property (nonatomic, assign) JSARCDemoA *assignDemo;
+@property (nonatomic, weak) JSARCDemoA *weakDemo;
+@property (nonatomic, strong) id demoB;
 
 - (instancetype)initWithNumber:(NSInteger)number;
 
