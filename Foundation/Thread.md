@@ -86,7 +86,7 @@ dispatch_queue_create("queue_concurrent", DISPATCH_QUEUE_CONCURRENT)
 dispatch_get_global_queue(0, 0);
 ```
 
-### dispatch_barrier_async（栅栏）
+### 栅栏
 
 > 当任务需要异步进行，但是这些任务需要分成两组来执行，第一组完成之后才能进行第二组的操作。这时候就用了到GCD的栅栏方法dispatch_barrier_async
 
@@ -142,7 +142,19 @@ LogDebug(@"done!");
 
 ```objc
 dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        LogDebug(@"队列分组异步1 %@", [NSThread currentThread]);
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        LogDebug(@"队列分组异步2 %@", [NSThread currentThread]);
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        LogDebug(@"队列分组异步3 %@", [NSThread currentThread]);
+    });
 
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        LogDebug(@"队列分组任务全部执行完成 %@", [NSThread currentThread]);
+    });
 ```
 
 ## NSOperation & NSOperationQueue
