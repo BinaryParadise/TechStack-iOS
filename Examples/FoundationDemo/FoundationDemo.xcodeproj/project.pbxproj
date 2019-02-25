@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		240F179C221D8C7600E4830D /* JSFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F179B221D8C7600E4830D /* JSFoundationTests.m */; };
 		2449EC802222545100F466EE /* MCThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2449EC7F2222545000F466EE /* MCThreadViewController.m */; };
+		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
 		8115A8D1D2A913C652306B5F /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */; };
 		B119E6897EE90DF6C5EC5B61 /* libPods-FoundationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */; };
 		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
@@ -50,6 +51,8 @@
 		240F179B221D8C7600E4830D /* JSFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFoundationTests.m; sourceTree = "<group>"; };
 		2449EC7E2222545000F466EE /* MCThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCThreadViewController.h; sourceTree = "<group>"; };
 		2449EC7F2222545000F466EE /* MCThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCThreadViewController.m; sourceTree = "<group>"; };
+		24F1FB6D22241F9E0066D008 /* MCArithmeticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCArithmeticTableViewController.h; sourceTree = "<group>"; };
+		24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCArithmeticTableViewController.m; sourceTree = "<group>"; };
 		32B1511F97C77E5D2A8A1636 /* Pods-FoundationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F6E80BAF777C5F259F0A014 /* Pods-FoundationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		732AAF20ED0031F8A4F84515 /* Pods-FoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +132,15 @@
 			path = Thread;
 			sourceTree = "<group>";
 		};
+		24F1FB6C22241F780066D008 /* Arithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				24F1FB6D22241F9E0066D008 /* MCArithmeticTableViewController.h */,
+				24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */,
+			);
+			path = Arithmetic;
+			sourceTree = "<group>";
+		};
 		88623C248EA2308E22844DB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +178,7 @@
 				CE6E26EB2202F743003AB8FB /* ViewController.h */,
 				CE6E26EC2202F743003AB8FB /* ViewController.m */,
 				CE6E26EE2202F743003AB8FB /* Main.storyboard */,
+				24F1FB6C22241F780066D008 /* Arithmetic */,
 				2449EC7D2222541000F466EE /* Thread */,
 				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
 				CE6E274022057076003AB8FB /* NSArray */,
@@ -496,6 +509,7 @@
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
 				CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */,
 				CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */,
+				24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */,
 				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,
 				CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */,
 			);

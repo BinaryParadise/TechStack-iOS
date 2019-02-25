@@ -57,7 +57,7 @@
 
 - (IBAction)releaseObj:(id)sender {
     arcObject = nil;
-    [MCLogger showConsoleView];
+//    [MCLogger showConsoleView];
 }
 
 - (void)didReceiveMemoryWarning {

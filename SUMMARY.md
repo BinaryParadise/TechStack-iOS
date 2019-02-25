@@ -7,6 +7,7 @@
   - [Class](Foundation/Property.md)
   - [Category](Foundation/README.md)
   - [多线程](Foundation/Thread.md)
+  - [算法](Foundation/Arithmetic.md)
 * [UIKit]()
   - [UIView](UIKit/UIView.md)
   - [AutoLayout](UIKit/AutoLayout/README.md)
