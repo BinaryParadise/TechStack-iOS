@@ -2,7 +2,7 @@
 //  JSNSArrayViewController.m
 //  FoundationDemo
 //
-//  Created by lingjing on 2019/2/2.
+//  Created by joengzi on 2019/2/2.
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 

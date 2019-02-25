@@ -15,7 +15,7 @@
 
 #### - (void)setNeedsLayout;
 
-> 标记视图需要重新布局，不会立即刷新
+> 标记视图需要重新布局，不会立即刷新，但是一定会调用layoutSubviews。
 
 #### - (void)layoutIfNeeded
 

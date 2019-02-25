@@ -10,6 +10,14 @@ PODS:
   - MCLogger (0.3.0):
     - CocoaLumberjack (~> 3.0)
     - MCFoundation (~> 0.2)
+    - MCUIKit (~> 0.3)
+  - MCUIKit (0.3.0):
+    - MCUIKit/UIKit (= 0.3.0)
+  - MCUIKit/Category (0.3.0)
+  - MCUIKit/Gesonry (0.3.0)
+  - MCUIKit/UIKit (0.3.0):
+    - MCUIKit/Category
+    - MCUIKit/Gesonry
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -25,7 +33,8 @@ SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   MCFoundation: 042b7ac8272e26f98928f03a49aada4c454ae8e2
-  MCLogger: 94fca1e31cc0bb2a29623e10c98ab84528d56fd2
+  MCLogger: 7e2ab2fc9139bc6f0dc946c02d93da938d64c6a6
+  MCUIKit: 4d9fb8d30b0cf44bf99605ecd248a3092d6f4e13
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: 70cc6189e3c55da3d6bb0b455650ae680179ab78
