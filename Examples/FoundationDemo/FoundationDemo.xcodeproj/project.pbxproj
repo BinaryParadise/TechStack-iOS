@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240BB63122280D4A00CB0722 /* MCLockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240BB62F22280D4A00CB0722 /* MCLockTableViewController.m */; };
+		240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240BB6332228144400CB0722 /* BasicKnowledge.storyboard */; };
 		240F179C221D8C7600E4830D /* JSFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F179B221D8C7600E4830D /* JSFoundationTests.m */; };
 		2449EC802222545100F466EE /* MCThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2449EC7F2222545000F466EE /* MCThreadViewController.m */; };
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
@@ -48,6 +50,11 @@
 
 /* Begin PBXFileReference section */
 		1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		240BB62C22280C8E00CB0722 /* MCDataTypeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDataTypeDefine.h; sourceTree = "<group>"; };
+		240BB62D22280D2A00CB0722 /* MCBasicKnowledgeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCBasicKnowledgeDefine.h; sourceTree = "<group>"; };
+		240BB62E22280D4A00CB0722 /* MCLockTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCLockTableViewController.h; sourceTree = "<group>"; };
+		240BB62F22280D4A00CB0722 /* MCLockTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCLockTableViewController.m; sourceTree = "<group>"; };
+		240BB6332228144400CB0722 /* BasicKnowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicKnowledge.storyboard; sourceTree = "<group>"; };
 		240F179B221D8C7600E4830D /* JSFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFoundationTests.m; sourceTree = "<group>"; };
 		2449EC7E2222545000F466EE /* MCThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCThreadViewController.h; sourceTree = "<group>"; };
 		2449EC7F2222545000F466EE /* MCThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCThreadViewController.m; sourceTree = "<group>"; };
@@ -123,6 +130,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240BB621222808CA00CB0722 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				240BB62E22280D4A00CB0722 /* MCLockTableViewController.h */,
+				240BB62F22280D4A00CB0722 /* MCLockTableViewController.m */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		240BB62A22280A6900CB0722 /* DataType */ = {
+			isa = PBXGroup;
+			children = (
+				240BB62C22280C8E00CB0722 /* MCDataTypeDefine.h */,
+				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
+				CE6E274022057076003AB8FB /* NSArray */,
+			);
+			path = DataType;
+			sourceTree = "<group>";
+		};
+		240BB62B22280C2400CB0722 /* BasicKnowledge */ = {
+			isa = PBXGroup;
+			children = (
+				240BB62D22280D2A00CB0722 /* MCBasicKnowledgeDefine.h */,
+				240BB6332228144400CB0722 /* BasicKnowledge.storyboard */,
+				24F1FB6C22241F780066D008 /* Arithmetic */,
+				240BB621222808CA00CB0722 /* Lock */,
+				2449EC7D2222541000F466EE /* Thread */,
+				CE6E272D22043EC8003AB8FB /* ARC */,
+				CE6E272822043EC8003AB8FB /* Category */,
+				CE6E272322043EC8003AB8FB /* GCD */,
+			);
+			path = BasicKnowledge;
+			sourceTree = "<group>";
+		};
 		2449EC7D2222541000F466EE /* Thread */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,13 +219,8 @@
 				CE6E26EB2202F743003AB8FB /* ViewController.h */,
 				CE6E26EC2202F743003AB8FB /* ViewController.m */,
 				CE6E26EE2202F743003AB8FB /* Main.storyboard */,
-				24F1FB6C22241F780066D008 /* Arithmetic */,
-				2449EC7D2222541000F466EE /* Thread */,
-				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
-				CE6E274022057076003AB8FB /* NSArray */,
-				CE6E272D22043EC8003AB8FB /* ARC */,
-				CE6E272822043EC8003AB8FB /* Category */,
-				CE6E272322043EC8003AB8FB /* GCD */,
+				240BB62A22280A6900CB0722 /* DataType */,
+				240BB62B22280C2400CB0722 /* BasicKnowledge */,
 				CE6E273222043EC8003AB8FB /* ObjectMemory */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
 				CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */,
@@ -376,6 +412,7 @@
 			files = (
 				CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */,
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
+				240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */,
 				CE6E26F02202F743003AB8FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +532,7 @@
 			files = (
 				CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */,
 				CE32B928221C066E00567417 /* JSModel.m in Sources */,
+				240BB63122280D4A00CB0722 /* MCLockTableViewController.m in Sources */,
 				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
 				CE6E26ED2202F743003AB8FB /* ViewController.m in Sources */,
 				2449EC802222545100F466EE /* MCThreadViewController.m in Sources */,
@@ -606,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -659,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

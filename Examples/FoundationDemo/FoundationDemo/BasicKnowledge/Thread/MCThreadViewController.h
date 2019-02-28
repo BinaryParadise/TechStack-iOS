@@ -1,8 +1,8 @@
 //
-//  MCArithmeticTableViewController.h
+//  MCThreadViewController.h
 //  FoundationDemo
 //
-//  Created by lingjing on 2019/2/25.
+//  Created by joengzi on 2019/2/24.
 //  Copyright © 2019年 joenggaa. All rights reserved.
 //
 
@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- 算法
- */
-@interface MCArithmeticTableViewController : UITableViewController
+@interface MCThreadViewController : UIViewController
 
 @end
 
