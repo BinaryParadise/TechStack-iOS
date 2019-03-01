@@ -9,6 +9,7 @@
   - [多线程](Foundation/Thread.md)
   - [ARC](Foundation/ARC.md)
   - [RunLoop](Foundation/RunLoop.md)
+  - [算法](Foundation/Arithmetic.md)
 * [UIKit]()
   - [UIView](UIKit/UIView.md)
   - [AutoLayout](UIKit/AutoLayout/README.md)
