@@ -17,6 +17,10 @@
 
 > 标记视图需要重新布局，不会立即刷新，但是一定会调用layoutSubviews。
 
+#### - (void)setNeedsDisplay;
+
+> 异步执行，自动调用`drawRect`
+
 #### - (void)layoutIfNeeded
 
 > 如果有需要重新布局的标记，则立即调用

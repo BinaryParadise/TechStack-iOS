@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "TestModel1+Addition.h"
 #import <objc/runtime.h>
 
 @interface ViewController ()
