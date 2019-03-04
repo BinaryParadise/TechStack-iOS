@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2461DF37222D677800D4382F /* PGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* PGPageViewController.m */; };
 		249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* PGDemoView.m */; };
 		249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25421E1F408009B8781 /* PGUIViewController.m */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2461DF34222D677800D4382F /* PGPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGPageViewController.h; sourceTree = "<group>"; };
+		2461DF35222D677800D4382F /* PGPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGPageViewController.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* PGDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* PGDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGDemoView.m; sourceTree = "<group>"; };
 		249DD25321E1F408009B8781 /* PGUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGUIViewController.h; sourceTree = "<group>"; };
@@ -57,9 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2461DF2E222D659E00D4382F /* UIPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2461DF34222D677800D4382F /* PGPageViewController.h */,
+				2461DF35222D677800D4382F /* PGPageViewController.m */,
+			);
+			path = UIPageViewController;
+			sourceTree = "<group>";
+		};
 		249DD24E21E1EF1F009B8781 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
 			);
 			path = UI;
@@ -225,6 +238,7 @@
 				CE861E072176DA5A009927A8 /* AutoLayoutViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
+				2461DF37222D677800D4382F /* PGPageViewController.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */,
 				249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */,
