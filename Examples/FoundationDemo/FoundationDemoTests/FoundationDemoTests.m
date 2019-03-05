@@ -7,6 +7,7 @@
 //
 
 #import "NSNumber+JSConvert.h"
+#import "MCSingletonDemo.h"
 
 SpecBegin(FoundationDemoSpec)
 
@@ -45,6 +46,16 @@ describe(@"Foundation", ^{
 
     context(@"NSArray", ^{
 
+    });
+
+    context(@"单例模式", ^{
+        MCSingletonDemo *singleton = [[MCSingletonDemo alloc] init];
+        it(@"校验", ^{
+            expect(singleton).equal([MCSingletonDemo new]);
+            expect(singleton).equal([singleton copy]);
+            expect(singleton).equal([singleton mutableCopy]);
+            expect(singleton).equal([[MCSingletonDemo alloc] init]);
+        });
     });
 });
 

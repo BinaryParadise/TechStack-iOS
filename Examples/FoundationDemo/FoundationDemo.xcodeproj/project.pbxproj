@@ -36,6 +36,7 @@
 		CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273622043EC8003AB8FB /* MemoryConstruction.m */; };
 		CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */; };
 		CE6E274622057335003AB8FB /* JSNSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274522057335003AB8FB /* JSNSArrayViewController.m */; };
+		CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBFA48B222E502200A68094 /* MCSingletonDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JSSafety.m"; sourceTree = "<group>"; };
 		CE6E274422057335003AB8FB /* JSNSArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNSArrayViewController.h; sourceTree = "<group>"; };
 		CE6E274522057335003AB8FB /* JSNSArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNSArrayViewController.m; sourceTree = "<group>"; };
+		CEBFA48A222E502200A68094 /* MCSingletonDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCSingletonDemo.h; sourceTree = "<group>"; };
+		CEBFA48B222E502200A68094 /* MCSingletonDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCSingletonDemo.m; sourceTree = "<group>"; };
 		E5D422805D85CBDAF30EDDB1 /* Pods-FoundationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +155,7 @@
 		240BB62B22280C2400CB0722 /* BasicKnowledge */ = {
 			isa = PBXGroup;
 			children = (
+				CEBFA489222E4FEC00A68094 /* Singleton */,
 				240BB62D22280D2A00CB0722 /* MCBasicKnowledgeDefine.h */,
 				240BB6332228144400CB0722 /* BasicKnowledge.storyboard */,
 				24F1FB6C22241F780066D008 /* Arithmetic */,
@@ -310,6 +314,15 @@
 				CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */,
 			);
 			path = NSArray;
+			sourceTree = "<group>";
+		};
+		CEBFA489222E4FEC00A68094 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				CEBFA48A222E502200A68094 /* MCSingletonDemo.h */,
+				CEBFA48B222E502200A68094 /* MCSingletonDemo.m */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		EAB987934CFB5DBFE4F9FBAF /* Pods */ = {
@@ -544,6 +557,7 @@
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
 				CE6E270F2202F94C003AB8FB /* JSFloatNumberViewController.m in Sources */,
 				CE6E274622057335003AB8FB /* JSNSArrayViewController.m in Sources */,
+				CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */,
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
 				CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */,
 				CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */,
