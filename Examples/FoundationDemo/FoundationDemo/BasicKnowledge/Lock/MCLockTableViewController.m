@@ -11,7 +11,11 @@
 
 static OSSpinLock oslock = OS_SPINLOCK_INIT;
 
-@interface MCLockTableViewController ()
+@interface MCLockTableViewController () {
+    NSUInteger _count;
+}
+
+@property (nonatomic, strong) NSLock *lock;
 
 @end
 
@@ -25,6 +29,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.lock = [[NSLock alloc] init];
 }
 
 - (IBAction)go_OSSpinLock:(id)sender {
@@ -58,6 +63,31 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
             dispatch_semaphore_signal(semaphore);
             
         });
+    }
+}
+
+- (IBAction)go_nslock:(id)sender {
+    _count = 5;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self selliPhone];
+    });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self selliPhone];
+    });
+}
+
+- (void)selliPhone {
+    while (YES) {
+        sleep(0.5);
+        //[self.lock lock];
+        if (_count > 0) {
+            _count--;
+            LogDebug(@"剩余iPhone= %ld，%@", _count, [NSThread currentThread]);
+        } else {
+            LogDebug(@"iPhone卖光了 %@", [NSThread currentThread]);
+            break;
+        }
+        //[self.lock unlock];
     }
 }
 

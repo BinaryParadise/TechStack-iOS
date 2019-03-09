@@ -63,6 +63,28 @@
                                             <outletCollection property="gestureRecognizers" destination="sjw-qy-kg6" appends="YES" id="G6O-uI-Vhh"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="bZY-Ay-Wgq" style="IBUITableViewCellStyleDefault" id="emZ-bG-Dgx">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="emZ-bG-Dgx" id="0OU-5q-Nlc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="NSLock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bZY-Ay-Wgq">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <gestureRecognizers/>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1aN-RT-TqD" appends="YES" id="YID-5K-Xrt"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -81,6 +103,11 @@
                 <tapGestureRecognizer id="sjw-qy-kg6">
                     <connections>
                         <action selector="go_semaphore:" destination="kq8-70-eiy" id="uBh-oT-m4l"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1aN-RT-TqD">
+                    <connections>
+                        <action selector="go_nslock:" destination="kq8-70-eiy" id="hl3-tt-iHq"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
