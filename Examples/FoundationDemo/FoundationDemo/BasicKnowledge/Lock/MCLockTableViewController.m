@@ -51,19 +51,33 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
 }
 
 - (IBAction)go_semaphore:(id)sender {
+    LogWarn("----------------------信号量----------------------");
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); //传入值必须 >0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    for (int i = 0; i < 100; i++) {
-        dispatch_async(queue, ^{
-            // 相当于加锁
-            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            LogDebug(@"i = %d semaphore = %@", i, semaphore);
-            sleep(1.0);
-            // 相当于解锁
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        sleep(3);
+        LogDebug(@"任务1完成 %@", [NSThread currentThread])
+        long ret = dispatch_semaphore_signal(semaphore);
+        LogDebug(@"%ld线程等待 %@",ret, [NSThread currentThread])
+    });
+    dispatch_async(queue, ^{
+        //此刻信号量为0，线程阻塞等待信号唤起，超时时间2秒
+        long ret = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC));
+        if (ret == 0) {//分支处理
+            //收到信号，继续执行
+            LogDebug(@"任务2完成 %@", [NSThread currentThread])
             dispatch_semaphore_signal(semaphore);
-            
-        });
-    }
+        } else {
+            //超时时间内未收到信号
+            LogDebug(@"线程阻塞 %@", [NSThread currentThread])
+        }
+    });
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        LogDebug(@"任务3完成 %@", [NSThread currentThread])
+        dispatch_semaphore_signal(semaphore);
+    });
 }
 
 - (IBAction)go_nslock:(id)sender {

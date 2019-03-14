@@ -4,7 +4,35 @@
 
 `OSSpinLock`是一种自旋锁
 
-# dispatch_semaphore
+# 信号量
+
+## dispatch_semaphore_create
+
+> 通过给定初始值创建新的计数信号量创建失败返回`NULL`，`0`表示无信号
+```objc
+dispatch_semaphore_t dispatch_semaphore_create(long value);
+```
+
+## dispatch_semaphore_wait
+
+>  等待或减少一个信号量
+信号量`>=1`时，计数`减1`，继续往下执行，返回值为`0`
+信号量`=0`时，线程在超时时间内阻塞，到期后继续向下执行，返回值为非`0`
+
+```objc
+long dispatch_semaphore_wait(dispatch_semaphore_t dsema, dispatch_time_t timeout);
+```
+
+> 增加一个信号量，如果之前的信号量小于0，则次函数返回之前唤醒等待的线程
+> 如果线程被唤醒返回非0值，否则返回0
+
+## dispatch_semaphore_signal
+
+> `当返回值为0时`：表示无线程等待，信号加1。
+`当返回值不为0时`：表示当前有一个或多个线程线程等待，并且该函数唤醒了一个“等待的线程”（当线程有优先级时，唤醒优先级最高的线程；否则随机唤醒）。
+```objc
+long dispatch_semaphore_signal(dispatch_semaphore_t dsema);
+```
 
 # pthread_mutex
 

@@ -60,7 +60,7 @@
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="sjw-qy-kg6" appends="YES" id="G6O-uI-Vhh"/>
+                                            <outletCollection property="gestureRecognizers" destination="sjw-qy-kg6" appends="YES" id="fIF-Hg-ZY6"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="bZY-Ay-Wgq" style="IBUITableViewCellStyleDefault" id="emZ-bG-Dgx">
@@ -102,7 +102,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="sjw-qy-kg6">
                     <connections>
-                        <action selector="go_semaphore:" destination="kq8-70-eiy" id="uBh-oT-m4l"/>
+                        <action selector="go_semaphore:" destination="kq8-70-eiy" id="aua-2i-bFo"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="1aN-RT-TqD">
