@@ -20,6 +20,8 @@
 		C5FB165D1F8B998400350055 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* WebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
 		CE861E072176DA5A009927A8 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE861E052176DA5A009927A8 /* AutoLayoutViewController.m */; };
+		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
+		CEA02DB2223B915E00157527 /* UKUITextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA02DB1223B915E00157527 /* UKUITextFieldViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,9 @@
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
 		CE861E042176DA5A009927A8 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
 		CE861E052176DA5A009927A8 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
+		CEA02DAE223B913000157527 /* UKUITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKUITextFieldViewController.h; sourceTree = "<group>"; };
+		CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKUITextFieldViewController.m; sourceTree = "<group>"; };
+		CEA02DB1223B915E00157527 /* UKUITextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKUITextFieldViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 		249DD24E21E1EF1F009B8781 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CEA02DAD223B90D400157527 /* UIControl */,
 				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
 			);
@@ -161,6 +167,24 @@
 			path = Autolayout;
 			sourceTree = "<group>";
 		};
+		CEA02DAC223B909C00157527 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				CEA02DAE223B913000157527 /* UKUITextFieldViewController.h */,
+				CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */,
+				CEA02DB1223B915E00157527 /* UKUITextFieldViewController.xib */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		CEA02DAD223B90D400157527 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				CEA02DAC223B909C00157527 /* UITextField */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,9 +211,9 @@
 		C532E4011F889834009E38CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PG;
+				CLASSPREFIX = UK;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = mylcode;
+				ORGANIZATIONNAME = joengzi;
 				TargetAttributes = {
 					C532E4081F889834009E38CA = {
 						CreatedOnToolsVersion = 9.0;
@@ -220,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA02DB2223B915E00157527 /* UKUITextFieldViewController.xib in Resources */,
 				C5FB165F1F8B9AAB00350055 /* webview.html in Resources */,
 				C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */,
 				C532E4161F889834009E38CA /* Assets.xcassets in Resources */,
@@ -235,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FB165D1F8B998400350055 /* WebViewController.m in Sources */,
+				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
 				CE861E072176DA5A009927A8 /* AutoLayoutViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
@@ -390,7 +416,7 @@
 				);
 				INFOPLIST_FILE = iOSGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zjlp.iOSGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joenggaa.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "08121f3d-6f0d-489b-9743-30d5602ac7e7";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -408,7 +434,7 @@
 				GCC_PREFIX_HEADER = iOSGuide/Header.h;
 				INFOPLIST_FILE = iOSGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zjlp.iOSGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joenggaa.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
