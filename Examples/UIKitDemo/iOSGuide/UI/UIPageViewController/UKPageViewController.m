@@ -6,16 +6,16 @@
 //  Copyright © 2019年 mylcode. All rights reserved.
 //
 
-#import "PGPageViewController.h"
+#import "UKPageViewController.h"
 
-@interface PGPageViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@interface UKPageViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 @property (nonatomic, copy) NSArray *viewControllers;
 
 @end
 
-@implementation PGPageViewController
+@implementation UKPageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -6,11 +6,11 @@
 //  Copyright © 2017年 mylcode. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "UKWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@interface WebViewController () <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
+@interface UKWebViewController () <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
 @property (nonatomic, assign) BOOL useWKWebview;
 @property (nonatomic, strong) UIWebView *uiWebView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation WebViewController
+@implementation UKWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

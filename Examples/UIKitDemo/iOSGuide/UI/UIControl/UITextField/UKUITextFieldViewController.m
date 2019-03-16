@@ -2,7 +2,7 @@
 //  UKUITextFieldViewController.m
 //  iOSGuide
 //
-//  Created by lingjing on 2019/3/15.
+//  Created by joengzi on 2019/3/15.
 //  Copyright © 2019 joengzi. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @interface UKUITextFieldViewController ()
 
+@property (nonatomic, weak) IBOutlet UITextField *textField;
 @end
 
 @implementation UKUITextFieldViewController
@@ -17,6 +18,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+}
+
+- (IBAction)changeKeyboard:(id)sender {
+    UIKeyboardType kt = self.textField.keyboardType;
+    if (kt == UIKeyboardTypeWebSearch-1) {
+        kt = UIKeyboardTypeDefault;
+    } else {
+        kt++;
+    }
+    self.textField.keyboardType = kt;
+    //重新加载，键盘类型才会改变
+    [self.textField reloadInputViews];
 }
 
 /*

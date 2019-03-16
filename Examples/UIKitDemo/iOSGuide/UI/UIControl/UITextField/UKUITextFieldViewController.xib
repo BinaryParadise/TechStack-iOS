@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UKUITextFieldViewController">
             <connections>
+                <outlet property="textField" destination="5DT-sq-KOn" id="HzB-eq-oUj"/>
                 <outlet property="view" destination="HlU-Uk-9Pf" id="9kY-pV-a3k"/>
             </connections>
         </placeholder>
@@ -19,8 +20,34 @@
         <view contentMode="scaleToFill" id="HlU-Uk-9Pf">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGy-ye-sVr">
+                    <rect key="frame" x="16" y="112" width="62" height="30"/>
+                    <state key="normal" title="切换键盘"/>
+                    <connections>
+                        <action selector="changeKeyboard:" destination="-1" eventType="touchUpInside" id="fPz-VE-naB"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="文本输入框" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5DT-sq-KOn">
+                    <rect key="frame" x="16" y="52" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="6g1-1b-Kbj"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2HJ-Bq-7jk" firstAttribute="trailing" secondItem="5DT-sq-KOn" secondAttribute="trailing" constant="16" id="Ox8-cb-IhW"/>
+                <constraint firstItem="5DT-sq-KOn" firstAttribute="top" secondItem="2HJ-Bq-7jk" secondAttribute="top" constant="32" id="bel-I0-TbP"/>
+                <constraint firstItem="DGy-ye-sVr" firstAttribute="leading" secondItem="5DT-sq-KOn" secondAttribute="leading" id="jvA-k6-7N7"/>
+                <constraint firstItem="5DT-sq-KOn" firstAttribute="leading" secondItem="2HJ-Bq-7jk" secondAttribute="leading" constant="16" id="vdd-5m-1AN"/>
+                <constraint firstItem="DGy-ye-sVr" firstAttribute="top" secondItem="5DT-sq-KOn" secondAttribute="bottom" constant="10" id="zbT-eF-L9N"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="2HJ-Bq-7jk"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
         </view>
     </objects>
 </document>

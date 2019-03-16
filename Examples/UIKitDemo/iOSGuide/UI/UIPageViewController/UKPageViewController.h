@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PGPageViewController : UIViewController
+@interface UKPageViewController : UIViewController
 
 @end
 
