@@ -21,7 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    gcdDemo = [GCDDemo new];
+    //gcdDemo = [GCDDemo new];
+    [GCDDemo asyncConcurrent];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

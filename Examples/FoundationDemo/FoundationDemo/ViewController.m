@@ -30,7 +30,7 @@
     
     [self.marr addObject:@{@"基础知识点":@[@[@"ARC", ARCViewController.class],
                                       @[@"锁", MCLockTableViewController.class],
-                                       @[@"多线程", MCThreadViewController.class],
+                                       @[@"多线程", GCDViewController.class],
                                        @[@"算法", MCArithmeticTableViewController.class]
                                       ]}];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"dftcell"];
@@ -59,8 +59,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *arr = [[self.marr objectAtIndex:indexPath.section].allValues.firstObject objectAtIndex:indexPath.row];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BasicKnowledge" bundle:nil];
-    UIViewController *destVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(arr.lastObject)];
-    [self.navigationController pushViewController:destVC animated:YES];
+    UIViewController *destVC;
+    @try {
+        destVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(arr.lastObject)];
+    } @catch (NSException *exception) {
+        destVC = [arr.lastObject new];
+    } @finally {
+        [self.navigationController pushViewController:[arr.lastObject new] animated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

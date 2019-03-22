@@ -6,14 +6,12 @@ PODS:
   - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
   - Expecta (1.0.6)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
   - MCFoundation (0.2.0)
   - MCLogger (0.3.0):
     - CocoaLumberjack (~> 3.0)
-    - FMDB (~> 2.6)
     - MCFoundation (~> 0.2)
+    - SocketRocket (~> 0.5)
+  - SocketRocket (0.5.1)
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -28,9 +26,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   MCFoundation: 042b7ac8272e26f98928f03a49aada4c454ae8e2
-  MCLogger: 1ca51b093e1b348dabb329ed5dba927fca24878d
+  MCLogger: eb89b889572d1cdf09d00bf4d506da676a2413f6
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: 70cc6189e3c55da3d6bb0b455650ae680179ab78

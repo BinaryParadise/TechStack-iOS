@@ -262,9 +262,9 @@
 		CE6E272322043EC8003AB8FB /* GCD */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E272422043EC8003AB8FB /* GCDDemo.h */,
-				CE6E272522043EC8003AB8FB /* GCDViewController.m */,
 				CE6E272622043EC8003AB8FB /* GCDViewController.h */,
+				CE6E272522043EC8003AB8FB /* GCDViewController.m */,
+				CE6E272422043EC8003AB8FB /* GCDDemo.h */,
 				CE6E272722043EC8003AB8FB /* GCDDemo.m */,
 			);
 			path = GCD;

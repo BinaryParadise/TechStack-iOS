@@ -8,14 +8,17 @@
 
 #import "MCLockTableViewController.h"
 #import <libkern/OSAtomic.h>
+#include <pthread/pthread.h>
 
 static OSSpinLock oslock = OS_SPINLOCK_INIT;
 
 @interface MCLockTableViewController () {
     NSUInteger _count;
+    pthread_mutex_t _mutex;
 }
 
 @property (nonatomic, strong) NSLock *lock;
+@property (nonatomic, copy) NSDictionary<NSNumber *, NSString *> *actionsDict;
 
 @end
 
@@ -23,16 +26,26 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    _actionsDict = @{@(1000):@"go_OSSpinLock",
+                     @(1001):@"go_semaphore",
+                     @(1002):@"go_pthread_mutex",
+                     @(1003):@"go_nslock",
+                     };
+
+
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_NORMAL);
+
+    pthread_mutex_init(&_mutex, &attr);//创建锁
+
     self.lock = [[NSLock alloc] init];
 }
 
-- (IBAction)go_OSSpinLock:(id)sender {
+#pragma mark - Actions
+
+- (IBAction)go_OSSpinLock {
     LogWarn(@"");
     /**
      适用于等待队列任务
@@ -50,7 +63,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     });
 }
 
-- (IBAction)go_semaphore:(id)sender {
+- (IBAction)go_semaphore {
     LogWarn("----------------------信号量----------------------");
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); //传入值必须 >0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -80,7 +93,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     });
 }
 
-- (IBAction)go_nslock:(id)sender {
+- (IBAction)go_nslock {
     _count = 5;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self selliPhone];
@@ -102,6 +115,32 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
             break;
         }
         //[self.lock unlock];
+    }
+}
+
+- (void)go_pthread_mutex {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        if (pthread_mutex_trylock(&self->_mutex) == 0) {
+            LogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
+            sleep(3);
+            LogDebug(@"解锁... %@", [NSThread currentThread]);
+            pthread_mutex_unlock(&self->_mutex);
+        } else {
+            LogDebug(@"加锁中 %@", [NSThread currentThread]);
+        }
+    });
+}
+
+#pragma mark - UITableViewDataSource
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSUInteger tag = [tableView cellForRowAtIndexPath:indexPath].tag;
+    NSString *selector = [self.actionsDict objectForKey:@(tag)];
+    if (selector.length > 0) {
+        if([self respondsToSelector:NSSelectorFromString(selector)]) {
+            [self performSelector:NSSelectorFromString(selector) withObject:nil];
+        }
     }
 }
 

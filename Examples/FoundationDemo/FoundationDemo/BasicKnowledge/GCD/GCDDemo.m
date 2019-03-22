@@ -28,6 +28,16 @@
     return self;
 }
 
++ (void)taskProcesser:(NSString *)task intV:(int)intv {
+    void (^inlineBlock1)(void) = ^() {
+        LogWarn(@"%@：-%d, %@", task, intv, [NSThread currentThread]);
+    };
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        sleep(intv);
+        inlineBlock1();
+    });
+}
+
 + (void)asyncConcurrent {
     //创建一个并行队列
     dispatch_queue_t queue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
@@ -36,13 +46,13 @@
     
     //异步执行将开启新线程
     dispatch_async(queue, ^{
-        LogWarn(@"任务1：%@", [NSThread currentThread]);
+        [self taskProcesser:@"任务1" intV:3];
     });
     dispatch_async(queue, ^{
-        LogWarn(@"任务2：%@", [NSThread currentThread]);
+        [self taskProcesser:@"任务2" intV:2];
     });
     dispatch_async(queue, ^{
-        LogWarn(@"任务3：%@", [NSThread currentThread]);
+        [self taskProcesser:@"任务3" intV:1];
     });
     
     LogInfo(@"-----------");
