@@ -6,9 +6,9 @@
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MCDemoViewController.h"
 
-@interface ViewController : UITableViewController
+@interface ViewController : MCDemoViewController
 
 
 @end

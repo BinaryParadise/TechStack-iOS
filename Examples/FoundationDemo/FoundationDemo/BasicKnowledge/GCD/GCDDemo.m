@@ -28,9 +28,15 @@
     return self;
 }
 
-+ (void)taskProcesser:(NSString *)task intV:(int)intv {
++ (instancetype)demoWithName:(NSString *)taskName {
+    GCDDemo *demo = [GCDDemo new];
+    demo.taskName = taskName;
+    return demo;
+}
+
++ (void)taskProcesser:(GCDDemo *)demo intV:(int)intv {
     void (^inlineBlock1)(void) = ^() {
-        LogWarn(@"%@：-%d, %@", task, intv, [NSThread currentThread]);
+        LogWarn(@"%@, %@", demo.taskName, [NSThread currentThread]);
     };
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         sleep(intv);
@@ -45,14 +51,18 @@
     LogInfo(@"-----------");
     
     //异步执行将开启新线程
+    __block GCDDemo *demo = [GCDDemo demoWithName:@"任务一"];
     dispatch_async(queue, ^{
-        [self taskProcesser:@"任务1" intV:3];
+        [self taskProcesser:demo intV:3];
     });
     dispatch_async(queue, ^{
-        [self taskProcesser:@"任务2" intV:2];
+        demo.taskName = @"任务二";
+        [self taskProcesser:demo intV:2];
     });
     dispatch_async(queue, ^{
-        [self taskProcesser:@"任务3" intV:1];
+        demo = [GCDDemo demoWithName:@"任务三"];
+        [self taskProcesser:demo intV:1];
+        demo = nil;
     });
     
     LogInfo(@"-----------");

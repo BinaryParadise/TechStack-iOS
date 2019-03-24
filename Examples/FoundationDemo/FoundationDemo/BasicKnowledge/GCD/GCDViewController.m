@@ -23,6 +23,7 @@
     // Do any additional setup after loading the view from its nib.
     //gcdDemo = [GCDDemo new];
     [GCDDemo asyncConcurrent];
+    LogError(@"what?");
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

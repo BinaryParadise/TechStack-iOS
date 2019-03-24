@@ -17,6 +17,10 @@
  */
 @interface GCDDemo : NSObject
 
+@property (nonatomic, copy) NSString *taskName;
+
++ (instancetype)demoWithName:(NSString *)taskName;
+
 /**
  异步执行+并行队列
  */

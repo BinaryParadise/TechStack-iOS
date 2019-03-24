@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <MCLogger/MCLogger.h>
+#import "Controller/ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithNibName:@"MCDemoViewController" bundle:nil]];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    [self initMCLogger];
     return YES;
 }
 
+- (void)initMCLogger {
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081/ws/log"]];
+    [MCLogger startNetworkMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081/ws/netlog"]];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
