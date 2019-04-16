@@ -21,6 +21,8 @@
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
 		8115A8D1D2A913C652306B5F /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */; };
 		B119E6897EE90DF6C5EC5B61 /* libPods-FoundationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */; };
+		CE25BB612265E0190067E97B /* MCMacroController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB602265E0190067E97B /* MCMacroController.m */; };
+		CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB6C2265E0F80067E97B /* MCMacroTest.m */; };
 		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
 		CE32B928221C066E00567417 /* JSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B927221C066E00567417 /* JSModel.m */; };
 		CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* AppDelegate.m */; };
@@ -83,6 +85,13 @@
 		4F6E80BAF777C5F259F0A014 /* Pods-FoundationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		732AAF20ED0031F8A4F84515 /* Pods-FoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE25BB5F2265E0190067E97B /* MCMacroController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroController.h; sourceTree = "<group>"; };
+		CE25BB602265E0190067E97B /* MCMacroController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMacroController.m; sourceTree = "<group>"; };
+		CE25BB622265E0910067E97B /* MCMacroDefine1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroDefine1.h; sourceTree = "<group>"; };
+		CE25BB652265E09F0067E97B /* MCMacroDefine2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroDefine2.h; sourceTree = "<group>"; };
+		CE25BB682265E0A90067E97B /* MCMacroDefine3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroDefine3.h; sourceTree = "<group>"; };
+		CE25BB6B2265E0F80067E97B /* MCMacroTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroTest.h; sourceTree = "<group>"; };
+		CE25BB6C2265E0F80067E97B /* MCMacroTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMacroTest.m; sourceTree = "<group>"; };
 		CE32B923221BFDE900567417 /* JSARCDemoB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSARCDemoB.h; sourceTree = "<group>"; };
 		CE32B924221BFDE900567417 /* JSARCDemoB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSARCDemoB.m; sourceTree = "<group>"; };
 		CE32B926221C066E00567417 /* JSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSModel.h; sourceTree = "<group>"; };
@@ -172,6 +181,7 @@
 		240BB62B22280C2400CB0722 /* BasicKnowledge */ = {
 			isa = PBXGroup;
 			children = (
+				CE25BB5E2265E0050067E97B /* Macro */,
 				CEBFA489222E4FEC00A68094 /* Singleton */,
 				240BB62D22280D2A00CB0722 /* MCBasicKnowledgeDefine.h */,
 				240BB6332228144400CB0722 /* BasicKnowledge.storyboard */,
@@ -248,6 +258,20 @@
 				78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE25BB5E2265E0050067E97B /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				CE25BB5F2265E0190067E97B /* MCMacroController.h */,
+				CE25BB602265E0190067E97B /* MCMacroController.m */,
+				CE25BB622265E0910067E97B /* MCMacroDefine1.h */,
+				CE25BB652265E09F0067E97B /* MCMacroDefine2.h */,
+				CE25BB682265E0A90067E97B /* MCMacroDefine3.h */,
+				CE25BB6B2265E0F80067E97B /* MCMacroTest.h */,
+				CE25BB6C2265E0F80067E97B /* MCMacroTest.m */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		CE6E26DC2202F743003AB8FB = {
@@ -610,6 +634,7 @@
 				CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */,
 				242D4E3622472C650022BD45 /* MCDemoViewController.m in Sources */,
 				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
+				CE25BB612265E0190067E97B /* MCMacroController.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
 				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
@@ -618,6 +643,7 @@
 				242D4E2B224727840022BD45 /* MCDemoTableViewCell.m in Sources */,
 				242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */,
 				CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */,
+				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
 				242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */,
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
 				CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */,

@@ -77,7 +77,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 2) {
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager GET:@"http://127.0.0.1:8081/japi/logs" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [manager GET:@"https://www.apple.com/cn/iPhoneX1" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             LogDebug(@"success")
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             LogDebug(@"%@ %@", [NSURLSessionConfiguration defaultSessionConfiguration], task.taskDescription);
