@@ -2,7 +2,7 @@
 //  MCSingletonDemo.m
 //  FoundationDemo
 //
-//  Created by lingjing on 2019/3/5.
+//  Created by joengzi on 2019/3/5.
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 

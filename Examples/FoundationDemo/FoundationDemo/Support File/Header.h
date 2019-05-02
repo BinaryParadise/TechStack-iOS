@@ -14,20 +14,21 @@ static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #define Header_h
 
 #if DEBUG
-    #define LogInfo(frmt, ...)      DDLogInfo(@"✢ " frmt, ##__VA_ARGS__);
-    #define LogDebug(frmt, ...)     DDLogDebug(@"◦ " frmt, ##__VA_ARGS__);
-    #define LogWarn(frmt, ...)      DDLogWarn(@"⚡︎ " frmt, ##__VA_ARGS__);
-    #define LogError(frmt, ...)     DDLogError(@"‼️ " frmt, ##__VA_ARGS__);
-    #define LogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__);
+    #define MCLogInfo(frmt, ...)      DDLogInfo(@"" frmt, ##__VA_ARGS__);
+    #define MCLogDebug(frmt, ...)     DDLogDebug(@"" frmt, ##__VA_ARGS__);
+    #define MCLogWarn(frmt, ...)      DDLogWarn(@"" frmt, ##__VA_ARGS__);
+    #define MCLogError(frmt, ...)     DDLogError(@"" frmt, ##__VA_ARGS__);
+    #define MCLogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__);
+    #define NSLog(frmt, ...)          DDLogInfo(@"" frmt, ##__VA_ARGS__);
 #else
-    #define LogInfo(frmt, ...)
-    #define LogWarn(frmt, ...)
-    #define LogError(frmt, ...)
+    #define MCLogInfo(frmt, ...)
+    #define MCLogWarn(frmt, ...)
+    #define MCLogError(frmt, ...)
     #define NSLog(...)
 #endif
 
 #define MACH_TIME_START    NSDate *startDate = [NSDate date];\
 
-#define MACH_TIME_END(fmt)   LogWarn(fmt @"：%f", [NSDate date].timeIntervalSince1970 - startDate.timeIntervalSince1970);
+#define MACH_TIME_END(fmt)   MCLogWarn(fmt @"：%f", [NSDate date].timeIntervalSince1970 - startDate.timeIntervalSince1970);
 
 #endif /* Header_h */

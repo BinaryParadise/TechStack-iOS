@@ -23,11 +23,11 @@
     // Do any additional setup after loading the view from its nib.
     //gcdDemo = [GCDDemo new];
     [GCDDemo asyncConcurrent];
-    LogError(@"what?");
+    MCLogError(@"what?");
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LogWarn(@"%@", [NSThread mainThread]);
+    MCLogWarn(@"%@", [NSThread mainThread]);
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;

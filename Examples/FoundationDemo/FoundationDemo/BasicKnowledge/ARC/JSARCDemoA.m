@@ -13,7 +13,7 @@
 - (void)testAssign {
     self.assignDemo = [[JSARCDemoA alloc] initWithTag:@"立即释放"];
     
-    LogWarn(@"使用assign修饰对象，会在方法执行完成后立即释放,造成野指针");
+    MCLogWarn(@"使用assign修饰对象，会在方法执行完成后立即释放,造成野指针");
 }
 
 - (void)testWeak {

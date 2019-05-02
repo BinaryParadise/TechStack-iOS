@@ -23,7 +23,7 @@
     
     self.memoryConstruct = [MemoryConstruction new];
     [self.memoryConstruct testMethod:19999 str:@"000000000000000"];
-    LogWarn(@"%@", self.memoryConstruct);
+    MCLogWarn(@"%@", self.memoryConstruct);
     
 }
 

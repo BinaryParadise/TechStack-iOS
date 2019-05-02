@@ -7,7 +7,7 @@
 //
 
 #import "Arithmetic/MCArithmeticTableViewController.h"
-#import "Lock/MCLockTableViewController.h"
-#import "Thread/MCThreadViewController.h"
+#import "Lock/MCLockActions.h"
+#import "Thread/MCThreadActions.h"
 #import "ARC/ARCViewController.h"
 #import "GCD/GCDViewController.h"

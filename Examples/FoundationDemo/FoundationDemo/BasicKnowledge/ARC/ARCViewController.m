@@ -32,27 +32,27 @@
         [demoB doSomething];
     }];
 
-    LogInfo(@"");
+    MCLogInfo(@"");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    LogInfo(@"");
+    MCLogInfo(@"");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    LogInfo(@"");
+    MCLogInfo(@"");
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    LogInfo(@"");
+    MCLogInfo(@"");
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    LogInfo(@"");
+    MCLogInfo(@"");
 }
 
 - (IBAction)releaseObj:(id)sender {
@@ -63,7 +63,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    LogInfo(@"");
+    MCLogInfo(@"");
 }
 
 @end

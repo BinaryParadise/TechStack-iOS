@@ -6,12 +6,9 @@
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import <MCDynamicAction/MCDynamicActionProtocol.h>
 
-@interface JSNSArrayViewController : UIViewController
+@interface MCNSArrayActions : NSObject <MCDynamicActionProtocol>
 
 @end
-
-NS_ASSUME_NONNULL_END

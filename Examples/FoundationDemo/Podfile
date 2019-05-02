@@ -7,6 +7,8 @@ target 'FoundationDemo' do
 
   # Pods for FoundationDemo
   pod 'MCLogger', :path => '../../../MCLogger'
+  pod 'MCDynamicAction', :path => '../MCDynamicAction'
+  pod 'MBProgressHUD'
   pod 'MCUIKit'
   pod 'Masonry'
   pod 'AFNetworking'

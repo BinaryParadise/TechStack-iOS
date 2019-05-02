@@ -6,19 +6,18 @@
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
-#import "JSNSArrayViewController.h"
+#import "MCNSArrayActions.h"
 #import "NSMutableArray+JSSafety.h"
 
-@interface JSNSArrayViewController ()
+@interface MCNSArrayActions ()
 
 @property (nonatomic, strong) NSMutableArray *marr;
 
 @end
 
-@implementation JSNSArrayViewController
+@implementation MCNSArrayActions
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)safeUse {
     // Do any additional setup after loading the view.
     NSMutableArray *marr = [NSMutableArray array];
 
@@ -47,7 +46,7 @@
 #if 1
         [marr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if (!running && show) {
-                LogWarn(@"%@", obj);
+                MCLogWarn(@"%@", obj);
                 show = NO;
             }
         }];
@@ -56,9 +55,9 @@
     });
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        LogWarn(@"休眠");
+        MCLogWarn(@"休眠");
         [NSThread sleepForTimeInterval:0.2];
-        LogWarn(@"取消");
+        MCLogWarn(@"取消");
         running = NO;
         for (NSUInteger i=65535*800; i<65535*900; i++) {
             [marr removeObjectAtIndex:i];
@@ -67,18 +66,8 @@
 }
 
 - (NSUInteger)arrayCount {
-    LogWarn(@"");
+    MCLogWarn(@"");
     return [self.marr count];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

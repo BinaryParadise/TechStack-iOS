@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240BB63122280D4A00CB0722 /* MCLockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240BB62F22280D4A00CB0722 /* MCLockTableViewController.m */; };
+		240BB63122280D4A00CB0722 /* MCLockActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 240BB62F22280D4A00CB0722 /* MCLockActions.m */; };
 		240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240BB6332228144400CB0722 /* BasicKnowledge.storyboard */; };
 		240F179C221D8C7600E4830D /* JSFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F179B221D8C7600E4830D /* JSFoundationTests.m */; };
-		242D4E2B224727840022BD45 /* MCDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E29224727840022BD45 /* MCDemoTableViewCell.m */; };
-		242D4E2C224727840022BD45 /* MCDemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242D4E2A224727840022BD45 /* MCDemoTableViewCell.xib */; };
+		2426ECC1227AE76E001947A9 /* Menus.json in Resources */ = {isa = PBXBuildFile; fileRef = 2426ECC0227AE76E001947A9 /* Menus.json */; };
+		2426ECC6227AEA62001947A9 /* MCDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426ECC4227AEA62001947A9 /* MCDemoTableViewCell.m */; };
+		2426ECC7227AEA62001947A9 /* MCDemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2426ECC5227AEA62001947A9 /* MCDemoTableViewCell.xib */; };
+		2426ECC9227AEC32001947A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2426ECC8227AEC32001947A9 /* Main.storyboard */; };
+		2426ECCD227AF1D4001947A9 /* MCFloatNumberActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426ECCB227AF1D4001947A9 /* MCFloatNumberActions.m */; };
 		242D4E2F224729DA0022BD45 /* MCDemoHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */; };
-		242D4E3622472C650022BD45 /* MCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E3422472C650022BD45 /* MCDemoViewController.m */; };
 		242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E3922472DFF0022BD45 /* UITableViewCell+MCRegister.m */; };
 		242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E3C22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m */; };
-		242D4E4022473A870022BD45 /* MCDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242D4E3E22473A870022BD45 /* MCDemoViewController.xib */; };
-		2449EC802222545100F466EE /* MCThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2449EC7F2222545000F466EE /* MCThreadViewController.m */; };
+		2449EC802222545100F466EE /* MCThreadActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2449EC7F2222545000F466EE /* MCThreadActions.m */; };
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
 		8115A8D1D2A913C652306B5F /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */; };
 		B119E6897EE90DF6C5EC5B61 /* libPods-FoundationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */; };
@@ -31,7 +32,6 @@
 		CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */; };
 		CE6E26F82202F745003AB8FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26F72202F745003AB8FB /* main.m */; };
 		CE6E27022202F745003AB8FB /* FoundationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27012202F745003AB8FB /* FoundationDemoTests.m */; };
-		CE6E270F2202F94C003AB8FB /* JSFloatNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E270E2202F94C003AB8FB /* JSFloatNumberViewController.m */; };
 		CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */; };
 		CE6E27182203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */; };
 		CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272522043EC8003AB8FB /* GCDViewController.m */; };
@@ -43,7 +43,7 @@
 		CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273322043EC8003AB8FB /* MemoryViewController.m */; };
 		CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273622043EC8003AB8FB /* MemoryConstruction.m */; };
 		CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */; };
-		CE6E274622057335003AB8FB /* JSNSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274522057335003AB8FB /* JSNSArrayViewController.m */; };
+		CE6E274622057335003AB8FB /* MCNSArrayActions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E274522057335003AB8FB /* MCNSArrayActions.m */; };
 		CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBFA48B222E502200A68094 /* MCSingletonDemo.m */; };
 /* End PBXBuildFile section */
 
@@ -59,26 +59,27 @@
 
 /* Begin PBXFileReference section */
 		1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		240BB62C22280C8E00CB0722 /* MCDataTypeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDataTypeDefine.h; sourceTree = "<group>"; };
 		240BB62D22280D2A00CB0722 /* MCBasicKnowledgeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCBasicKnowledgeDefine.h; sourceTree = "<group>"; };
-		240BB62E22280D4A00CB0722 /* MCLockTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCLockTableViewController.h; sourceTree = "<group>"; };
-		240BB62F22280D4A00CB0722 /* MCLockTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCLockTableViewController.m; sourceTree = "<group>"; };
+		240BB62E22280D4A00CB0722 /* MCLockActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCLockActions.h; sourceTree = "<group>"; };
+		240BB62F22280D4A00CB0722 /* MCLockActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCLockActions.m; sourceTree = "<group>"; };
 		240BB6332228144400CB0722 /* BasicKnowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicKnowledge.storyboard; sourceTree = "<group>"; };
 		240F179B221D8C7600E4830D /* JSFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFoundationTests.m; sourceTree = "<group>"; };
-		242D4E28224727840022BD45 /* MCDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDemoTableViewCell.h; sourceTree = "<group>"; };
-		242D4E29224727840022BD45 /* MCDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDemoTableViewCell.m; sourceTree = "<group>"; };
-		242D4E2A224727840022BD45 /* MCDemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDemoTableViewCell.xib; sourceTree = "<group>"; };
+		2426ECC0227AE76E001947A9 /* Menus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Menus.json; sourceTree = "<group>"; };
+		2426ECC3227AEA62001947A9 /* MCDemoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDemoTableViewCell.h; sourceTree = "<group>"; };
+		2426ECC4227AEA62001947A9 /* MCDemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDemoTableViewCell.m; sourceTree = "<group>"; };
+		2426ECC5227AEA62001947A9 /* MCDemoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDemoTableViewCell.xib; sourceTree = "<group>"; };
+		2426ECC8227AEC32001947A9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2426ECCA227AED4D001947A9 /* MCNSArrayActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNSArrayActions.h; sourceTree = "<group>"; };
+		2426ECCB227AF1D4001947A9 /* MCFloatNumberActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFloatNumberActions.m; sourceTree = "<group>"; };
+		2426ECCC227AF1D4001947A9 /* MCFloatNumberActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFloatNumberActions.h; sourceTree = "<group>"; };
 		242D4E2D224729DA0022BD45 /* MCDemoHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDemoHeaderFooterView.h; sourceTree = "<group>"; };
 		242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDemoHeaderFooterView.m; sourceTree = "<group>"; };
-		242D4E3422472C650022BD45 /* MCDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDemoViewController.m; sourceTree = "<group>"; };
 		242D4E3822472DFF0022BD45 /* UITableViewCell+MCRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MCRegister.h"; sourceTree = "<group>"; };
 		242D4E3922472DFF0022BD45 /* UITableViewCell+MCRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MCRegister.m"; sourceTree = "<group>"; };
 		242D4E3B22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewHeaderFooterView+MCRegister.h"; sourceTree = "<group>"; };
 		242D4E3C22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+MCRegister.m"; sourceTree = "<group>"; };
-		242D4E3E22473A870022BD45 /* MCDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDemoViewController.xib; sourceTree = "<group>"; };
-		242D4E3F22473A870022BD45 /* MCDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDemoViewController.h; sourceTree = "<group>"; };
-		2449EC7E2222545000F466EE /* MCThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCThreadViewController.h; sourceTree = "<group>"; };
-		2449EC7F2222545000F466EE /* MCThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCThreadViewController.m; sourceTree = "<group>"; };
+		2449EC7E2222545000F466EE /* MCThreadActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCThreadActions.h; sourceTree = "<group>"; };
+		2449EC7F2222545000F466EE /* MCThreadActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCThreadActions.m; sourceTree = "<group>"; };
 		24F1FB6D22241F9E0066D008 /* MCArithmeticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCArithmeticTableViewController.h; sourceTree = "<group>"; };
 		24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCArithmeticTableViewController.m; sourceTree = "<group>"; };
 		32B1511F97C77E5D2A8A1636 /* Pods-FoundationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,8 +109,6 @@
 		CE6E26FD2202F745003AB8FB /* FoundationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6E27012202F745003AB8FB /* FoundationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationDemoTests.m; sourceTree = "<group>"; };
 		CE6E27032202F745003AB8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE6E270D2202F94C003AB8FB /* JSFloatNumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFloatNumberViewController.h; sourceTree = "<group>"; };
-		CE6E270E2202F94C003AB8FB /* JSFloatNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFloatNumberViewController.m; sourceTree = "<group>"; };
 		CE6E27142203E750003AB8FB /* TestPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPrefix.h; sourceTree = "<group>"; };
 		CE6E27152203E88C003AB8FB /* NSNumber+JSConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JSConvert.h"; sourceTree = "<group>"; };
 		CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JSConvert.m"; sourceTree = "<group>"; };
@@ -132,8 +131,7 @@
 		CE6E273F22043F7E003AB8FB /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		CE6E274122057144003AB8FB /* NSMutableArray+JSSafety.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JSSafety.h"; sourceTree = "<group>"; };
 		CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JSSafety.m"; sourceTree = "<group>"; };
-		CE6E274422057335003AB8FB /* JSNSArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNSArrayViewController.h; sourceTree = "<group>"; };
-		CE6E274522057335003AB8FB /* JSNSArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNSArrayViewController.m; sourceTree = "<group>"; };
+		CE6E274522057335003AB8FB /* MCNSArrayActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCNSArrayActions.m; sourceTree = "<group>"; };
 		CEBFA48A222E502200A68094 /* MCSingletonDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCSingletonDemo.h; sourceTree = "<group>"; };
 		CEBFA48B222E502200A68094 /* MCSingletonDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCSingletonDemo.m; sourceTree = "<group>"; };
 		E5D422805D85CBDAF30EDDB1 /* Pods-FoundationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,8 +160,8 @@
 		240BB621222808CA00CB0722 /* Lock */ = {
 			isa = PBXGroup;
 			children = (
-				240BB62E22280D4A00CB0722 /* MCLockTableViewController.h */,
-				240BB62F22280D4A00CB0722 /* MCLockTableViewController.m */,
+				240BB62E22280D4A00CB0722 /* MCLockActions.h */,
+				240BB62F22280D4A00CB0722 /* MCLockActions.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -171,7 +169,6 @@
 		240BB62A22280A6900CB0722 /* DataType */ = {
 			isa = PBXGroup;
 			children = (
-				240BB62C22280C8E00CB0722 /* MCDataTypeDefine.h */,
 				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
 				CE6E274022057076003AB8FB /* NSArray */,
 			);
@@ -198,9 +195,9 @@
 		242D4E27224727590022BD45 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				242D4E28224727840022BD45 /* MCDemoTableViewCell.h */,
-				242D4E29224727840022BD45 /* MCDemoTableViewCell.m */,
-				242D4E2A224727840022BD45 /* MCDemoTableViewCell.xib */,
+				2426ECC3227AEA62001947A9 /* MCDemoTableViewCell.h */,
+				2426ECC4227AEA62001947A9 /* MCDemoTableViewCell.m */,
+				2426ECC5227AEA62001947A9 /* MCDemoTableViewCell.xib */,
 				242D4E2D224729DA0022BD45 /* MCDemoHeaderFooterView.h */,
 				242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */,
 				242D4E3822472DFF0022BD45 /* UITableViewCell+MCRegister.h */,
@@ -211,23 +208,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		242D4E3222472C4F0022BD45 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				242D4E3F22473A870022BD45 /* MCDemoViewController.h */,
-				242D4E3422472C650022BD45 /* MCDemoViewController.m */,
-				242D4E3E22473A870022BD45 /* MCDemoViewController.xib */,
-				CE6E26EB2202F743003AB8FB /* ViewController.h */,
-				CE6E26EC2202F743003AB8FB /* ViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		2449EC7D2222541000F466EE /* Thread */ = {
 			isa = PBXGroup;
 			children = (
-				2449EC7E2222545000F466EE /* MCThreadViewController.h */,
-				2449EC7F2222545000F466EE /* MCThreadViewController.m */,
+				2449EC7E2222545000F466EE /* MCThreadActions.h */,
+				2449EC7F2222545000F466EE /* MCThreadActions.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -238,6 +223,7 @@
 				CE6E273F22043F7E003AB8FB /* Header.h */,
 				CE6E26F62202F745003AB8FB /* Info.plist */,
 				CE6E26F72202F745003AB8FB /* main.m */,
+				2426ECC0227AE76E001947A9 /* Menus.json */,
 			);
 			path = "Support File";
 			sourceTree = "<group>";
@@ -299,7 +285,9 @@
 			children = (
 				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
 				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
-				242D4E3222472C4F0022BD45 /* Controller */,
+				CE6E26EB2202F743003AB8FB /* ViewController.h */,
+				CE6E26EC2202F743003AB8FB /* ViewController.m */,
+				2426ECC8227AEC32001947A9 /* Main.storyboard */,
 				242D4E27224727590022BD45 /* View */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
 				240BB62A22280A6900CB0722 /* DataType */,
@@ -327,10 +315,10 @@
 		CE6E270C2202F8F1003AB8FB /* FloatNumber */ = {
 			isa = PBXGroup;
 			children = (
+				2426ECCC227AF1D4001947A9 /* MCFloatNumberActions.h */,
+				2426ECCB227AF1D4001947A9 /* MCFloatNumberActions.m */,
 				CE6E27152203E88C003AB8FB /* NSNumber+JSConvert.h */,
 				CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */,
-				CE6E270D2202F94C003AB8FB /* JSFloatNumberViewController.h */,
-				CE6E270E2202F94C003AB8FB /* JSFloatNumberViewController.m */,
 			);
 			path = FloatNumber;
 			sourceTree = "<group>";
@@ -384,8 +372,8 @@
 		CE6E274022057076003AB8FB /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E274422057335003AB8FB /* JSNSArrayViewController.h */,
-				CE6E274522057335003AB8FB /* JSNSArrayViewController.m */,
+				2426ECCA227AED4D001947A9 /* MCNSArrayActions.h */,
+				CE6E274522057335003AB8FB /* MCNSArrayActions.m */,
 				CE6E274122057144003AB8FB /* NSMutableArray+JSSafety.h */,
 				CE6E274222057144003AB8FB /* NSMutableArray+JSSafety.m */,
 			);
@@ -500,9 +488,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */,
-				242D4E4022473A870022BD45 /* MCDemoViewController.xib in Resources */,
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
-				242D4E2C224727840022BD45 /* MCDemoTableViewCell.xib in Resources */,
+				2426ECC7227AEA62001947A9 /* MCDemoTableViewCell.xib in Resources */,
+				2426ECC9227AEC32001947A9 /* Main.storyboard in Resources */,
+				2426ECC1227AE76E001947A9 /* Menus.json in Resources */,
 				240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,21 +615,20 @@
 				CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */,
 				CE32B928221C066E00567417 /* JSModel.m in Sources */,
 				242D4E2F224729DA0022BD45 /* MCDemoHeaderFooterView.m in Sources */,
-				240BB63122280D4A00CB0722 /* MCLockTableViewController.m in Sources */,
+				240BB63122280D4A00CB0722 /* MCLockActions.m in Sources */,
 				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
 				CE6E26ED2202F743003AB8FB /* ViewController.m in Sources */,
-				2449EC802222545100F466EE /* MCThreadViewController.m in Sources */,
+				2426ECC6227AEA62001947A9 /* MCDemoTableViewCell.m in Sources */,
+				2449EC802222545100F466EE /* MCThreadActions.m in Sources */,
 				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
 				CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */,
-				242D4E3622472C650022BD45 /* MCDemoViewController.m in Sources */,
 				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
 				CE25BB612265E0190067E97B /* MCMacroController.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
+				2426ECCD227AF1D4001947A9 /* MCFloatNumberActions.m in Sources */,
 				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
-				CE6E270F2202F94C003AB8FB /* JSFloatNumberViewController.m in Sources */,
-				CE6E274622057335003AB8FB /* JSNSArrayViewController.m in Sources */,
-				242D4E2B224727840022BD45 /* MCDemoTableViewCell.m in Sources */,
+				CE6E274622057335003AB8FB /* MCNSArrayActions.m in Sources */,
 				242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */,
 				CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */,
 				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
