@@ -791,7 +791,9 @@
 			baseConfigurationReference = E5D422805D85CBDAF30EDDB1 /* Pods-FoundationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CC = /Users/bonana/Github/ClangPlugin/llvm_xcode/Debug/bin/clang;
 				CODE_SIGN_STYLE = Automatic;
+				COMPILER_INDEX_STORE_ENABLE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationDemo/Support File/Header.h";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -799,10 +801,50 @@
 					"COCOAPODS=1",
 					"MCLoggerEnable=1",
 				);
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "FoundationDemo/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MCDynamicAction\"",
+					"-l\"MCLogger\"",
+					"-l\"MCUIKit\"",
+					"-l\"MJExtension\"",
+					"-l\"Masonry\"",
+					"-l\"SSKeychain\"",
+					"-l\"SocketRocket\"",
+					"-l\"icucore\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-Xclang",
+					"-load",
+					"-Xclang",
+					/Users/bonana/Github/ClangPlugin/AnnotationPlugin.dylib,
+					"-Xclang",
+					"-add-plugin",
+					"-Xclang",
+					AnnotationPlugin,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joenggaa.FoundationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -815,13 +857,55 @@
 			baseConfigurationReference = 4F6E80BAF777C5F259F0A014 /* Pods-FoundationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CC = /Users/bonana/Github/ClangPlugin/llvm_xcode/Debug/bin/clang;
 				CODE_SIGN_STYLE = Automatic;
+				COMPILER_INDEX_STORE_ENABLE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationDemo/Support File/Header.h";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "FoundationDemo/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MCDynamicAction\"",
+					"-l\"MCLogger\"",
+					"-l\"MCUIKit\"",
+					"-l\"MJExtension\"",
+					"-l\"Masonry\"",
+					"-l\"SSKeychain\"",
+					"-l\"SocketRocket\"",
+					"-l\"icucore\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-Xclang",
+					"-load",
+					"-Xclang",
+					/Users/bonana/Github/ClangPlugin/AnnotationPlugin.dylib,
+					"-Xclang",
+					"-add-plugin",
+					"-Xclang",
+					AnnotationPlugin,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joenggaa.FoundationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

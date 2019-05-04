@@ -15,9 +15,9 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-#warning The macro definition has been valid at the time of the last imported definition!
-        //宏定义已在时最后导入的定义有效
+        //宏定义已寸在时以最后导入的定义为准
         int i = kMCMacroTestValue;
+        MCLogDebug(@"%d", i)
     }
     return self;
 }

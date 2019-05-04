@@ -1,24 +1,12 @@
 //
 //  AppDelegate.m
-//  FoundationDemo
+//  ClangDemo
 //
-//  Created by joengzi on 2019/1/31.
-//  Copyright © 2019 joenggaa. All rights reserved.
+//  Created by joengzi on 2019/5/3.
+//  Copyright © 2019年 joenggaa. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <MCLogger/MCLogger.h>
-#import "ViewController.h"
-
-@interface testClass : NSObject
-
-@property (nonatomic, strong) NSString *title;
-
-@end
-
-@implementation testClass
-
-@end
 
 @interface AppDelegate ()
 
@@ -29,13 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self initMCLogger];
     return YES;
 }
 
-- (void)initMCLogger {
-    [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

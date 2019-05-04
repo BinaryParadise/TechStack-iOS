@@ -1,5 +1,3 @@
-# 数字
-
 ## bool 与 BOOL
 
 C语言标准中没有布尔型变量，C++中的bool类型，为true和false，这在许多其他的类C语言中都是一样的，例如java、C#、php等，但在ObjC中，你可以使用bool类型，但更建议使用ObjC专用的`BOOL`类型，这个基本布尔型的值为YES和NO。

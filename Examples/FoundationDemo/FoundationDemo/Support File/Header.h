@@ -6,7 +6,7 @@
 //  Copyright © 2019 joenggaa. All rights reserved.
 //
 
-#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
