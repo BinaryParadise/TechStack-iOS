@@ -1,4 +1,4 @@
-## 自定义clang的Attribute
+## 自定义clang的Attribute (`__attribtue__`)
 
 [官方文档](https://clang.llvm.org/docs/InternalsManual.html#how-to-add-an-attribute)
 
