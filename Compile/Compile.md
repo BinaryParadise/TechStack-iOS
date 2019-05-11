@@ -2,6 +2,8 @@
 
  - [iOS编译过程的原理和应用](https://blog.csdn.net/Hello_Hwc/article/details/53557308)
  - [iOS底层探索（二） - 写给小白看的Clang编译过程原理](https://www.jianshu.com/p/c9fccc93ed15)
+ - [编写我的第一个 Clang 插件：检测 ObjC 中的类声明规范](https://www.itcodemonkey.com/article/7459.html)
+ - [LLVM & Clang 入门](https://github.com/CYBoys/Blogs/blob/master/LLVM_Clang/LLVM%20%26%20Clang%20%E5%85%A5%E9%97%A8.md)
 
 ## 前言
 
@@ -21,14 +23,13 @@ iOS开发目前的常用语言是：Objective和Swift。二者都是编译语言
 - 插入编译期脚本
 - 提高项目编译速度
 
-对于不想看我啰里八嗦讲一大堆原理的同学，可以直接跳到本文的最后一个章节。
+对于不想看我啰里八嗦讲一大堆原理的同学，可以直接跳到本文的最后一个章节。[LLVM源码编译](#源码编译)
 
 `三段式设计`
 
-![](../images/clang_00.webp)
+![](/images/clang_00.webp)
 
-### 编译主要步骤
-
+> 编译主要步骤
   1. 源代码（source code） ->  
   2. 预处理器（preprocessor） ->   
   3. 编译器（compiler） ->  
@@ -37,7 +38,80 @@ iOS开发目前的常用语言是：Objective和Swift。二者都是编译语言
   6. 链接器（Linker） ->  
   7. 可执行文件（executables）
 
+## 自己编译LLVM
+
+  废话不多说，直接进入正题😍
+
+### 准备工作
+
+  Clang 需要用 CMake 和 Ninja 来编译，可以通过 Homebrew 安装
+
+    - 安装 Homebrew
+    ```ruby
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
+    - 安装 CMake 3.12.4
+    ```ruby
+    brew install cmake
+    brew link cmake
+    ```
+    - 安装 Ninja 1.8.2
+    ```ruby
+    brew install ninja
+    ```
+
+  ### 源码下载
+
+    下载 LLVM (clang 9)
+    ```ruby
+    git clone git@github.com:joenggaa/llvm.git llvm
+    #cang 源码需要安装到 llvm/tools 目录下
+    git clone git@github.com:joenggaa/clang.git llvm/tools/clang
+    #可选
+    git clone git@github.com:llvm-mirror/clang-tools-extra.git llvm/tools/clang/tools/extra
+    #可选
+    git clone git@github.com:llvm-mirror/compiler-rt.git llvm/projects/compiler-rt
+
+    export MLLVM_HOME=`pwd`
+    ```
+
+### 源码编译
+
+    在 llvm 同级目录下新建一个 llvm_build 目录，然后选择编译方式
+
+#### 1. 使用 Ninja 编译
+
+```ruby
+mkdir llvm_build && cd llvm_build
+cmake -G Ninja ../llvm -DCMAKE_INSTALL_PREFIX=../llvm_release
+
+# 执行编译，完成后llvm_build目录大概 21 GB
+ninja
+# [可选]执行安装，完成后llvm_release大概 12 GB
+ninja install
+```
+
+#### 2. 使用 Xcode 编译
+
+```ruby
+mkdir llvm_xcode && cd llvm_xcode
+cmake -G Xcode $MLLVM_HOME && open LLVM.xcodeproj
+```
+选择自动创建schemes，选择target`ALL_BUILD`，然后开始漫长的编译预计`1500s`
+
+出现以下错误时，可能是权限导致，加上`sudo`再次尝试编译
+```ruby
+Detecting C compiler ABI info - failed
+```
+
+编译成功后将权限还原到默认
+```ruby
+sudo chmod -R `whoami` 766 .
+sudo chown -R `whoami` .
+```
+
 ----------
+
 ## iOS编译
 
 Objective C采用Clang(swift采用[swift](https://swift.org/compiler-stdlib/#compiler-architecture))作为编译器前端，LLVM(Low level vritual machine)作为编译器后端。
@@ -484,5 +558,3 @@ XCode的pch文件是预编译文件，这里的内容在执行XCode build之前�
 编译器优化
 
 <img src="./images/compile_16.png">
-
-------

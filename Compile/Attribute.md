@@ -4,7 +4,7 @@
 
 ### 属性的结构
 
-属性定义在clang源码目录：`include/clang/Basic/Attr.td`
+属性定义在llvm源码：`include/clang/Basic/Attr.td`
 
 示例
 
