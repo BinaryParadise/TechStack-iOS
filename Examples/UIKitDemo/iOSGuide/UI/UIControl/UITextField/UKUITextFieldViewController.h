@@ -3,7 +3,7 @@
 //  iOSGuide
 //
 //  Created by joengzi on 2019/3/15.
-//  Copyright © 2019 joengzi. All rights reserved.
+//  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

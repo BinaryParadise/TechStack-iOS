@@ -9,6 +9,8 @@
 #ifndef Header_h
 #define Header_h
 
+#import <Peregrine/Peregrine.h>
+
 #if DEBUG
 
 #define PGLog(frmt, ...) NSLog(frmt,__func__,__LINE__, ##__VA_ARGS__);

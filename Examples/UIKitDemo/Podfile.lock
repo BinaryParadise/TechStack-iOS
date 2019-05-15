@@ -1,0 +1,16 @@
+PODS:
+  - Peregrine (0.1.1)
+
+DEPENDENCIES:
+  - Peregrine (from `../../../Peregrine`)
+
+EXTERNAL SOURCES:
+  Peregrine:
+    :path: ../../../Peregrine
+
+SPEC CHECKSUMS:
+  Peregrine: 7b7e3acc50491cc118bc78a0f86fda371e26e92d
+
+PODFILE CHECKSUM: 955cd2466de3e97d1263155da6d0d27fa7dca45f
+
+COCOAPODS: 1.4.0
