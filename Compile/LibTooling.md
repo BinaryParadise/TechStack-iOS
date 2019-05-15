@@ -12,7 +12,7 @@ cd llvm/tools/clang/tools && mkdir clang-peregrine && cd clang-peregrine
 ### 输出参数
 
 ```ruby
-~/Github/Peregrine/Example/Peregrine/PeregrineActionTest.m
+${HOME}/Github/Peregrine/Example/Peregrine/PeregrineActionTest.m
 --
 -isysroot
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk

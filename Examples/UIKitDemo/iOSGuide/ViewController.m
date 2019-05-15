@@ -34,7 +34,7 @@
             [self.navigationController pushViewController:[UKUITextFieldViewController new] animated:YES];
             break;
         case 1003: {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:[NSBundle mainBundle]];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard1" bundle:[NSBundle mainBundle]];
             [self.navigationController pushViewController:[storyboard instantiateInitialViewController] animated:YES];
             break;
         }

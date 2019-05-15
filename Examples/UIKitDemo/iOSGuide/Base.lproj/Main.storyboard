@@ -111,7 +111,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6mB-F1-3LA" detailTextLabel="Bug-8L-2Sv" style="IBUITableViewCellStyleSubtitle" id="Bgx-oA-by0">
+                                    <tableViewCell clipsSubviews="YES" tag="1003" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6mB-F1-3LA" detailTextLabel="Bug-8L-2Sv" style="IBUITableViewCellStyleSubtitle" id="Bgx-oA-by0">
                                         <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bgx-oA-by0" id="tAh-6s-94o">

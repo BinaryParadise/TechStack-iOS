@@ -13,6 +13,7 @@
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
 		249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* PGDemoView.m */; };
 		249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25421E1F408009B8781 /* PGUIViewController.m */; };
+		24DD1F39228B0C49001713EC /* Storyboard1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* Storyboard1.storyboard */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
 		C532E4111F889834009E38CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E4101F889834009E38CA /* ViewController.m */; };
 		C532E4141F889834009E38CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4121F889834009E38CA /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		249DD25121E1EF92009B8781 /* PGDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGDemoView.m; sourceTree = "<group>"; };
 		249DD25321E1F408009B8781 /* PGUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGUIViewController.h; sourceTree = "<group>"; };
 		249DD25421E1F408009B8781 /* PGUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGUIViewController.m; sourceTree = "<group>"; };
+		24DD1F38228B0C49001713EC /* Storyboard1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard1.storyboard; sourceTree = "<group>"; };
 		C532E4091F889834009E38CA /* iOSGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C532E40C1F889834009E38CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C532E40D1F889834009E38CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
 				244848E1223CAECC00A37FC7 /* Storyboard.storyboard */,
+				24DD1F38228B0C49001713EC /* Storyboard1.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				244848E2223CAECC00A37FC7 /* Storyboard.storyboard in Resources */,
 				C532E4141F889834009E38CA /* Main.storyboard in Resources */,
 				244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */,
+				24DD1F39228B0C49001713EC /* Storyboard1.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

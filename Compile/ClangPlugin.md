@@ -44,7 +44,7 @@ add_clang_subdirectory(AnnotationPlugin)
 ```
   2. 将 test.m 和 AnnotationPlugin.dylib 放在llvm_xcode同级目录目录然后执行
 ```objc
-./llvm_xcode/Debug/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk -Xclang -load -Xclang ./AnnotationPlugin.dylib -Xclang -add-plugin -Xclang AnnotationPlugin -c ./test.m
+-isysroot ${SDKROOT} -Xclang -load -Xclang ${CC}/PeregrinePlugin.dylib -Xclang -add-plugin -Xclang PeregrinePlugin
 ```
   输出文件 test.o 表示编译成功
 
