@@ -33,6 +33,10 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"xxxxxx"];
 }
 
+- (void)xxx:(NSArray *)ddd {
+    return;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
