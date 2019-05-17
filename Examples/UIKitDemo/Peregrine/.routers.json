@@ -1,7 +1,12 @@
 [
    {
       "class" : "PGAutoLayout",
-      "selector" : "textField:contextxxxx:",
+      "selector" : "equalization:context:",
+      "url" : "gd://UIView/Equalization"
+   },
+   {
+      "class" : "PGAutoLayout",
+      "selector" : "textField:context:",
       "url" : "gd://UIControl/UITextField"
    },
    {

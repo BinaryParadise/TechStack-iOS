@@ -11,6 +11,13 @@
 
 @implementation PGAutoLayout
 
++ (void)equalization:(NSDictionary *)dict context:(PGRouterContext *)context PG_Target("gd://UIView/Equalization") {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AutoLayout" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"Equalization"];
+    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [nav pushViewController:vc animated:YES];
+}
+
 + (void)textField:(NSDictionary *)dict context:(PGRouterContext *)context PG_Target("gd://UIControl/UITextField") {
 
 }

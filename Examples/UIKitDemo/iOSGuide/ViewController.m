@@ -45,11 +45,11 @@
 #pragma mark - UITableViewDatasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [PGRouterManager routerMap].count;
+    return self.data.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [(NSArray *)self.data[section].lastObject count];
 }
 
 #pragma mark - UITableViewDelegate
