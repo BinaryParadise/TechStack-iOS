@@ -11,13 +11,13 @@
 
 @implementation PGAutoLayout
 
-+ (void)textField:(NSDictionary *)dict PG_Target("gd://UIControl/UITextField") {
++ (void)textField:(NSDictionary *)dict context:(PGRouterContext *)context PG_Target("gd://UIControl/UITextField") {
 
 }
 
-+ (void)scrollView:(NSDictionary *)dict PG_Target("gd://UIView/UIScrollView") {
++ (void)scrollView:(NSDictionary *)dict context:(PGRouterContext *)context PG_Target("gd://UIView/UIScrollView") {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AutoLayout" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyboard instantiateInitialViewController];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"CSScrollView"];
     UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav pushViewController:vc animated:YES];
 }

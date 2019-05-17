@@ -1,17 +1,12 @@
 [
    {
-      "class" : "PGAutolayout",
-      "selector" : "scrollView:",
-      "url" : ""
-   },
-   {
       "class" : "PGAutoLayout",
-      "selector" : "textField:",
+      "selector" : "textField:contextxxxx:",
       "url" : "gd://UIControl/UITextField"
    },
    {
       "class" : "PGAutoLayout",
-      "selector" : "scrollView:",
+      "selector" : "scrollView:context:",
       "url" : "gd://UIView/UIScrollView"
    }
 ]
