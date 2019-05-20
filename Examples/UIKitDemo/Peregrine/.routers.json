@@ -1,17 +1,22 @@
 [
    {
       "class" : "PGAutoLayout",
-      "selector" : "equalization:context:",
+      "selector" : "equalization:",
       "url" : "gd://UIView/Equalization"
    },
    {
       "class" : "PGAutoLayout",
-      "selector" : "textField:context:",
+      "selector" : "textField:",
       "url" : "gd://UIControl/UITextField"
    },
    {
       "class" : "PGAutoLayout",
-      "selector" : "scrollView:context:",
+      "selector" : "scrollView:",
       "url" : "gd://UIView/UIScrollView"
+   },
+   {
+      "class" : "GDControlActions",
+      "selector" : "button:",
+      "url" : "gd://UIControl/UIButton"
    }
 ]

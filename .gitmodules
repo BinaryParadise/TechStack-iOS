@@ -1,0 +1,3 @@
+[submodule "Examples/Peregrine"]
+	path = Examples/Peregrine
+	url = git@github.com:BinaryParadise/Peregrine.git

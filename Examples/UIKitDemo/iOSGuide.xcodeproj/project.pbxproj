@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1BFE7F40ADB2C17E161A5252 /* libPods-iOSGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75066658D3EF804CB65E01E5 /* libPods-iOSGuide.a */; };
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
-		244848E2223CAECC00A37FC7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244848E1223CAECC00A37FC7 /* Storyboard.storyboard */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
 		249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* PGDemoView.m */; };
 		249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25421E1F408009B8781 /* PGUIViewController.m */; };
@@ -23,15 +22,16 @@
 		C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */; };
 		C5FB165D1F8B998400350055 /* UKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* UKWebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
+		CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18B36022928F5800271B72 /* SBUIControl.storyboard */; };
+		CE18B3642292912000271B72 /* GDControlAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B3632292912000271B72 /* GDControlAction.m */; };
+		CE18B367229291B900271B72 /* GDBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B366229291B900271B72 /* GDBaseAction.m */; };
 		CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */; };
 		CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */; };
 		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
-		CEA02DB2223B915E00157527 /* UKUITextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA02DB1223B915E00157527 /* UKUITextFieldViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		244848D3223CA92100A37FC7 /* UKPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKPageViewController.xib; sourceTree = "<group>"; };
-		244848E1223CAECC00A37FC7 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		2461DF34222D677800D4382F /* UKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKPageViewController.h; sourceTree = "<group>"; };
 		2461DF35222D677800D4382F /* UKPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKPageViewController.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* PGDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDemoView.h; sourceTree = "<group>"; };
@@ -57,13 +57,17 @@
 		C5FB165B1F8B998400350055 /* UKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKWebViewController.h; sourceTree = "<group>"; };
 		C5FB165C1F8B998400350055 /* UKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKWebViewController.m; sourceTree = "<group>"; };
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		CE18B36022928F5800271B72 /* SBUIControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIControl.storyboard; sourceTree = "<group>"; };
+		CE18B3622292912000271B72 /* GDControlAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDControlAction.h; sourceTree = "<group>"; };
+		CE18B3632292912000271B72 /* GDControlAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDControlAction.m; sourceTree = "<group>"; };
+		CE18B365229291B900271B72 /* GDBaseAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDBaseAction.h; sourceTree = "<group>"; };
+		CE18B366229291B900271B72 /* GDBaseAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDBaseAction.m; sourceTree = "<group>"; };
 		CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDRouterTableViewCell.h; sourceTree = "<group>"; };
 		CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDRouterTableViewCell.m; sourceTree = "<group>"; };
 		CE9ABD37228BEC9B00115D2C /* PGAutoLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGAutoLayout.h; sourceTree = "<group>"; };
 		CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAutoLayout.m; sourceTree = "<group>"; };
 		CEA02DAE223B913000157527 /* UKUITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKUITextFieldViewController.h; sourceTree = "<group>"; };
 		CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKUITextFieldViewController.m; sourceTree = "<group>"; };
-		CEA02DB1223B915E00157527 /* UKUITextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKUITextFieldViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,6 @@
 				CEA02DAD223B90D400157527 /* UIControl */,
 				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
-				244848E1223CAECC00A37FC7 /* Storyboard.storyboard */,
-				24DD1F38228B0C49001713EC /* AutoLayout.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -149,6 +151,8 @@
 				C532E40D1F889834009E38CA /* AppDelegate.m */,
 				C532E40F1F889834009E38CA /* ViewController.h */,
 				C532E4101F889834009E38CA /* ViewController.m */,
+				CE18B365229291B900271B72 /* GDBaseAction.h */,
+				CE18B366229291B900271B72 /* GDBaseAction.m */,
 				CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */,
 				CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */,
 				C532E4121F889834009E38CA /* Main.storyboard */,
@@ -191,6 +195,7 @@
 		CE861DF421762F19009927A8 /* Autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				24DD1F38228B0C49001713EC /* AutoLayout.storyboard */,
 				CE9ABD37228BEC9B00115D2C /* PGAutoLayout.h */,
 				CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */,
 			);
@@ -202,7 +207,6 @@
 			children = (
 				CEA02DAE223B913000157527 /* UKUITextFieldViewController.h */,
 				CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */,
-				CEA02DB1223B915E00157527 /* UKUITextFieldViewController.xib */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -211,6 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				CEA02DAC223B909C00157527 /* UITextField */,
+				CE18B36022928F5800271B72 /* SBUIControl.storyboard */,
+				CE18B3622292912000271B72 /* GDControlAction.h */,
+				CE18B3632292912000271B72 /* GDControlAction.m */,
 			);
 			path = UIControl;
 			sourceTree = "<group>";
@@ -278,11 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA02DB2223B915E00157527 /* UKUITextFieldViewController.xib in Resources */,
+				CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */,
 				C5FB165F1F8B9AAB00350055 /* webview.html in Resources */,
 				C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */,
 				C532E4161F889834009E38CA /* Assets.xcassets in Resources */,
-				244848E2223CAECC00A37FC7 /* Storyboard.storyboard in Resources */,
 				C532E4141F889834009E38CA /* Main.storyboard in Resources */,
 				244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */,
 				24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */,
@@ -380,7 +386,9 @@
 				C5FB165D1F8B998400350055 /* UKWebViewController.m in Sources */,
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
+				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
 				CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */,
+				CE18B367229291B900271B72 /* GDBaseAction.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				2461DF37222D677800D4382F /* UKPageViewController.m in Sources */,
 				CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */,

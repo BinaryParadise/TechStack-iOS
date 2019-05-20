@@ -6,6 +6,6 @@ target 'iOSGuide' do
   # use_frameworks!
 
   # Pods for iOSGuide
-  pod 'Peregrine', :path => '../../../Peregrine'
+  pod 'Peregrine', :path => '../Peregrine'
 
 end
