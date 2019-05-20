@@ -1,13 +1,18 @@
 [
    {
-      "class" : "PGAutoLayout",
-      "selector" : "equalization:",
-      "url" : "gd://UIView/Equalization"
+      "class" : "GDControlAction",
+      "selector" : "buttonAction:",
+      "url" : "gd://UIControl/UIButton"
+   },
+   {
+      "class" : "GDControlAction",
+      "selector" : "textFieldAction:",
+      "url" : "gd://UIControl/UITextField"
    },
    {
       "class" : "PGAutoLayout",
-      "selector" : "textField:",
-      "url" : "gd://UIControl/UITextField"
+      "selector" : "equalization:",
+      "url" : "gd://UIView/Equalization"
    },
    {
       "class" : "PGAutoLayout",
@@ -15,8 +20,8 @@
       "url" : "gd://UIView/UIScrollView"
    },
    {
-      "class" : "GDControlActions",
-      "selector" : "button:",
-      "url" : "gd://UIControl/UIButton"
+      "class" : "GDUIViewAction",
+      "selector" : "webViewAction:",
+      "url" : "gd://UIView/WKWebView"
    }
 ]

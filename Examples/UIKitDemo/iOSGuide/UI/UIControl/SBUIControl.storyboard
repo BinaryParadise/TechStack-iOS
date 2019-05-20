@@ -18,17 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1s-Qt-U3P">
-                                <rect key="frame" x="26" y="45" width="129" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1s-Qt-U3P">
+                                <rect key="frame" x="16" y="36" width="94" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="设置" image="ico_setting">
+                                <state key="normal" title="默认间距" image="icon_lock">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-JT-fh9">
+                                <rect key="frame" x="16" y="68" width="90" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="db1-Vt-OCE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="间距12" image="icon_lock">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-LK-4dO">
+                                <rect key="frame" x="16" y="100" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icon_lock">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-OR-Ee7">
+                                <rect key="frame" x="16" y="132" width="70" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="仅限文字">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1AA-OR-Ee7" firstAttribute="top" secondItem="hN7-LK-4dO" secondAttribute="bottom" constant="8" id="10V-ON-iiI"/>
+                            <constraint firstItem="SQH-JT-fh9" firstAttribute="top" secondItem="D1s-Qt-U3P" secondAttribute="bottom" constant="8" id="6MM-ef-5q5"/>
+                            <constraint firstItem="hN7-LK-4dO" firstAttribute="top" secondItem="SQH-JT-fh9" secondAttribute="bottom" constant="8" id="Dbx-hn-t6N"/>
+                            <constraint firstItem="D1s-Qt-U3P" firstAttribute="leading" secondItem="9pe-i2-Zpy" secondAttribute="leading" constant="16" id="GSr-XS-KXc"/>
+                            <constraint firstItem="D1s-Qt-U3P" firstAttribute="top" secondItem="9pe-i2-Zpy" secondAttribute="top" constant="16" id="Lqa-ql-GSJ"/>
+                            <constraint firstItem="1AA-OR-Ee7" firstAttribute="leading" secondItem="hN7-LK-4dO" secondAttribute="leading" id="PkV-AS-tAg"/>
+                            <constraint firstItem="hN7-LK-4dO" firstAttribute="leading" secondItem="9pe-i2-Zpy" secondAttribute="leading" constant="16" id="asU-tn-7AU"/>
+                            <constraint firstItem="SQH-JT-fh9" firstAttribute="leading" secondItem="D1s-Qt-U3P" secondAttribute="leading" id="tVO-ZR-0Ty"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9pe-i2-Zpy"/>
                     </view>
                 </viewController>
@@ -83,6 +121,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ico_setting" width="24" height="24"/>
+        <image name="icon_lock" width="24" height="24"/>
     </resources>
 </document>

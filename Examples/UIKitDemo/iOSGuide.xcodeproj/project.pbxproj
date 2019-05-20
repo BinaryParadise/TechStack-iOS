@@ -10,6 +10,7 @@
 		1BFE7F40ADB2C17E161A5252 /* libPods-iOSGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75066658D3EF804CB65E01E5 /* libPods-iOSGuide.a */; };
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
+		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
 		249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* PGDemoView.m */; };
 		249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25421E1F408009B8781 /* PGUIViewController.m */; };
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
@@ -34,6 +35,8 @@
 		244848D3223CA92100A37FC7 /* UKPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKPageViewController.xib; sourceTree = "<group>"; };
 		2461DF34222D677800D4382F /* UKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKPageViewController.h; sourceTree = "<group>"; };
 		2461DF35222D677800D4382F /* UKPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKPageViewController.m; sourceTree = "<group>"; };
+		248237662292F23500B9DF7B /* GDUIViewAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIViewAction.h; sourceTree = "<group>"; };
+		248237672292F23500B9DF7B /* GDUIViewAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIViewAction.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* PGDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* PGDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGDemoView.m; sourceTree = "<group>"; };
 		249DD25321E1F408009B8781 /* PGUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGUIViewController.h; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		249DD24E21E1EF1F009B8781 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C5FB165A1F8B997B00350055 /* WKWebView */,
 				CEA02DAD223B90D400157527 /* UIControl */,
 				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
@@ -107,10 +109,13 @@
 		249DD24F21E1EF2D009B8781 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				248237662292F23500B9DF7B /* GDUIViewAction.h */,
+				248237672292F23500B9DF7B /* GDUIViewAction.m */,
 				249DD25021E1EF92009B8781 /* PGDemoView.h */,
 				249DD25121E1EF92009B8781 /* PGDemoView.m */,
 				249DD25321E1F408009B8781 /* PGUIViewController.h */,
 				249DD25421E1F408009B8781 /* PGUIViewController.m */,
+				C5FB165A1F8B997B00350055 /* WKWebView */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -214,10 +219,10 @@
 		CEA02DAD223B90D400157527 /* UIControl */ = {
 			isa = PBXGroup;
 			children = (
-				CEA02DAC223B909C00157527 /* UITextField */,
 				CE18B36022928F5800271B72 /* SBUIControl.storyboard */,
 				CE18B3622292912000271B72 /* GDControlAction.h */,
 				CE18B3632292912000271B72 /* GDControlAction.m */,
+				CEA02DAC223B909C00157527 /* UITextField */,
 			);
 			path = UIControl;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */,
+				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				249DD25221E1EF92009B8781 /* PGDemoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

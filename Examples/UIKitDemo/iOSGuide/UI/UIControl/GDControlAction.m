@@ -14,13 +14,13 @@
     return @"SBUIControl";
 }
 
-+ (void)buttonAction:(PGRouterContext *)context  __PGTarget("gd://UIControl/UIButton") {
++ (void)buttonAction:(PGRouterContext *)context PGTarget("gd://UIControl/UIButton") {
     UIViewController *vc = [self.class controllerForIdentify:context.config.actionName];
     UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav pushViewController:vc animated:YES];
 }
 
-+ (void)textFieldAction:(PGRouterContext *)context __PGTarget("gd://UIControl/UITextField") {
++ (void)textFieldAction:(PGRouterContext *)context PGTarget("gd://UIControl/UITextField") {
     UIViewController *vc = [self.class controllerForIdentify:context.config.actionName];
     UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav pushViewController:vc animated:YES];
