@@ -11,9 +11,17 @@
 
 @implementation GDUIViewAction
 
++ (NSString *)storyBoardName {
+    return @"SBUIView";
+}
+
++ (void)viewLifecycleAction:(PGRouterContext *)context PGTarget("gd://UIView/Lifecycle") {
+    [self pushViewControllerWithIdentify:context.config.actionName];
+}
+
 + (void)webViewAction:(PGRouterContext *)context PGTarget("gd://UIView/WKWebView") {
     PGUIViewController *vc = [PGUIViewController new];
-    UINavigationController *nav = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav pushViewController:vc animated:YES];
 }
 

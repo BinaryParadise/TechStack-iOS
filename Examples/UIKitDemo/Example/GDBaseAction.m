@@ -19,4 +19,10 @@
     return [storyBoard instantiateViewControllerWithIdentifier:identify];
 }
 
++ (void)pushViewControllerWithIdentify:(NSString *)identify {
+    UIViewController *controller = [self controllerForIdentify:identify];
+    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [nav pushViewController:controller animated:YES];
+}
+
 @end

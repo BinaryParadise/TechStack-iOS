@@ -6,11 +6,11 @@
 //  Copyright © 2019 joengzi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "GDBaseAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PGAutoLayout : NSObject
+@interface PGAutoLayout : GDBaseAction
 
 @end
 

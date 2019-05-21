@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C532E4081F889834009E38CA"
-               BuildableName = "iOSGuide.app"
-               BlueprintName = "iOSGuide"
-               ReferencedContainer = "container:iOSGuide.xcodeproj">
+               BuildableName = "UIKitDemo.app"
+               BlueprintName = "UIKitDemo"
+               ReferencedContainer = "container:UIKitDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C532E4081F889834009E38CA"
-            BuildableName = "iOSGuide.app"
-            BlueprintName = "iOSGuide"
-            ReferencedContainer = "container:iOSGuide.xcodeproj">
+            BuildableName = "UIKitDemo.app"
+            BlueprintName = "UIKitDemo"
+            ReferencedContainer = "container:UIKitDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C532E4081F889834009E38CA"
-            BuildableName = "iOSGuide.app"
-            BlueprintName = "iOSGuide"
-            ReferencedContainer = "container:iOSGuide.xcodeproj">
+            BuildableName = "UIKitDemo.app"
+            BlueprintName = "UIKitDemo"
+            ReferencedContainer = "container:UIKitDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C532E4081F889834009E38CA"
-            BuildableName = "iOSGuide.app"
-            BlueprintName = "iOSGuide"
-            ReferencedContainer = "container:iOSGuide.xcodeproj">
+            BuildableName = "UIKitDemo.app"
+            BlueprintName = "UIKitDemo"
+            ReferencedContainer = "container:UIKitDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

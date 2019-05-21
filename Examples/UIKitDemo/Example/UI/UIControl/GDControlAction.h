@@ -1,20 +1,17 @@
 //
-//  GDBaseAction.h
+//  GDControlActions.h
 //  iOSGuide
 //
 //  Created by Rake Yang on 2019/5/20.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GDBaseAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDBaseAction : NSObject
+@interface GDControlAction : GDBaseAction
 
-+ (NSString *)storyBoardName;
-
-+ (UIViewController *)controllerForIdentify:(NSString *)identify;
 
 @end
 

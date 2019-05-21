@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PGDemoView : UIView
+@interface GDDemoView : UIView
 
 @end

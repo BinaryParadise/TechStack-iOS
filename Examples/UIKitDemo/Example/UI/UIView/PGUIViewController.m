@@ -7,7 +7,7 @@
 //
 
 #import "PGUIViewController.h"
-#import "PGDemoView.h"
+#import "GDDemoView.h"
 
 @interface PGUIViewController ()
 
@@ -22,7 +22,7 @@
     scrollView.contentSize = self.view.frame.size;
     [self.view addSubview:scrollView];
     // Do any additional setup after loading the view.
-    PGDemoView *demoView = [[PGDemoView alloc] initWithFrame:CGRectMake(16, scrollView.frame.size.height - 99, 186, 66)];
+    GDDemoView *demoView = [[GDDemoView alloc] initWithFrame:CGRectMake(16, scrollView.frame.size.height - 99, 186, 66)];
     [scrollView addSubview:demoView];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [demoView addSubview:[[UIView alloc] initWithFrame:CGRectMake(0, 0, 36, 36)]];

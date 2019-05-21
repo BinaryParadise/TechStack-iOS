@@ -6,9 +6,9 @@
 //  Copyright © 2019年 mylcode. All rights reserved.
 //
 
-#import "PGDemoView.h"
+#import "GDDemoView.h"
 
-@implementation PGDemoView
+@implementation GDDemoView
 
 - (instancetype)init {
     LogInfo(@"壹")
@@ -37,7 +37,7 @@
 }
 
 - (void)dealloc {
-    LogInfo(@"终")
+    LogInfo(@"释放")
 }
 
 @end
