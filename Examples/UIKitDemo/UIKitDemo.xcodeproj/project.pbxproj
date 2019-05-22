@@ -11,7 +11,6 @@
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
 		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
 		249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* GDDemoView.m */; };
-		249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25421E1F408009B8781 /* PGUIViewController.m */; };
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
 		89D622698E22CD8C57495725 /* libPods-UIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20F99BFC80F0BE76D57338D /* libPods-UIKitDemo.a */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
@@ -21,7 +20,7 @@
 		C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4171F889834009E38CA /* LaunchScreen.storyboard */; };
 		C532E41C1F889834009E38CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E41B1F889834009E38CA /* main.m */; };
 		C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */; };
-		C5FB165D1F8B998400350055 /* UKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* UKWebViewController.m */; };
+		C5FB165D1F8B998400350055 /* GDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* GDWebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
 		CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18B36022928F5800271B72 /* SBUIControl.storyboard */; };
 		CE18B3642292912000271B72 /* GDControlAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B3632292912000271B72 /* GDControlAction.m */; };
@@ -40,8 +39,6 @@
 		248237672292F23500B9DF7B /* GDUIViewAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIViewAction.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* GDDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* GDDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDDemoView.m; sourceTree = "<group>"; };
-		249DD25321E1F408009B8781 /* PGUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGUIViewController.h; sourceTree = "<group>"; };
-		249DD25421E1F408009B8781 /* PGUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGUIViewController.m; sourceTree = "<group>"; };
 		24DD1F38228B0C49001713EC /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
 		2D00CC20B0682CAA9C180A67 /* Pods-UIKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C532E4091F889834009E38CA /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,8 +53,8 @@
 		C532E41B1F889834009E38CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5ECF4DD1F89D84500CECF8B /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		C5FB165B1F8B998400350055 /* UKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKWebViewController.h; sourceTree = "<group>"; };
-		C5FB165C1F8B998400350055 /* UKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKWebViewController.m; sourceTree = "<group>"; };
+		C5FB165B1F8B998400350055 /* GDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDWebViewController.h; sourceTree = "<group>"; };
+		C5FB165C1F8B998400350055 /* GDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDWebViewController.m; sourceTree = "<group>"; };
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
 		CE18B36022928F5800271B72 /* SBUIControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIControl.storyboard; sourceTree = "<group>"; };
 		CE18B3622292912000271B72 /* GDControlAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDControlAction.h; sourceTree = "<group>"; };
@@ -125,8 +122,6 @@
 				248237672292F23500B9DF7B /* GDUIViewAction.m */,
 				249DD25021E1EF92009B8781 /* GDDemoView.h */,
 				249DD25121E1EF92009B8781 /* GDDemoView.m */,
-				249DD25321E1F408009B8781 /* PGUIViewController.h */,
-				249DD25421E1F408009B8781 /* PGUIViewController.m */,
 				C5FB165A1F8B997B00350055 /* WKWebView */,
 			);
 			path = UIView;
@@ -193,8 +188,8 @@
 		C5FB165A1F8B997B00350055 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				C5FB165B1F8B998400350055 /* UKWebViewController.h */,
-				C5FB165C1F8B998400350055 /* UKWebViewController.m */,
+				C5FB165B1F8B998400350055 /* GDWebViewController.h */,
+				C5FB165C1F8B998400350055 /* GDWebViewController.m */,
 				C5FB165E1F8B9AAB00350055 /* webview.html */,
 			);
 			path = WKWebView;
@@ -356,11 +351,14 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
+				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -392,7 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5FB165D1F8B998400350055 /* UKWebViewController.m in Sources */,
+				C5FB165D1F8B998400350055 /* GDWebViewController.m in Sources */,
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
@@ -402,7 +400,6 @@
 				2461DF37222D677800D4382F /* UKPageViewController.m in Sources */,
 				CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
-				249DD25521E1F408009B8781 /* PGUIViewController.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */,
 			);

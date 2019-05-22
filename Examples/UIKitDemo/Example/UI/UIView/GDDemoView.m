@@ -11,7 +11,7 @@
 @implementation GDDemoView
 
 - (instancetype)init {
-    LogInfo(@"壹")
+    LogDebug(@"壹")
     if (self = [super init]) {
         
     }
@@ -19,7 +19,7 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    LogInfo(@"贰")
+    LogDebug(@"贰")
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -28,16 +28,16 @@
 
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    LogInfo(@"肆")
+    LogDebug(@"肆")
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    LogInfo(@"叁")
+    LogDebug(@"叁")
 }
 
 - (void)dealloc {
-    LogInfo(@"释放")
+    LogWarn(@"释放")
 }
 
 @end

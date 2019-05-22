@@ -2,14 +2,13 @@
 <html>
 <head>
 <meta name="viewport"
-	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=1" />
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
 <meta charset="UTF-8">
 <title>WebView功能演示</title>
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 	jQuery(function() {
-
 	});
 
 	//提供给OC调用
@@ -40,17 +39,10 @@ a {
 	color: #c75f3e;
 }
 
-#mytable {
-	width: 700px;
+#rstable {
+	width: 100%;
 	padding: 0;
 	margin: 0;
-}
-
-caption {
-	padding: 0 0 5px 0;
-	width: 700px;
-	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	text-align: right;
 }
 
 th {
@@ -114,11 +106,11 @@ th.specalt {
 				<td colspan="2">UIWebView
 			</tr>
 			<tr>
-				<td><button onclick="callOCFunc(1)">callJSFunc</button></td>
+				<td><button id="btn1" onclick="callOCFunc(1)">callJSFunc</button></td>
 				<td>OC调用JS代码</td>
 			</tr>
 			<tr>
-				<td><button onclick="callOCFunc(2)">callOCFunc</button></td>
+				<td><button id="btn2" onclick="callOCFunc(2)">callOCFunc</button></td>
 				<td>调用OC代码</td>
 			</tr>
 			<tr>

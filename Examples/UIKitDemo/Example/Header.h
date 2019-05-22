@@ -9,19 +9,23 @@
 #ifndef Header_h
 #define Header_h
 
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <Peregrine/Peregrine.h>
+
+static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 #if DEBUG
 
-#define PGLog(frmt, ...) NSLog(frmt,__func__,__LINE__, ##__VA_ARGS__);
+#define NSLog(frmt, ...) DDLogVerbose(frmt,__func__,__LINE__, ##__VA_ARGS__);
 
-#define LogSpec(frmt, ...) PGLog(@"⌘ %s+%d " frmt, ##__VA_ARGS__)
-#define LogInfo(frmt, ...) PGLog(@"⌗ %s+%d " frmt, ##__VA_ARGS__)
-#define LogWarn(frmt, ...) PGLog(@"⚠️ %s+%d " frmt, ##__VA_ARGS__)
-#define LogError(frmt, ...) PGLog(@"‼️ %s+%d " frmt, ##__VA_ARGS__)
+#define LogInfo(frmt, ...) DDLogInfo(@"" frmt, ##__VA_ARGS__);
+#define LogDebug(frmt, ...) DDLogDebug(@"" frmt, ##__VA_ARGS__);
+#define LogWarn(frmt, ...) DDLogWarn(@"" frmt, ##__VA_ARGS__);
+#define LogError(frmt, ...) DDLogError(@"" frmt, ##__VA_ARGS__);
 
 #else
 #define LogInfo(frmt, ...)
+#define LogDebug(frmt, ...)
 #define LogWarn(frmt, ...)
 #define LogError(frmt, ...)
 #define NSLog(...)

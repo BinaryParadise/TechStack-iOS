@@ -2,15 +2,15 @@
 //  WebViewController.m
 //  iOSGuide
 //
-//  Created by mylcode on 2017/10/9.
+//  Created by Rake Yang on 2017/10/9.
 //  Copyright © 2017年 mylcode. All rights reserved.
 //
 
-#import "UKWebViewController.h"
+#import "GDWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@interface UKWebViewController () <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
+@interface GDWebViewController () <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
 @property (nonatomic, assign) BOOL useWKWebview;
 @property (nonatomic, strong) UIWebView *uiWebView;
@@ -18,18 +18,26 @@
 
 @end
 
-@implementation UKWebViewController
+@implementation GDWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"是否使用WKWebView?" preferredStyle:UIAlertControllerStyleAlert];
-    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self setupWebView];
+    }]];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.useWKWebview = YES;
+        [self setupWebView];
     }]];
-    [self presentViewController:alertVC animated:YES completion:nil];
+    [self presentViewController:alertVC animated:YES completion:^{
+        
+    }];
+}
+    
+- (void)setupWebView {
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"webview.html" ofType:nil];
     if (self.useWKWebview) {
         //属性设置
@@ -93,14 +101,14 @@
 // 单独处理。但是，对于Safari是允许跨域的，不用这么处理。
 // 这个是决定是否Request
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 // 决定是否接收响应
 // 这个是决定是否接收response
 // 要获取response，通过WKNavigationResponse对象获取
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-    
+    decisionHandler(WKNavigationResponsePolicyAllow);
 }
 
 // 当main frame的导航开始请求时，会调用此方法
@@ -125,7 +133,9 @@
 
 // 当main frame导航完成时，会回调
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    
+    [webView evaluateJavaScript:@"$('#btn1').attr('disabled','disabled');" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+        LogError(@"%@", error);
+    }];
 }
 
 // 当main frame最后下载数据失败时，会回调
@@ -134,7 +144,7 @@
 
 // 这与用于授权验证的API，与AFN、UIWebView的授权验证API是一样的
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *__nullable credential))completionHandler {
-    
+    completionHandler(NSURLSessionAuthChallengeUseCredential, nil);
 }
 
 // 当web content处理完成时，会回调
@@ -151,7 +161,7 @@
  @param message 脚本消息
  */
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    
+    LogDebug(@"%@", message.body);
 }
 
 - (void)dealloc {
