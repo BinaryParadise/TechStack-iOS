@@ -89,6 +89,7 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     //加载完成时调用
+    [webView stringByEvaluatingJavaScriptFromString:@"disableWKWebView()"];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
@@ -133,7 +134,7 @@
 
 // 当main frame导航完成时，会回调
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    [webView evaluateJavaScript:@"$('#btn1').attr('disabled','disabled');" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+    [webView evaluateJavaScript:@"disableUIWebBtn()" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
         LogError(@"%@", error);
     }];
 }

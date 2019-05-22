@@ -26,6 +26,15 @@
 	function postMessage() {
 		window.webkit.messageHandlers.objc.postMessage('message send from js');
 	}
+
+    function disableUIWebBtn() {
+        $('#btn1').attr('disabled','disabled');
+        $('#btn2').attr('disabled','disabled');
+    }
+
+    function disableWKWebView() {
+        $('#btn3').attr('disabled','disabled');
+    }
 </script>
 <style type="text/css">
 body {
@@ -117,7 +126,7 @@ th.specalt {
 				<td colspan="2">WkWebView</td>
 			</tr>
 			<tr>
-				<td><button onclick="postMessage()">postMessage</button></td>
+				<td><button id="btn3" onclick="postMessage()">postMessage</button></td>
 				<td>调用OC代码</td>
 			</tr>
 		</table>

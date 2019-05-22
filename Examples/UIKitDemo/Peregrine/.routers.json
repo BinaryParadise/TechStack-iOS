@@ -1,15 +1,5 @@
 [
    {
-      "class" : "GDControlAction",
-      "selector" : "buttonAction:",
-      "url" : "gd://UIControl/UIButton"
-   },
-   {
-      "class" : "GDControlAction",
-      "selector" : "textFieldAction:",
-      "url" : "gd://UIControl/UITextField"
-   },
-   {
       "class" : "PGAutoLayout",
       "selector" : "equalization:",
       "url" : "gd://UIView/Equalization"
@@ -28,5 +18,15 @@
       "class" : "GDUIViewAction",
       "selector" : "webViewAction:",
       "url" : "gd://UIView/WKWebView"
+   },
+   {
+      "class" : "GDControlAction",
+      "selector" : "buttonAction:",
+      "url" : "gd://UIControl/UIButton"
+   },
+   {
+      "class" : "GDControlAction",
+      "selector" : "textFieldAction:",
+      "url" : "gd://UIControl/UITextField"
    }
 ]
