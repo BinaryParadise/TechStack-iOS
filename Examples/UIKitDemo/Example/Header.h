@@ -10,7 +10,6 @@
 #define Header_h
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <Peregrine/Peregrine.h>
 
 static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 

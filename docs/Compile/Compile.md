@@ -83,7 +83,7 @@ iOS开发目前的常用语言是：Objective和Swift。二者都是编译语言
 
 ```ruby
 mkdir llvm_build && cd llvm_build
-cmake -G Ninja ../llvm -DCMAKE_INSTALL_PREFIX=../llvm_release
+cmake -G Ninja ../llvm -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../llvm_release
 
 # 执行编译，完成后llvm_build目录大概 21 GB
 ninja
@@ -95,7 +95,7 @@ ninja install
 
 ```ruby
 mkdir llvm_xcode && cd llvm_xcode
-cmake -G Xcode $MLLVM_HOME && open LLVM.xcodeproj
+cmake -G Xcode $MLLVM_HOME -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../llvm_release && open LLVM.xcodeproj
 ```
 选择自动创建schemes，选择target`ALL_BUILD`，然后开始漫长的编译预计`1500s`
 
@@ -111,6 +111,17 @@ sudo chown -R `whoami` .
 ```
 
 ----------
+
+## 安装
+
+```ruby
+#生成makefile
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release –enable-optimized -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_INSTALL_PREFIX=/opt/llvm ../llvm
+
+#编译和安装，8表示并发编译数
+make -j 8
+make install
+```
 
 ## iOS编译
 
