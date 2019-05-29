@@ -19,12 +19,14 @@
 		C532E4161F889834009E38CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C532E4151F889834009E38CA /* Assets.xcassets */; };
 		C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4171F889834009E38CA /* LaunchScreen.storyboard */; };
 		C532E41C1F889834009E38CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E41B1F889834009E38CA /* main.m */; };
-		C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */; };
 		C5FB165D1F8B998400350055 /* GDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* GDWebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
+		CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E301422966DE900E39428 /* GDViewControllerAction.m */; };
+		CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0E301622966E0200E39428 /* SBViewController.storyboard */; };
 		CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18B36022928F5800271B72 /* SBUIControl.storyboard */; };
 		CE18B3642292912000271B72 /* GDControlAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B3632292912000271B72 /* GDControlAction.m */; };
 		CE18B367229291B900271B72 /* GDBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B366229291B900271B72 /* GDBaseAction.m */; };
+		CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE21AC1D229CDB3E0083822A /* GDTest.m */; };
 		CE2845B82293CCE200E74616 /* SBUIView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2845B72293CCE200E74616 /* SBUIView.storyboard */; };
 		CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */; };
 		CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */; };
@@ -56,11 +58,16 @@
 		C5FB165B1F8B998400350055 /* GDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDWebViewController.h; sourceTree = "<group>"; };
 		C5FB165C1F8B998400350055 /* GDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDWebViewController.m; sourceTree = "<group>"; };
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		CE0E301322966DE900E39428 /* GDViewControllerAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDViewControllerAction.h; sourceTree = "<group>"; };
+		CE0E301422966DE900E39428 /* GDViewControllerAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDViewControllerAction.m; sourceTree = "<group>"; };
+		CE0E301622966E0200E39428 /* SBViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBViewController.storyboard; sourceTree = "<group>"; };
 		CE18B36022928F5800271B72 /* SBUIControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIControl.storyboard; sourceTree = "<group>"; };
 		CE18B3622292912000271B72 /* GDControlAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDControlAction.h; sourceTree = "<group>"; };
 		CE18B3632292912000271B72 /* GDControlAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDControlAction.m; sourceTree = "<group>"; };
 		CE18B365229291B900271B72 /* GDBaseAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDBaseAction.h; sourceTree = "<group>"; };
 		CE18B366229291B900271B72 /* GDBaseAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDBaseAction.m; sourceTree = "<group>"; };
+		CE21AC1C229CDB3E0083822A /* GDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTest.h; sourceTree = "<group>"; };
+		CE21AC1D229CDB3E0083822A /* GDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTest.m; sourceTree = "<group>"; };
 		CE2845B72293CCE200E74616 /* SBUIView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIView.storyboard; sourceTree = "<group>"; };
 		CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDRouterTableViewCell.h; sourceTree = "<group>"; };
 		CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDRouterTableViewCell.m; sourceTree = "<group>"; };
@@ -77,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5ECF4E01F8A0BE800CECF8B /* AddressBook.framework in Frameworks */,
 				89D622698E22CD8C57495725 /* libPods-UIKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +113,7 @@
 		249DD24E21E1EF1F009B8781 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E301222966DC500E39428 /* UIViewController */,
 				CEA02DAD223B90D400157527 /* UIControl */,
 				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
@@ -162,6 +169,8 @@
 				C532E4151F889834009E38CA /* Assets.xcassets */,
 				C532E4171F889834009E38CA /* LaunchScreen.storyboard */,
 				C5ECF4DC1F89D82800CECF8B /* Support File */,
+				CE21AC1C229CDB3E0083822A /* GDTest.h */,
+				CE21AC1D229CDB3E0083822A /* GDTest.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -193,6 +202,16 @@
 				C5FB165E1F8B9AAB00350055 /* webview.html */,
 			);
 			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		CE0E301222966DC500E39428 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E301322966DE900E39428 /* GDViewControllerAction.h */,
+				CE0E301422966DE900E39428 /* GDViewControllerAction.m */,
+				CE0E301622966E0200E39428 /* SBViewController.storyboard */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		CE861DF421762F19009927A8 /* Autolayout */ = {
@@ -236,9 +255,9 @@
 				C532E4051F889834009E38CA /* Sources */,
 				C532E4061F889834009E38CA /* Frameworks */,
 				C532E4071F889834009E38CA /* Resources */,
-				CE9ABD3A228BEE0B00115D2C /* [PG] Fetch Router Table */,
 				3CD34AE12122723FC144920F /* [CP] Embed Pods Frameworks */,
 				ADAE8F977B3F5E983A2DD83B /* [CP] Copy Pods Resources */,
+				CE9ABD3A228BEE0B00115D2C /* [PG] Fetch Router Table */,
 			);
 			buildRules = (
 			);
@@ -293,6 +312,7 @@
 				C5FB165F1F8B9AAB00350055 /* webview.html in Resources */,
 				C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */,
 				C532E4161F889834009E38CA /* Assets.xcassets in Resources */,
+				CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */,
 				C532E4141F889834009E38CA /* Main.storyboard in Resources */,
 				244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */,
 				24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */,
@@ -365,24 +385,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE9ABD3A228BEE0B00115D2C /* [PG] Fetch Router Table */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[PG] Fetch Router Table";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "dest=${METAL_LIBRARY_OUTPUT_DIR}/Peregrine \nif [ ! -d \"$dest\" ]; then\nmkdir \"$dest\"\nfi\nsrcfile=${SRCROOT}/Peregrine/.routers.json\nif [ ! -f \"$srcfile\" ]; then\ncp \"$srcfile\" \"${dest}/routers.json\"\nelse\necho 'router file not find'\nfi\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -394,12 +396,14 @@
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
+				CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */,
 				CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */,
 				CE18B367229291B900271B72 /* GDBaseAction.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				2461DF37222D677800D4382F /* UKPageViewController.m in Sources */,
 				CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
+				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */,
 			);
@@ -544,8 +548,6 @@
 			baseConfigurationReference = 2D00CC20B0682CAA9C180A67 /* Pods-UIKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CC = "${CCROOT}/bin/clang";
-				CCROOT = "${HOME}/Github/llvm_release";
 				CODE_SIGN_STYLE = Manual;
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = "";
@@ -555,20 +557,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-isysroot",
-					"${SDK_DIR}",
-					"-Xclang",
-					"-load",
-					"-Xclang",
-					"${CCROOT}/lib/PeregrinePlugin.dylib",
-					"-Xclang",
-					"-add-plugin",
-					"-Xclang",
-					PeregrinePlugin,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joenggaa.iOSGuide;
+				OTHER_CFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,8 +570,6 @@
 			baseConfigurationReference = E3DA78CEC43AE06F53204963 /* Pods-UIKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CC = "${CCROOT}/bin/clang";
-				CCROOT = "${HOME}/Github/llvm_release";
 				CODE_SIGN_STYLE = Manual;
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = "";
@@ -590,20 +578,8 @@
 				GCC_PREFIX_HEADER = Example/Header.h;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-isysroot",
-					"${SDK_DIR}",
-					"-Xclang",
-					"-load",
-					"-Xclang",
-					"${CCROOT}/lib/PeregrinePlugin.dylib",
-					"-Xclang",
-					"-add-plugin",
-					"-Xclang",
-					PeregrinePlugin,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joenggaa.iOSGuide;
+				OTHER_CFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

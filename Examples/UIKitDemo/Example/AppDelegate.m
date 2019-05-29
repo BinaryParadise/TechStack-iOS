@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <MCLogger/MCLogger.h>
+//#import "GDTest.h"
 
 @interface AppDelegate ()
 
@@ -17,10 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
     // Override point for customization after application launch.
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
     LogDebug(@"%@", NSHomeDirectory());
+    LogWarn(@"据说地址不一样：%p", kTestKey);
+
     return YES;
 }
 

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <objc/runtime.h>
 #import "UKUITextFieldViewController.h"
-#import <Peregrine/PGRouterConfig.h>
+#import <Peregrine/Peregrine.h>
 
 @interface ViewController ()
 
@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    LogWarn(@"据说地址不一样：%p", kTestKey);
     NSMutableArray *marr = [NSMutableArray array];
     [[PGRouterManager routerMap] enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray<PGRouterConfig *> * _Nonnull obj, BOOL * _Nonnull stop) {
         [marr addObject:@[key,obj]];

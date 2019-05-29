@@ -1,0 +1,32 @@
+[
+   {
+      "class" : "GDUIViewAction",
+      "selector" : "viewLifecycleAction:",
+      "url" : "gd://UIView/Lifecycle"
+   },
+   {
+      "class" : "GDUIViewAction",
+      "selector" : "webViewAction:",
+      "url" : "gd://UIView/WKWebView"
+   },
+   {
+      "class" : "PGAutoLayout",
+      "selector" : "equalization:",
+      "url" : "gd://UIView/Equalization"
+   },
+   {
+      "class" : "PGAutoLayout",
+      "selector" : "scrollView:",
+      "url" : "gd://UIView/UIScrollView"
+   },
+   {
+      "class" : "GDControlAction",
+      "selector" : "buttonAction:",
+      "url" : "gd://UIControl/UIButton"
+   },
+   {
+      "class" : "GDControlAction",
+      "selector" : "textFieldAction:",
+      "url" : "gd://UIControl/UITextField"
+   }
+]

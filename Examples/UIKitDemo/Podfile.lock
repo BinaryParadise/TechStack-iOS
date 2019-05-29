@@ -11,7 +11,7 @@ PODS:
     - SAMKeychain (~> 1.5)
     - SocketRocket (~> 0.5)
   - MJExtension (3.0.15.1)
-  - Peregrine (0.1.1)
+  - Peregrine (0.1.2)
   - SAMKeychain (1.5.3)
   - SocketRocket (0.5.1)
 
@@ -29,7 +29,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   MCLogger: cbcb3b3572caa9dbe5e5b1cf9b9ae004287d14f5
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  Peregrine: 7b7e3acc50491cc118bc78a0f86fda371e26e92d
+  Peregrine: 5a52757263fe65ecf47b6ab1214f50d40cdc8518
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 

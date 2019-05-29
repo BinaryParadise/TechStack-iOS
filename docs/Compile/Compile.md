@@ -95,7 +95,7 @@ ninja install
 
 ```ruby
 mkdir llvm_xcode && cd llvm_xcode
-cmake -G Xcode $MLLVM_HOME -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../llvm_release && open LLVM.xcodeproj
+cmake -G Xcode $MLLVM_HOME -DCMAKE_BUILD_TYPE:STRING=MinSizeRel -DCMAKE_INSTALL_PREFIX=../llvm_release && open LLVM.xcodeproj
 ```
 选择自动创建schemes，选择target`ALL_BUILD`，然后开始漫长的编译预计`1500s`
 
