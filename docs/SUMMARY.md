@@ -5,6 +5,8 @@
   - [我的第一个Clang插件](Compile/ClangPlugin.md)
   - [自定义LibTooling](Compile/LibTooling.md)
   - [自定义属性](Compile/Attribute.md)
+  - [AST](Compile/AST.md)
+  - [Compile](Compile/Compile.md)
 * [Foundation](Foundation.md)
   - [Number](Foundation/Number.md)
   - [NSString](Foundation/NSString.md)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244826E2229F63DB00861F97 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244826E1229F63DB00861F97 /* WebKit.framework */; };
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
 		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		244826E1229F63DB00861F97 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		244848D3223CA92100A37FC7 /* UKPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKPageViewController.xib; sourceTree = "<group>"; };
 		2461DF34222D677800D4382F /* UKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKPageViewController.h; sourceTree = "<group>"; };
 		2461DF35222D677800D4382F /* UKPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKPageViewController.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244826E2229F63DB00861F97 /* WebKit.framework in Frameworks */,
 				89D622698E22CD8C57495725 /* libPods-UIKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +191,7 @@
 		C5ECF4DE1F8A0BE800CECF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				244826E1229F63DB00861F97 /* WebKit.framework */,
 				C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */,
 				E20F99BFC80F0BE76D57338D /* libPods-UIKitDemo.a */,
 			);
@@ -255,9 +259,8 @@
 				C532E4051F889834009E38CA /* Sources */,
 				C532E4061F889834009E38CA /* Frameworks */,
 				C532E4071F889834009E38CA /* Resources */,
-				3CD34AE12122723FC144920F /* [CP] Embed Pods Frameworks */,
 				ADAE8F977B3F5E983A2DD83B /* [CP] Copy Pods Resources */,
-				CE9ABD3A228BEE0B00115D2C /* [PG] Fetch Router Table */,
+				8F0115B97F06A7CE2C9DB2BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,7 +347,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3CD34AE12122723FC144920F /* [CP] Embed Pods Frameworks */ = {
+		8F0115B97F06A7CE2C9DB2BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,15 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 			);
@@ -439,7 +438,6 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -498,7 +496,6 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -549,7 +546,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -557,7 +553,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -571,14 +566,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Example/Header.h;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

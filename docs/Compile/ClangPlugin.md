@@ -50,6 +50,8 @@ add_clang_subdirectory(AnnotationPlugin)
 
 #### 在 Xcode 10 中使用插件
 
+**关闭Bitcode**
+
   1. 设置编译器
 
     在Build Settings栏目中新增两项用户定义的设置 `CC`、`CXX`
