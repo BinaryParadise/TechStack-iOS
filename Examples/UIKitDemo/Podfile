@@ -6,7 +6,8 @@ target 'UIKitDemo' do
   # use_frameworks!
 
   # Pods for iOSGuide
-  pod 'Peregrine', :path => '../Peregrine'
+  # pod 'Peregrine', :path => '../Peregrine'
+  pod 'Peregrine', :git => 'git@github.com:BinaryParadise/Peregrine.git', :branch => 'master'
   pod 'MCLogger', :path => '../../../MCLogger'
 
 end

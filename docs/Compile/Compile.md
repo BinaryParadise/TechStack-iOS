@@ -64,13 +64,9 @@ iOS开发目前的常用语言是：Objective和Swift。二者都是编译语言
 
     下载 LLVM (clang 9)
     ```ruby
-    git clone git@github.com:joenggaa/llvm.git llvm
+    git clone -b peregrine git@github.com:BinaryParadise/llvm.git --depth=1 llvm
     #cang 源码需要安装到 llvm/tools 目录下
-    git clone git@github.com:joenggaa/clang.git llvm/tools/clang
-    #可选
-    git clone git@github.com:llvm-mirror/clang-tools-extra.git llvm/tools/clang/tools/extra
-    #可选
-    git clone git@github.com:llvm-mirror/compiler-rt.git llvm/projects/compiler-rt
+    git clone -b peregrine git@github.com:BinaryParadise/clang.git llvm/tools/clang
 
     export MLLVM_HOME=`pwd`
     ```
@@ -116,7 +112,7 @@ sudo chown -R `whoami` .
 
 ```ruby
 #生成makefile
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release –enable-optimized -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_INSTALL_PREFIX=/opt/llvm ../llvm
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release –enable-optimized -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_INSTALL_PREFIX=llvm_release ../llvm
 
 #编译和安装，8表示并发编译数
 make -j 8
