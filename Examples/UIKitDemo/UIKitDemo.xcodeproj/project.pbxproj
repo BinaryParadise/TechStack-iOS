@@ -392,10 +392,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
+				"${PODS_ROOT}/Peregrine/Support/Peregrine.bundle",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Peregrine.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,35 +574,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-Xclang",
-					"-load",
-					"-Xclang",
-					"${CCROOT}/lib/PeregrinePlugin.dylib",
-					"-Xclang",
-					"-add-plugin",
-					"-Xclang",
-					PeregrinePlugin,
-					"-Xclang",
-					"-plugin-arg-PeregrinePlugin",
-					"-Xclang",
-					"${CCROOT}",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/MCLogger\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/Peregrine\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/SAMKeychain\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -620,35 +593,6 @@
 				GCC_PREFIX_HEADER = Example/Header.h;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-Xclang",
-					"-load",
-					"-Xclang",
-					"${CCROOT}/lib/PeregrinePlugin.dylib",
-					"-Xclang",
-					"-add-plugin",
-					"-Xclang",
-					PeregrinePlugin,
-					"-Xclang",
-					"-plugin-arg-PeregrinePlugin",
-					"-Xclang",
-					"${CCROOT}",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/MCLogger\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/Peregrine\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/SAMKeychain\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
