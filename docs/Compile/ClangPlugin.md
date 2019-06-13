@@ -2,7 +2,7 @@
 ## 编写插件
 
 `文件夹结构标记:`
-![](/images/clang_1.jpg)
+![](../images/clang_1.jpg)
 
 1. 插件加载逻辑定义
 ```txt
@@ -56,10 +56,10 @@ add_clang_subdirectory(AnnotationPlugin)
 
     在Build Settings栏目中新增两项用户定义的设置 `CC`、`CXX`
 
-    ![](/images/clang_4.png)
+    ![](../images/clang_4.png)
 
     如果👆的步骤都确认无误之后，在编译的时候如果遇到了下图这种错误
-    ![](/images/clang_5.jpg)
+    ![](../images/clang_5.jpg)
 
     则可以在Build Settings栏目中搜索index，将Enable Index-Wihle-Building Functionality的Default改为NO。
 
@@ -69,10 +69,10 @@ add_clang_subdirectory(AnnotationPlugin)
     ```ruby
     -Xclang -load -Xclang /Users/bonana/Github/ClangPlugin/llvm_xcode/Debug/lib/AnnotationPlugin.dylib -Xclang -add-plugin -Xclang AnnotationPlugin
     ```
-    ![](/images/clang_3.jpg)
+    ![](../images/clang_3.jpg)
 
     编译项目后，即可看到插件输入的错误提示如下所示：
-    ![](/images/clang_4.jpg)
+    ![](../images/clang_4.jpg)
 
 
 ## 最终效果
