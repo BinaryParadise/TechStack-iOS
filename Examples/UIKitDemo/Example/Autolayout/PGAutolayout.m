@@ -11,18 +11,16 @@
 
 @implementation PGAutoLayout
 
-+ (void)equalization:(PGRouterContext *)context PGTarget("gd://UIView/Equalization") {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AutoLayout" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"Equalization"];
-    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
-    [nav pushViewController:vc animated:YES];
++ (NSString *)storyBoardName {
+    return @"AutoLayout";
 }
 
-+ (void)scrollView:(PGRouterContext *)dict PGTarget("gd://UIView/UIScrollView") {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AutoLayout" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"CSScrollView"];
-    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
-    [nav pushViewController:vc animated:YES];
++ (void)equalization:(PGRouterContext *)context PGTarget("gd://UIView/Equalization") {
+    [self pushViewControllerWithIdentify:context.config.actionName];
+}
+
++ (void)scrollView:(PGRouterContext *)context PGTarget("gd://UIView/UIScrollView") {
+    [self pushViewControllerWithIdentify:context.config.actionName];
 }
 
 @end

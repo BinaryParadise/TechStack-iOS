@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243A11E622B46B3900429B09 /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243A11E522B46B3900429B09 /* Animation.storyboard */; };
+		243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A11E922B46B6900429B09 /* GDAnimationAction.m */; };
+		243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A11EC22B46CE900429B09 /* GDLoadingView.m */; };
 		244826E2229F63DB00861F97 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244826E1229F63DB00861F97 /* WebKit.framework */; };
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
@@ -35,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243A11E522B46B3900429B09 /* Animation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Animation.storyboard; sourceTree = "<group>"; };
+		243A11E822B46B6900429B09 /* GDAnimationAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAnimationAction.h; sourceTree = "<group>"; };
+		243A11E922B46B6900429B09 /* GDAnimationAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAnimationAction.m; sourceTree = "<group>"; };
+		243A11EB22B46CE900429B09 /* GDLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDLoadingView.h; sourceTree = "<group>"; };
+		243A11EC22B46CE900429B09 /* GDLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDLoadingView.m; sourceTree = "<group>"; };
 		244826E1229F63DB00861F97 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		244848D3223CA92100A37FC7 /* UKPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKPageViewController.xib; sourceTree = "<group>"; };
 		2461DF34222D677800D4382F /* UKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKPageViewController.h; sourceTree = "<group>"; };
@@ -103,6 +111,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		243A11E422B46B2B00429B09 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				243A11E522B46B3900429B09 /* Animation.storyboard */,
+				243A11E822B46B6900429B09 /* GDAnimationAction.h */,
+				243A11E922B46B6900429B09 /* GDAnimationAction.m */,
+				243A11E722B46B5100429B09 /* Loading */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		243A11E722B46B5100429B09 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				243A11EB22B46CE900429B09 /* GDLoadingView.h */,
+				243A11EC22B46CE900429B09 /* GDLoadingView.m */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		2461DF2E222D659E00D4382F /* UIPageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +188,7 @@
 			children = (
 				249DD24E21E1EF1F009B8781 /* UI */,
 				CE861DF421762F19009927A8 /* Autolayout */,
+				243A11E422B46B2B00429B09 /* Animation */,
 				C532E40C1F889834009E38CA /* AppDelegate.h */,
 				C532E40D1F889834009E38CA /* AppDelegate.m */,
 				C532E40F1F889834009E38CA /* ViewController.h */,
@@ -320,6 +349,7 @@
 				C532E4141F889834009E38CA /* Main.storyboard in Resources */,
 				244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */,
 				24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */,
+				243A11E622B46B3900429B09 /* Animation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,9 +452,11 @@
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				2461DF37222D677800D4382F /* UKPageViewController.m in Sources */,
 				CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */,
+				243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
+				243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */,
 				249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

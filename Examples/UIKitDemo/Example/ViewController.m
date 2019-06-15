@@ -79,8 +79,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSArray<PGRouterConfig *> *items = self.data[indexPath.section].lastObject;
-    [PGRouterManager openURL:items[indexPath.row].URL.absoluteString completion:^(id  _Nullable result) {
-
+    [PGRouterManager openURL:items[indexPath.row].URL.absoluteString  completion:^(BOOL ret, id object) {
+        
     }];
 }
 

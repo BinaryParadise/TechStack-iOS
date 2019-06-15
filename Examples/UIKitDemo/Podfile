@@ -7,7 +7,8 @@ target 'UIKitDemo' do
 
   # Pods for iOSGuide
   # pod 'Peregrine', :path => '../Peregrine'
-  pod 'Peregrine', :git => 'git@github.com:BinaryParadise/Peregrine.git', :branch => 'master'
+  # pod 'Peregrine', :git => 'git@github.com:BinaryParadise/Peregrine.git', :branch => 'master'
+  pod 'Peregrine', '~> 0.2.3'
   pod 'MCLogger', :path => '../../../MCLogger'
 
 end

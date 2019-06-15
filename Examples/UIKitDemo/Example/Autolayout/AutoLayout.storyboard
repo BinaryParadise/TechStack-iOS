@@ -13,7 +13,7 @@
         <!--ScrollView-->
         <scene sceneID="3dI-6n-6fx">
             <objects>
-                <viewController storyboardIdentifier="CSScrollView" id="ry5-T0-07a" userLabel="ScrollView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIScrollView" id="ry5-T0-07a" userLabel="ScrollView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R8B-Vt-CBE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
