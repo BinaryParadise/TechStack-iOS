@@ -3,7 +3,7 @@
 //  FoundationDemo
 //
 //  Created by joengzi on 2019/1/31.
-//  Copyright © 2019 joenggaa. All rights reserved.
+//  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
 #import "MCFloatNumberActions.h"
@@ -14,7 +14,7 @@
 
 @implementation MCFloatNumberActions
 
-- (void)processFloat {
++ (void)processFloat:(PGRouterContext *)context PGTarget("fd://Number/Float") {
     NSString *jsonStr = @"{\"price\":71.49}";
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
     NSNumber *price = dict[@"price"];

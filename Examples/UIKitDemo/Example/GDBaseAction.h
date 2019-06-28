@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)pushViewControllerWithIdentify:(NSString *)identify;
 
++ (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END

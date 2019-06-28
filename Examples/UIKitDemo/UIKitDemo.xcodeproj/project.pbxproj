@@ -32,6 +32,7 @@
 		CE18B367229291B900271B72 /* GDBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B366229291B900271B72 /* GDBaseAction.m */; };
 		CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE21AC1D229CDB3E0083822A /* GDTest.m */; };
 		CE2845B82293CCE200E74616 /* SBUIView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2845B72293CCE200E74616 /* SBUIView.storyboard */; };
+		CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */; };
 		CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */; };
 		CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */; };
 		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
@@ -79,6 +80,8 @@
 		CE21AC1C229CDB3E0083822A /* GDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTest.h; sourceTree = "<group>"; };
 		CE21AC1D229CDB3E0083822A /* GDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTest.m; sourceTree = "<group>"; };
 		CE2845B72293CCE200E74616 /* SBUIView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIView.storyboard; sourceTree = "<group>"; };
+		CE46D4C822C49C5300685E2F /* GDUIButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIButtonViewController.h; sourceTree = "<group>"; };
+		CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIButtonViewController.m; sourceTree = "<group>"; };
 		CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDRouterTableViewCell.h; sourceTree = "<group>"; };
 		CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDRouterTableViewCell.m; sourceTree = "<group>"; };
 		CE9ABD37228BEC9B00115D2C /* PGAutoLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGAutoLayout.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				CE18B3622292912000271B72 /* GDControlAction.h */,
 				CE18B3632292912000271B72 /* GDControlAction.m */,
 				CEA02DAC223B909C00157527 /* UITextField */,
+				CE46D4C822C49C5300685E2F /* GDUIButtonViewController.h */,
+				CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */,
 			);
 			path = UIControl;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
 				CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */,
+				CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */,
 				CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */,
 				CE18B367229291B900271B72 /* GDBaseAction.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,

@@ -1,22 +1,20 @@
 //
 //  ViewController.m
-//  FoundationDemo
+//  iOSGuide
 //
-//  Created by joengzi on 2019/1/31.
-//  Copyright © 2019 joenggaa. All rights reserved.
+//  Created by mylcode on 2017/10/7.
+//  Copyright © 2017年 mylcode. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "MCBasicKnowledgeDefine.h"
-#import <AFNetworking/AFNetworking.h>
-#import "MCDemoHeaderFooterView.h"
-#import "MCDemoTableViewCell.h"
-#import <MJExtension/MJExtension.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import <objc/runtime.h>
+#import "UKUITextFieldViewController.h"
+#import <Peregrine/Peregrine.h>
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController ()
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray<NSArray *> *data;
+
 
 @end
 
@@ -25,94 +23,65 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [self.view addSubview:self.tableView];
-    
-    if (!self.marr) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Menus.json" ofType:nil];
-        NSDictionary *configMenus = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableLeaves error:nil];
-        self.marr = [MCDynamicAction mj_objectArrayWithKeyValuesArray:configMenus[@"groups"]];
-    }
-    
-    [MCDemoTableViewCell registerForTableView:self.tableView];
-    //[self.tableView reloadData];
-    /*[self.marr addObject:@{@"基础知识点":@[@[@"ARC", ARCViewController.class],
-                                      @[@"锁", MCLockTableViewController.class],
-                                       @[@"多线程", GCDViewController.class],
-                                       @[@"算法", MCArithmeticTableViewController.class]
-                                      ]}];
-    [self.marr addObject:@{@"网络":@[@[@"日志", ARCViewController.class]]}];*/
+
+    LogWarn(@"据说地址不一样：%p", kTestKey);
+    NSMutableArray *marr = [NSMutableArray array];
+    [[PGRouterManager routerMap] enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray<PGRouterConfig *> * _Nonnull obj, BOOL * _Nonnull stop) {
+        [marr addObject:@[key,obj]];
+    }];
+    self.data = marr;
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"xxxxxx"];
 }
 
+- (void)xxx:(NSArray *)ddd {
+    return;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewDatasource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.action ? 1 : self.marr.count;
+    return self.data.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if ([self numberOfSectionsInTableView:tableView] > 1) {
-        return self.marr[section].items.count;
-    } else {
-        return self.marr.count;
-    }
+    return [(NSArray *)self.data[section].lastObject count];
 }
 
+#pragma mark - UITableViewDelegate
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 36;
+    return 28;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    MCDemoHeaderFooterView *hederView = [[MCDemoHeaderFooterView alloc] initWithFrame:CGRectZero];
-    if (!self.action) {
-        [hederView setTitle:self.marr[section].title];
-        return hederView;
-    }
-    return nil;
+    NSArray<PGRouterConfig *> *items = self.data[section].lastObject;
+    UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(16, 0, 0, 0)];
+    header.font = [UIFont systemFontOfSize:15];
+    header.textColor = [UIColor darkTextColor];
+    header.text = [NSString stringWithFormat:@"  %@", items.firstObject.URL.host];
+    return header;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    MCDynamicAction *actionItem = self.action ? self.marr[indexPath.row] : self.marr[indexPath.section].items[indexPath.row];
-    MCDemoTableViewCell *cell = [MCDemoTableViewCell cellForTableView:tableView indexPath:indexPath];
-    cell.textLabel.text = actionItem.title;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"xxxxxx" forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    NSArray<PGRouterConfig *> *items = self.data[indexPath.section].lastObject;
+    cell.textLabel.text = [items[indexPath.row] actionName];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    if (indexPath.section == 2) {
-//        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//        [manager GET:@"https://www.apple.com/cn/iPhoneX1" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//            LogDebug(@"success")
-//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//            LogDebug(@"%@ %@", [NSURLSessionConfiguration defaultSessionConfiguration], task.taskDescription);
-//        }];
-//        return;
-//    }
-    if (!self.action) {
-        MCDynamicAction *actionItem = self.marr[indexPath.section].items[indexPath.row];
-        ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
-        vc.title = actionItem.title;
-        vc.marr = actionItem.items;
-        Class actionCls = NSClassFromString(actionItem.action);
-        vc.action = [[actionCls alloc] init];
-        NSAssert(vc.action, @"创建实例失败%@", actionItem.action);
-        [self.navigationController pushViewController:vc animated:YES];
-    } else {
-        [self.action performSelector:NSSelectorFromString(self.marr[indexPath.row].action)];
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.mode = MBProgressHUDModeText;
-        hud.animationType = MBProgressHUDAnimationFade;
-        hud.label.text = @"done";
-        [hud hideAnimated:YES afterDelay:1];
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.1;
+    NSArray<PGRouterConfig *> *items = self.data[indexPath.section].lastObject;
+    [PGRouterManager openURL:items[indexPath.row].URL.absoluteString  completion:^(BOOL ret, id object) {
+        
+    }];
 }
 
 @end

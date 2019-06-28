@@ -3,21 +3,20 @@
 //  FoundationDemo
 //
 //  Created by joengzi on 2019/2/2.
-//  Copyright © 2019 joenggaa. All rights reserved.
+//  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
 #import "MCNSArrayActions.h"
 #import "NSMutableArray+JSSafety.h"
 
+static NSMutableArray *_marr;
 @interface MCNSArrayActions ()
-
-@property (nonatomic, strong) NSMutableArray *marr;
 
 @end
 
 @implementation MCNSArrayActions
 
-- (void)safeUse {
++ (void)safeUse:(PGRouterContext *)context PGTarget("fd://NSArray/safeuse") {
     // Do any additional setup after loading the view.
     NSMutableArray *marr = [NSMutableArray array];
 
@@ -27,7 +26,7 @@
     }
     MACH_TIME_END(@"造数据")
 
-    self.marr = marr;
+    _marr = marr;
 
     __block BOOL running = YES;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -65,9 +64,9 @@
     });
 }
 
-- (NSUInteger)arrayCount {
++ (NSUInteger)arrayCount {
     MCLogWarn(@"");
-    return [self.marr count];
+    return [_marr count];
 }
 
 @end

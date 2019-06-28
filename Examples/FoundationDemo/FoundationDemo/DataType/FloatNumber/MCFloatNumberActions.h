@@ -3,14 +3,14 @@
 //  FoundationDemo
 //
 //  Created by joengzi on 2019/1/31.
-//  Copyright © 2019 joenggaa. All rights reserved.
+//  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <MCDynamicAction/MCDynamicActionProtocol.h>
+#import "GDBaseAction.h"
 
 /**
  浮点数
  */
-@interface MCFloatNumberActions : NSObject <MCDynamicActionProtocol>
+@interface MCFloatNumberActions : GDBaseAction
 
 @end

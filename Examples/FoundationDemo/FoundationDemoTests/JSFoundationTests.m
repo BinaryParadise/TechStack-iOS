@@ -3,7 +3,7 @@
 //  FoundationDemoTests
 //
 //  Created by joengzi on 2019/2/20.
-//  Copyright © 2019年 joenggaa. All rights reserved.
+//  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

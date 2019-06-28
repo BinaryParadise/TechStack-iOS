@@ -1,20 +1,15 @@
 //
 //  ViewController.h
-//  FoundationDemo
+//  iOSGuide
 //
-//  Created by joengzi on 2019/1/31.
-//  Copyright © 2019 joenggaa. All rights reserved.
+//  Created by mylcode on 2017/10/7.
+//  Copyright © 2017年 mylcode. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <MCDynamicAction/MCDynamicActionProtocol.h>
-#import <MCDynamicAction/MCDynamicAction.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray<MCDynamicAction *> *marr;
-
-@property (nonatomic, strong) id<MCDynamicActionProtocol> action;
 
 @end
 

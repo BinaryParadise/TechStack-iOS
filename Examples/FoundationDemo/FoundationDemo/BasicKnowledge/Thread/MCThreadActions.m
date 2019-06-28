@@ -3,7 +3,7 @@
 //  FoundationDemo
 //
 //  Created by joengzi on 2019/2/24.
-//  Copyright © 2019年 joenggaa. All rights reserved.
+//  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
 #import "MCThreadActions.h"
@@ -14,7 +14,7 @@
 
 @implementation MCThreadActions
 
-- (void)demo_NSThread {
++ (void)demo_NSThread:(PGRouterContext *)context PGTarget("fd://Thread/NSThread") {
     printf("------------------NSThread------------------\n");
     //手动启动
     NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(doSomething1:) object:@"thread1"];
@@ -36,7 +36,7 @@
     MCLogDebug(@"当前线程 %@", [NSThread currentThread])
 }
 
-- (void)demo_GCD {
++ (void)demo_GCD:(PGRouterContext *)context PGTarget("fd://Thread/NSThread") {
     printf("------------------GCD------------------\n");
     
     //主队列
@@ -155,20 +155,8 @@
     MCLogDebug(@"done!");
 }
 
-- (void)demo_NSOperation {
++ (void)demo_NSOperation {
     printf("------------------NSOperation------------------\n");
-}
-
-- (void)doSomething1:(id)sender {
-    MCLogDebug(@"随便做些事情1 %@", sender);
-}
-
-- (void)doSomething2:(id)sender {
-    MCLogDebug(@"随便做些事情2 %@", sender);
-}
-
-- (void)doSomething3:(id)sender {
-    MCLogDebug(@"随便做些事情3 %@", sender);
 }
 
 @end

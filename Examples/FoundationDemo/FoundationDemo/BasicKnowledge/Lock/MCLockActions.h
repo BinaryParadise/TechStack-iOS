@@ -3,11 +3,11 @@
 //  FoundationDemo
 //
 //  Created by joengzi on 2019/2/28.
-//  Copyright © 2019年 joenggaa. All rights reserved.
+//  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import <MCDynamicAction/MCDynamicActionProtocol.h>
+#import "GDBaseAction.h"
 
-@interface MCLockActions : NSObject <MCDynamicActionProtocol>
+@interface MCLockActions : GDBaseAction
 
 @end

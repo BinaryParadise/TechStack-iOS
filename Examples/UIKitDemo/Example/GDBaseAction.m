@@ -25,4 +25,9 @@
     [nav pushViewController:controller animated:YES];
 }
 
++ (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [nav pushViewController:viewController animated:animated];
+}
+
 @end

@@ -3,7 +3,7 @@
 //  iOSGuide
 //
 //  Created by joengzi on 2017/10/9.
-//  Copyright © 2017年 joenggaa. All rights reserved.
+//  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
 #import "JSARCDemoA.h"

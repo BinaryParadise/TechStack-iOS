@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GDTest.h"
+
 @interface ViewController : UITableViewController
 
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ry5-T0-07a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ry5-T0-07a">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -336,16 +336,55 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Content Compression Resistance Priority" id="JvG-n1-M1Q">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fZJ-Qn-MEa">
-                                        <rect key="frame" x="0.0" y="258" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="fZJ-Qn-MEa">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZJ-Qn-MEa" id="fEP-ek-vgU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="戴森球是弗里曼·戴森假想出的包围母恒星的巨大球形结构，它可以捕获大部分或者全部的恒星能量输出。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-Rm-WVC">
+                                                    <rect key="frame" x="16" y="10" width="296" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="隐藏元素也会影响布局，需要设置优先级" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkt-JC-nWp">
+                                                    <rect key="frame" x="20" y="38.5" width="284" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" text="不同类型的戴森球和它们的能量收集能力将对应于在卡尔达肖夫指数水平上的技术进步" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ1-1w-eg6">
+                                                    <rect key="frame" x="312" y="38.5" width="0.0" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.98431372549999996" green="0.4549019608" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZw-ND-Gsq">
+                                                    <rect key="frame" x="344" y="39.5" width="66" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kZw-ND-Gsq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rkt-JC-nWp" secondAttribute="trailing" constant="32" id="1Sh-PT-IV0"/>
+                                                <constraint firstItem="HJ1-1w-eg6" firstAttribute="leading" secondItem="Rkt-JC-nWp" secondAttribute="trailing" constant="8" id="2IX-Hf-xb7"/>
+                                                <constraint firstItem="kZw-ND-Gsq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HJ1-1w-eg6" secondAttribute="trailing" constant="32" id="6Hn-56-6VK"/>
+                                                <constraint firstItem="kZw-ND-Gsq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4yv-Rm-WVC" secondAttribute="trailing" constant="32" id="M3F-iQ-SGf"/>
+                                                <constraint firstItem="Rkt-JC-nWp" firstAttribute="top" secondItem="4yv-Rm-WVC" secondAttribute="bottom" constant="8" id="Ni6-mW-JZe"/>
+                                                <constraint firstItem="4yv-Rm-WVC" firstAttribute="top" secondItem="fEP-ek-vgU" secondAttribute="top" constant="10" id="TI9-sY-stI"/>
+                                                <constraint firstItem="kZw-ND-Gsq" firstAttribute="centerY" secondItem="fEP-ek-vgU" secondAttribute="centerY" id="bkv-gy-INz"/>
+                                                <constraint firstItem="4yv-Rm-WVC" firstAttribute="leading" secondItem="fEP-ek-vgU" secondAttribute="leading" constant="16" id="erZ-96-bnP"/>
+                                                <constraint firstItem="Rkt-JC-nWp" firstAttribute="leading" secondItem="fEP-ek-vgU" secondAttribute="leadingMargin" id="oDp-yH-Ql4"/>
+                                                <constraint firstItem="HJ1-1w-eg6" firstAttribute="centerY" secondItem="Rkt-JC-nWp" secondAttribute="centerY" id="w0K-4l-INM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kZw-ND-Gsq" secondAttribute="trailing" constant="-16" id="zt4-Xn-UTh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5wQ-pB-WO5">
-                                        <rect key="frame" x="0.0" y="302" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="358" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wQ-pB-WO5" id="pkO-LQ-gj9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -353,7 +392,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FdH-a6-Qdg">
-                                        <rect key="frame" x="0.0" y="346" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="402" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FdH-a6-Qdg" id="9jk-gG-fel">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>

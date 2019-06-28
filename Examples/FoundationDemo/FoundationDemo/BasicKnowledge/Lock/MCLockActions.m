@@ -3,7 +3,7 @@
 //  FoundationDemo
 //
 //  Created by joengzi on 2019/2/28.
-//  Copyright © 2019年 joenggaa. All rights reserved.
+//  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
 #import "MCLockActions.h"
@@ -11,10 +11,10 @@
 #include <pthread/pthread.h>
 
 static OSSpinLock oslock = OS_SPINLOCK_INIT;
+static NSUInteger _count;
+static pthread_mutex_t _mutex;
 
 @interface MCLockActions () {
-    NSUInteger _count;
-    pthread_mutex_t _mutex;
 }
 
 @property (nonatomic, strong) NSLock *lock;
@@ -39,7 +39,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
 
 #pragma mark - Actions
 
-- (IBAction)go_OSSpinLock {
++ (IBAction)go_OSSpinLock:(PGRouterContext *)context PGTarget("ft://Lock/OSSpinLock") {
     MCLogWarn(@"");
     /**
      适用于等待队列任务
@@ -57,7 +57,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     });
 }
 
-- (IBAction)go_semaphore {
++ (IBAction)go_semaphore:(PGRouterContext *)context PGTarget("ft://Lock/semaphore") {
     MCLogWarn("----------------------信号量----------------------");
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); //传入值必须 >0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -87,7 +87,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     });
 }
 
-- (IBAction)go_nslock {
++ (IBAction)go_nslock:(PGRouterContext *)context PGTarget("ft://Lock/NSLock") {
     _count = 5;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self selliPhone];
@@ -97,7 +97,7 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     });
 }
 
-- (void)selliPhone {
++ (void)selliPhone {
     while (YES) {
         sleep(0.5);
         //[self.lock lock];
@@ -112,13 +112,13 @@ static OSSpinLock oslock = OS_SPINLOCK_INIT;
     }
 }
 
-- (void)go_pthread_mutex {
++ (void)go_pthread_mutex:(PGRouterContext *)context PGTarget("ft://Lock/mutex") {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        if (pthread_mutex_trylock(&self->_mutex) == 0) {
+        if (pthread_mutex_trylock(&_mutex) == 0) {
             MCLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
             sleep(3);
             MCLogDebug(@"解锁... %@", [NSThread currentThread]);
-            pthread_mutex_unlock(&self->_mutex);
+            pthread_mutex_unlock(&_mutex);
         } else {
             MCLogDebug(@"加锁中 %@", [NSThread currentThread]);
         }

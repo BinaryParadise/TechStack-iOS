@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Button View Controller-->
         <scene sceneID="6vY-bi-9Qx">
             <objects>
-                <viewController storyboardIdentifier="UIButton" id="IB7-IA-5xY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIButton" id="IB7-IA-5xY" customClass="GDUIButtonViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GWj-9G-FfL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,13 +52,26 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-2j-5Pm">
+                                <rect key="frame" x="91" y="210" width="193" height="44"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.4549019608" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7Rh-gR-uqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="titleEdgeInsets" minX="-24" minY="29" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="79.5" minY="0.0" maxX="0.0" maxY="19"/>
+                                <state key="normal" title="图片左间隔是标题宽度的二分之一" image="icon_lock"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1AA-OR-Ee7" firstAttribute="top" secondItem="hN7-LK-4dO" secondAttribute="bottom" constant="8" id="10V-ON-iiI"/>
                             <constraint firstItem="SQH-JT-fh9" firstAttribute="top" secondItem="D1s-Qt-U3P" secondAttribute="bottom" constant="8" id="6MM-ef-5q5"/>
+                            <constraint firstItem="1y0-2j-5Pm" firstAttribute="top" secondItem="9pe-i2-Zpy" secondAttribute="top" constant="190" id="A79-CO-qGJ"/>
                             <constraint firstItem="hN7-LK-4dO" firstAttribute="top" secondItem="SQH-JT-fh9" secondAttribute="bottom" constant="8" id="Dbx-hn-t6N"/>
                             <constraint firstItem="D1s-Qt-U3P" firstAttribute="leading" secondItem="9pe-i2-Zpy" secondAttribute="leading" constant="16" id="GSr-XS-KXc"/>
+                            <constraint firstItem="1y0-2j-5Pm" firstAttribute="centerX" secondItem="9pe-i2-Zpy" secondAttribute="centerX" id="JKy-3Q-KNT"/>
                             <constraint firstItem="D1s-Qt-U3P" firstAttribute="top" secondItem="9pe-i2-Zpy" secondAttribute="top" constant="16" id="Lqa-ql-GSJ"/>
                             <constraint firstItem="1AA-OR-Ee7" firstAttribute="leading" secondItem="hN7-LK-4dO" secondAttribute="leading" id="PkV-AS-tAg"/>
                             <constraint firstItem="hN7-LK-4dO" firstAttribute="leading" secondItem="9pe-i2-Zpy" secondAttribute="leading" constant="16" id="asU-tn-7AU"/>
@@ -66,6 +79,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9pe-i2-Zpy"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="1y0-2j-5Pm" id="BSL-2O-VUV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZ9-E1-Al0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
