@@ -6,20 +6,20 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <JavascriptCore/JavascriptCore.h>
-
-@class SNView, SNViewController;
 
 @protocol SNJSExport <JSExport>
 
-JSExportAs(new, - (instancetype)initWithDictionary:(NSDictionary *)dict);
+JSExportAs(__invoke,- (id)invoke:(NSDictionary *)typeInfo method:(NSString *)method arguments:(NSArray *)arguments);
 
 @end
 
-@protocol SNViewJSExport <NSObject>
+@protocol SNViewJSExport <JSExport>
 
-+ (BOOL)ret;
-- (SNView *)view;
-- (SNViewController *)controller;
+@property (nonatomic, assign) BOOL ret;
+
+- (UIView *)View:(NSDictionary *)dict;
+- (UIViewController *)Controller:(NSDictionary *)dict;
 
 @end

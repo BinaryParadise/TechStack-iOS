@@ -8,7 +8,7 @@
 
 #import "MCJavaScriptAction.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-#import "SNViewJSExport.h"
+#import "SNViewJSExportImpl.h"
 
 @implementation MCJavaScriptAction
 
@@ -19,15 +19,23 @@
 }
 
 + (void)scriptNative:(PGRouterContext *)context PGTarget("fd://JavaScriptCore/ScriptNative") {
-    JSContext *jsContext = [[JSContext alloc] init];
+    static NSString *_regexStr = @"(?<!\\\\)\\.\\s*(\\w+)\\s*\\(";
+    static NSString *_replaceStr = @".__c(\"$1\")(";
+    NSRegularExpression* _regex;
+    NSString *jsEngine = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SNEngine.js" ofType:nil] encoding:NSUTF8StringEncoding error:nil];
+    NSString *jsContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Environment.js" ofType:nil] encoding:NSUTF8StringEncoding error:nil];
+    _regex = [NSRegularExpression regularExpressionWithPattern:_regexStr options:0 error:nil];
+    jsContent = [_regex stringByReplacingMatchesInString:jsContent options:0 range:NSMakeRange(0, jsContent.length) withTemplate:_replaceStr];
+    
+    JSContext *jsContext = [[JSContext alloc] initWithVirtualMachine:[JSVirtualMachine new]];
     jsContext.exceptionHandler = ^(JSContext *context, JSValue *exception) {
         MCLogError(@"%@", exception);
-    };
-    [jsContext evaluateScript:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Environment.js" ofType:nil] encoding:NSUTF8StringEncoding error:nil]];
+    };    
+    jsContext[@"SNBridge"] = [[SNJSExportImpl alloc] init];
+    [jsContext evaluateScript:[jsEngine stringByAppendingString:jsContent]];
     jsContext[@"hellooc"] =  ^() {
         MCLogWarn(@"HelloWord");
     };
-    jsContext[@"SNBridge"] = [[SNViewJSExport alloc] init];
     JSValue *retValue = [jsContext[@"demo"] callWithArguments:nil];
     [self pushViewController:retValue.toObject animated:YES];
 }

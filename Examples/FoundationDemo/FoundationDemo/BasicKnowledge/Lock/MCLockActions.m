@@ -39,7 +39,7 @@ static pthread_mutex_t _mutex;
 
 #pragma mark - Actions
 
-+ (IBAction)go_OSSpinLock:(PGRouterContext *)context PGTarget("ft://Lock/OSSpinLock") {
++ (void)go_OSSpinLock:(PGRouterContext *)context PGTarget("ft://Lock/OSSpinLock") {
     MCLogWarn(@"");
     /**
      适用于等待队列任务
@@ -57,7 +57,7 @@ static pthread_mutex_t _mutex;
     });
 }
 
-+ (IBAction)go_semaphore:(PGRouterContext *)context PGTarget("ft://Lock/semaphore") {
++ (void)go_semaphore:(PGRouterContext *)context PGTarget("ft://Lock/semaphore") {
     MCLogWarn("----------------------信号量----------------------");
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); //传入值必须 >0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -87,7 +87,7 @@ static pthread_mutex_t _mutex;
     });
 }
 
-+ (IBAction)go_nslock:(PGRouterContext *)context PGTarget("ft://Lock/NSLock") {
++ (void)go_nslock:(PGRouterContext *)context PGTarget("ft://Lock/NSLock") {
     _count = 5;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self selliPhone];

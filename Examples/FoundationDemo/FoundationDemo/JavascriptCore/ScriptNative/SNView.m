@@ -10,4 +10,11 @@
 
 @implementation SNView
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
 @end

@@ -32,7 +32,6 @@ static NSMutableArray *_marr;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         MACH_TIME_START
         __block BOOL show = YES;
-        NSUInteger count = marr.count;
         //不要直接遍历NSMutableArray
 #if 0
         for (id obj1 in marr) {//crash

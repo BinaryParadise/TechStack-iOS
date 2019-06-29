@@ -16,15 +16,6 @@
 
 + (void)demo_NSThread:(PGRouterContext *)context PGTarget("fd://Thread/NSThread") {
     printf("------------------NSThread------------------\n");
-    //手动启动
-    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(doSomething1:) object:@"thread1"];
-    [thread1 start];
-    
-    //自动启动
-    [NSThread detachNewThreadSelector:@selector(doSomething2:) toTarget:self withObject:@"thread2"];
-    
-    //隐式创建，直接启动
-    [self performSelectorInBackground:@selector(doSomething3:) withObject:@"thread3"];
     
     //休眠指定秒数
     [NSThread sleepForTimeInterval:0.2];

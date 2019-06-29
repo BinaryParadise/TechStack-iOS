@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (SNBridge)
 
-+ (UIColor *)colorWithHex:(long)hexColor;
++ (UIColor *)sn_colorWithHex:(long)hexColor;
 
 @end
 

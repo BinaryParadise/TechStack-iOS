@@ -18,6 +18,9 @@
 		242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E3922472DFF0022BD45 /* UITableViewCell+MCRegister.m */; };
 		242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E3C22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m */; };
 		2449EC802222545100F466EE /* MCThreadActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2449EC7F2222545000F466EE /* MCThreadActions.m */; };
+		248B206B22C701B200CF4EA4 /* SNEngine.js in Resources */ = {isa = PBXBuildFile; fileRef = 248B206A22C701B200CF4EA4 /* SNEngine.js */; };
+		248B206E22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B206D22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m */; };
+		24EE328922C75AF5001B32ED /* NSInvocation+ScriptNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE328822C75AF5001B32ED /* NSInvocation+ScriptNative.m */; };
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
 		8115A8D1D2A913C652306B5F /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC76AB7E50A50CDF0C3E2F /* libPods-FoundationDemoTests.a */; };
 		B119E6897EE90DF6C5EC5B61 /* libPods-FoundationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6450DE03129ECDA067B08E /* libPods-FoundationDemo.a */; };
@@ -50,7 +53,7 @@
 		CEC9B6D222C61B52002CCBD1 /* SNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9B6D122C61B52002CCBD1 /* SNViewController.m */; };
 		CEC9B6D622C61D17002CCBD1 /* UIColor+SNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9B6D522C61D17002CCBD1 /* UIColor+SNBridge.m */; };
 		CEF3446522C5FF0E00088D74 /* Environment.js in Resources */ = {isa = PBXBuildFile; fileRef = CEF3446422C5FF0E00088D74 /* Environment.js */; };
-		CEF3446822C60BD900088D74 /* SNViewJSExport.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3446722C60BD900088D74 /* SNViewJSExport.m */; };
+		CEF3446822C60BD900088D74 /* SNViewJSExportImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3446722C60BD900088D74 /* SNViewJSExportImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,11 @@
 		242D4E3C22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+MCRegister.m"; sourceTree = "<group>"; };
 		2449EC7E2222545000F466EE /* MCThreadActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCThreadActions.h; sourceTree = "<group>"; };
 		2449EC7F2222545000F466EE /* MCThreadActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCThreadActions.m; sourceTree = "<group>"; };
+		248B206A22C701B200CF4EA4 /* SNEngine.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = SNEngine.js; sourceTree = "<group>"; };
+		248B206C22C7041B00CF4EA4 /* NSDictionary+ScriptNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ScriptNative.h"; sourceTree = "<group>"; };
+		248B206D22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ScriptNative.m"; sourceTree = "<group>"; };
+		24EE328722C75AF5001B32ED /* NSInvocation+ScriptNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+ScriptNative.h"; sourceTree = "<group>"; };
+		24EE328822C75AF5001B32ED /* NSInvocation+ScriptNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+ScriptNative.m"; sourceTree = "<group>"; };
 		24F1FB6D22241F9E0066D008 /* MCArithmeticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCArithmeticTableViewController.h; sourceTree = "<group>"; };
 		24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCArithmeticTableViewController.m; sourceTree = "<group>"; };
 		32B1511F97C77E5D2A8A1636 /* Pods-FoundationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,8 +160,8 @@
 		CEC9B6D522C61D17002CCBD1 /* UIColor+SNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SNBridge.m"; sourceTree = "<group>"; };
 		CEC9B6D722C62088002CCBD1 /* SNBridgeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNBridgeDefine.h; sourceTree = "<group>"; };
 		CEF3446422C5FF0E00088D74 /* Environment.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Environment.js; sourceTree = "<group>"; };
-		CEF3446622C60BD900088D74 /* SNViewJSExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNViewJSExport.h; sourceTree = "<group>"; };
-		CEF3446722C60BD900088D74 /* SNViewJSExport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNViewJSExport.m; sourceTree = "<group>"; };
+		CEF3446622C60BD900088D74 /* SNViewJSExportImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNViewJSExportImpl.h; sourceTree = "<group>"; };
+		CEF3446722C60BD900088D74 /* SNViewJSExportImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNViewJSExportImpl.m; sourceTree = "<group>"; };
 		E5D422805D85CBDAF30EDDB1 /* Pods-FoundationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,12 +320,12 @@
 		CE6E26E72202F743003AB8FB /* FoundationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
+				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
 				CE650E7E22C3464C00AE2908 /* ViewController.h */,
 				CE650E7D22C3464B00AE2908 /* ViewController.m */,
 				CE650E7422C3231800AE2908 /* GDBaseAction.h */,
 				CE650E7522C3231800AE2908 /* GDBaseAction.m */,
-				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
-				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
 				2426ECC8227AEC32001947A9 /* Main.storyboard */,
 				242D4E27224727590022BD45 /* View */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
@@ -424,9 +432,10 @@
 		CEF3446322C5FCD600088D74 /* ScriptNative */ = {
 			isa = PBXGroup;
 			children = (
+				248B206A22C701B200CF4EA4 /* SNEngine.js */,
 				CEF3446422C5FF0E00088D74 /* Environment.js */,
-				CEF3446622C60BD900088D74 /* SNViewJSExport.h */,
-				CEF3446722C60BD900088D74 /* SNViewJSExport.m */,
+				CEF3446622C60BD900088D74 /* SNViewJSExportImpl.h */,
+				CEF3446722C60BD900088D74 /* SNViewJSExportImpl.m */,
 				CEC9B6D322C61BF7002CCBD1 /* SNKit.h */,
 				CEC9B6CD22C618D0002CCBD1 /* SNView.h */,
 				CEC9B6CE22C618D0002CCBD1 /* SNView.m */,
@@ -435,6 +444,10 @@
 				CEC9B6D422C61D17002CCBD1 /* UIColor+SNBridge.h */,
 				CEC9B6D522C61D17002CCBD1 /* UIColor+SNBridge.m */,
 				CEC9B6D722C62088002CCBD1 /* SNBridgeDefine.h */,
+				248B206C22C7041B00CF4EA4 /* NSDictionary+ScriptNative.h */,
+				248B206D22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m */,
+				24EE328722C75AF5001B32ED /* NSInvocation+ScriptNative.h */,
+				24EE328822C75AF5001B32ED /* NSInvocation+ScriptNative.m */,
 			);
 			path = ScriptNative;
 			sourceTree = "<group>";
@@ -541,6 +554,7 @@
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
 				CEF3446522C5FF0E00088D74 /* Environment.js in Resources */,
 				2426ECC7227AEA62001947A9 /* MCDemoTableViewCell.xib in Resources */,
+				248B206B22C701B200CF4EA4 /* SNEngine.js in Resources */,
 				2426ECC9227AEC32001947A9 /* Main.storyboard in Resources */,
 				240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */,
 			);
@@ -678,9 +692,11 @@
 				CE25BB612265E0190067E97B /* MCMacroController.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
 				CEC9B6D222C61B52002CCBD1 /* SNViewController.m in Sources */,
-				CEF3446822C60BD900088D74 /* SNViewJSExport.m in Sources */,
+				248B206E22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m in Sources */,
+				CEF3446822C60BD900088D74 /* SNViewJSExportImpl.m in Sources */,
 				2426ECCD227AF1D4001947A9 /* MCFloatNumberActions.m in Sources */,
 				CEC9B6CF22C618D0002CCBD1 /* SNView.m in Sources */,
+				24EE328922C75AF5001B32ED /* NSInvocation+ScriptNative.m in Sources */,
 				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
 				CE6E274622057335003AB8FB /* MCNSArrayActions.m in Sources */,

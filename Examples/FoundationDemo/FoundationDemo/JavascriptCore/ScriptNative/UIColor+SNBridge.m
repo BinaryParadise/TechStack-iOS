@@ -10,7 +10,7 @@
 
 @implementation UIColor (SNBridge)
 
-+ (UIColor *)colorWithHex:(long)hexColor {
++ (UIColor *)sn_colorWithHex:(long)hexColor {
     CGFloat red = ((hexColor & 0xFF0000) >> 16);
     CGFloat green = ((hexColor & 0x00FF00) >> 8);
     CGFloat blue = ((hexColor & 0x00FF) >> 0);

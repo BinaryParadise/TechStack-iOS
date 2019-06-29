@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIColor+SNBridge.h"
-#import "SNBridgeDefine.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SNViewController : UIViewController <SNJSExport>
+@interface SNViewController : UIViewController
 
 @end
 
