@@ -102,8 +102,7 @@ Detecting C compiler ABI info - failed
 
 编译成功后将权限还原到默认
 ```ruby
-sudo chmod -R `whoami` 766 .
-sudo chown -R `whoami` .
+sudo chmod -R $(whoami) 766 . && chown -R $(whoami) .
 ```
 
 ----------
