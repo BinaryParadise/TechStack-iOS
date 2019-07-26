@@ -10,8 +10,6 @@
 
 @interface GDUIButtonViewController ()
 
-@property (nonatomic, weak) IBOutlet UIButton *button;
-
 @end
 
 @implementation GDUIButtonViewController

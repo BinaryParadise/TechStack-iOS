@@ -389,6 +389,39 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wQ-pB-WO5" id="pkO-LQ-gj9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="666.66" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-Wt-JLp">
+                                                    <rect key="frame" x="342" y="11.5" width="56" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.1801593935743552" green="0.38047271573604058" blue="0.11198481329852132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="列噶巨额拉杆夹雷建国蓝色我就格拉斯耳机个列噶巨额拉杆夹雷建国蓝色我就格拉斯耳机个列噶巨额拉杆夹雷建国蓝色我就格拉斯耳机个列噶巨额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca8-UQ-Fed">
+                                                    <rect key="frame" x="20" y="13" width="242" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="奶盖借来二硫键嘎斯鹅肝酱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLY-p3-7n9">
+                                                    <rect key="frame" x="270" y="15" width="48" height="13.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="ymo-Hw-xw2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.98431372549999996" green="0.4549019608" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CLY-p3-7n9" firstAttribute="leading" secondItem="ca8-UQ-Fed" secondAttribute="trailing" constant="8" id="4te-V9-Zqc"/>
+                                                <constraint firstItem="ca8-UQ-Fed" firstAttribute="leading" secondItem="pkO-LQ-gj9" secondAttribute="leadingMargin" id="Rvx-9Q-q7O"/>
+                                                <constraint firstItem="CLY-p3-7n9" firstAttribute="centerY" secondItem="pkO-LQ-gj9" secondAttribute="centerY" id="gXh-KR-BAP"/>
+                                                <constraint firstItem="Zak-Wt-JLp" firstAttribute="centerY" secondItem="pkO-LQ-gj9" secondAttribute="centerY" id="l2Z-3W-IZb"/>
+                                                <constraint firstItem="Zak-Wt-JLp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CLY-p3-7n9" secondAttribute="trailing" constant="24" id="mvx-kV-YVO"/>
+                                                <constraint firstItem="ca8-UQ-Fed" firstAttribute="centerY" secondItem="pkO-LQ-gj9" secondAttribute="centerY" id="n4k-24-Xe2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zak-Wt-JLp" secondAttribute="trailing" constant="16" id="xXK-e9-kbs"/>
+                                                <constraint firstItem="Zak-Wt-JLp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ca8-UQ-Fed" secondAttribute="trailing" priority="750" constant="24" id="zcJ-it-tQ8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FdH-a6-Qdg">
@@ -410,7 +443,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8S-2q-hYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="-31"/>
+            <point key="canvasLocation" x="450.72463768115944" y="-31.473214285714285"/>
         </scene>
     </scenes>
 </document>
