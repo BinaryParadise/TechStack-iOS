@@ -2,12 +2,12 @@
 //  JSNSArrayViewController.h
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/2/2.
+//  Created by Rake Yang on 2019/2/2.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import <TIRouterAction/TIRouterAction.h>
 
-@interface MCNSArrayActions : GDBaseAction
+@interface MCNSArrayActions : TIRouterActionBase
 
 @end

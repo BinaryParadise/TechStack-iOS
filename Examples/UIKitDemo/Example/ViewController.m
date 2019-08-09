@@ -19,10 +19,16 @@
 
 @implementation ViewController
 
+- (void)loadView {
+    UITableView *tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    tableView.backgroundColor = [UIColor darkGrayColor];
+    self.tableView = tableView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    
     NSMutableArray *marr = [NSMutableArray array];
     [[PGRouterManager routerMap] enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray<PGRouterConfig *> * _Nonnull obj, BOOL * _Nonnull stop) {
         [marr addObject:@[key,obj]];

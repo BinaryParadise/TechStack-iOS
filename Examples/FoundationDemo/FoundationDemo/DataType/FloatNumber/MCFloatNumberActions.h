@@ -6,11 +6,11 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import <TIRouterAction/TIRouterAction.h>
 
 /**
  浮点数
  */
-@interface MCFloatNumberActions : GDBaseAction
+@interface MCFloatNumberActions : TIRouterActionBase
 
 @end

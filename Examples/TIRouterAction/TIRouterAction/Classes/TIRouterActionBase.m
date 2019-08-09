@@ -6,9 +6,9 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import "TIRouterActionBase.h"
 
-@implementation GDBaseAction
+@implementation TIRouterActionBase
 
 + (NSString *)storyBoardName {
     return nil;

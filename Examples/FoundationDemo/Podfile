@@ -6,8 +6,9 @@ target 'FoundationDemo' do
   # use_frameworks!
 
   # Pods for FoundationDemo
-  pod 'Peregrine', '~> 0.2.0'
+  pod 'Peregrine', '~> 0.3.0'
   pod 'MCLogger', :path => '../../../MCLogger'
+  pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
   pod 'Masonry'
@@ -20,4 +21,14 @@ target 'FoundationDemo' do
     pod 'Expecta'
   end
 
+end
+
+post_install do |installer|
+     require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
+     PGConfiguration::configure_project(installer)
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['COMPILER_INDEX_STORE_ENABLE'] = "NO"
+    end
+  end
 end

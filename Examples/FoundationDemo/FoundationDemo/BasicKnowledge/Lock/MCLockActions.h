@@ -6,8 +6,8 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import <TIRouterAction/TIRouterAction.h>
 
-@interface MCLockActions : GDBaseAction
+@interface MCLockActions : TIRouterActionBase
 
 @end

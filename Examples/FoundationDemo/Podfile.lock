@@ -20,7 +20,7 @@ PODS:
   - Expecta (1.0.6)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - MCLogger (0.5.0):
+  - MCLogger (0.6.1):
     - CocoaLumberjack (~> 3.0)
     - MJExtension (~> 3.0)
     - SAMKeychain (~> 1.5)
@@ -32,11 +32,15 @@ PODS:
   - MCUIKit/UIKit (0.3.0):
     - MCUIKit/Category
     - MCUIKit/Gesonry
-  - MJExtension (3.0.17)
-  - Peregrine (0.2.3)
+  - MJExtension (3.1.0)
+  - Peregrine (0.3.1):
+    - Peregrine/LibTooling (= 0.3.1)
+  - Peregrine/LibTooling (0.3.1)
   - SAMKeychain (1.5.3)
   - SocketRocket (0.5.1)
   - Specta (1.0.7)
+  - TIRouterAction (0.1.0):
+    - Peregrine (~> 0.3.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -45,12 +49,15 @@ DEPENDENCIES:
   - MBProgressHUD
   - MCLogger (from `../../../MCLogger`)
   - MCUIKit
-  - Peregrine (~> 0.2.0)
+  - Peregrine (~> 0.3.0)
   - Specta
+  - TIRouterAction (from `../TIRouterAction`)
 
 EXTERNAL SOURCES:
   MCLogger:
     :path: ../../../MCLogger
+  TIRouterAction:
+    :path: ../TIRouterAction
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -58,14 +65,15 @@ SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MCLogger: cbcb3b3572caa9dbe5e5b1cf9b9ae004287d14f5
+  MCLogger: a2425f1613a15cf27cee4bb3b20329a100306e67
   MCUIKit: 4d9fb8d30b0cf44bf99605ecd248a3092d6f4e13
-  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
-  Peregrine: 080d286cd7e9e86090477a3c53e26dde9321517e
+  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
+  Peregrine: 4706b36fe5d61b7cf32bfb0fabc116c406853a4a
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  TIRouterAction: 7aefa05289823d15b7866415253ae2c6e687106c
 
-PODFILE CHECKSUM: 22e41243f660ba0f50ca9872853dd679cb2eb11a
+PODFILE CHECKSUM: 3bff9a609a72106a748a8b74d291010ffa54047e
 
 COCOAPODS: 1.4.0

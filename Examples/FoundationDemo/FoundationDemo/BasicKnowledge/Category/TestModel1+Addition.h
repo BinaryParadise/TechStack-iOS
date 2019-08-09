@@ -7,6 +7,7 @@
 //
 
 #import "TestModel1.h"
+#import <TIRouterAction/TIRouterAction.h>
 
 @interface TestModel1 (Addition)
 

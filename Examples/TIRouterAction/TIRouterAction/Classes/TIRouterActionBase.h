@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDBaseAction : NSObject
+@interface TIRouterActionBase : NSObject
 
 + (NSString *)storyBoardName;
 

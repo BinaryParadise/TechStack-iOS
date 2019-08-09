@@ -17,4 +17,8 @@
     return self;
 }
 
+- (id)invoke:(NSDictionary *)typeInfo method:(NSString *)method arguments:(NSArray *)arguments {
+    return nil;
+}
+
 @end

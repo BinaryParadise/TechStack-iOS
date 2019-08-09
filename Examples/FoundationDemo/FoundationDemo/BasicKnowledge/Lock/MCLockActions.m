@@ -64,25 +64,25 @@ static pthread_mutex_t _mutex;
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         sleep(3);
-        MCLogDebug(@"任务1完成 %@", [NSThread currentThread])
+        MCLogDebug(@"任务1完成 %@", [NSThread currentThread]);
         long ret = dispatch_semaphore_signal(semaphore);
-        MCLogDebug(@"%ld线程等待 %@",ret, [NSThread currentThread])
+        MCLogDebug(@"%ld线程等待 %@",ret, [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         //此刻信号量为0，线程阻塞等待信号唤起，超时时间2秒
         long ret = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC));
         if (ret == 0) {//分支处理
             //收到信号，继续执行
-            MCLogDebug(@"任务2完成 %@", [NSThread currentThread])
+            MCLogDebug(@"任务2完成 %@", [NSThread currentThread]);
             dispatch_semaphore_signal(semaphore);
         } else {
             //超时时间内未收到信号
-            MCLogDebug(@"线程阻塞 %@", [NSThread currentThread])
+            MCLogDebug(@"线程阻塞 %@", [NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        MCLogDebug(@"任务3完成 %@", [NSThread currentThread])
+        MCLogDebug(@"任务3完成 %@", [NSThread currentThread]);
         dispatch_semaphore_signal(semaphore);
     });
 }

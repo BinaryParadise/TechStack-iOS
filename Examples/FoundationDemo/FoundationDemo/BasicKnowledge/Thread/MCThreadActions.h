@@ -6,11 +6,19 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import <TIRouterAction/TIRouterAction.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCThreadActions : GDBaseAction
+@interface MCThreadActions : TIRouterActionBase
+
++ (void)demo_NSThread:(PGRouterContext *)context PGTarget("fd://Thread/NSThread");
+
++ (void)demo_GCD:(PGRouterContext *)context PGTarget("fd://Thread/GCD");
+
++ (void)demo_GCDGroup:(PGRouterContext *)context PGTarget("fd://Thread/GCD_Group");
+
++ (void)dem_temp:(PGRouterContext *)context PGTarget("fd://Thread/Temp");
 
 @end
 

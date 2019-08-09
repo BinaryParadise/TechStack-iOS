@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <TIRouterAction/TIRouterAction.h>
 
 /**
  警告：在主队列中执行同步任务会造成Dead Lock
