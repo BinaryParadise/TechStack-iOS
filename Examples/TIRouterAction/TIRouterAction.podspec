@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/rakeyang/TIRouterAction'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'rakeyang' => 'lingjing@wacai.com' }
+  s.author           = { 'Rake Yang' => 'fenglaijun@gmail.com' }
   s.source           = { :git => 'https://github.com/rakeyang/TIRouterAction.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -32,12 +32,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'TIRouterAction/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'TIRouterAction' => ['TIRouterAction/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'TIRouterAction' => ['TIRouterAction/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'MBProgressHUD'
   s.dependency 'Peregrine', '~> 0.3.0'
   
 end

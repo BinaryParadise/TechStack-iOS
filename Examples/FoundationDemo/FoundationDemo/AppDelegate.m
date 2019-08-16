@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <MCLogger/MCLogger.h>
-#import "ViewController.h"
+#import <TIRouterAction/TIRouterAction.h>
 
 @interface testClass : NSObject
 
@@ -30,6 +30,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self initMCLogger];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TIRouterActionManager mangerController]];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

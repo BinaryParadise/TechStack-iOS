@@ -11,9 +11,6 @@
 		240BB63122280D4A00CB0722 /* MCLockActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 240BB62F22280D4A00CB0722 /* MCLockActions.m */; };
 		240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240BB6332228144400CB0722 /* BasicKnowledge.storyboard */; };
 		240F179C221D8C7600E4830D /* JSFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F179B221D8C7600E4830D /* JSFoundationTests.m */; };
-		2426ECC6227AEA62001947A9 /* MCDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426ECC4227AEA62001947A9 /* MCDemoTableViewCell.m */; };
-		2426ECC7227AEA62001947A9 /* MCDemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2426ECC5227AEA62001947A9 /* MCDemoTableViewCell.xib */; };
-		2426ECC9227AEC32001947A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2426ECC8227AEC32001947A9 /* Main.storyboard */; };
 		2426ECCD227AF1D4001947A9 /* MCFloatNumberActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426ECCB227AF1D4001947A9 /* MCFloatNumberActions.m */; };
 		242D4E2F224729DA0022BD45 /* MCDemoHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */; };
 		242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D4E3922472DFF0022BD45 /* UITableViewCell+MCRegister.m */; };
@@ -29,7 +26,6 @@
 		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
 		CE32B928221C066E00567417 /* JSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B927221C066E00567417 /* JSModel.m */; };
 		CE650E7922C3233800AE2908 /* MCJavaScriptAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE650E7822C3233800AE2908 /* MCJavaScriptAction.m */; };
-		CE650E7F22C3464C00AE2908 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE650E7D22C3464B00AE2908 /* ViewController.m */; };
 		CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* AppDelegate.m */; };
 		CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F12202F745003AB8FB /* Assets.xcassets */; };
 		CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */; };
@@ -72,10 +68,6 @@
 		240BB62F22280D4A00CB0722 /* MCLockActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCLockActions.m; sourceTree = "<group>"; };
 		240BB6332228144400CB0722 /* BasicKnowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicKnowledge.storyboard; sourceTree = "<group>"; };
 		240F179B221D8C7600E4830D /* JSFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFoundationTests.m; sourceTree = "<group>"; };
-		2426ECC3227AEA62001947A9 /* MCDemoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDemoTableViewCell.h; sourceTree = "<group>"; };
-		2426ECC4227AEA62001947A9 /* MCDemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDemoTableViewCell.m; sourceTree = "<group>"; };
-		2426ECC5227AEA62001947A9 /* MCDemoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDemoTableViewCell.xib; sourceTree = "<group>"; };
-		2426ECC8227AEC32001947A9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2426ECCA227AED4D001947A9 /* MCNSArrayActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNSArrayActions.h; sourceTree = "<group>"; };
 		2426ECCB227AF1D4001947A9 /* MCFloatNumberActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFloatNumberActions.m; sourceTree = "<group>"; };
 		2426ECCC227AF1D4001947A9 /* MCFloatNumberActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFloatNumberActions.h; sourceTree = "<group>"; };
@@ -110,8 +102,6 @@
 		CE32B927221C066E00567417 /* JSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSModel.m; sourceTree = "<group>"; };
 		CE650E7722C3233800AE2908 /* MCJavaScriptAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCJavaScriptAction.h; sourceTree = "<group>"; };
 		CE650E7822C3233800AE2908 /* MCJavaScriptAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCJavaScriptAction.m; sourceTree = "<group>"; };
-		CE650E7D22C3464B00AE2908 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../UIKitDemo/Example/ViewController.m; sourceTree = "<group>"; };
-		CE650E7E22C3464C00AE2908 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../UIKitDemo/Example/ViewController.h; sourceTree = "<group>"; };
 		CE6E26E52202F743003AB8FB /* FoundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6E26E82202F743003AB8FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE6E26E92202F743003AB8FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -239,9 +229,6 @@
 		242D4E27224727590022BD45 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2426ECC3227AEA62001947A9 /* MCDemoTableViewCell.h */,
-				2426ECC4227AEA62001947A9 /* MCDemoTableViewCell.m */,
-				2426ECC5227AEA62001947A9 /* MCDemoTableViewCell.xib */,
 				242D4E2D224729DA0022BD45 /* MCDemoHeaderFooterView.h */,
 				242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */,
 				242D4E3822472DFF0022BD45 /* UITableViewCell+MCRegister.h */,
@@ -328,9 +315,6 @@
 			children = (
 				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
 				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
-				CE650E7E22C3464C00AE2908 /* ViewController.h */,
-				CE650E7D22C3464B00AE2908 /* ViewController.m */,
-				2426ECC8227AEC32001947A9 /* Main.storyboard */,
 				242D4E27224727590022BD45 /* View */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
 				240BB62A22280A6900CB0722 /* DataType */,
@@ -469,7 +453,6 @@
 				CE6E26E32202F743003AB8FB /* Resources */,
 				A95EC6701E2A6AF937CA4025 /* [CP] Embed Pods Frameworks */,
 				B2C379BD090F6202E51F7CC6 /* [CP] Copy Pods Resources */,
-				628FF3A886226620BB388370 /* [Peregrine] Generator Routing Table */,
 			);
 			buildRules = (
 			);
@@ -507,7 +490,7 @@
 		CE6E26DD2202F743003AB8FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = MC;
+				CLASSPREFIX = FD;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = BinaryParadise;
 				TargetAttributes = {
@@ -547,9 +530,7 @@
 				CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */,
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
 				CEF3446522C5FF0E00088D74 /* Environment.js in Resources */,
-				2426ECC7227AEA62001947A9 /* MCDemoTableViewCell.xib in Resources */,
 				248B206B22C701B200CF4EA4 /* SNEngine.js in Resources */,
-				2426ECC9227AEC32001947A9 /* Main.storyboard in Resources */,
 				240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,24 +566,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		628FF3A886226620BB388370 /* [Peregrine] Generator Routing Table */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Peregrine] Generator Routing Table";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"\n";
 		};
 		6CEA40877844EBDEF007E391 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -671,12 +634,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources.sh",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TIRouterAction/TIRouterAction.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TIRouterAction.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -713,12 +678,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */,
-				CE650E7F22C3464C00AE2908 /* ViewController.m in Sources */,
 				CE32B928221C066E00567417 /* JSModel.m in Sources */,
 				242D4E2F224729DA0022BD45 /* MCDemoHeaderFooterView.m in Sources */,
 				240BB63122280D4A00CB0722 /* MCLockActions.m in Sources */,
 				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
-				2426ECC6227AEA62001947A9 /* MCDemoTableViewCell.m in Sources */,
 				2449EC802222545100F466EE /* MCThreadActions.m in Sources */,
 				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
 				CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */,
@@ -832,7 +795,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -885,7 +848,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -899,8 +862,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				COMPILER_INDEX_STORE_ENABLE = NO;
-				DEVELOPMENT_TEAM = UGZ8Y9UYRK;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -921,8 +883,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				COMPILER_INDEX_STORE_ENABLE = NO;
-				DEVELOPMENT_TEAM = UGZ8Y9UYRK;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "FoundationDemo/Support File/Info.plist";
@@ -938,7 +899,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMPILER_INDEX_STORE_ENABLE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FoundationDemoTests/TestPrefix.h;
 				INFOPLIST_FILE = FoundationDemoTests/Info.plist;
@@ -960,7 +920,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMPILER_INDEX_STORE_ENABLE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FoundationDemoTests/TestPrefix.h;
 				INFOPLIST_FILE = FoundationDemoTests/Info.plist;

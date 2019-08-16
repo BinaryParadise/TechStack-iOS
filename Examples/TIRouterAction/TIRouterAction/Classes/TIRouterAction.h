@@ -1,6 +1,6 @@
 //
-//  GDBaseAction.h
-//  iOSGuide
+//  TIRouterAction.h
+//  TIRouterAction
 //
 //  Created by Rake Yang on 2019/5/20.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -8,6 +8,7 @@
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <TIRouterAction/TIRouterActionBase.h>
+#import <TIRouterAction/TIRouterActionManager.h>
 
 static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 

@@ -39,7 +39,7 @@ static pthread_mutex_t _mutex;
 
 #pragma mark - Actions
 
-+ (void)go_OSSpinLock:(PGRouterContext *)context PGTarget("ft://Lock/OSSpinLock") {
++ (void)go_OSSpinLock:(PGRouterContext *)context {
     MCLogWarn(@"");
     /**
      适用于等待队列任务
@@ -53,11 +53,12 @@ static pthread_mutex_t _mutex;
             OSSpinLockUnlock(&oslock);
             MCLogDebug(@"%@ 解锁%d", [NSThread currentThread], oslock);
             MCLogDebug(@"--------------------------------------------------------");
+            [context onDone:YES object:nil];
         }
     });
 }
 
-+ (void)go_semaphore:(PGRouterContext *)context PGTarget("ft://Lock/semaphore") {
++ (void)go_semaphore:(PGRouterContext *)context {
     MCLogWarn("----------------------信号量----------------------");
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); //传入值必须 >0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -112,7 +113,7 @@ static pthread_mutex_t _mutex;
     }
 }
 
-+ (void)go_pthread_mutex:(PGRouterContext *)context PGTarget("ft://Lock/mutex") {
++ (void)go_pthread_mutex:(PGRouterContext *)context {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         if (pthread_mutex_trylock(&_mutex) == 0) {
             MCLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
