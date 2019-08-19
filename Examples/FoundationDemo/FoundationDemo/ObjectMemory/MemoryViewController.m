@@ -8,6 +8,7 @@
 
 #import "MemoryViewController.h"
 #import "MemoryConstruction.h"
+#import <TIRouterAction/TIRouterAction.h>
 
 @interface MemoryViewController ()
 

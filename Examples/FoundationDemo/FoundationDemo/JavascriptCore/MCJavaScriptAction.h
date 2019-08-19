@@ -6,8 +6,8 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import <TIRouterAction/TIRouterAction.h>
 
-@interface MCJavaScriptAction : GDBaseAction
+@interface MCJavaScriptAction : TIRouterActionBase
 
 @end

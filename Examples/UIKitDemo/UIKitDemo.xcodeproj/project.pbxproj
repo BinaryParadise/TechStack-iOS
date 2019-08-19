@@ -33,6 +33,10 @@
 		CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE21AC1D229CDB3E0083822A /* GDTest.m */; };
 		CE2845B82293CCE200E74616 /* SBUIView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2845B72293CCE200E74616 /* SBUIView.storyboard */; };
 		CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */; };
+		CE58F63922CB895A00A98A6F /* GDXibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58F63722CB895A00A98A6F /* GDXibTableViewCell.m */; };
+		CE58F63A22CB895A00A98A6F /* GDXibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE58F63822CB895A00A98A6F /* GDXibTableViewCell.xib */; };
+		CE58F64122CC45C000A98A6F /* InterfaceBuilder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58F64022CC45C000A98A6F /* InterfaceBuilder.storyboard */; };
+		CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58F64322CC47C000A98A6F /* GDInterfaceBuildAction.m */; };
 		CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */; };
 		CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */; };
 		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
@@ -64,7 +68,7 @@
 		C532E4181F889834009E38CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C532E41A1F889834009E38CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C532E41B1F889834009E38CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C5ECF4DD1F89D84500CECF8B /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		C5ECF4DD1F89D84500CECF8B /* Header.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		C5FB165B1F8B998400350055 /* GDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDWebViewController.h; sourceTree = "<group>"; };
 		C5FB165C1F8B998400350055 /* GDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDWebViewController.m; sourceTree = "<group>"; };
@@ -82,6 +86,12 @@
 		CE2845B72293CCE200E74616 /* SBUIView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIView.storyboard; sourceTree = "<group>"; };
 		CE46D4C822C49C5300685E2F /* GDUIButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIButtonViewController.h; sourceTree = "<group>"; };
 		CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIButtonViewController.m; sourceTree = "<group>"; };
+		CE58F63622CB895A00A98A6F /* GDXibTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDXibTableViewCell.h; sourceTree = "<group>"; };
+		CE58F63722CB895A00A98A6F /* GDXibTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDXibTableViewCell.m; sourceTree = "<group>"; };
+		CE58F63822CB895A00A98A6F /* GDXibTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDXibTableViewCell.xib; sourceTree = "<group>"; };
+		CE58F64022CC45C000A98A6F /* InterfaceBuilder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterfaceBuilder.storyboard; sourceTree = "<group>"; };
+		CE58F64222CC47C000A98A6F /* GDInterfaceBuildAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDInterfaceBuildAction.h; sourceTree = "<group>"; };
+		CE58F64322CC47C000A98A6F /* GDInterfaceBuildAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDInterfaceBuildAction.m; sourceTree = "<group>"; };
 		CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDRouterTableViewCell.h; sourceTree = "<group>"; };
 		CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDRouterTableViewCell.m; sourceTree = "<group>"; };
 		CE9ABD37228BEC9B00115D2C /* PGAutoLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGAutoLayout.h; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 		249DD24E21E1EF1F009B8781 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CE58F63022CB88D900A98A6F /* Xib */,
 				CE0E301222966DC500E39428 /* UIViewController */,
 				CEA02DAD223B90D400157527 /* UIControl */,
 				2461DF2E222D659E00D4382F /* UIPageViewController */,
@@ -215,7 +226,7 @@
 			children = (
 				C532E41B1F889834009E38CA /* main.m */,
 				C532E41A1F889834009E38CA /* Info.plist */,
-				C5ECF4DD1F89D84500CECF8B /* Header.h */,
+				C5ECF4DD1F89D84500CECF8B /* Header.pch */,
 			);
 			name = "Support File";
 			sourceTree = "<group>";
@@ -248,6 +259,19 @@
 				CE0E301622966E0200E39428 /* SBViewController.storyboard */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		CE58F63022CB88D900A98A6F /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				CE58F64022CC45C000A98A6F /* InterfaceBuilder.storyboard */,
+				CE58F63622CB895A00A98A6F /* GDXibTableViewCell.h */,
+				CE58F63722CB895A00A98A6F /* GDXibTableViewCell.m */,
+				CE58F63822CB895A00A98A6F /* GDXibTableViewCell.xib */,
+				CE58F64222CC47C000A98A6F /* GDInterfaceBuildAction.h */,
+				CE58F64322CC47C000A98A6F /* GDInterfaceBuildAction.m */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		CE861DF421762F19009927A8 /* Autolayout */ = {
@@ -294,8 +318,7 @@
 				C532E4061F889834009E38CA /* Frameworks */,
 				C532E4071F889834009E38CA /* Resources */,
 				ADAE8F977B3F5E983A2DD83B /* [CP] Copy Pods Resources */,
-				8F0115B97F06A7CE2C9DB2BF /* [CP] Embed Pods Frameworks */,
-				24970CF722A02B3A00CBACBA /* [Peregrine] Copy Router File To Main Bundle */,
+				A2AA9AB78E4392CF47D891B2 /* [Peregrine] Generator Routing Table */,
 			);
 			buildRules = (
 			);
@@ -348,8 +371,10 @@
 				CE2845B82293CCE200E74616 /* SBUIView.storyboard in Resources */,
 				CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */,
 				C5FB165F1F8B9AAB00350055 /* webview.html in Resources */,
+				CE58F63A22CB895A00A98A6F /* GDXibTableViewCell.xib in Resources */,
 				C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */,
 				C532E4161F889834009E38CA /* Assets.xcassets in Resources */,
+				CE58F64122CC45C000A98A6F /* InterfaceBuilder.storyboard in Resources */,
 				CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */,
 				C532E4141F889834009E38CA /* Main.storyboard in Resources */,
 				244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */,
@@ -383,42 +408,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		24970CF722A02B3A00CBACBA /* [Peregrine] Copy Router File To Main Bundle */ = {
+		A2AA9AB78E4392CF47D891B2 /* [Peregrine] Generator Routing Table */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
-			name = "[Peregrine] Copy Router File To Main Bundle";
+			name = "[Peregrine] Generator Routing Table";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "dest=${METAL_LIBRARY_OUTPUT_DIR}/Peregrine \nif [ ! -d \"$dest\" ]; then\nmkdir \"$dest\"\nfi\nsrcfile=${PODS_ROOT}/Peregrine/routers.json\nif [ -f \"$srcfile\" ]; then\ncp \"$srcfile\" \"${dest}/routers.json\"\nelse\necho 'no such file at path :${srcfile}/routers.json'\nfi\n";
-		};
-		8F0115B97F06A7CE2C9DB2BF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${PROJECT_FILE_PATH}\" \"${TARGET_NAME}\" \"${PODS_ROOT}\" \"${SDKROOT}\" \"${HEADER_SEARCH_PATHS}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
 		};
 		ADAE8F977B3F5E983A2DD83B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -426,18 +432,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
-				"${PODS_ROOT}/Peregrine/Support/Peregrine.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Peregrine.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -455,9 +459,11 @@
 				CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */,
 				CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */,
 				CE18B367229291B900271B72 /* GDBaseAction.m in Sources */,
+				CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				2461DF37222D677800D4382F /* UKPageViewController.m in Sources */,
 				CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */,
+				CE58F63922CB895A00A98A6F /* GDXibTableViewCell.m in Sources */,
 				243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
@@ -608,7 +614,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Example/Header.h;
+				GCC_PREFIX_HEADER = Example/Header.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,8 +633,9 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Example/Header.h;
+				GCC_PREFIX_HEADER = Example/Header.pch;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;

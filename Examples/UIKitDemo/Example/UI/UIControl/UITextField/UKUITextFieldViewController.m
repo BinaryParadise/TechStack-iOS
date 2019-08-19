@@ -10,7 +10,7 @@
 
 @interface UKUITextFieldViewController ()
 
-@property (nonatomic, weak) IBOutlet UITextField *textField;
+@property (nonatomic, strong) UITextField *textField;
 @end
 
 @implementation UKUITextFieldViewController

@@ -7,6 +7,7 @@
   - [自定义LibTooling](Compile/LibTooling.md)
   - [自定义属性](Compile/Attribute.md)
   - [AST](Compile/AST.md)
+  - [Swift](Swift/README.md)
 * [Foundation](Foundation.md)
   - [Number](Foundation/Number.md)
   - [NSString](Foundation/NSString.md)

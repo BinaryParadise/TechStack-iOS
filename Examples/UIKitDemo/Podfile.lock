@@ -1,36 +1,40 @@
 PODS:
-  - CocoaLumberjack (3.4.2):
-    - CocoaLumberjack/Default (= 3.4.2)
-    - CocoaLumberjack/Extensions (= 3.4.2)
-  - CocoaLumberjack/Default (3.4.2)
-  - CocoaLumberjack/Extensions (3.4.2):
-    - CocoaLumberjack/Default
-  - MCLogger (0.5.0):
+  - CocoaLumberjack (3.5.3):
+    - CocoaLumberjack/Core (= 3.5.3)
+  - CocoaLumberjack/Core (3.5.3)
+  - MCLogger (0.6.1):
     - CocoaLumberjack (~> 3.0)
     - MJExtension (~> 3.0)
     - SAMKeychain (~> 1.5)
     - SocketRocket (~> 0.5)
-  - MJExtension (3.0.15.1)
-  - Peregrine (0.2.3)
+  - MJExtension (3.1.0)
+  - Peregrine (0.3.1):
+    - Peregrine/LibTooling (= 0.3.1)
+  - Peregrine/LibTooling (0.3.1)
   - SAMKeychain (1.5.3)
   - SocketRocket (0.5.1)
 
 DEPENDENCIES:
-  - MCLogger (from `../../../MCLogger`)
-  - Peregrine (~> 0.2.3)
+  - MCLogger (~> 0.1)
+  - Peregrine (~> 0.3.0)
 
-EXTERNAL SOURCES:
-  MCLogger:
-    :path: ../../../MCLogger
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - MCLogger
+    - MJExtension
+    - Peregrine
+    - SAMKeychain
+    - SocketRocket
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  MCLogger: cbcb3b3572caa9dbe5e5b1cf9b9ae004287d14f5
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  Peregrine: 080d286cd7e9e86090477a3c53e26dde9321517e
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
+  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
+  Peregrine: 4706b36fe5d61b7cf32bfb0fabc116c406853a4a
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
-PODFILE CHECKSUM: 76b240710bf2ee274d9aad5ac76c8d9008b7d17c
+PODFILE CHECKSUM: 27c1ee33d9166aaffaa7b8111da4d1e3781897b7
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.7.5

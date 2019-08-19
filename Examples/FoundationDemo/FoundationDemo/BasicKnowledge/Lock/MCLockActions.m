@@ -39,7 +39,7 @@ static pthread_mutex_t _mutex;
 
 #pragma mark - Actions
 
-+ (void)go_OSSpinLock:(PGRouterContext *)context PGTarget("ft://Lock/OSSpinLock") {
++ (void)go_OSSpinLock:(PGRouterContext *)context {
     MCLogWarn(@"");
     /**
      适用于等待队列任务
@@ -53,36 +53,37 @@ static pthread_mutex_t _mutex;
             OSSpinLockUnlock(&oslock);
             MCLogDebug(@"%@ 解锁%d", [NSThread currentThread], oslock);
             MCLogDebug(@"--------------------------------------------------------");
+            [context onDone:YES object:nil];
         }
     });
 }
 
-+ (void)go_semaphore:(PGRouterContext *)context PGTarget("ft://Lock/semaphore") {
++ (void)go_semaphore:(PGRouterContext *)context {
     MCLogWarn("----------------------信号量----------------------");
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); //传入值必须 >0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         sleep(3);
-        MCLogDebug(@"任务1完成 %@", [NSThread currentThread])
+        MCLogDebug(@"任务1完成 %@", [NSThread currentThread]);
         long ret = dispatch_semaphore_signal(semaphore);
-        MCLogDebug(@"%ld线程等待 %@",ret, [NSThread currentThread])
+        MCLogDebug(@"%ld线程等待 %@",ret, [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         //此刻信号量为0，线程阻塞等待信号唤起，超时时间2秒
         long ret = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC));
         if (ret == 0) {//分支处理
             //收到信号，继续执行
-            MCLogDebug(@"任务2完成 %@", [NSThread currentThread])
+            MCLogDebug(@"任务2完成 %@", [NSThread currentThread]);
             dispatch_semaphore_signal(semaphore);
         } else {
             //超时时间内未收到信号
-            MCLogDebug(@"线程阻塞 %@", [NSThread currentThread])
+            MCLogDebug(@"线程阻塞 %@", [NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        MCLogDebug(@"任务3完成 %@", [NSThread currentThread])
+        MCLogDebug(@"任务3完成 %@", [NSThread currentThread]);
         dispatch_semaphore_signal(semaphore);
     });
 }
@@ -112,7 +113,7 @@ static pthread_mutex_t _mutex;
     }
 }
 
-+ (void)go_pthread_mutex:(PGRouterContext *)context PGTarget("ft://Lock/mutex") {
++ (void)go_pthread_mutex:(PGRouterContext *)context {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         if (pthread_mutex_trylock(&_mutex) == 0) {
             MCLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);

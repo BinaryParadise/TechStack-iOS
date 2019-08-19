@@ -1,14 +1,14 @@
 //
-//  GDBaseAction.m
-//  iOSGuide
+//  TIRouterActionBase.m
+//  TIRouterAction
 //
-//  Created by Rake Yang on 2019/5/20.
+//  Created by Rake Yang on 2019/8/01.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
+#import "TIRouterActionBase.h"
 
-@implementation GDBaseAction
+@implementation TIRouterActionBase
 
 + (NSString *)storyBoardName {
     return nil;
