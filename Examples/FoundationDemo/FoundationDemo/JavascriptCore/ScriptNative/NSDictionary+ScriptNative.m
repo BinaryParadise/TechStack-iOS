@@ -49,6 +49,22 @@
     return retValue;
 }
 
+- (BOOL)sn_boolForKey:(NSString *)key {
+    __block BOOL retValue;
+    [self sn_valueForKey:key string:^(NSString *val) {
+        retValue = val.boolValue;
+    } number:^(NSNumber *val) {
+        retValue = val.boolValue;
+    } array:^(NSArray *val) {
+        
+    } dictionary:^(NSDictionary *val) {
+        
+    } null:^(NSString *val) {
+        
+    }];
+    return retValue;
+}
+
 - (NSNumber *)sn_numberForKey:(NSString *)key {
     __block NSNumber *retValue;
     [self sn_valueForKey:key string:^(NSString *val) {

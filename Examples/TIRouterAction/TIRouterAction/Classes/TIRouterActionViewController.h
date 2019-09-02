@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class PGRouterConfig;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TIRouterActionViewController : UIViewController
+
+@property (nonatomic, copy) NSArray<PGRouterConfig *> *routers;
 
 + (NSBundle *)routerActionBundle;
 

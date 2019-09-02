@@ -33,8 +33,7 @@
 		CE6E27022202F745003AB8FB /* FoundationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27012202F745003AB8FB /* FoundationDemoTests.m */; };
 		CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */; };
 		CE6E27182203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */; };
-		CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272522043EC8003AB8FB /* GCDViewController.m */; };
-		CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272722043EC8003AB8FB /* GCDDemo.m */; };
+		CE6E273822043EC9003AB8FB /* GCDActions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272722043EC8003AB8FB /* GCDActions.m */; };
 		CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */; };
 		CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272C22043EC8003AB8FB /* TestModel1.m */; };
 		CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272E22043EC8003AB8FB /* ARCViewController.m */; };
@@ -115,10 +114,8 @@
 		CE6E27142203E750003AB8FB /* TestPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPrefix.h; sourceTree = "<group>"; };
 		CE6E27152203E88C003AB8FB /* NSNumber+JSConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JSConvert.h"; sourceTree = "<group>"; };
 		CE6E27162203E88C003AB8FB /* NSNumber+JSConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JSConvert.m"; sourceTree = "<group>"; };
-		CE6E272422043EC8003AB8FB /* GCDDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDDemo.h; sourceTree = "<group>"; };
-		CE6E272522043EC8003AB8FB /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
-		CE6E272622043EC8003AB8FB /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
-		CE6E272722043EC8003AB8FB /* GCDDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDDemo.m; sourceTree = "<group>"; };
+		CE6E272422043EC8003AB8FB /* GCDActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDActions.h; sourceTree = "<group>"; };
+		CE6E272722043EC8003AB8FB /* GCDActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDActions.m; sourceTree = "<group>"; };
 		CE6E272922043EC8003AB8FB /* TestModel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel1.h; sourceTree = "<group>"; };
 		CE6E272A22043EC8003AB8FB /* TestModel1+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestModel1+Addition.h"; sourceTree = "<group>"; };
 		CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestModel1+Addition.m"; sourceTree = "<group>"; };
@@ -354,10 +351,8 @@
 		CE6E272322043EC8003AB8FB /* GCD */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E272622043EC8003AB8FB /* GCDViewController.h */,
-				CE6E272522043EC8003AB8FB /* GCDViewController.m */,
-				CE6E272422043EC8003AB8FB /* GCDDemo.h */,
-				CE6E272722043EC8003AB8FB /* GCDDemo.m */,
+				CE6E272422043EC8003AB8FB /* GCDActions.h */,
+				CE6E272722043EC8003AB8FB /* GCDActions.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -684,7 +679,6 @@
 				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
 				2449EC802222545100F466EE /* MCThreadActions.m in Sources */,
 				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
-				CE6E273722043EC9003AB8FB /* GCDViewController.m in Sources */,
 				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
 				CE25BB612265E0190067E97B /* MCMacroController.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
@@ -703,7 +697,7 @@
 				242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */,
 				CE650E7922C3233800AE2908 /* MCJavaScriptAction.m in Sources */,
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
-				CE6E273822043EC9003AB8FB /* GCDDemo.m in Sources */,
+				CE6E273822043EC9003AB8FB /* GCDActions.m in Sources */,
 				CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */,
 				24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */,
 				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,

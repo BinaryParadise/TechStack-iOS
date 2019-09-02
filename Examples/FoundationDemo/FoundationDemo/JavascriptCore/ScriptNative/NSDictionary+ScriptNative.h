@@ -12,6 +12,7 @@
 
 - (NSString *)sn_stringForKey:(NSString *)key;
 - (NSNumber *)sn_numberForKey:(NSString *)key;
+- (BOOL)sn_boolForKey:(NSString *)key;
 - (int)sn_intForKey:(NSString *)key;
 - (long)sn_longForKey:(NSString *)key;
 - (long long)sn_longlongForKey:(NSString *)key;

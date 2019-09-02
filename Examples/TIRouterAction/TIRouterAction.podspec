@@ -40,5 +40,7 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'MBProgressHUD'
   s.dependency 'Peregrine', '~> 0.3.0'
+  s.dependency 'MCUIKit', '~> 0.3'
+  s.dependency 'Masonry', '~> 1.0'
   
 end

@@ -6,11 +6,9 @@
 //  Copyright © 2019 joengzi. All rights reserved.
 //
 
-#import "GDBaseAction.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PGAutoLayout : GDBaseAction
+@interface PGAutoLayout : TIRouterActionBase
 
 @end
 

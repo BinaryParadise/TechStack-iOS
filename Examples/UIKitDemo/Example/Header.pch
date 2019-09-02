@@ -9,9 +9,7 @@
 #ifndef Header_h
 #define Header_h
 
-#import <CocoaLumberjack/CocoaLumberjack.h>
-
-static DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#import <TIRouterAction/TIRouterAction.h>
 
 #if DEBUG
 

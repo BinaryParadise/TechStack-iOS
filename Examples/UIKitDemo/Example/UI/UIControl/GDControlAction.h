@@ -6,11 +6,9 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "GDBaseAction.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDControlAction : GDBaseAction
+@interface GDControlAction : TIRouterActionBase
 
 
 @end

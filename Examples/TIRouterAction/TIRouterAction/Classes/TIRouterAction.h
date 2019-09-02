@@ -17,7 +17,7 @@ static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 #if DEBUG
     #define MCLogInfo(frmt, ...)      DDLogInfo(@"" frmt, ##__VA_ARGS__)
-    #define MCLogDebug(frmt, ...)     DDLogDebug(@"%s +%d " frmt, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+    #define MCLogDebug(frmt, ...)     DDLogDebug(@"" frmt,  ##__VA_ARGS__)
     #define MCLogWarn(frmt, ...)      DDLogWarn(@"" frmt, ##__VA_ARGS__)
     #define MCLogError(frmt, ...)     DDLogError(@"" frmt, ##__VA_ARGS__)
     #define MCLogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__)

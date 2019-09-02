@@ -1,8 +1,8 @@
 //
-//  GDInterfaceBuildAction.h
+//  GDUILabelInsetViewController.h
 //  UIKitDemo
 //
-//  Created by lingjing on 2019/7/3.
+//  Created by lingjing on 2019/8/28.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDInterfaceBuildAction : TIRouterActionBase
+@interface GDUILabelInsetViewController : UIViewController
 
 @end
 

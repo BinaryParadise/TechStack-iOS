@@ -6,18 +6,19 @@
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "GCDDemo.h"
+#import "GCDActions.h"
 #import <AddressBook/AddressBook.h>
 #import <UIKit/UIKit.h>
+#import "NSDictionary+ScriptNative.h"
 
-@interface GCDDemo ()
+@interface GCDActions ()
 
 @property (nonatomic, strong) NSMutableArray *marr;
 @property (nonatomic, strong) NSObject *object;
 
 @end
 
-@implementation GCDDemo
+@implementation GCDActions
 
 - (instancetype)init
 {
@@ -28,47 +29,10 @@
     return self;
 }
 
-+ (instancetype)demoWithName:(NSString *)taskName {
-    GCDDemo *demo = [GCDDemo new];
-    demo.taskName = taskName;
-    return demo;
++ (void)asyncConcurrent:(PGRouterContext *)context {
 }
 
-+ (void)taskProcesser:(GCDDemo *)demo intV:(int)intv {
-    void (^inlineBlock1)(void) = ^() {
-        MCLogWarn(@"%@, %@", demo.taskName, [NSThread currentThread]);
-    };
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        sleep(intv);
-        inlineBlock1();
-    });
-}
-
-+ (void)asyncConcurrent {
-    //创建一个并行队列
-    dispatch_queue_t queue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
-    
-    MCLogInfo(@"-----------");
-    
-    //异步执行将开启新线程
-    __block GCDDemo *demo = [GCDDemo demoWithName:@"任务一"];
-    dispatch_async(queue, ^{
-        [self taskProcesser:demo intV:3];
-    });
-    dispatch_async(queue, ^{
-        demo.taskName = @"任务二";
-        [self taskProcesser:demo intV:2];
-    });
-    dispatch_async(queue, ^{
-        demo = [GCDDemo demoWithName:@"任务三"];
-        [self taskProcesser:demo intV:1];
-        demo = nil;
-    });
-    
-    MCLogInfo(@"-----------");
-}
-
-+ (void)asyncSerial {
++ (void)asyncSerial:(PGRouterContext *)context {
     //创建一个串行队列
     dispatch_queue_t queue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
     
@@ -88,7 +52,7 @@
     MCLogInfo(@"-----------");
 }
 
-+ (void)syncConcurrent {
++ (void)syncConcurrent:(PGRouterContext *)context {
     //创建一个并行队列
     dispatch_queue_t queue = dispatch_queue_create("并行队列标签", DISPATCH_QUEUE_CONCURRENT);
     
@@ -108,7 +72,7 @@
     MCLogInfo(@"-----------");
 }
 
-+ (void)syncSerial {
++ (void)syncSerial:(PGRouterContext *)context {
     //创建一个串行队列
     dispatch_queue_t queue = dispatch_queue_create("串行队列标签", DISPATCH_QUEUE_SERIAL);
     
@@ -128,7 +92,7 @@
     MCLogInfo(@"-----------");
 }
 
-+ (void)asyncMain {
++ (void)asyncMain:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_get_main_queue();
     
     MCLogInfo(@"-----------");
@@ -147,7 +111,7 @@
     MCLogInfo(@"-----------");
 }
 
-+ (void)syncMain {
++ (void)syncMain:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_get_main_queue();
     
     MCLogInfo(@"-----------");
@@ -167,53 +131,38 @@
     MCLogInfo(@"-----------");
 }
 
-+ (void)gloabConcurrent:(BOOL)async {
++ (void)gloabConcurrent:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     
-    MCLogInfo(@"-----------");
-    
-    if (async) {
-        dispatch_async(queue, ^{
-            MCLogWarn(@"任务1：%@", [NSThread currentThread]);
-        });
-        dispatch_async(queue, ^{
-            MCLogWarn(@"任务2：%@", [NSThread currentThread]);
-        });
-        dispatch_async(queue, ^{
-            MCLogWarn(@"任务3：%@", [NSThread currentThread]);
-        });
-    }else {
-        dispatch_sync(queue, ^{
-            MCLogWarn(@"任务1：%@", [NSThread currentThread]);
-        });
-        dispatch_sync(queue, ^{
-            MCLogWarn(@"任务2：%@", [NSThread currentThread]);
-        });
-        dispatch_sync(queue, ^{
-            MCLogWarn(@"任务3：%@", [NSThread currentThread]);
-        });
-    }
-    
-    MCLogInfo(@"-----------");
+    dispatch_async(queue, ^{
+        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        MCLogWarn(@"任务2：%@", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+    });
 }
 
-+ (void)dispatchGroup:(BOOL)serial {
++ (void)dispatchGroup:(PGRouterContext *)context {
     dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_queue_create("dispatchQueue", serial?DISPATCH_QUEUE_SERIAL:DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue = dispatch_queue_create("dispatchQueue", YES?DISPATCH_QUEUE_SERIAL:DISPATCH_QUEUE_CONCURRENT);
     
     MCLogInfo(@"-----------");
     
     //dispatch_group_async_f表示执行C语言函数
     dispatch_group_async(group, queue, ^{
-        MCLogWarn(@"任务1：%@", [NSThread currentThread]);
+        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        sleep(2);
     });
     
     dispatch_group_async(group, queue, ^{
-        MCLogWarn(@"任务2：%@", [NSThread currentThread]);
+        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     
     dispatch_group_async(group, queue, ^{
-        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     
     //dispatch_group_notify_f表示执行C语言函数
@@ -224,7 +173,8 @@
     MCLogInfo(@"-----------");
 }
 
-+ (void)dispatchBarrier:(BOOL)async {
++ (void)dispatchBarrier:(PGRouterContext *)context {
+    BOOL async = [context.config.parameters sn_boolForKey:@"async"];
     dispatch_queue_t queue = dispatch_queue_create("dispatchQueue", DISPATCH_QUEUE_CONCURRENT);
     
     MCLogInfo(@"-----------");
@@ -265,7 +215,9 @@
     MCLogInfo(@"-----------");
 }
 
-- (void)dispatchSemaphore:(BOOL)useSemap {
+- (void)dispatchSemaphore:(PGRouterContext *)context {
+    BOOL useSemap = [context.config.parameters sn_boolForKey:@"use"];
+    
     /*
      通过dispatch_semaphore_create 函数创建一个Semaphore并初始化信号的总量。
      通过dispatch_semaphore_signal 函数发送一个信号，让信号总量加1。
@@ -279,7 +231,7 @@
     dispatch_queue_t queue = dispatch_queue_create("arraySafeQueue", DISPATCH_QUEUE_CONCURRENT);
     
     for (int i=0; i<2000000; i++) {
-           [self.marr addObject:[GCDDemo new]];
+           [self.marr addObject:[GCDActions new]];
     }
     dispatch_async(queue, ^{
         NSDate *date = [NSDate date];

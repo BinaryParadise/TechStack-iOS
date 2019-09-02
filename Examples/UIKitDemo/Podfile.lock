@@ -2,39 +2,55 @@ PODS:
   - CocoaLumberjack (3.5.3):
     - CocoaLumberjack/Core (= 3.5.3)
   - CocoaLumberjack/Core (3.5.3)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MCLogger (0.6.1):
     - CocoaLumberjack (~> 3.0)
     - MJExtension (~> 3.0)
     - SAMKeychain (~> 1.5)
     - SocketRocket (~> 0.5)
+  - MCUIKit (0.3.0):
+    - MCUIKit/UIKit (= 0.3.0)
+  - MCUIKit/Category (0.3.0)
+  - MCUIKit/Gesonry (0.3.0)
+  - MCUIKit/UIKit (0.3.0):
+    - MCUIKit/Category
+    - MCUIKit/Gesonry
   - MJExtension (3.1.0)
-  - Peregrine (0.3.1):
-    - Peregrine/LibTooling (= 0.3.1)
-  - Peregrine/LibTooling (0.3.1)
+  - Peregrine (0.3.2):
+    - Peregrine/Plugin (= 0.3.2)
+  - Peregrine/LibTooling (0.3.2)
+  - Peregrine/Plugin (0.3.2):
+    - Peregrine/LibTooling
   - SAMKeychain (1.5.3)
   - SocketRocket (0.5.1)
+  - TIRouterAction (0.1.0):
+    - Masonry
+    - MBProgressHUD
+    - MCUIKit
+    - Peregrine (~> 0.3.0)
 
 DEPENDENCIES:
   - MCLogger (~> 0.1)
   - Peregrine (~> 0.3.0)
+  - TIRouterAction (from `../TIRouterAction`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - CocoaLumberjack
-    - MCLogger
-    - MJExtension
-    - Peregrine
-    - SAMKeychain
-    - SocketRocket
+EXTERNAL SOURCES:
+  TIRouterAction:
+    :path: ../TIRouterAction
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
+  MCUIKit: 4d9fb8d30b0cf44bf99605ecd248a3092d6f4e13
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
-  Peregrine: 4706b36fe5d61b7cf32bfb0fabc116c406853a4a
+  Peregrine: a09e82359f06af0d5185823fad23b9431e092f3f
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  TIRouterAction: 7045527ffdc195547024a750b775103b0d3fd10f
 
-PODFILE CHECKSUM: 27c1ee33d9166aaffaa7b8111da4d1e3781897b7
+PODFILE CHECKSUM: 8f5ef6fbfcbb46e61f619b256a1c3987542dd3f6
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.4.0

@@ -18,7 +18,6 @@
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
 		89D622698E22CD8C57495725 /* libPods-UIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20F99BFC80F0BE76D57338D /* libPods-UIKitDemo.a */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
-		C532E4111F889834009E38CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E4101F889834009E38CA /* ViewController.m */; };
 		C532E4141F889834009E38CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4121F889834009E38CA /* Main.storyboard */; };
 		C532E4161F889834009E38CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C532E4151F889834009E38CA /* Assets.xcassets */; };
 		C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4171F889834009E38CA /* LaunchScreen.storyboard */; };
@@ -29,7 +28,6 @@
 		CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0E301622966E0200E39428 /* SBViewController.storyboard */; };
 		CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18B36022928F5800271B72 /* SBUIControl.storyboard */; };
 		CE18B3642292912000271B72 /* GDControlAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B3632292912000271B72 /* GDControlAction.m */; };
-		CE18B367229291B900271B72 /* GDBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18B366229291B900271B72 /* GDBaseAction.m */; };
 		CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE21AC1D229CDB3E0083822A /* GDTest.m */; };
 		CE2845B82293CCE200E74616 /* SBUIView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2845B72293CCE200E74616 /* SBUIView.storyboard */; };
 		CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */; };
@@ -37,9 +35,9 @@
 		CE58F63A22CB895A00A98A6F /* GDXibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE58F63822CB895A00A98A6F /* GDXibTableViewCell.xib */; };
 		CE58F64122CC45C000A98A6F /* InterfaceBuilder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58F64022CC45C000A98A6F /* InterfaceBuilder.storyboard */; };
 		CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58F64322CC47C000A98A6F /* GDInterfaceBuildAction.m */; };
-		CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */; };
 		CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */; };
 		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
+		CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +59,6 @@
 		C532E4091F889834009E38CA /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C532E40C1F889834009E38CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C532E40D1F889834009E38CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C532E40F1F889834009E38CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C532E4101F889834009E38CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C532E4131F889834009E38CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C532E4151F889834009E38CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C532E4181F889834009E38CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,8 +75,6 @@
 		CE18B36022928F5800271B72 /* SBUIControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIControl.storyboard; sourceTree = "<group>"; };
 		CE18B3622292912000271B72 /* GDControlAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDControlAction.h; sourceTree = "<group>"; };
 		CE18B3632292912000271B72 /* GDControlAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDControlAction.m; sourceTree = "<group>"; };
-		CE18B365229291B900271B72 /* GDBaseAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDBaseAction.h; sourceTree = "<group>"; };
-		CE18B366229291B900271B72 /* GDBaseAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDBaseAction.m; sourceTree = "<group>"; };
 		CE21AC1C229CDB3E0083822A /* GDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTest.h; sourceTree = "<group>"; };
 		CE21AC1D229CDB3E0083822A /* GDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTest.m; sourceTree = "<group>"; };
 		CE2845B72293CCE200E74616 /* SBUIView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIView.storyboard; sourceTree = "<group>"; };
@@ -92,12 +86,12 @@
 		CE58F64022CC45C000A98A6F /* InterfaceBuilder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterfaceBuilder.storyboard; sourceTree = "<group>"; };
 		CE58F64222CC47C000A98A6F /* GDInterfaceBuildAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDInterfaceBuildAction.h; sourceTree = "<group>"; };
 		CE58F64322CC47C000A98A6F /* GDInterfaceBuildAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDInterfaceBuildAction.m; sourceTree = "<group>"; };
-		CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDRouterTableViewCell.h; sourceTree = "<group>"; };
-		CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDRouterTableViewCell.m; sourceTree = "<group>"; };
 		CE9ABD37228BEC9B00115D2C /* PGAutoLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGAutoLayout.h; sourceTree = "<group>"; };
 		CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAutoLayout.m; sourceTree = "<group>"; };
 		CEA02DAE223B913000157527 /* UKUITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKUITextFieldViewController.h; sourceTree = "<group>"; };
 		CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKUITextFieldViewController.m; sourceTree = "<group>"; };
+		CEFAAC332316870D000CB2D9 /* GDUILabelInsetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUILabelInsetViewController.h; sourceTree = "<group>"; };
+		CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUILabelInsetViewController.m; sourceTree = "<group>"; };
 		E20F99BFC80F0BE76D57338D /* libPods-UIKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DA78CEC43AE06F53204963 /* Pods-UIKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				CE2845B72293CCE200E74616 /* SBUIView.storyboard */,
+				CEFAAC332316870D000CB2D9 /* GDUILabelInsetViewController.h */,
+				CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */,
 				248237662292F23500B9DF7B /* GDUIViewAction.h */,
 				248237672292F23500B9DF7B /* GDUIViewAction.m */,
 				249DD25021E1EF92009B8781 /* GDDemoView.h */,
@@ -205,12 +201,6 @@
 				243A11E422B46B2B00429B09 /* Animation */,
 				C532E40C1F889834009E38CA /* AppDelegate.h */,
 				C532E40D1F889834009E38CA /* AppDelegate.m */,
-				C532E40F1F889834009E38CA /* ViewController.h */,
-				C532E4101F889834009E38CA /* ViewController.m */,
-				CE18B365229291B900271B72 /* GDBaseAction.h */,
-				CE18B366229291B900271B72 /* GDBaseAction.m */,
-				CE9ABD34228BE48400115D2C /* GDRouterTableViewCell.h */,
-				CE9ABD35228BE48400115D2C /* GDRouterTableViewCell.m */,
 				C532E4121F889834009E38CA /* Main.storyboard */,
 				C532E4151F889834009E38CA /* Assets.xcassets */,
 				C532E4171F889834009E38CA /* LaunchScreen.storyboard */,
@@ -318,7 +308,7 @@
 				C532E4061F889834009E38CA /* Frameworks */,
 				C532E4071F889834009E38CA /* Resources */,
 				ADAE8F977B3F5E983A2DD83B /* [CP] Copy Pods Resources */,
-				A2AA9AB78E4392CF47D891B2 /* [Peregrine] Generator Routing Table */,
+				C381026240594A7F1D07731E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -408,40 +398,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2AA9AB78E4392CF47D891B2 /* [Peregrine] Generator Routing Table */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Peregrine] Generator Routing Table";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${PROJECT_FILE_PATH}\" \"${TARGET_NAME}\" \"${PODS_ROOT}\" \"${SDKROOT}\" \"${HEADER_SEARCH_PATHS}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
-		};
 		ADAE8F977B3F5E983A2DD83B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TIRouterAction/TIRouterAction.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TIRouterAction.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C381026240594A7F1D07731E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -453,12 +446,9 @@
 			files = (
 				C5FB165D1F8B998400350055 /* GDWebViewController.m in Sources */,
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
-				C532E4111F889834009E38CA /* ViewController.m in Sources */,
 				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
 				CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */,
 				CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */,
-				CE9ABD36228BE48400115D2C /* GDRouterTableViewCell.m in Sources */,
-				CE18B367229291B900271B72 /* GDBaseAction.m in Sources */,
 				CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
 				2461DF37222D677800D4382F /* UKPageViewController.m in Sources */,
@@ -466,6 +456,7 @@
 				CE58F63922CB895A00A98A6F /* GDXibTableViewCell.m in Sources */,
 				243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
+				CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */,

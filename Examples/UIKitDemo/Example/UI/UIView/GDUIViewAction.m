@@ -25,4 +25,8 @@
     [nav pushViewController:vc animated:YES];
 }
 
++ (void)labelDemo:(PGRouterContext *)context {
+    [self pushViewControllerWithIdentify:context.config.actionName];
+}
+
 @end

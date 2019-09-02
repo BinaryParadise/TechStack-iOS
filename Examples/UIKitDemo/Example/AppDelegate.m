@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <MCLogger/MCLogger.h>
-//#import "GDTest.h"
+#import <TIRouterAction/TIRouterAction.h>
 
 @interface AppDelegate ()
 
@@ -21,9 +21,11 @@
     // Override point for customization after application launch.
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [MCLogger startMonitor:[NSURL URLWithString:@"ws://172.16.76.111:8081"]];
-    LogDebug(@"%@", NSHomeDirectory());
-    LogWarn(@"据说地址不一样：%p", kTestKey);
 
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TIRouterActionManager mangerController]];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
