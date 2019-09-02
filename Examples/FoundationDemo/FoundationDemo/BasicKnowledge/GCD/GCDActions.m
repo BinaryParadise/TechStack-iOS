@@ -36,20 +36,18 @@
     //创建一个串行队列
     dispatch_queue_t queue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
     
-    MCLogInfo(@"-----------");
-    
     //虽然是异步执行，由于是放入串行队列中将不会开启新线程
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务1：%@", [NSThread currentThread]);
+        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务2：%@", [NSThread currentThread]);
+        MCLogDebug(@"任务2：%@（等待1秒)", [NSThread currentThread]);
+        sleep(1);
     });
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        context.callback(YES, nil);
     });
-    
-    MCLogInfo(@"-----------");
 }
 
 + (void)syncConcurrent:(PGRouterContext *)context {

@@ -135,16 +135,21 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PGRouterConfig *config = self.data[indexPath.section][indexPath.row];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES].graceTime = 10;
-    MCLogWarn(@"------------------------%@------------------------", config.actionName);
+    MCLogWarn(@"------------------------BEGIN %@------------------------", config.actionName);
+    __block BOOL finished;
     [PGRouterManager openURL:config.URL.absoluteString  completion:^(BOOL ret, id object) {
-        MCLogWarn(@"------------------------%@------------------------", config.actionName);
+        finished = YES;
+        MCLogWarn(@"------------------------END %@------------------------\n", config.actionName);
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (!finished) {
+            MCLogWarn(@"------------------------END %@------------------------\n", config.actionName);
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
     });
 }
 
