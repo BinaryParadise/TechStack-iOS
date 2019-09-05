@@ -18,7 +18,6 @@
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
 		89D622698E22CD8C57495725 /* libPods-UIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20F99BFC80F0BE76D57338D /* libPods-UIKitDemo.a */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
-		C532E4141F889834009E38CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4121F889834009E38CA /* Main.storyboard */; };
 		C532E4161F889834009E38CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C532E4151F889834009E38CA /* Assets.xcassets */; };
 		C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4171F889834009E38CA /* LaunchScreen.storyboard */; };
 		C532E41C1F889834009E38CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E41B1F889834009E38CA /* main.m */; };
@@ -37,6 +36,8 @@
 		CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58F64322CC47C000A98A6F /* GDInterfaceBuildAction.m */; };
 		CE9ABD39228BEC9B00115D2C /* PGAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */; };
 		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
+		CEAA13CA2320A310005D1800 /* GDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAA13C92320A310005D1800 /* GDTabBarController.m */; };
+		CECEB5E92320B2F4008A4639 /* GDCloseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECEB5E82320B2F4008A4639 /* GDCloseViewController.m */; };
 		CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +60,6 @@
 		C532E4091F889834009E38CA /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C532E40C1F889834009E38CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C532E40D1F889834009E38CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C532E4131F889834009E38CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C532E4151F889834009E38CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C532E4181F889834009E38CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C532E41A1F889834009E38CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +90,10 @@
 		CE9ABD38228BEC9B00115D2C /* PGAutoLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAutoLayout.m; sourceTree = "<group>"; };
 		CEA02DAE223B913000157527 /* UKUITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKUITextFieldViewController.h; sourceTree = "<group>"; };
 		CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKUITextFieldViewController.m; sourceTree = "<group>"; };
+		CEAA13C82320A310005D1800 /* GDTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTabBarController.h; sourceTree = "<group>"; };
+		CEAA13C92320A310005D1800 /* GDTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTabBarController.m; sourceTree = "<group>"; };
+		CECEB5E72320B2F4008A4639 /* GDCloseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDCloseViewController.h; sourceTree = "<group>"; };
+		CECEB5E82320B2F4008A4639 /* GDCloseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDCloseViewController.m; sourceTree = "<group>"; };
 		CEFAAC332316870D000CB2D9 /* GDUILabelInsetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUILabelInsetViewController.h; sourceTree = "<group>"; };
 		CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUILabelInsetViewController.m; sourceTree = "<group>"; };
 		E20F99BFC80F0BE76D57338D /* libPods-UIKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +158,6 @@
 				CE58F63022CB88D900A98A6F /* Xib */,
 				CE0E301222966DC500E39428 /* UIViewController */,
 				CEA02DAD223B90D400157527 /* UIControl */,
-				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				249DD24F21E1EF2D009B8781 /* UIView */,
 			);
 			path = UI;
@@ -201,7 +204,6 @@
 				243A11E422B46B2B00429B09 /* Animation */,
 				C532E40C1F889834009E38CA /* AppDelegate.h */,
 				C532E40D1F889834009E38CA /* AppDelegate.m */,
-				C532E4121F889834009E38CA /* Main.storyboard */,
 				C532E4151F889834009E38CA /* Assets.xcassets */,
 				C532E4171F889834009E38CA /* LaunchScreen.storyboard */,
 				C5ECF4DC1F89D82800CECF8B /* Support File */,
@@ -244,9 +246,14 @@
 		CE0E301222966DC500E39428 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2461DF2E222D659E00D4382F /* UIPageViewController */,
 				CE0E301322966DE900E39428 /* GDViewControllerAction.h */,
 				CE0E301422966DE900E39428 /* GDViewControllerAction.m */,
 				CE0E301622966E0200E39428 /* SBViewController.storyboard */,
+				CEAA13C82320A310005D1800 /* GDTabBarController.h */,
+				CEAA13C92320A310005D1800 /* GDTabBarController.m */,
+				CECEB5E72320B2F4008A4639 /* GDCloseViewController.h */,
+				CECEB5E82320B2F4008A4639 /* GDCloseViewController.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -366,7 +373,6 @@
 				C532E4161F889834009E38CA /* Assets.xcassets in Resources */,
 				CE58F64122CC45C000A98A6F /* InterfaceBuilder.storyboard in Resources */,
 				CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */,
-				C532E4141F889834009E38CA /* Main.storyboard in Resources */,
 				244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */,
 				24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */,
 				243A11E622B46B3900429B09 /* Animation.storyboard in Resources */,
@@ -456,10 +462,12 @@
 				CE58F63922CB895A00A98A6F /* GDXibTableViewCell.m in Sources */,
 				243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */,
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
+				CECEB5E92320B2F4008A4639 /* GDCloseViewController.m in Sources */,
 				CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */,
+				CEAA13CA2320A310005D1800 /* GDTabBarController.m in Sources */,
 				249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,14 +475,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C532E4121F889834009E38CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C532E4131F889834009E38CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C532E4171F889834009E38CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

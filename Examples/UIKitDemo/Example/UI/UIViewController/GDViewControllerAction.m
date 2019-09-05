@@ -15,7 +15,11 @@
 }
 
 + (void)controllAction:(PGRouterContext *)context PGTarget("gd://UIViewController/PushStack") {
-    [self pushViewControllerWithIdentify:context.config.actionName];
+    UIViewController *controller = [self controllerForIdentify:context.config.actionName];
+    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [nav presentViewController:controller animated:YES completion:^{
+        [context onDone:YES object:nil];
+    }];
 }
 
 @end

@@ -15,7 +15,7 @@
 
 @interface TIRouterActionViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, copy) NSArray<NSArray<PGRouterConfig *> *> *data;
+@property (nonatomic, copy) NSArray<PGRouterNode *> *data;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
@@ -40,18 +40,17 @@
     
     self.view.backgroundColor = MCHexColor(0xF6F6F6);
     
-    if (self.routers) {
-        self.data = @[@{self.routers.firstObject.URL.host: self.routers}];
+    if (self.routerNode) {
+        self.title = self.routerNode.name;
+        self.data = @[self.routerNode];
     } else {
-        NSMutableArray<NSArray<PGRouterConfig *> *> *marr = [NSMutableArray array];
-        [[PGRouterManager routerMap] enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray<PGRouterConfig *> * _Nonnull obj, BOOL * _Nonnull stop) {
-            NSArray *sorted = [obj sortedArrayUsingComparator:^NSComparisonResult(PGRouterConfig * _Nonnull obj1, PGRouterConfig *  _Nonnull obj2) {
-                return [obj1.actionName compare:obj2.actionName];
-            }];
-            [marr addObject:sorted];
+        self.data = [[PGRouterManager routerMap].allValues sortedArrayUsingComparator:^NSComparisonResult(PGRouterNode *  _Nonnull obj1, PGRouterNode * _Nonnull obj2) {
+            return [obj1.name compare:obj2.name];
         }];
-        self.data = [marr sortedArrayUsingComparator:^NSComparisonResult(NSArray<PGRouterConfig *> *  _Nonnull obj1, NSArray<PGRouterConfig *> *  _Nonnull obj2) {
-            return [obj1.firstObject.URL.host compare:obj2.firstObject.URL.host];
+        [self.data enumerateObjectsUsingBlock:^(PGRouterNode * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj.childs sortUsingComparator:^NSComparisonResult(PGRouterNode *  _Nonnull obj11,  PGRouterNode * _Nonnull obj22) {
+                return [obj11.name compare:obj22.name];
+            }];
         }];
     }
     
@@ -59,6 +58,7 @@
     self.tableView.estimatedRowHeight = 0;
     self.tableView.estimatedSectionHeaderHeight = 0;
     self.tableView.estimatedSectionFooterHeight = 0;
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     [self.tableView registerClass:[TIRouterActionCell class] forCellReuseIdentifier:@"TIRouterActionCell"];
     self.tableView.backgroundColor = self.view.backgroundColor;
 }
@@ -76,7 +76,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.data[section].count;
+    return self.data[section].childs.count;
 }
 
 #pragma mark - UITableViewDelegate
@@ -98,11 +98,11 @@
     UIView *headerView = [[UIView alloc] init];
     headerView.backgroundColor = [UIColor whiteColor];
     
-    NSArray<PGRouterConfig *> *items = self.data[section];
+    PGRouterNode *node = self.data[section];
     UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(16, 8, 0, 0)];
     header.font = [UIFont fontWithName:@"DINAlternate-Bold" size:13];
     header.textColor = MCHexColor(0x333333);
-    header.text = [NSString stringWithFormat:@"%@(%ld)", items.firstObject.URL.host, items.count];
+    header.text = [NSString stringWithFormat:@"%@（%ld）", node.name, node.childs.count];
     [headerView addSubview:header];
     [header mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(headerView).offset(16);
@@ -121,9 +121,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TIRouterActionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TIRouterActionCell" forIndexPath:indexPath];
-    PGRouterConfig *item = self.data[indexPath.section][indexPath.row];
-    cell.nameLabel.text = [item actionName];
-    cell.descLabel.text = [item.parameters[@"c"] stringByRemovingPercentEncoding];
+    PGRouterNode *item = self.data[indexPath.section].childs[indexPath.row];
+    if (item.config) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.nameLabel.text = [item.config actionName];
+        cell.descLabel.text = [item.config.parameters[@"c"] stringByRemovingPercentEncoding];
+    } else {
+        cell.nameLabel.text = item.name;
+        cell.descLabel.text = @"就是懒...";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     return cell;
 }
 
@@ -133,24 +140,36 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    PGRouterConfig *config = self.data[indexPath.section][indexPath.row];
+    PGRouterNode *node = self.data[indexPath.section].childs[indexPath.row];
+    if (!node.config) {
+        TIRouterActionViewController *nodeVC = [[TIRouterActionViewController alloc] init];
+        nodeVC.routerNode = node;
+        [self.navigationController pushViewController:nodeVC animated:YES];
+        return;
+    }
+    PGRouterConfig *config = node.config;
     [MBProgressHUD showHUDAddedTo:self.view animated:YES].graceTime = 10;
-    MCLogWarn(@"------------------------BEGIN %@------------------------", config.actionName);
+    [self gidle:YES name:nil];
+    [self gidle:YES name:config.actionName];
     __block BOOL finished;
     [PGRouterManager openURL:config.URL.absoluteString  completion:^(BOOL ret, id object) {
         finished = YES;
-        MCLogWarn(@"------------------------END %@------------------------\n", config.actionName);
+        if (!ret) {
+            MCLogError(@"%@", object);
+        }
+        [self gidle:NO name:config.actionName];
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     }];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (!finished) {
-            MCLogWarn(@"------------------------END %@------------------------\n", config.actionName);
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        }
-    });
+}
+
+- (void)gidle:(BOOL)begin name:(NSString *)name {
+    if (name.length) {
+        MCLogVerbose(@"------------------------%@ %@------------------------", name, begin ? @"BEGIN":@"END");
+    } else {
+        MCLogInfo(@"");
+    }
 }
 
 @end

@@ -40,7 +40,7 @@
 
 - (void)initMCLogger {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [MCLogger startMonitor:[NSURL URLWithString:@"ws://172.16.76.111:8081"]];
+    [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'TIRouterAction/Classes/**/*'
-  
+
    s.resource_bundles = {
      'TIRouterAction' => ['TIRouterAction/Assets/*']
    }
@@ -39,8 +39,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'MBProgressHUD'
-  s.dependency 'Peregrine', '~> 0.3.0'
+  s.dependency 'Peregrine', '~> 0.3'
   s.dependency 'MCUIKit', '~> 0.3'
   s.dependency 'Masonry', '~> 1.0'
-  
+
 end

@@ -8,7 +8,7 @@ target 'FoundationDemo' do
   # use_frameworks!
 
   # Pods for FoundationDemo
-  pod 'Peregrine', '~> 0.3.0'
+  pod 'Peregrine', '~> 0.4'
   pod 'MCLogger', :path => '../../../MCLogger'
   pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'

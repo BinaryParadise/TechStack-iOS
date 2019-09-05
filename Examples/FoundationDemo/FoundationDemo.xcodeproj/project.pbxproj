@@ -36,7 +36,6 @@
 		CE6E273822043EC9003AB8FB /* GCDActions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272722043EC8003AB8FB /* GCDActions.m */; };
 		CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */; };
 		CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272C22043EC8003AB8FB /* TestModel1.m */; };
-		CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E272E22043EC8003AB8FB /* ARCViewController.m */; };
 		CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273022043EC8003AB8FB /* JSARCDemoA.m */; };
 		CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273322043EC8003AB8FB /* MemoryViewController.m */; };
 		CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E273622043EC8003AB8FB /* MemoryConstruction.m */; };
@@ -46,6 +45,8 @@
 		CEC9B6CF22C618D0002CCBD1 /* SNView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9B6CE22C618D0002CCBD1 /* SNView.m */; };
 		CEC9B6D222C61B52002CCBD1 /* SNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9B6D122C61B52002CCBD1 /* SNViewController.m */; };
 		CEC9B6D622C61D17002CCBD1 /* UIColor+SNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9B6D522C61D17002CCBD1 /* UIColor+SNBridge.m */; };
+		CED9E4092320FFCA002276BF /* FDBasicActions.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9E4082320FFCA002276BF /* FDBasicActions.m */; };
+		CED9E40C2321013D002276BF /* FDRefrigerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9E40B2321013D002276BF /* FDRefrigerator.m */; };
 		CEF3446522C5FF0E00088D74 /* Environment.js in Resources */ = {isa = PBXBuildFile; fileRef = CEF3446422C5FF0E00088D74 /* Environment.js */; };
 		CEF3446822C60BD900088D74 /* SNViewJSExportImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3446722C60BD900088D74 /* SNViewJSExportImpl.m */; };
 /* End PBXBuildFile section */
@@ -120,10 +121,8 @@
 		CE6E272A22043EC8003AB8FB /* TestModel1+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestModel1+Addition.h"; sourceTree = "<group>"; };
 		CE6E272B22043EC8003AB8FB /* TestModel1+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestModel1+Addition.m"; sourceTree = "<group>"; };
 		CE6E272C22043EC8003AB8FB /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
-		CE6E272E22043EC8003AB8FB /* ARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
 		CE6E272F22043EC8003AB8FB /* JSARCDemoA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSARCDemoA.h; sourceTree = "<group>"; };
 		CE6E273022043EC8003AB8FB /* JSARCDemoA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSARCDemoA.m; sourceTree = "<group>"; };
-		CE6E273122043EC8003AB8FB /* ARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCViewController.h; sourceTree = "<group>"; };
 		CE6E273322043EC8003AB8FB /* MemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
 		CE6E273422043EC8003AB8FB /* MemoryConstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryConstruction.h; sourceTree = "<group>"; };
 		CE6E273522043EC8003AB8FB /* MemoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryViewController.h; sourceTree = "<group>"; };
@@ -141,6 +140,10 @@
 		CEC9B6D422C61D17002CCBD1 /* UIColor+SNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SNBridge.h"; sourceTree = "<group>"; };
 		CEC9B6D522C61D17002CCBD1 /* UIColor+SNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SNBridge.m"; sourceTree = "<group>"; };
 		CEC9B6D722C62088002CCBD1 /* SNBridgeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNBridgeDefine.h; sourceTree = "<group>"; };
+		CED9E4072320FFCA002276BF /* FDBasicActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDBasicActions.h; sourceTree = "<group>"; };
+		CED9E4082320FFCA002276BF /* FDBasicActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDBasicActions.m; sourceTree = "<group>"; };
+		CED9E40A2321013D002276BF /* FDRefrigerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDRefrigerator.h; sourceTree = "<group>"; };
+		CED9E40B2321013D002276BF /* FDRefrigerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDRefrigerator.m; sourceTree = "<group>"; };
 		CEF3446422C5FF0E00088D74 /* Environment.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Environment.js; sourceTree = "<group>"; };
 		CEF3446622C60BD900088D74 /* SNViewJSExportImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNViewJSExportImpl.h; sourceTree = "<group>"; };
 		CEF3446722C60BD900088D74 /* SNViewJSExportImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNViewJSExportImpl.m; sourceTree = "<group>"; };
@@ -371,12 +374,14 @@
 		CE6E272D22043EC8003AB8FB /* ARC */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E273122043EC8003AB8FB /* ARCViewController.h */,
-				CE6E272E22043EC8003AB8FB /* ARCViewController.m */,
 				CE6E272F22043EC8003AB8FB /* JSARCDemoA.h */,
 				CE6E273022043EC8003AB8FB /* JSARCDemoA.m */,
 				CE32B923221BFDE900567417 /* JSARCDemoB.h */,
 				CE32B924221BFDE900567417 /* JSARCDemoB.m */,
+				CED9E4072320FFCA002276BF /* FDBasicActions.h */,
+				CED9E4082320FFCA002276BF /* FDBasicActions.m */,
+				CED9E40A2321013D002276BF /* FDRefrigerator.h */,
+				CED9E40B2321013D002276BF /* FDRefrigerator.m */,
 			);
 			path = ARC;
 			sourceTree = "<group>";
@@ -673,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E274322057144003AB8FB /* NSMutableArray+JSSafety.m in Sources */,
+				CED9E40C2321013D002276BF /* FDRefrigerator.m in Sources */,
 				CE32B928221C066E00567417 /* JSModel.m in Sources */,
 				242D4E2F224729DA0022BD45 /* MCDemoHeaderFooterView.m in Sources */,
 				240BB63122280D4A00CB0722 /* MCLockActions.m in Sources */,
@@ -693,6 +699,7 @@
 				CE6E274622057335003AB8FB /* MCNSArrayActions.m in Sources */,
 				242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */,
 				CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */,
+				CED9E4092320FFCA002276BF /* FDBasicActions.m in Sources */,
 				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
 				242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */,
 				CE650E7922C3233800AE2908 /* MCJavaScriptAction.m in Sources */,
@@ -702,7 +709,6 @@
 				24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */,
 				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,
 				CEC9B6D622C61D17002CCBD1 /* UIColor+SNBridge.m in Sources */,
-				CE6E273B22043EC9003AB8FB /* ARCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,25 @@
 
 #import "TIRouterActionManager.h"
 #import "TIRouterActionViewController.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+@interface TILogFormatter : NSObject <DDLogFormatter>
+
+@end
+
+@implementation TILogFormatter
+
+- (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
+    return [NSString stringWithFormat:@"%@ +%lu %@", logMessage.function, logMessage.line, logMessage.message];
+}
+
+@end
 
 @implementation TIRouterActionManager
+
++ (void)load {
+//    DDTTYLogger.sharedInstance.logFormatter = [TILogFormatter new];
+}
 
 + (UIViewController *)mangerController {
     return [[TIRouterActionViewController alloc] initWithNibName:nil bundle:nil];
