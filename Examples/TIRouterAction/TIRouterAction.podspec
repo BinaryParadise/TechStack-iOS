@@ -39,7 +39,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'MBProgressHUD'
-  s.dependency 'Peregrine', '~> 0.3'
+  s.dependency 'Peregrine/LibTooling', '~> 0.3'
   s.dependency 'MCUIKit', '~> 0.3'
   s.dependency 'Masonry', '~> 1.0'
 

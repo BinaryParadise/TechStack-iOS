@@ -14,8 +14,10 @@
 + (NSString *)storyBoardName {
     return @"Animation";
 }
+
 + (void)loadingView:(PGRouterContext *)context PGTarget("ap://Animation/Loading") {
     [self pushViewControllerWithIdentify:context.config.actionName];
+    [context finished];
 }
 
 @end

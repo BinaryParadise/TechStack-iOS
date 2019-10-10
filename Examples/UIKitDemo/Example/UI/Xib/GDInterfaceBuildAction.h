@@ -2,7 +2,7 @@
 //  GDInterfaceBuildAction.h
 //  UIKitDemo
 //
-//  Created by lingjing on 2019/7/3.
+//  Created by Rake Yang on 2019/7/3.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

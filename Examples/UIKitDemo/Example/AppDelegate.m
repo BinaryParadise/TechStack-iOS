@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <MCLogger/MCLogger.h>
 #import <TIRouterAction/TIRouterAction.h>
+#import <AuthenticationServices/AuthenticationServices.h>
 
 @interface AppDelegate ()
 
@@ -53,6 +54,30 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     DDLogVerbose(@"");
+    
+    if (@available(iOS 13.0, *)) {
+        ASAuthorizationAppleIDProvider *provider = [ASAuthorizationAppleIDProvider new];
+        NSString *user = [[NSUserDefaults standardUserDefaults] stringForKey:@"appleid_user"];
+        [provider getCredentialStateForUserID:user completion:^(ASAuthorizationAppleIDProviderCredentialState credentialState, NSError * _Nullable error) {
+            switch (credentialState) {
+                case ASAuthorizationAppleIDProviderCredentialAuthorized:
+                    LogWarn(@"授权状态有效");
+                    break;
+                case ASAuthorizationAppleIDProviderCredentialNotFound:
+                    LogWarn(@"授权凭证缺失（可能是使用AppleID 登录过App）");
+                    break;
+                case ASAuthorizationAppleIDProviderCredentialRevoked:
+                    LogWarn(@"上次使用苹果账号登录的凭据已被移除，需解除绑定并重新引导用户使用苹果登录");
+                    break;
+                default:
+                    LogWarn(@"未知状态");break;
+            }
+
+            if (error) {
+                LogError(@"%@", error);
+            }
+        }];
+    }
 }
 
 

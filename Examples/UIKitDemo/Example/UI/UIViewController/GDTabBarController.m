@@ -2,7 +2,7 @@
 //  GDTabBarController.m
 //  UIKitDemo
 //
-//  Created by lingjing on 2019/9/5.
+//  Created by Rake Yang on 2019/9/5.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

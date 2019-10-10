@@ -2,7 +2,7 @@
 //  GDUILabelInsetViewController.m
 //  UIKitDemo
 //
-//  Created by lingjing on 2019/8/28.
+//  Created by Rake Yang on 2019/8/28.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

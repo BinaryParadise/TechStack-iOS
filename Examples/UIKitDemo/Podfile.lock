@@ -16,26 +16,21 @@ PODS:
   - MCUIKit/UIKit (0.3.0):
     - MCUIKit/Category
     - MCUIKit/Gesonry
-  - MJExtension (3.1.0)
-  - Peregrine (0.4.0):
-    - Peregrine/Plugin (= 0.4.0)
-  - Peregrine/Plugin (0.4.0)
+  - MJExtension (3.1.1)
+  - Peregrine/LibTooling (0.4.0)
   - SAMKeychain (1.5.3)
   - SocketRocket (0.5.1)
   - TIRouterAction (0.1.0):
     - Masonry (~> 1.0)
     - MBProgressHUD
     - MCUIKit (~> 0.3)
-    - Peregrine (~> 0.3)
+    - Peregrine/LibTooling (~> 0.3)
 
 DEPENDENCIES:
   - MCLogger (~> 0.1)
-  - Peregrine (from `../../../Peregrine`)
   - TIRouterAction (from `../TIRouterAction`)
 
 EXTERNAL SOURCES:
-  Peregrine:
-    :path: ../../../Peregrine
   TIRouterAction:
     :path: ../TIRouterAction
 
@@ -45,12 +40,12 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
   MCUIKit: 4d9fb8d30b0cf44bf99605ecd248a3092d6f4e13
-  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
-  Peregrine: 62203afd8225bf338995ce384b9a2f2549413be7
+  MJExtension: dfef9855ee178e1ce67f3e03b71ca4226330d87d
+  Peregrine: 92283ab12996ebc4dccdb4ad969b54fe74da924d
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  TIRouterAction: 9ddb9339198f3df38504ae74918e77e9b70a6c77
+  TIRouterAction: aa6078e19be2dbf1a8ae7dd2c4df3280ff8e54f6
 
-PODFILE CHECKSUM: cf014d11a265f6cbeb16cb7c33aab7d3cffb7e3f
+PODFILE CHECKSUM: bf1a9990e5836e16738e3c2d2ec4ab5c3f31fa2f
 
 COCOAPODS: 1.4.0

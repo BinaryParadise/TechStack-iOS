@@ -1,8 +1,8 @@
 //
-//  GDTabBarController.h
+//  GDSignInWithAppleViewController.h
 //  UIKitDemo
 //
-//  Created by Rake Yang on 2019/9/5.
+//  Created by Rake Yang on 2019/10/9.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDTabBarController : UITabBarController
+@interface GDSignInWithAppleViewController : UIViewController
 
 @end
 

@@ -10,13 +10,12 @@ target 'UIKitDemo' do
   # Pods for iOSGuide
   # pod 'Peregrine', :path => '../Peregrine'
   # pod 'Peregrine', :git => 'git@github.com:BinaryParadise/Peregrine.git', :branch => 'master'
-  pod 'Peregrine', '~> 0.4'
   pod 'MCLogger', '~> 0.1'
   pod 'TIRouterAction', :path => '../TIRouterAction'
 
 end
 
 post_install do |installer|
-  # require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
-  # PGConfiguration::configure_project(installer)
+  require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
+  PGConfiguration::configure_project(installer)
 end
