@@ -12,6 +12,7 @@
 #import <Masonry/Masonry.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "TIRouterAction.h"
+#import "TIRouterUIHelper.h"
 
 @interface TIRouterActionViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,7 +26,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:[self.class routerActionBundle]]) {
-        self.title = @"";
+        self.title = @"路由表";
     }
     return self;
 }
@@ -37,8 +38,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    self.view.backgroundColor = MCHexColor(0xF6F6F6);
     
     if (self.routerNode) {
         self.title = self.routerNode.name;
@@ -54,13 +53,11 @@
         }];
     }
     
-    self.tableView.separatorColor = MCHexColor(0xECECEC);
     self.tableView.estimatedRowHeight = 0;
     self.tableView.estimatedSectionHeaderHeight = 0;
     self.tableView.estimatedSectionFooterHeight = 0;
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     [self.tableView registerClass:[TIRouterActionCell class] forCellReuseIdentifier:@"TIRouterActionCell"];
-    self.tableView.backgroundColor = self.view.backgroundColor;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -96,12 +93,11 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     UIView *headerView = [[UIView alloc] init];
-    headerView.backgroundColor = [UIColor whiteColor];
+    headerView.backgroundColor = [UIColor ti_section];
     
     PGRouterNode *node = self.data[section];
     UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(16, 8, 0, 0)];
     header.font = [UIFont fontWithName:@"DINAlternate-Bold" size:13];
-    header.textColor = MCHexColor(0x333333);
     header.text = [NSString stringWithFormat:@"%@（%ld）", node.name, node.childs.count];
     [headerView addSubview:header];
     [header mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -110,7 +106,7 @@
     }];
     
     UIView *lineView = [[UIView alloc] init];
-    lineView.backgroundColor = MCHexColor(0xECECEC);
+    lineView.backgroundColor = [UIColor ti_line1];
     [headerView addSubview:lineView];
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.equalTo(headerView);

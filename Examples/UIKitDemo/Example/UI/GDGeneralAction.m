@@ -11,9 +11,18 @@
 
 @implementation GDGeneralAction
 
++ (NSString *)storyBoardName {
+    return @"InterfaceBuilder";
+}
+
 + (void)signInWithApple:(PGRouterContext *)context {
     UIViewController *vc = [[GDSignInWithAppleViewController alloc] initWithNibName:nil bundle:nil];
     [self pushViewController:vc animated:YES];
+    [context finished];
+}
+
++ (void)darkMode:(PGRouterContext *)context {
+    [self pushViewControllerWithIdentify:@"DarkModeController"];
     [context finished];
 }
 

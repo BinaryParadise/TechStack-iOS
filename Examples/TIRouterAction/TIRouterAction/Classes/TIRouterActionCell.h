@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MCUIKit/UIColor+MCExtension.h>
+#import "TIRouterUIHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

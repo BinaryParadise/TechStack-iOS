@@ -13,10 +13,9 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor ti_white];
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.nameLabel = [[UILabel alloc] init];
-        self.nameLabel.textColor = MCHexColor(0x595959);
         self.nameLabel.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:self.nameLabel];
         [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -25,7 +24,7 @@
         }];
         
         self.descLabel = [[UILabel alloc] init];
-        self.descLabel.textColor = MCHexColor(0x3C6188);
+        self.descLabel.textColor = [UIColor ti_special];
         self.descLabel.font = [UIFont systemFontOfSize:12];
         [self.contentView addSubview:self.descLabel];
         [self.descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
