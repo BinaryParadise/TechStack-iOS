@@ -14,7 +14,7 @@
     return @"InterfaceBuilder";
 }
 
-+ (void)xibDemo:(PGRouterContext *)context PGTarget("gd://InterfaceBuild/Storyboard") {
++ (void)xibDemo:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:@"InterfaceBuilderDemo1"];    
 }
 

@@ -10,6 +10,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PGAutoLayout : TIRouterActionBase
 
+PGMethod(equalization, "gd://UIView/Equalization");
+
+PGMethod(scrollView, "gd://UIView/UIScrollView");
+
 @end
 
 NS_ASSUME_NONNULL_END

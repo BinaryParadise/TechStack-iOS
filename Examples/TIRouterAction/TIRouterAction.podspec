@@ -41,6 +41,7 @@ TODO: Add long description of the pod here.
   s.dependency 'MBProgressHUD'
   s.dependency 'Peregrine/LibTooling', '~> 0.3'
   s.dependency 'MCUIKit', '~> 0.3'
+  s.dependency 'MCLogger', '~> 0.6.0'
   s.dependency 'Masonry', '~> 1.0'
 
 end

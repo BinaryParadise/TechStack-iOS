@@ -15,7 +15,7 @@
     return @"Animation";
 }
 
-+ (void)loadingView:(PGRouterContext *)context PGTarget("ap://Animation/Loading") {
++ (void)loadingView:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
     [context finished];
 }

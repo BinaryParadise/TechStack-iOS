@@ -14,11 +14,11 @@
     return @"SBUIControl";
 }
 
-+ (void)buttonAction:(PGRouterContext *)context PGTarget("gd://UIControl/UIButton") {
++ (void)buttonAction:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
 }
 
-+ (void)textFieldAction:(PGRouterContext *)context PGTarget("gd://UIControl/UITextField") {
++ (void)textFieldAction:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
 }
 

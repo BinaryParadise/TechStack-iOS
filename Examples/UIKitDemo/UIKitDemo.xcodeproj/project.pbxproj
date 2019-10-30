@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D48F8C9E3B4136FD3AE12D /* libPods-UIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3CE24A7222E001D7C3CF84 /* libPods-UIKitDemo.a */; };
 		243A11E622B46B3900429B09 /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243A11E522B46B3900429B09 /* Animation.storyboard */; };
 		243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A11E922B46B6900429B09 /* GDAnimationAction.m */; };
 		243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A11EC22B46CE900429B09 /* GDLoadingView.m */; };
@@ -23,6 +22,7 @@
 		C532E41C1F889834009E38CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E41B1F889834009E38CA /* main.m */; };
 		C5FB165D1F8B998400350055 /* GDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB165C1F8B998400350055 /* GDWebViewController.m */; };
 		C5FB165F1F8B9AAB00350055 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = C5FB165E1F8B9AAB00350055 /* webview.html */; };
+		CB48BF642F21C6785DDDCC58 /* libPods-UIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49D96D5AE1B6C75EC85651 /* libPods-UIKitDemo.a */; };
 		CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E301422966DE900E39428 /* GDViewControllerAction.m */; };
 		CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0E301622966E0200E39428 /* SBViewController.storyboard */; };
 		CE18B36122928F5800271B72 /* SBUIControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18B36022928F5800271B72 /* SBUIControl.storyboard */; };
@@ -42,6 +42,9 @@
 		CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA02DAF223B913000157527 /* UKUITextFieldViewController.m */; };
 		CEAA13CA2320A310005D1800 /* GDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAA13C92320A310005D1800 /* GDTabBarController.m */; };
 		CECEB5E92320B2F4008A4639 /* GDCloseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECEB5E82320B2F4008A4639 /* GDCloseViewController.m */; };
+		CED84AD9235ED58D00C1A3BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED84AD8235ED58D00C1A3BC /* UIKit.framework */; };
+		CED84ADB235ED5A200C1A3BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED84ADA235ED5A200C1A3BC /* QuartzCore.framework */; };
+		CED84ADE235EDA8400C1A3BC /* GDUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED84ADD235EDA8400C1A3BC /* GDUIViewController.m */; };
 		CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +63,7 @@
 		249DD25021E1EF92009B8781 /* GDDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* GDDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDDemoView.m; sourceTree = "<group>"; };
 		24DD1F38228B0C49001713EC /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
-		730B793ED939796A884DE369 /* Pods-UIKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C532E4091F889834009E38CA /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C532E40C1F889834009E38CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C532E40D1F889834009E38CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,7 +76,7 @@
 		C5FB165B1F8B998400350055 /* GDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDWebViewController.h; sourceTree = "<group>"; };
 		C5FB165C1F8B998400350055 /* GDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDWebViewController.m; sourceTree = "<group>"; };
 		C5FB165E1F8B9AAB00350055 /* webview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
-		C6ACBAD7EC10C3F268189284 /* Pods-UIKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CA49D96D5AE1B6C75EC85651 /* libPods-UIKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0E301322966DE900E39428 /* GDViewControllerAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDViewControllerAction.h; sourceTree = "<group>"; };
 		CE0E301422966DE900E39428 /* GDViewControllerAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDViewControllerAction.m; sourceTree = "<group>"; };
 		CE0E301622966E0200E39428 /* SBViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBViewController.storyboard; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		CE21AC1C229CDB3E0083822A /* GDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTest.h; sourceTree = "<group>"; };
 		CE21AC1D229CDB3E0083822A /* GDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTest.m; sourceTree = "<group>"; };
 		CE2845B72293CCE200E74616 /* SBUIView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBUIView.storyboard; sourceTree = "<group>"; };
-		CE3CE24A7222E001D7C3CF84 /* libPods-UIKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46D4C822C49C5300685E2F /* GDUIButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIButtonViewController.h; sourceTree = "<group>"; };
 		CE46D4C922C49C5300685E2F /* GDUIButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIButtonViewController.m; sourceTree = "<group>"; };
 		CE58F63622CB895A00A98A6F /* GDXibTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDXibTableViewCell.h; sourceTree = "<group>"; };
@@ -107,8 +109,13 @@
 		CEAA13C92320A310005D1800 /* GDTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTabBarController.m; sourceTree = "<group>"; };
 		CECEB5E72320B2F4008A4639 /* GDCloseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDCloseViewController.h; sourceTree = "<group>"; };
 		CECEB5E82320B2F4008A4639 /* GDCloseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDCloseViewController.m; sourceTree = "<group>"; };
+		CED84AD8235ED58D00C1A3BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CED84ADA235ED5A200C1A3BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CED84ADC235EDA8400C1A3BC /* GDUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIViewController.h; sourceTree = "<group>"; };
+		CED84ADD235EDA8400C1A3BC /* GDUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIViewController.m; sourceTree = "<group>"; };
 		CEFAAC332316870D000CB2D9 /* GDUILabelInsetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUILabelInsetViewController.h; sourceTree = "<group>"; };
 		CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUILabelInsetViewController.m; sourceTree = "<group>"; };
+		CF3D4B675A048E20C5C582EC /* Pods-UIKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.release.xcconfig"; path = "Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED84ADB235ED5A200C1A3BC /* QuartzCore.framework in Frameworks */,
 				CE1C0ED2234DB59100AB7EAB /* AuthenticationServices.framework in Frameworks */,
+				CED84AD9235ED58D00C1A3BC /* UIKit.framework in Frameworks */,
 				244826E2229F63DB00861F97 /* WebKit.framework in Frameworks */,
-				02D48F8C9E3B4136FD3AE12D /* libPods-UIKitDemo.a in Frameworks */,
+				CB48BF642F21C6785DDDCC58 /* libPods-UIKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +184,8 @@
 				CE2845B72293CCE200E74616 /* SBUIView.storyboard */,
 				CEFAAC332316870D000CB2D9 /* GDUILabelInsetViewController.h */,
 				CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */,
+				CED84ADC235EDA8400C1A3BC /* GDUIViewController.h */,
+				CED84ADD235EDA8400C1A3BC /* GDUIViewController.m */,
 				248237662292F23500B9DF7B /* GDUIViewAction.h */,
 				248237672292F23500B9DF7B /* GDUIViewAction.m */,
 				249DD25021E1EF92009B8781 /* GDDemoView.h */,
@@ -184,6 +195,16 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		466F49CD5221695EF44A6D87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */,
+				CF3D4B675A048E20C5C582EC /* Pods-UIKitDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C532E4001F889834009E38CA = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +212,7 @@
 				C532E40B1F889834009E38CA /* Example */,
 				C532E40A1F889834009E38CA /* Products */,
 				C5ECF4DE1F8A0BE800CECF8B /* Frameworks */,
-				C9A53E91A28461BED19D7BDB /* Pods */,
+				466F49CD5221695EF44A6D87 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,10 +254,12 @@
 		C5ECF4DE1F8A0BE800CECF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CED84ADA235ED5A200C1A3BC /* QuartzCore.framework */,
+				CED84AD8235ED58D00C1A3BC /* UIKit.framework */,
 				CE1C0ED1234DB59100AB7EAB /* AuthenticationServices.framework */,
 				244826E1229F63DB00861F97 /* WebKit.framework */,
 				C5ECF4DF1F8A0BE800CECF8B /* AddressBook.framework */,
-				CE3CE24A7222E001D7C3CF84 /* libPods-UIKitDemo.a */,
+				CA49D96D5AE1B6C75EC85651 /* libPods-UIKitDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,15 +272,6 @@
 				C5FB165E1F8B9AAB00350055 /* webview.html */,
 			);
 			path = WKWebView;
-			sourceTree = "<group>";
-		};
-		C9A53E91A28461BED19D7BDB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C6ACBAD7EC10C3F268189284 /* Pods-UIKitDemo.debug.xcconfig */,
-				730B793ED939796A884DE369 /* Pods-UIKitDemo.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		CE0E301222966DC500E39428 /* UIViewController */ = {
@@ -337,13 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C532E41F1F889834009E38CA /* Build configuration list for PBXNativeTarget "UIKitDemo" */;
 			buildPhases = (
-				E8AE68DE7AC6B1705D712ADF /* [CP] Check Pods Manifest.lock */,
+				F83DD5BF889A053F57E1554B /* [CP] Check Pods Manifest.lock */,
 				C532E4051F889834009E38CA /* Sources */,
 				C532E4061F889834009E38CA /* Frameworks */,
 				C532E4071F889834009E38CA /* Resources */,
-				27C006DB280FAA493D7B22C8 /* [CP] Embed Pods Frameworks */,
-				DE9AF7D8A1DD9AA8816152C7 /* [CP] Copy Pods Resources */,
-				BA2E05F8D7734AC02C6BD703 /* [Peregrine] Generator Routing Table */,
+				7C99E90B1A3B121573F9C8D4 /* [Peregrine] Generator Routing Table */,
+				D4354FE2F418808C7863B09A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -411,26 +424,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27C006DB280FAA493D7B22C8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA2E05F8D7734AC02C6BD703 /* [Peregrine] Generator Routing Table */ = {
+		7C99E90B1A3B121573F9C8D4 /* [Peregrine] Generator Routing Table */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,31 +442,27 @@
 			shellPath = /bin/sh;
 			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
 		};
-		DE9AF7D8A1DD9AA8816152C7 /* [CP] Copy Pods Resources */ = {
+		D4354FE2F418808C7863B09A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/TIRouterAction/TIRouterAction.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TIRouterAction.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8AE68DE7AC6B1705D712ADF /* [CP] Check Pods Manifest.lock */ = {
+		F83DD5BF889A053F57E1554B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,6 +496,7 @@
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
 				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
 				CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */,
+				CED84ADE235EDA8400C1A3BC /* GDUIViewController.m in Sources */,
 				CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */,
 				CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */,
 				C532E41C1F889834009E38CA /* main.m in Sources */,
@@ -651,44 +642,44 @@
 		};
 		C532E4201F889834009E38CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6ACBAD7EC10C3F268189284 /* Pods-UIKitDemo.debug.xcconfig */;
+			baseConfigurationReference = 4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UIKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4CGWM3X77;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Example/Header.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hangzhoucaimi.jizhang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = JiZhangTest_Dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		C532E4211F889834009E38CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 730B793ED939796A884DE369 /* Pods-UIKitDemo.release.xcconfig */;
+			baseConfigurationReference = CF3D4B675A048E20C5C582EC /* Pods-UIKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UIKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4CGWM3X77;
 				ENABLE_BITCODE = NO;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Example/Header.pch;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.iOSGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hangzhoucaimi.jizhang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = JiZhangTest_Dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

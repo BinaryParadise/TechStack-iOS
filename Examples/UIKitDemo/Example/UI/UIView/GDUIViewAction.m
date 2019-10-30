@@ -15,11 +15,11 @@
     return @"SBUIView";
 }
 
-+ (void)viewLifecycleAction:(PGRouterContext *)context PGTarget("gd://UIView/Lifecycle") {
++ (void)viewLifecycleAction:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
 }
 
-+ (void)webViewAction:(PGRouterContext *)context PGTarget("gd://UIView/WKWebView") {
++ (void)webViewAction:(PGRouterContext *)context {
     GDWebViewController *vc = [GDWebViewController new];
     UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav pushViewController:vc animated:YES];

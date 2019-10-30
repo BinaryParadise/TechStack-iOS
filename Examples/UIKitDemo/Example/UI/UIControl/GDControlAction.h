@@ -10,6 +10,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GDControlAction : TIRouterActionBase
 
++ (void)buttonAction:(PGRouterContext *)context PGTarget("gd://UIControl/UIButton");
+
++ (void)textFieldAction:(PGRouterContext *)context PGTarget("gd://UIControl/UITextField");
 
 @end
 

@@ -55,7 +55,7 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     DDLogVerbose(@"");
     
-    if (@available(iOS 13.0, *)) {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
         ASAuthorizationAppleIDProvider *provider = [ASAuthorizationAppleIDProvider new];
         NSString *user = [[NSUserDefaults standardUserDefaults] stringForKey:@"appleid_user"];
         [provider getCredentialStateForUserID:user completion:^(ASAuthorizationAppleIDProviderCredentialState credentialState, NSError * _Nullable error) {
@@ -76,8 +76,8 @@
             if (error) {
                 LogError(@"%@", error);
             }
-        }];
-    }
+        }];    
+#endif
 }
 
 

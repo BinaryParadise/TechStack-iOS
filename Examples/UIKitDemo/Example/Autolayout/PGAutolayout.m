@@ -15,11 +15,11 @@
     return @"AutoLayout";
 }
 
-+ (void)equalization:(PGRouterContext *)context PGTarget("gd://UIView/Equalization") {
++ (void)equalization:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
 }
 
-+ (void)scrollView:(PGRouterContext *)context PGTarget("gd://UIView/UIScrollView") {
++ (void)scrollView:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
 }
 

@@ -14,7 +14,7 @@
     return @"SBViewController";
 }
 
-+ (void)controllAction:(PGRouterContext *)context PGTarget("gd://UIViewController/PushStack") {
++ (void)controllAction:(PGRouterContext *)context {
     UIViewController *controller = [self controllerForIdentify:context.config.actionName];
     UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav presentViewController:controller animated:YES completion:^{

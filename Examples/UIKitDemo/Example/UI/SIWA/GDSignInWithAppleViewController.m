@@ -10,9 +10,11 @@
 #import <Masonry/Masonry.h>
 #import <AuthenticationServices/AuthenticationServices.h>
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
 @interface GDSignInWithAppleViewController () <ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding>
 
 @end
+#endif
 
 @implementation GDSignInWithAppleViewController
 
@@ -20,16 +22,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    if (@available(iOS 13.0, *)) {
-        ASAuthorizationAppleIDButton *authorButton = [ASAuthorizationAppleIDButton buttonWithType:ASAuthorizationAppleIDButtonTypeSignIn style:ASAuthorizationAppleIDButtonStyleBlack];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
+    ASAuthorizationAppleIDButton *authorButton = [ASAuthorizationAppleIDButton buttonWithType:ASAuthorizationAppleIDButtonTypeSignIn style:ASAuthorizationAppleIDButtonStyleBlack];
         [authorButton addTarget:self action:@selector(authorAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:authorButton];
         [authorButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
             make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(28);
         }];
-    }
+#endif
 }
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -37,11 +41,9 @@
     [self perfomExistingAccountSetupFlows];
 }
 
-
 /// 处理授权
 /// @param sender sender
 - (void)authorAction:(id)sender {
-    if (@available(iOS 13.0, *)) {
         // A mechanism for generating requests to authenticate users based on their Apple ID.
         // 基于用户的Apple ID授权用户，生成用户授权请求的一种机制
         ASAuthorizationAppleIDProvider *appleIDProvider = [ASAuthorizationAppleIDProvider new];
@@ -63,7 +65,6 @@
         // starts the authorization flows named during controller initialization.
         // 在控制器初始化期间启动授权流
         [controller performRequests];
-    }
 }
 
 /// 校验
@@ -159,5 +160,7 @@
         LogError(@"%@", error);
     }
 }
+
+#endif
 
 @end
