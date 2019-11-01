@@ -2,7 +2,7 @@
 //  TestModel1.m
 //  iOSGuide
 //
-//  Created by joengzi on 2017/10/10.
+//  Created by Rake Yang on 2017/10/10.
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 

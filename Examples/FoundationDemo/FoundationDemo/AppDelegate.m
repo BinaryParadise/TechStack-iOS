@@ -2,13 +2,13 @@
 //  AppDelegate.m
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/1/31.
+//  Created by Rake Yang on 2019/1/31.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <MCLogger/MCLogger.h>
 #import <TIRouterAction/TIRouterAction.h>
+#import <MCLogger/MCLogger.h>
 
 @interface testClass : NSObject
 
@@ -31,9 +31,11 @@
     // Override point for customization after application launch.
     [self initMCLogger];
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TIRouterActionManager mangerController]];
-    [self.window makeKeyAndVisible];
+    [PGRouterManager openURL:@"fd://weibo/init?appKey=3609616584" completion:^(BOOL ret, id object) {
+        if (!ret) {
+            DDLogError(@"%@", object);
+        }
+    }];
     
     return YES;
 }
@@ -69,5 +71,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    __block BOOL canOpen;
+    [PGRouterManager openURL:@"fd://weibo/openurl" object:url completion:^(BOOL ret, id object) {
+        canOpen = ret;
+    }];
+    return canOpen;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [self application:application openURL:url options:@{UIApplicationOpenURLOptionsSourceApplicationKey: sourceApplication}];
+}
 
 @end

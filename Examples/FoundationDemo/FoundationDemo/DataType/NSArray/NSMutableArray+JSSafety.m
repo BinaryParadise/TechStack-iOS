@@ -2,7 +2,7 @@
 //  NSMutableArray+JSSafety.m
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/2/2.
+//  Created by Rake Yang on 2019/2/2.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

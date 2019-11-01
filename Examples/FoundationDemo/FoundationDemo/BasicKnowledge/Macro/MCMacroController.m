@@ -2,7 +2,7 @@
 //  MCMacroController.m
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/4/16.
+//  Created by Rake Yang on 2019/4/16.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

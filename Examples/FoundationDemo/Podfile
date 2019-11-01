@@ -1,6 +1,15 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
+if Gem::Version.new(`pod --version`) >= Gem::Version.new('1.7.5')
+    install! 'cocoapods',
+    :generate_multiple_pod_projects => true,
+    :incremental_installation => true
+    else
+    raise 'cocoapods 最低要求1.7.5'
+    return
+end
+
 `rm Podfile.lock`
 
 target 'FoundationDemo' do
@@ -8,13 +17,15 @@ target 'FoundationDemo' do
   # use_frameworks!
 
   # Pods for FoundationDemo
-  pod 'Peregrine', '~> 0.4'
-  pod 'MCLogger', :path => '../../../MCLogger'
+  pod 'Peregrine/LibTooling', :path => '../../../Peregrine'
   pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
+  pod 'MCJSONKit'
   pod 'Masonry'
   pod 'AFNetworking'
+  pod 'Weibo_SDK', '~> 3.2'
+  pod 'Realm', '~> 3.2'
 
   target 'FoundationDemoTests' do
     inherit! :search_paths
@@ -26,11 +37,6 @@ target 'FoundationDemo' do
 end
 
 post_install do |installer|
-#     require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
-#     PGConfiguration::configure_project(installer)
-#    installer.pods_project.targets.each do |target|
-#      target.build_configurations.each do |config|
-#        config.build_settings['COMPILER_INDEX_STORE_ENABLE'] = "NO"
-#    end
-#  end
+    require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
+    PGConfiguration::configure_project(installer)
 end

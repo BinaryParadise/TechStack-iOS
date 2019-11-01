@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,16 @@
 		24EE328922C75AF5001B32ED /* NSInvocation+ScriptNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE328822C75AF5001B32ED /* NSInvocation+ScriptNative.m */; };
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
 		9BF7343FBED96F66FF3055CB /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA8DCE4211F3FAADC364528 /* libPods-FoundationDemoTests.a */; };
+		CE17E77F236BDBEE00F259C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* Main.storyboard */; };
+		CE17E783236BDF7A00F259C1 /* FDRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* FDRouterViewController.m */; };
+		CE17E786236BDF8500F259C1 /* FDWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E785236BDF8500F259C1 /* FDWeiboViewController.m */; };
+		CE17E78A236C02BB00F259C1 /* FDAutoRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E789236C02BB00F259C1 /* FDAutoRefreshTableView.m */; };
+		CE17E790236C059E00F259C1 /* FDWeiboTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E78E236C059E00F259C1 /* FDWeiboTableViewCell.m */; };
+		CE17E791236C059E00F259C1 /* FDWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE17E78F236C059E00F259C1 /* FDWeiboTableViewCell.xib */; };
+		CE17E7FD236C0CEB00F259C1 /* FDWeiboPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E7FC236C0CEB00F259C1 /* FDWeiboPresenter.m */; };
+		CE17E861236C2FBD00F259C1 /* FDWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */; };
+		CE17E865236C36DE00F259C1 /* FDWeiboResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */; };
+		CE17E868236C398500F259C1 /* FDWeiboStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E867236C398500F259C1 /* FDWeiboStatus.m */; };
 		CE25BB612265E0190067E97B /* MCMacroController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB602265E0190067E97B /* MCMacroController.m */; };
 		CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB6C2265E0F80067E97B /* MCMacroTest.m */; };
 		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
@@ -73,7 +83,7 @@
 		2426ECCC227AF1D4001947A9 /* MCFloatNumberActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFloatNumberActions.h; sourceTree = "<group>"; };
 		242D4E2D224729DA0022BD45 /* MCDemoHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDemoHeaderFooterView.h; sourceTree = "<group>"; };
 		242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDemoHeaderFooterView.m; sourceTree = "<group>"; };
-		242D4E3822472DFF0022BD45 /* UITableViewCell+MCRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MCRegister.h"; sourceTree = "<group>"; };
+		242D4E3822472DFF0022BD45 /* UITableViewCell+MCRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MCRegister.h"; sourceTree = "<group>"; wrapsLines = 1; };
 		242D4E3922472DFF0022BD45 /* UITableViewCell+MCRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MCRegister.m"; sourceTree = "<group>"; };
 		242D4E3B22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewHeaderFooterView+MCRegister.h"; sourceTree = "<group>"; };
 		242D4E3C22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+MCRegister.m"; sourceTree = "<group>"; };
@@ -89,6 +99,24 @@
 		85354DE5695070DF8D465055 /* Pods-FoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB898C771736DD8AB1D8CE7E /* libPods-FoundationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA8DCE4211F3FAADC364528 /* libPods-FoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE17E77E236BDBEE00F259C1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE17E781236BDF7A00F259C1 /* FDRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDRouterViewController.h; sourceTree = "<group>"; };
+		CE17E782236BDF7A00F259C1 /* FDRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDRouterViewController.m; sourceTree = "<group>"; };
+		CE17E784236BDF8500F259C1 /* FDWeiboViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboViewController.h; sourceTree = "<group>"; };
+		CE17E785236BDF8500F259C1 /* FDWeiboViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboViewController.m; sourceTree = "<group>"; };
+		CE17E788236C02BB00F259C1 /* FDAutoRefreshTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDAutoRefreshTableView.h; sourceTree = "<group>"; };
+		CE17E789236C02BB00F259C1 /* FDAutoRefreshTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDAutoRefreshTableView.m; sourceTree = "<group>"; };
+		CE17E78D236C059E00F259C1 /* FDWeiboTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboTableViewCell.h; sourceTree = "<group>"; };
+		CE17E78E236C059E00F259C1 /* FDWeiboTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboTableViewCell.m; sourceTree = "<group>"; };
+		CE17E78F236C059E00F259C1 /* FDWeiboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FDWeiboTableViewCell.xib; sourceTree = "<group>"; };
+		CE17E7FB236C0CEB00F259C1 /* FDWeiboPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboPresenter.h; sourceTree = "<group>"; };
+		CE17E7FC236C0CEB00F259C1 /* FDWeiboPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboPresenter.m; sourceTree = "<group>"; };
+		CE17E85F236C2FBD00F259C1 /* FDWeiboRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboRequest.h; sourceTree = "<group>"; };
+		CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboRequest.m; sourceTree = "<group>"; };
+		CE17E863236C36DE00F259C1 /* FDWeiboResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboResponse.h; sourceTree = "<group>"; };
+		CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboResponse.m; sourceTree = "<group>"; };
+		CE17E866236C398500F259C1 /* FDWeiboStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboStatus.h; sourceTree = "<group>"; };
+		CE17E867236C398500F259C1 /* FDWeiboStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboStatus.m; sourceTree = "<group>"; };
 		CE25BB5F2265E0190067E97B /* MCMacroController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroController.h; sourceTree = "<group>"; };
 		CE25BB602265E0190067E97B /* MCMacroController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMacroController.m; sourceTree = "<group>"; };
 		CE25BB622265E0910067E97B /* MCMacroDefine1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroDefine1.h; sourceTree = "<group>"; };
@@ -229,6 +257,8 @@
 		242D4E27224727590022BD45 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE17E788236C02BB00F259C1 /* FDAutoRefreshTableView.h */,
+				CE17E789236C02BB00F259C1 /* FDAutoRefreshTableView.m */,
 				242D4E2D224729DA0022BD45 /* MCDemoHeaderFooterView.h */,
 				242D4E2E224729DA0022BD45 /* MCDemoHeaderFooterView.m */,
 				242D4E3822472DFF0022BD45 /* UITableViewCell+MCRegister.h */,
@@ -248,13 +278,13 @@
 			path = Thread;
 			sourceTree = "<group>";
 		};
-		24741EC3224678F100BF7DE5 /* Support File */ = {
+		24741EC3224678F100BF7DE5 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
 				CE6E26F62202F745003AB8FB /* Info.plist */,
 				CE6E26F72202F745003AB8FB /* main.m */,
 			);
-			path = "Support File";
+			path = SupportFile;
 			sourceTree = "<group>";
 		};
 		24F1FB6C22241F780066D008 /* Arithmetic */ = {
@@ -264,6 +294,67 @@
 				24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */,
 			);
 			path = Arithmetic;
+			sourceTree = "<group>";
+		};
+		CE17E780236BDF5A00F259C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE17E781236BDF7A00F259C1 /* FDRouterViewController.h */,
+				CE17E782236BDF7A00F259C1 /* FDRouterViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE17E787236BE1D800F259C1 /* SinaWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				CE17E862236C36C100F259C1 /* Model */,
+				CE17E85E236C2FAF00F259C1 /* Request */,
+				CE17E784236BDF8500F259C1 /* FDWeiboViewController.h */,
+				CE17E785236BDF8500F259C1 /* FDWeiboViewController.m */,
+				CE17E7FA236C0CC900F259C1 /* Presenter */,
+				CE17E78C236C056700F259C1 /* View */,
+			);
+			path = SinaWeibo;
+			sourceTree = "<group>";
+		};
+		CE17E78C236C056700F259C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE17E78D236C059E00F259C1 /* FDWeiboTableViewCell.h */,
+				CE17E78E236C059E00F259C1 /* FDWeiboTableViewCell.m */,
+				CE17E78F236C059E00F259C1 /* FDWeiboTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE17E7FA236C0CC900F259C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE17E7FB236C0CEB00F259C1 /* FDWeiboPresenter.h */,
+				CE17E7FC236C0CEB00F259C1 /* FDWeiboPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE17E85E236C2FAF00F259C1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				CE17E85F236C2FBD00F259C1 /* FDWeiboRequest.h */,
+				CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		CE17E862236C36C100F259C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE17E863236C36DE00F259C1 /* FDWeiboResponse.h */,
+				CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */,
+				CE17E866236C398500F259C1 /* FDWeiboStatus.h */,
+				CE17E867236C398500F259C1 /* FDWeiboStatus.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CE25BB5E2265E0050067E97B /* Macro */ = {
@@ -295,9 +386,9 @@
 			children = (
 				CE6E26E72202F743003AB8FB /* FoundationDemo */,
 				CE6E27002202F745003AB8FB /* FoundationDemoTests */,
-				CE6E26E62202F743003AB8FB /* Products */,
-				13B88F1736418C752F6E8F49 /* Pods */,
 				0F0544F8C968687FC18B3AE7 /* Frameworks */,
+				13B88F1736418C752F6E8F49 /* Pods */,
+				CE6E26E62202F743003AB8FB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,16 +406,19 @@
 			children = (
 				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
 				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
-				242D4E27224727590022BD45 /* View */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
-				240BB62A22280A6900CB0722 /* DataType */,
 				240BB62B22280C2400CB0722 /* BasicKnowledge */,
-				CE6E273222043EC8003AB8FB /* ObjectMemory */,
+				CE17E780236BDF5A00F259C1 /* Controllers */,
+				240BB62A22280A6900CB0722 /* DataType */,
 				CE650E7322C322DF00AE2908 /* JavascriptCore */,
-				24741EC3224678F100BF7DE5 /* Support File */,
-				CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */,
 				CE32B926221C066E00567417 /* JSModel.h */,
 				CE32B927221C066E00567417 /* JSModel.m */,
+				CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */,
+				CE17E77E236BDBEE00F259C1 /* Main.storyboard */,
+				CE6E273222043EC8003AB8FB /* ObjectMemory */,
+				CE17E787236BE1D800F259C1 /* SinaWeibo */,
+				24741EC3224678F100BF7DE5 /* SupportFile */,
+				242D4E27224727590022BD45 /* View */,
 			);
 			path = FoundationDemo;
 			sourceTree = "<group>";
@@ -451,8 +545,8 @@
 				CE6E26E12202F743003AB8FB /* Sources */,
 				CE6E26E22202F743003AB8FB /* Frameworks */,
 				CE6E26E32202F743003AB8FB /* Resources */,
-				A95EC6701E2A6AF937CA4025 /* [CP] Embed Pods Frameworks */,
 				B2C379BD090F6202E51F7CC6 /* [CP] Copy Pods Resources */,
+				49AB9425AC37964F50F6A79C /* [Peregrine] Generator Routing Table */,
 			);
 			buildRules = (
 			);
@@ -471,8 +565,6 @@
 				CE6E26F92202F745003AB8FB /* Sources */,
 				CE6E26FA2202F745003AB8FB /* Frameworks */,
 				CE6E26FB2202F745003AB8FB /* Resources */,
-				7C4303C6E2A27B9DEDB13314 /* [CP] Embed Pods Frameworks */,
-				6CEA40877844EBDEF007E391 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -528,8 +620,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */,
+				CE17E791236C059E00F259C1 /* FDWeiboTableViewCell.xib in Resources */,
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
 				CEF3446522C5FF0E00088D74 /* Environment.js in Resources */,
+				CE17E77F236BDBEE00F259C1 /* Main.storyboard in Resources */,
 				248B206B22C701B200CF4EA4 /* SNEngine.js in Resources */,
 				240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */,
 			);
@@ -567,7 +661,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6CEA40877844EBDEF007E391 /* [CP] Copy Pods Resources */ = {
+		49AB9425AC37964F50F6A79C /* [Peregrine] Generator Routing Table */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -576,53 +670,14 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[Peregrine] Generator Routing Table";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C4303C6E2A27B9DEDB13314 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A95EC6701E2A6AF937CA4025 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby /Users/lingjing/Documents/Github/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
 		};
 		B2C379BD090F6202E51F7CC6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -630,22 +685,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources.sh",
-				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/TIRouterAction/TIRouterAction.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TIRouterAction.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1676FEFE300865B2CACC129 /* [CP] Check Pods Manifest.lock */ = {
@@ -685,30 +733,38 @@
 				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
 				2449EC802222545100F466EE /* MCThreadActions.m in Sources */,
 				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
+				CE17E790236C059E00F259C1 /* FDWeiboTableViewCell.m in Sources */,
 				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
 				CE25BB612265E0190067E97B /* MCMacroController.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
 				CEC9B6D222C61B52002CCBD1 /* SNViewController.m in Sources */,
 				248B206E22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m in Sources */,
 				CEF3446822C60BD900088D74 /* SNViewJSExportImpl.m in Sources */,
+				CE17E78A236C02BB00F259C1 /* FDAutoRefreshTableView.m in Sources */,
 				2426ECCD227AF1D4001947A9 /* MCFloatNumberActions.m in Sources */,
 				CEC9B6CF22C618D0002CCBD1 /* SNView.m in Sources */,
 				24EE328922C75AF5001B32ED /* NSInvocation+ScriptNative.m in Sources */,
 				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
 				CE6E274622057335003AB8FB /* MCNSArrayActions.m in Sources */,
+				CE17E7FD236C0CEB00F259C1 /* FDWeiboPresenter.m in Sources */,
+				CE17E783236BDF7A00F259C1 /* FDRouterViewController.m in Sources */,
 				242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */,
 				CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */,
+				CE17E861236C2FBD00F259C1 /* FDWeiboRequest.m in Sources */,
 				CED9E4092320FFCA002276BF /* FDBasicActions.m in Sources */,
 				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
 				242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */,
+				CE17E868236C398500F259C1 /* FDWeiboStatus.m in Sources */,
 				CE650E7922C3233800AE2908 /* MCJavaScriptAction.m in Sources */,
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
 				CE6E273822043EC9003AB8FB /* GCDActions.m in Sources */,
+				CE17E865236C36DE00F259C1 /* FDWeiboResponse.m in Sources */,
 				CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */,
 				24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */,
 				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,
 				CEC9B6D622C61D17002CCBD1 /* UIColor+SNBridge.m in Sources */,
+				CE17E786236BDF8500F259C1 /* FDWeiboViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +917,7 @@
 			baseConfigurationReference = DDC7922AEFFFA1614CE2F875 /* Pods-FoundationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -870,9 +927,10 @@
 					"MCLoggerEnable=1",
 				);
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "FoundationDemo/Support File/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BinaryParadise.FoundationDemo;
+				INFOPLIST_FILE = "$(SRCROOT)/FoundationDemo/SupportFile/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.foundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -882,13 +940,15 @@
 			baseConfigurationReference = 0E9FD52965D7071B143F0D83 /* Pods-FoundationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "FoundationDemo/Support File/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BinaryParadise.FoundationDemo;
+				INFOPLIST_FILE = "$(SRCROOT)/FoundationDemo/SupportFile/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.foundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
+    [MCLogger startMonitor:[NSURL URLWithString:@"ws://172.16.106.113:8081"]];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TIRouterActionManager mangerController]];

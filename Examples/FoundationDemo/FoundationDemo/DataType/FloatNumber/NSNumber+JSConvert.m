@@ -2,7 +2,7 @@
 //  NSNumber+JSConvert.m
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/2/1.
+//  Created by Rake Yang on 2019/2/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

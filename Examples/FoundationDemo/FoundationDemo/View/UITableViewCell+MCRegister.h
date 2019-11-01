@@ -2,7 +2,7 @@
 //  UITableViewCell+MCRegister.h
 //  FoundationDemo
 //
-//  Created by joengzi on 2019/3/24.
+//  Created by Rake Yang on 2019/3/24.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)registerForTableView:(UITableView *)tableView;
 
-+ (instancetype)cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
++ (instancetype)cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath * _Nullable )indexPath;
 
 @end
 
