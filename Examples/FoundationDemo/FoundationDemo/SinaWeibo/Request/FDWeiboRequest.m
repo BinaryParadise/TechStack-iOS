@@ -26,7 +26,7 @@
 + (void)getDataWithURL:(NSString *)url params:(NSDictionary *)params completion:(nonnull FDActionCompletion)completion {
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:[self getParams:url params:params] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-        BOOL success = [[dict objectForKey:@"error_code"] isEqualToString:@"0"] || !error;
+        BOOL success = [dict[@"error_code"] intValue] == 0 || !error;
         if (completion) {
             completion(success, dict, error);
         }

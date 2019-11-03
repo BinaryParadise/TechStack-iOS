@@ -10,9 +10,12 @@
 #import <Weibo_SDK/WeiboSDK.h>
 #import <MCLogger/MCLogger.h>
 #import <TIRouterAction/TIRouterAction.h>
-#import "FDWeiboStatus.h"
+#import "FDWeiboResponse.h"
 
 @interface FDWeiboPresenter () <WeiboSDKDelegate>
+
+@property (nonatomic, strong) FDWeiboResponse *header;
+
 
 @end
 
@@ -48,10 +51,15 @@
 }
 
 - (void)fetchHomeTimeline:(FDActionCompletion)completion {
+    NSDictionary *params;
+    if (self.header) {
+        params = @{@"max_id": @(self.statuses.lastObject.mid)};
+    }
     [FDWeiboRequest getDataWithURL:@"statuses/home_timeline.json" params:nil completion:^(BOOL success, id  _Nonnull data, NSError * _Nonnull error) {
-        NSArray *statuses = [FDWeiboStatus mc_arrayOfModelsFromKeyValues:data[@"statuses"]];
+        self.header = [FDWeiboResponse fd_objectFromKeyValues:data];
+        self.statuses = [FWBStatus fd_arrayOfModelsFromKeyValues:data[@"statuses"]];
         if (completion) {
-            
+            completion(success, self.statuses, error);
         }
     }];
 }

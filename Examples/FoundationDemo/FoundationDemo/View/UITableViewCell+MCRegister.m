@@ -11,19 +11,19 @@
 @implementation UITableViewCell (MCRegister)
 
 + (void)registerForTableView:(UITableView *)tableView {
-    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:[NSBundle mainBundle]];
+    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (cellNib) {
         [tableView registerNib:cellNib forCellReuseIdentifier:NSStringFromClass([self class])];
     } else {
-        [tableView registerClass:self.class forCellReuseIdentifier:NSStringFromClass(self.class)];
+        [tableView registerClass:[self class] forCellReuseIdentifier:NSStringFromClass([self class])];
     }
 }
 
 + (instancetype)cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath * _Nullable)indexPath {
     if (indexPath) {     
-        return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self.class) forIndexPath:indexPath];
+        return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class]) forIndexPath:indexPath];
     } else {
-        return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self.class)];
+        return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     }
 }
 

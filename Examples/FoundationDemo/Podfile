@@ -10,14 +10,16 @@ if Gem::Version.new(`pod --version`) >= Gem::Version.new('1.7.5')
     return
 end
 
-`rm Podfile.lock`
+if File.exists?("Podfile.lock")
+  `rm Podfile.lock`
+end
 
 target 'FoundationDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
   # Pods for FoundationDemo
-  pod 'Peregrine/LibTooling', :path => '../../../Peregrine'
+  # pod 'Peregrine', :path => '../../../Peregrine'
   pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
@@ -26,6 +28,8 @@ target 'FoundationDemo' do
   pod 'AFNetworking'
   pod 'Weibo_SDK', '~> 3.2'
   pod 'Realm', '~> 3.2'
+  pod 'SDWebImage'
+  pod 'MJRefresh'
 
   target 'FoundationDemoTests' do
     inherit! :search_paths
@@ -37,6 +41,6 @@ target 'FoundationDemo' do
 end
 
 post_install do |installer|
-    require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
+    require_relative 'Pods/Peregrine/Peregrine/PGConfiguration.rb'
     PGConfiguration::configure_project(installer)
 end

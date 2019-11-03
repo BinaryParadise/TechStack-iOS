@@ -36,11 +36,15 @@ PODS:
     - MCUIKit/Category
     - MCUIKit/Gesonry
   - MJExtension (3.2.1)
-  - Peregrine/LibTooling (0.5.1)
+  - MJRefresh (3.2.0)
+  - Peregrine (0.5.1)
   - Realm (3.20.0):
     - Realm/Headers (= 3.20.0)
   - Realm/Headers (3.20.0)
   - SAMKeychain (1.5.3)
+  - SDWebImage (5.2.5):
+    - SDWebImage/Core (= 5.2.5)
+  - SDWebImage/Core (5.2.5)
   - SocketRocket (0.5.1)
   - Specta (1.0.7)
   - TIRouterAction (0.1.0):
@@ -48,7 +52,7 @@ PODS:
     - MBProgressHUD
     - MCLogger (~> 0.6.0)
     - MCUIKit (~> 0.3)
-    - Peregrine/LibTooling (~> 0.3)
+    - Peregrine (~> 0.5)
   - Weibo_SDK (3.2.5.1)
 
 DEPENDENCIES:
@@ -58,8 +62,9 @@ DEPENDENCIES:
   - MBProgressHUD
   - MCJSONKit
   - MCUIKit
-  - Peregrine/LibTooling (from `../../../Peregrine`)
+  - MJRefresh
   - Realm (~> 3.2)
+  - SDWebImage
   - Specta
   - TIRouterAction (from `../TIRouterAction`)
   - Weibo_SDK (~> 3.2)
@@ -76,15 +81,16 @@ SPEC REPOS:
     - MCLogger
     - MCUIKit
     - MJExtension
+    - MJRefresh
+    - Peregrine
     - Realm
     - SAMKeychain
+    - SDWebImage
     - SocketRocket
     - Specta
     - Weibo_SDK
 
 EXTERNAL SOURCES:
-  Peregrine:
-    :path: "../../../Peregrine"
   TIRouterAction:
     :path: "../TIRouterAction"
 
@@ -99,14 +105,16 @@ SPEC CHECKSUMS:
   MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
   MCUIKit: 4d9fb8d30b0cf44bf99605ecd248a3092d6f4e13
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
-  Peregrine: 6295f232a921222fcfc53def5cfc9ebfd6268ba7
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
-  TIRouterAction: 454442dceccd43352e8436738a54a15d0694431d
+  TIRouterAction: 49d1f0b1bed33b9583f82f20ff9c1595fd242163
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
 
-PODFILE CHECKSUM: bbec756c0b907a65b19ff6e20d0df3091e9d0aba
+PODFILE CHECKSUM: e1059c3ec5d4c02b912a776c0b42ceced551a9f2
 
 COCOAPODS: 1.7.5

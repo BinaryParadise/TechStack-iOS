@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <TIRouterAction/TIRouterAction.h>
 #import "FDWeiboRequest.h"
+#import "FWBStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FDWeiboPresenter : NSObject
+
+@property (nonatomic, copy) NSArray<FWBStatus *> *statuses;
+
 
 PGMethod(initWeibo, "fd://weibo/init");
 PGMethod(openWeiboURL, "fd://weibo/openurl");

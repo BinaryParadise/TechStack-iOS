@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FDBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDWeiboResponse : NSObject
+@interface FDWeiboResponse : FDBase
 
 @property(nonatomic, copy) NSArray *advertises;
 @property(nonatomic, copy) NSArray *ad;
