@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MCFoundation/MCFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -59,6 +60,8 @@ NS_ASSUME_NONNULL_BEGIN
  @return key:对象属性   value:类型class
  */
 - (NSDictionary *)fd_typeMappingDictionary;
+
+- (id)fd_newValueFromOldValue:(id)oldValue property:(id)property;
 
 @end
 

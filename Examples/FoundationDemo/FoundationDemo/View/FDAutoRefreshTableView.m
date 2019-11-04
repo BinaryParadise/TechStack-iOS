@@ -34,11 +34,19 @@
 @interface FDRefreshFooterView ()
 
 @property (nonatomic, strong) UIActivityIndicatorView *indictorView;
-
+@property (nonatomic, weak) id target;
+@property (nonatomic, assign) SEL selector;
 
 @end
 
 @implementation FDRefreshFooterView
+
++ (instancetype)initWithTarget:(id)target selector:(SEL)selector {
+    FDRefreshFooterView *view = [[FDRefreshFooterView alloc] initWithFrame:CGRectMake(0, 0, 0, 36)];
+    view.target = target;
+    view.selector = selector;
+    return view;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -52,19 +60,33 @@
 }
 
 - (void)setState:(FDRefreshFooterViewState)state {
-    switch (state) {
-        case FDRefreshFooterViewStateIdle:
-            if ([self.indictorView isAnimating]) {
-                [self.indictorView stopAnimating];
-            }
-            self.indictorView.hidden = YES;
-            break;
-        case FDRefreshFooterViewStateRefreshing:
-            self.indictorView.hidden = NO;
-            [self.indictorView startAnimating];
-        default:
-            break;
-    }
+    void(^setStateBlock)() = ^() {
+        switch (state) {
+            case FDRefreshFooterViewStateIdle:
+                if ([self.indictorView isAnimating]) {
+                    [self.indictorView stopAnimating];
+                }
+                self.indictorView.hidden = YES;
+                break;
+            case FDRefreshFooterViewStateRefreshing:
+                self.indictorView.hidden = NO;
+                [self.indictorView startAnimating];
+                if (self.target && [self.target respondsToSelector:self.selector]) {
+                    [self.target performSelectorOnMainThread:self.selector withObject:nil waitUntilDone:YES];
+                }
+            default:
+                break;
+        }
+    };
+    dispatch_async(dispatch_get_main_queue(), setStateBlock);
+}
+
+- (void)beginRefreshing {
+    self.state = FDRefreshFooterViewStateRefreshing;
+}
+
+- (void)endRefreshing {
+    self.state = FDRefreshFooterViewStateIdle;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -72,6 +94,7 @@
     if (newSuperview && [newSuperview isKindOfClass:[UIScrollView class]]) {
         _scrollView = (id)newSuperview;
         self.mcTop = _scrollView.contentSize.height;
+        self.mcWidth = _scrollView.contentSize.width;
         self.backgroundColor = _scrollView.backgroundColor;
         //TODO: observe
         [_scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
@@ -86,6 +109,9 @@
         CGFloat scrollHeight = self.scrollView.mcHeight;
         // 设置位置和尺寸
         self.mcTop = MAX(contentHeight, scrollHeight);
+        if (self.scrollView.contentOffset.y + self.scrollView.contentSize.height > self.scrollView.mcHeight - 10 && self.state != FDRefreshFooterViewStateRefreshing) {
+            [self beginRefreshing];
+        }
     }
 }
 
@@ -100,18 +126,6 @@
 
 - (FDRefreshFooterView *)fd_footer {
     return objc_getAssociatedObject(self, _cmd);
-}
-
-- (BOOL)refreshing {
-    return self.fd_footer.state == FDRefreshFooterViewStateRefreshing;
-}
-
-- (void)beginRefreshing {
-    self.fd_footer.state = FDRefreshFooterViewStateRefreshing;
-}
-
-- (void)endRefresh {
-    self.fd_footer.state = FDRefreshFooterViewStateIdle;
 }
 
 @end

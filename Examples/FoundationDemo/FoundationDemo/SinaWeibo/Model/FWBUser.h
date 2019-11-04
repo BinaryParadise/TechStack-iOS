@@ -6,8 +6,11 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDBase.h"
+#import "FWBBase.h"
 
+/**
+ 微博用户
+ */
 @interface FWBUser : FDBase
 
 /**

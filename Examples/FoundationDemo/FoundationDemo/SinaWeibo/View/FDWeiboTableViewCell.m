@@ -39,7 +39,7 @@
     
     [self.avatorView sd_setImageWithURL:[NSURL URLWithString:self.status.user.avatar_large]];
     self.nameLabel.text = self.status.user.screen_name;
-    self.timeLabel.text = self.status.created_at;
+    self.timeLabel.text = [self.status.created_at description];
 }
 
 @end

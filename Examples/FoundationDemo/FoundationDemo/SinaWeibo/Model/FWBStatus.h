@@ -9,17 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "FWBUser.h"
 
-@interface FWBStatus : FDBase
+/**
+ 微博详情
+ */
+@interface FWBStatus : FWBBase
 
 /**
  微博创建时间
  */
-@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, copy) NSDate *created_at;
 
 /**
  微博ID
  */
-@property (nonatomic, assign) long long sid;
+@property (nonatomic, assign) long long rid;
 
 /**
  微博MID

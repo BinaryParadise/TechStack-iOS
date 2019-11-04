@@ -23,13 +23,14 @@ target 'FoundationDemo' do
   pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
-  pod 'MCJSONKit'
+  pod 'MCJSONKit', :path => '../../../MCJSONKit'
   pod 'Masonry'
   pod 'AFNetworking'
   pod 'Weibo_SDK', '~> 3.2'
   pod 'Realm', '~> 3.2'
   pod 'SDWebImage'
   pod 'MJRefresh'
+  pod 'MCObserverKit'
 
   target 'FoundationDemoTests' do
     inherit! :search_paths

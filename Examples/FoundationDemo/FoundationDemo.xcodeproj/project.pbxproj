@@ -33,6 +33,7 @@
 		CE17E861236C2FBD00F259C1 /* FDWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */; };
 		CE17E865236C36DE00F259C1 /* FDWeiboResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */; };
 		CE17E868236C398500F259C1 /* FWBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E867236C398500F259C1 /* FWBStatus.m */; };
+		CE17E923236FCCD800F259C1 /* FWBBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E922236FCCD800F259C1 /* FWBBase.m */; };
 		CE25BB612265E0190067E97B /* MCMacroController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB602265E0190067E97B /* MCMacroController.m */; };
 		CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB6C2265E0F80067E97B /* MCMacroTest.m */; };
 		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
@@ -124,6 +125,8 @@
 		CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboResponse.m; sourceTree = "<group>"; };
 		CE17E866236C398500F259C1 /* FWBStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBStatus.h; sourceTree = "<group>"; };
 		CE17E867236C398500F259C1 /* FWBStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBStatus.m; sourceTree = "<group>"; };
+		CE17E921236FCCD800F259C1 /* FWBBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBBase.h; sourceTree = "<group>"; };
+		CE17E922236FCCD800F259C1 /* FWBBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBBase.m; sourceTree = "<group>"; };
 		CE25BB5F2265E0190067E97B /* MCMacroController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroController.h; sourceTree = "<group>"; };
 		CE25BB602265E0190067E97B /* MCMacroController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMacroController.m; sourceTree = "<group>"; };
 		CE25BB622265E0910067E97B /* MCMacroDefine1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroDefine1.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 				CE17E867236C398500F259C1 /* FWBStatus.m */,
 				24FFBA1B236DC39C009773A7 /* FWBUser.h */,
 				24FFBA1C236DC39C009773A7 /* FWBUser.m */,
+				CE17E921236FCCD800F259C1 /* FWBBase.h */,
+				CE17E922236FCCD800F259C1 /* FWBBase.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -566,7 +571,7 @@
 				CE6E26E22202F743003AB8FB /* Frameworks */,
 				CE6E26E32202F743003AB8FB /* Resources */,
 				B2C379BD090F6202E51F7CC6 /* [CP] Copy Pods Resources */,
-				47419ECB9BA1F63DBA5007EB /* [Peregrine] Generator Routing Table */,
+				B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */,
 			);
 			buildRules = (
 			);
@@ -681,24 +686,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47419ECB9BA1F63DBA5007EB /* [Peregrine] Generator Routing Table */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Peregrine] Generator Routing Table";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\" \"-ferror-limit=0 -w\"";
-		};
 		B2C379BD090F6202E51F7CC6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -715,6 +702,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Peregrine] Generator Routing Table";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\" \"-ferror-limit=0 -w\"";
 		};
 		C1676FEFE300865B2CACC129 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -776,6 +781,7 @@
 				CE17E861236C2FBD00F259C1 /* FDWeiboRequest.m in Sources */,
 				CED9E4092320FFCA002276BF /* FDBasicActions.m in Sources */,
 				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
+				CE17E923236FCCD800F259C1 /* FWBBase.m in Sources */,
 				242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */,
 				CE17E868236C398500F259C1 /* FWBStatus.m in Sources */,
 				CE650E7922C3233800AE2908 /* MCJavaScriptAction.m in Sources */,

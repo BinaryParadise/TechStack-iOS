@@ -72,4 +72,12 @@
     return nil;
 }
 
+- (id)mc_newValueFromOldValue:(id)oldValue property:(id)property {
+    return [self fd_newValueFromOldValue:oldValue property:property];
+}
+
+- (id)fd_newValueFromOldValue:(id)oldValue property:(MCJSONKitProperty *)property {
+    return oldValue;
+}
+
 @end

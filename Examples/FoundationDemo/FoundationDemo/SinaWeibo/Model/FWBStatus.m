@@ -11,7 +11,7 @@
 @implementation FWBStatus
 
 - (NSDictionary *)fd_keyMappingDictionary {
-    return @{@"sid": @"id"};
+    return @{MCSafeProp(rid): @"id"};
 }
 
 @end

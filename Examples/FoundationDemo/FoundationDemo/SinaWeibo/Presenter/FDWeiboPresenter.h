@@ -10,6 +10,7 @@
 #import <TIRouterAction/TIRouterAction.h>
 #import "FDWeiboRequest.h"
 #import "FWBStatus.h"
+#import <MCObserverKit/MCObserverKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

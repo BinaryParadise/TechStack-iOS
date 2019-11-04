@@ -11,6 +11,7 @@
 #import "FDWeiboTableViewCell.h"
 #import "FDWeiboPresenter.h"
 #import <Masonry/Masonry.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface FDWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -34,7 +35,8 @@
     self.tableView = [[FDAutoRefreshTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.fd_footer = [[FDRefreshFooterView alloc] initWithFrame:CGRectMake(0, 0, self.view.mcWidth, 20)];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.fd_footer = [FDRefreshFooterView initWithTarget:self selector:@selector(refreshData)];
     if (@available(iOS 11, *)) {
         self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
@@ -49,16 +51,29 @@
     }];
     
     [FDWeiboTableViewCell registerForTableView:self.tableView];
-    [self.presenter authorizeIfInvalid];
-    [self.presenter fetchHomeTimeline:^(BOOL success, id  _Nullable data, NSError * _Nullable error) {
-        dispatch_async(dispatch_get_main_queue(), ^{            
+    
+    [MCObserver(self.presenter, statuses) valueChanged:^(id target, id value) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.tableView reloadData];
         });
     }];
+    
+    [self.presenter authorizeIfInvalid];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self refreshData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+}
+
+#pragma mark - Actions
+
+- (void)refreshData {
+    [self.presenter fetchHomeTimeline:^(BOOL success, id  _Nullable data, NSError * _Nullable error) {
+        [self.tableView.fd_footer endRefreshing];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,14 +88,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 128;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offsetY = scrollView.contentOffset.y + scrollView.frame.size.height - scrollView.contentSize.height;
-    MCLogWarn(@"%f", offsetY);
-    if (scrollView.contentOffset.y + scrollView.contentSize.height > scrollView.mcHeight - 10 && !self.tableView.refreshing) {
-        [self.tableView beginRefreshing];
-    }
 }
 
 @end

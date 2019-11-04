@@ -25,17 +25,16 @@ typedef NS_OPTIONS(NSUInteger, FDRefreshFooterViewState) {
 @property (nonatomic, assign) FDRefreshFooterViewState state;
 @property (nonatomic, weak, readonly) UIScrollView *scrollView;
 
++ (instancetype)initWithTarget:(id)target selector:(SEL)selector;
+
+- (void)beginRefreshing;
+- (void)endRefreshing;
+
 @end
 
 @interface UITableView (FDRefresh)
 
 @property (nonatomic, strong) FDRefreshFooterView *fd_footer;
-@property (nonatomic, assign, readonly) BOOL refreshing;
-
-
-- (void)beginRefreshing;
-
-- (void)endRefresh;
 
 @end
 
