@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath * _Nullable )indexPath;
 
++ (CGFloat)defaultHeightForData:(id)data;
+
 @end
 
 NS_ASSUME_NONNULL_END

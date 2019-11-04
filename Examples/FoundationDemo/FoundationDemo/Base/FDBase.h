@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MCFoundation/MCFoundation.h>
+#import "FDNSDate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

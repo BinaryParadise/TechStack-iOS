@@ -1,5 +1,5 @@
 //
-//  FDWeiboRequest.h
+//  FWBRequestManager.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^FDActionCompletion)(BOOL success, id _Nullable data, NSError * _Nullable error);
+typedef void(^FDActionCompletion)(id _Nullable data, NSError * _Nullable error);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDWeiboRequest : NSObject
+@interface FWBRequestManager : NSObject
 
 + (void)getDataWithURL:(NSString *)url params:(NSDictionary * _Nullable)params completion:(FDActionCompletion)completion;
 

@@ -43,6 +43,7 @@
 
 - (void)authorizeIfInvalid {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"weibo_sso_data"]) {
+        [self fetchEmotions];
         return;
     }
     WBAuthorizeRequest *request =[[WBAuthorizeRequest alloc] init];
@@ -55,11 +56,24 @@
     if (self.header) {
         params = @{@"max_id": @(self.statuses.lastObject.mid)};
     }
-    [FDWeiboRequest getDataWithURL:@"statuses/home_timeline.json" params:nil completion:^(BOOL success, id  _Nonnull data, NSError * _Nonnull error) {
+    [FWBRequestManager getDataWithURL:@"statuses/home_timeline.json" params:params completion:^(id  _Nonnull data, NSError * _Nonnull error) {
         self.header = [FDWeiboResponse fd_objectFromKeyValues:data];
-        self.statuses = [FWBStatus fd_arrayOfModelsFromKeyValues:data[@"statuses"]];
+        NSArray *statuses = [FWBStatus fd_arrayOfModelsFromKeyValues:data[@"statuses"]];
+        if (self.statuses) {
+            self.statuses = [self.statuses arrayByAddingObjectsFromArray:statuses];
+        } else {
+            self.statuses = statuses;
+        }
         if (completion) {
-            completion(success, self.statuses, error);
+            completion(statuses, error);
+        }
+    }];
+}
+
+- (void)fetchEmotions {
+    [FWBRequestManager getDataWithURL:@"emotions.json" params:nil completion:^(id  _Nullable data, NSError * _Nullable error) {
+        if (error) {
+            DDLogError(@"%@", error);
         }
     }];
 }
@@ -73,6 +87,7 @@
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
     if (response.statusCode == WeiboSDKResponseStatusCodeSuccess) {
         if ([response isKindOfClass:[WBAuthorizeResponse class]]) {
+            self.authChanged = YES;
             [[NSUserDefaults standardUserDefaults] setObject:response.userInfo forKey:@"weibo_sso_data"];
         }
     } else {

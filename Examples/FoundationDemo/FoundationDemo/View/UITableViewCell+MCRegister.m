@@ -27,4 +27,8 @@
     }
 }
 
++ (CGFloat)defaultHeightForData:(id)data {
+    return 44.0;
+}
+
 @end

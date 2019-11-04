@@ -52,9 +52,11 @@ PODS:
   - TIRouterAction (0.1.0):
     - Masonry (~> 1.0)
     - MBProgressHUD
-    - MCLogger (~> 0.6.0)
+    - MCJSONKit (~> 0.5)
+    - MCLogger (~> 0.6)
     - MCUIKit (~> 0.3)
     - Peregrine (~> 0.5)
+  - Toast (4.0.0)
   - Weibo_SDK (3.2.5.1)
 
 DEPENDENCIES:
@@ -70,6 +72,7 @@ DEPENDENCIES:
   - SDWebImage
   - Specta
   - TIRouterAction (from `../TIRouterAction`)
+  - Toast
   - Weibo_SDK (~> 3.2)
 
 SPEC REPOS:
@@ -91,6 +94,7 @@ SPEC REPOS:
     - SDWebImage
     - SocketRocket
     - Specta
+    - Toast
     - Weibo_SDK
 
 EXTERNAL SOURCES:
@@ -118,9 +122,10 @@ SPEC CHECKSUMS:
   SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
-  TIRouterAction: 49d1f0b1bed33b9583f82f20ff9c1595fd242163
+  TIRouterAction: 646e81e30bb64892b38b06dab2d6c7399a030391
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
 
-PODFILE CHECKSUM: f28a6bae5beeff7d22f904dc69de31bc2dff44f7
+PODFILE CHECKSUM: 03c42649faab4cb14bfdea604065a1ea9b886caf
 
 COCOAPODS: 1.7.5

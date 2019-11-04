@@ -8,16 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <TIRouterAction/TIRouterAction.h>
-#import "FDWeiboRequest.h"
+#import "FWBRequestManager.h"
 #import "FWBStatus.h"
 #import <MCObserverKit/MCObserverKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface FDWeiboPresenter : NSObject
 
 @property (nonatomic, copy) NSArray<FWBStatus *> *statuses;
-
+@property (nonatomic, assign) BOOL authChanged;
 
 PGMethod(initWeibo, "fd://weibo/init");
 PGMethod(openWeiboURL, "fd://weibo/openurl");
@@ -33,5 +31,3 @@ PGMethod(openWeiboURL, "fd://weibo/openurl");
 - (void)fetchHomeTimeline:(FDActionCompletion)completion;
 
 @end
-
-NS_ASSUME_NONNULL_END

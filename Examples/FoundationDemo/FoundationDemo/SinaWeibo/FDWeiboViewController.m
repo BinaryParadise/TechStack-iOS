@@ -12,11 +12,15 @@
 #import "FDWeiboPresenter.h"
 #import <Masonry/Masonry.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <Toast/Toast.h>
+#import "FDPlaceholderView.h"
 
 @interface FDWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) FDWeiboPresenter *presenter;
+@property (nonatomic, strong) FDPlaceholderView *emptyView;
+
 
 @end
 
@@ -26,42 +30,48 @@
     [super awakeFromNib];
     
     self.presenter = [[FDWeiboPresenter alloc] init];
+    [CSToastManager setDefaultPosition:CSToastPositionCenter];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = MCHexColor(0xF6F6F6);
+    
+    self.emptyView = [[FDPlaceholderView alloc] init];
+    self.emptyView.hidden = YES;
+    self.emptyView.onButtonClick = ^{
+        [self refreshData:FDRefreshStateFirst];
+    };
+    [self.view addSubview:self.emptyView];
+    [self.emptyView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
     self.tableView = [[FDAutoRefreshTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.backgroundColor = self.view.backgroundColor;
+    self.tableView.hidden = YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.fd_footer = [FDRefreshFooterView initWithTarget:self selector:@selector(refreshData)];
-    if (@available(iOS 11, *)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+    self.tableView.fd_footer = [FDRefreshFooterView initWithTarget:self selector:@selector(refreshData:)];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
-        make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-        make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
-        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        make.edges.equalTo(self.view);
     }];
     
     [FDWeiboTableViewCell registerForTableView:self.tableView];
     
-    [MCObserver(self.presenter, statuses) valueChanged:^(id target, id value) {
+    [MCObserver(self.presenter, authChanged) valueChanged:^(id target, id value) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            [self.tableView reloadData];
+            [self refreshData:FDRefreshStateFirst];
         });
     }];
     
     [self.presenter authorizeIfInvalid];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self refreshData];
+    [self refreshData:FDRefreshStateFirst];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -70,24 +80,57 @@
 
 #pragma mark - Actions
 
-- (void)refreshData {
-    [self.presenter fetchHomeTimeline:^(BOOL success, id  _Nullable data, NSError * _Nullable error) {
-        [self.tableView.fd_footer endRefreshing];
+- (void)refreshData:(FDRefreshState)state {
+    if (state == FDRefreshStateFirst) {
+        self.presenter.statuses = nil;
+    }
+    [self.presenter fetchHomeTimeline:^(id  _Nullable data, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            self.emptyView.hidden = !error;
+            self.tableView.hidden = error;
+            [self.tableView.fd_footer endRefreshing];
+            if (error) {
+                [self.view makeToast:error.localizedDescription];
+            } else {
+                [self reloadData];
+            }
+        });
     }];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (void)reloadData {
+    [self.tableView reloadData];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.presenter.statuses.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FDWeiboTableViewCell *cell = [FDWeiboTableViewCell cellForTableView:tableView indexPath:indexPath];
-    cell.status = self.presenter.statuses[indexPath.row];
+    cell.status = self.presenter.statuses[indexPath.section];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 128;
+    return [FDWeiboTableViewCell defaultHeightForData:self.presenter.statuses[indexPath.section]];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 16.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return [UIView new];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    DDLogDebug(@"%@ %@ %@", NSStringFromUIEdgeInsets(scrollView.contentInset), NSStringFromCGPoint(scrollView.contentOffset), NSStringFromCGSize(scrollView.contentSize));
 }
 
 @end

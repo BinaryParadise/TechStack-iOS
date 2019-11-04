@@ -8,27 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MCUIKit/UIView+MCFrameGeometry.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "FDRefreshFooterView.h"
 
 @interface FDAutoRefreshTableView : UITableView
-
-@end
-
-typedef NS_OPTIONS(NSUInteger, FDRefreshFooterViewState) {
-    FDRefreshFooterViewStateIdle = 0,
-    FDRefreshFooterViewStateRefreshing = 1 << 0
-};
-
-@interface FDRefreshFooterView : UIView
-
-@property (nonatomic, assign) FDRefreshFooterViewState state;
-@property (nonatomic, weak, readonly) UIScrollView *scrollView;
-
-+ (instancetype)initWithTarget:(id)target selector:(SEL)selector;
-
-- (void)beginRefreshing;
-- (void)endRefreshing;
 
 @end
 
@@ -37,5 +19,3 @@ typedef NS_OPTIONS(NSUInteger, FDRefreshFooterViewState) {
 @property (nonatomic, strong) FDRefreshFooterView *fd_footer;
 
 @end
-
-NS_ASSUME_NONNULL_END

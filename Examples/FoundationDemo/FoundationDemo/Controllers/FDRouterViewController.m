@@ -8,6 +8,7 @@
 
 #import "FDRouterViewController.h"
 #import <TIRouterAction/TIRouterAction.h>
+#import <Masonry/Masonry.h>
 
 @interface FDRouterViewController ()
 
@@ -21,6 +22,9 @@
     UIViewController *vc = [TIRouterActionManager mangerController];
     [self addChildViewController:vc];
     [self.view addSubview:vc.view];
+    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 /*

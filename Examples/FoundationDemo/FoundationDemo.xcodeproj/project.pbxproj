@@ -19,6 +19,7 @@
 		246E4F02236C51FF00DC139C /* FDBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E4F01236C51FF00DC139C /* FDBase.m */; };
 		248B206B22C701B200CF4EA4 /* SNEngine.js in Resources */ = {isa = PBXBuildFile; fileRef = 248B206A22C701B200CF4EA4 /* SNEngine.js */; };
 		248B206E22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B206D22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m */; };
+		24CAC199237054EF0011EC07 /* FDPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAC198237054EF0011EC07 /* FDPlaceholderView.m */; };
 		24EE328922C75AF5001B32ED /* NSInvocation+ScriptNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE328822C75AF5001B32ED /* NSInvocation+ScriptNative.m */; };
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
 		24FFBA1D236DC39C009773A7 /* FWBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFBA1C236DC39C009773A7 /* FWBUser.m */; };
@@ -30,10 +31,14 @@
 		CE17E790236C059E00F259C1 /* FDWeiboTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E78E236C059E00F259C1 /* FDWeiboTableViewCell.m */; };
 		CE17E791236C059E00F259C1 /* FDWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE17E78F236C059E00F259C1 /* FDWeiboTableViewCell.xib */; };
 		CE17E7FD236C0CEB00F259C1 /* FDWeiboPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E7FC236C0CEB00F259C1 /* FDWeiboPresenter.m */; };
-		CE17E861236C2FBD00F259C1 /* FDWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */; };
+		CE17E861236C2FBD00F259C1 /* FWBRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E860236C2FBD00F259C1 /* FWBRequestManager.m */; };
 		CE17E865236C36DE00F259C1 /* FDWeiboResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */; };
 		CE17E868236C398500F259C1 /* FWBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E867236C398500F259C1 /* FWBStatus.m */; };
 		CE17E923236FCCD800F259C1 /* FWBBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E922236FCCD800F259C1 /* FWBBase.m */; };
+		CE17ED1E2372C10B00F259C1 /* FDRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17ED1C2372C10A00F259C1 /* FDRefreshFooterView.m */; };
+		CE17ED632373CE4700F259C1 /* FDNSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17ED622373CE4700F259C1 /* FDNSDate.m */; };
+		CE17ED662373EF1F00F259C1 /* FDAttributeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17ED652373EF1F00F259C1 /* FDAttributeLabel.m */; };
+		CE17ED6A2373FC4000F259C1 /* Emotions.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE17ED692373FC4000F259C1 /* Emotions.bundle */; };
 		CE25BB612265E0190067E97B /* MCMacroController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB602265E0190067E97B /* MCMacroController.m */; };
 		CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25BB6C2265E0F80067E97B /* MCMacroTest.m */; };
 		CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32B924221BFDE900567417 /* JSARCDemoB.m */; };
@@ -98,6 +103,8 @@
 		248B206C22C7041B00CF4EA4 /* NSDictionary+ScriptNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ScriptNative.h"; sourceTree = "<group>"; };
 		248B206D22C7041B00CF4EA4 /* NSDictionary+ScriptNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ScriptNative.m"; sourceTree = "<group>"; };
 		249FA9D9236D2E5600CEA3B7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		24CAC197237054EF0011EC07 /* FDPlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDPlaceholderView.h; sourceTree = "<group>"; };
+		24CAC198237054EF0011EC07 /* FDPlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDPlaceholderView.m; sourceTree = "<group>"; };
 		24EE328722C75AF5001B32ED /* NSInvocation+ScriptNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+ScriptNative.h"; sourceTree = "<group>"; };
 		24EE328822C75AF5001B32ED /* NSInvocation+ScriptNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+ScriptNative.m"; sourceTree = "<group>"; };
 		24F1FB6D22241F9E0066D008 /* MCArithmeticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCArithmeticTableViewController.h; sourceTree = "<group>"; };
@@ -119,14 +126,22 @@
 		CE17E78F236C059E00F259C1 /* FDWeiboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FDWeiboTableViewCell.xib; sourceTree = "<group>"; };
 		CE17E7FB236C0CEB00F259C1 /* FDWeiboPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboPresenter.h; sourceTree = "<group>"; };
 		CE17E7FC236C0CEB00F259C1 /* FDWeiboPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboPresenter.m; sourceTree = "<group>"; };
-		CE17E85F236C2FBD00F259C1 /* FDWeiboRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboRequest.h; sourceTree = "<group>"; };
-		CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboRequest.m; sourceTree = "<group>"; };
+		CE17E85F236C2FBD00F259C1 /* FWBRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBRequestManager.h; sourceTree = "<group>"; };
+		CE17E860236C2FBD00F259C1 /* FWBRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBRequestManager.m; sourceTree = "<group>"; };
 		CE17E863236C36DE00F259C1 /* FDWeiboResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWeiboResponse.h; sourceTree = "<group>"; };
 		CE17E864236C36DE00F259C1 /* FDWeiboResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDWeiboResponse.m; sourceTree = "<group>"; };
 		CE17E866236C398500F259C1 /* FWBStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBStatus.h; sourceTree = "<group>"; };
 		CE17E867236C398500F259C1 /* FWBStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBStatus.m; sourceTree = "<group>"; };
 		CE17E921236FCCD800F259C1 /* FWBBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBBase.h; sourceTree = "<group>"; };
 		CE17E922236FCCD800F259C1 /* FWBBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBBase.m; sourceTree = "<group>"; };
+		CE17EB7B237159E900F259C1 /* FDUIDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDUIDefine.h; sourceTree = "<group>"; };
+		CE17ED1C2372C10A00F259C1 /* FDRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDRefreshFooterView.m; sourceTree = "<group>"; };
+		CE17ED1D2372C10B00F259C1 /* FDRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRefreshFooterView.h; sourceTree = "<group>"; };
+		CE17ED612373CE4700F259C1 /* FDNSDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDNSDate.h; sourceTree = "<group>"; };
+		CE17ED622373CE4700F259C1 /* FDNSDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDNSDate.m; sourceTree = "<group>"; };
+		CE17ED642373EF1F00F259C1 /* FDAttributeLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDAttributeLabel.h; sourceTree = "<group>"; };
+		CE17ED652373EF1F00F259C1 /* FDAttributeLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDAttributeLabel.m; sourceTree = "<group>"; };
+		CE17ED692373FC4000F259C1 /* Emotions.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emotions.bundle; sourceTree = "<group>"; };
 		CE25BB5F2265E0190067E97B /* MCMacroController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroController.h; sourceTree = "<group>"; };
 		CE25BB602265E0190067E97B /* MCMacroController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMacroController.m; sourceTree = "<group>"; };
 		CE25BB622265E0910067E97B /* MCMacroDefine1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMacroDefine1.h; sourceTree = "<group>"; };
@@ -243,6 +258,8 @@
 			children = (
 				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
 				CE6E274022057076003AB8FB /* NSArray */,
+				CE17ED612373CE4700F259C1 /* FDNSDate.h */,
+				CE17ED622373CE4700F259C1 /* FDNSDate.m */,
 			);
 			path = DataType;
 			sourceTree = "<group>";
@@ -267,6 +284,8 @@
 		242D4E27224727590022BD45 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE17ED1D2372C10B00F259C1 /* FDRefreshFooterView.h */,
+				CE17ED1C2372C10A00F259C1 /* FDRefreshFooterView.m */,
 				CE17E788236C02BB00F259C1 /* FDAutoRefreshTableView.h */,
 				CE17E789236C02BB00F259C1 /* FDAutoRefreshTableView.m */,
 				242D4E2D224729DA0022BD45 /* MCDemoHeaderFooterView.h */,
@@ -275,6 +294,11 @@
 				242D4E3922472DFF0022BD45 /* UITableViewCell+MCRegister.m */,
 				242D4E3B22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.h */,
 				242D4E3C22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m */,
+				24CAC197237054EF0011EC07 /* FDPlaceholderView.h */,
+				24CAC198237054EF0011EC07 /* FDPlaceholderView.m */,
+				CE17EB7B237159E900F259C1 /* FDUIDefine.h */,
+				CE17ED642373EF1F00F259C1 /* FDAttributeLabel.h */,
+				CE17ED652373EF1F00F259C1 /* FDAttributeLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +352,7 @@
 		CE17E787236BE1D800F259C1 /* SinaWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				CE17ED672373FBE000F259C1 /* Resources */,
 				CE17E862236C36C100F259C1 /* Model */,
 				CE17E85E236C2FAF00F259C1 /* Request */,
 				CE17E784236BDF8500F259C1 /* FDWeiboViewController.h */,
@@ -360,8 +385,8 @@
 		CE17E85E236C2FAF00F259C1 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				CE17E85F236C2FBD00F259C1 /* FDWeiboRequest.h */,
-				CE17E860236C2FBD00F259C1 /* FDWeiboRequest.m */,
+				CE17E85F236C2FBD00F259C1 /* FWBRequestManager.h */,
+				CE17E860236C2FBD00F259C1 /* FWBRequestManager.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -379,6 +404,14 @@
 				CE17E922236FCCD800F259C1 /* FWBBase.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE17ED672373FBE000F259C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE17ED692373FC4000F259C1 /* Emotions.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CE25BB5E2265E0050067E97B /* Macro */ = {
@@ -649,6 +682,7 @@
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
 				CEF3446522C5FF0E00088D74 /* Environment.js in Resources */,
 				CE17E77F236BDBEE00F259C1 /* Main.storyboard in Resources */,
+				CE17ED6A2373FC4000F259C1 /* Emotions.bundle in Resources */,
 				248B206B22C701B200CF4EA4 /* SNEngine.js in Resources */,
 				240BB6342228144400CB0722 /* BasicKnowledge.storyboard in Resources */,
 			);
@@ -758,6 +792,7 @@
 				CE32B925221BFDE900567417 /* JSARCDemoB.m in Sources */,
 				2449EC802222545100F466EE /* MCThreadActions.m in Sources */,
 				246E4F02236C51FF00DC139C /* FDBase.m in Sources */,
+				CE17ED662373EF1F00F259C1 /* FDAttributeLabel.m in Sources */,
 				CE6E273922043EC9003AB8FB /* TestModel1+Addition.m in Sources */,
 				CE17E790236C059E00F259C1 /* FDWeiboTableViewCell.m in Sources */,
 				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
@@ -772,13 +807,15 @@
 				24EE328922C75AF5001B32ED /* NSInvocation+ScriptNative.m in Sources */,
 				CE6E273E22043EC9003AB8FB /* MemoryConstruction.m in Sources */,
 				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
+				CE17ED632373CE4700F259C1 /* FDNSDate.m in Sources */,
 				24FFBA1D236DC39C009773A7 /* FWBUser.m in Sources */,
 				CE6E274622057335003AB8FB /* MCNSArrayActions.m in Sources */,
 				CE17E7FD236C0CEB00F259C1 /* FDWeiboPresenter.m in Sources */,
 				CE17E783236BDF7A00F259C1 /* FDRouterViewController.m in Sources */,
 				242D4E3A22472DFF0022BD45 /* UITableViewCell+MCRegister.m in Sources */,
 				CEBFA48C222E502200A68094 /* MCSingletonDemo.m in Sources */,
-				CE17E861236C2FBD00F259C1 /* FDWeiboRequest.m in Sources */,
+				CE17E861236C2FBD00F259C1 /* FWBRequestManager.m in Sources */,
+				CE17ED1E2372C10B00F259C1 /* FDRefreshFooterView.m in Sources */,
 				CED9E4092320FFCA002276BF /* FDBasicActions.m in Sources */,
 				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
 				CE17E923236FCCD800F259C1 /* FWBBase.m in Sources */,
@@ -788,6 +825,7 @@
 				CE6E27172203E88C003AB8FB /* NSNumber+JSConvert.m in Sources */,
 				CE6E273822043EC9003AB8FB /* GCDActions.m in Sources */,
 				CE17E865236C36DE00F259C1 /* FDWeiboResponse.m in Sources */,
+				24CAC199237054EF0011EC07 /* FDPlaceholderView.m in Sources */,
 				CE6E273D22043EC9003AB8FB /* MemoryViewController.m in Sources */,
 				24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */,
 				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,
@@ -879,7 +917,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -932,7 +970,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -946,8 +984,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FoundationDemo/SupportFile/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -959,7 +996,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/FoundationDemo/SupportFile/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.foundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "WildcardDev: *";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -970,8 +1007,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FoundationDemo/SupportFile/PrefixHeader.pch;
 				GCC_VERSION = "";

@@ -1,7 +1,17 @@
-#!/usr/bin/ruby -w
+#!/usr/bin/ruby -W0
+
+require 'json'
 
 class Generator
-  def self.createModle()
+  def initialize(args)
+    if args[0].eql?('model')
+      createModel()
+    elsif args[0].eql?('emotion')
+      createEmotion(args[1])
+    end
+  end
+
+  def createModel()
     columns = [["id","int64","用户UID"],
 ["idstr","string","字符串型的用户UID"],
 ["screen_name","string","用户昵称"],
@@ -57,5 +67,12 @@ class Generator
       )}
   end
 
+  def createEmotion(path)
+    emotion_json = JSON.parse(File.read(path))
+    emotion_json.each {|item| (
+        `curl #{item['url']} -o #{File::dirname(path)}/#{item['phrase']}#{File::extname(item['url'])}`
+    )}
+  end
+
 end
-Generator::createModle()
+Generator::new(ARGV)
