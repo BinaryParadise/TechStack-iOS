@@ -14,9 +14,9 @@
 @property (nonatomic, weak) IBOutlet UIImageView *avatorView;
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
-@property (nonatomic, weak) IBOutlet UILabel *sourceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *contentLabel;
+@property (nonatomic, weak) IBOutlet UILabel *sourceLabel;
 
 
 @end

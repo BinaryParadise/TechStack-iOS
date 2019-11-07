@@ -57,6 +57,17 @@ describe(@"Foundation", ^{
             expect(singleton).equal([[MCSingletonDemo alloc] init]);
         });
     });
+    
+    context(@"Regular", ^{
+        NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:@"(href=\")(\\S+)(\")" options:NSRegularExpressionCaseInsensitive error:nil];
+        NSString *text = @"<a href=\"http://weibo.com\" rel=\"nofollow\">新浪微博</a>";
+        NSTextCheckingResult *result = [[NSRegularExpression regularExpressionWithPattern:@"(>)(\\s*\\S*)(<\\/a>)" options:NSRegularExpressionCaseInsensitive error:nil] firstMatchInString:text options:NSMatchingWithoutAnchoringBounds range:NSMakeRange(0, text.length)];
+        expect([text substringWithRange:[result rangeAtIndex:2]]).equal(@"新浪微博");
+        NSArray<NSTextCheckingResult *> *matches = [regx matchesInString:text options:NSMatchingWithoutAnchoringBounds range:NSMakeRange(0, text.length)];
+        [matches enumerateObjectsUsingBlock:^(NSTextCheckingResult * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            expect([text substringWithRange:[obj rangeAtIndex:2]]).equal(@"http://weibo.com");
+        }];
+    });
 });
 
 SpecEnd
