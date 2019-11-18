@@ -1,14 +1,21 @@
-## UIWebView
+# UIWebView
 
 ```objc
-//网页加载完成通过此方法执行JavaScript脚本
+//加载方法
+- (void)loadRequest:(NSURLRequest *)request;
+- (void)loadHTMLString:(NSString *)string baseURL:(nullable NSURL *)baseURL;
+- (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
+```
+
+```objc
+//执行JavaScript脚本【由于是同步的，需在主线程】
 - (nullable NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script;
 ```
 
 ### *UIWebViewDelegate*
 
 ```objc
-//加载之前调用
+//是否可加载指定的网页，常用来和JS交互
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 ```
 ```objc
@@ -22,6 +29,54 @@
 ```objc
 //加载失败时调用
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+```
+
+### OC调用JS
+
+##### 1、[JavaScriptCore](../JavaScriptCore.md)（iOS 7.0引入)
+
+```objc
+JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+JSValue *value = [context evaluateScript:@"document.title"];
+self.title = value.toString;
+```
+
+##### 2、调用`stringByEvaluatingJavaScriptFromString`
+
+### JS调用OC
+
+##### 1、`JavaScriptCore`
+
+##### 2、`shouldStartLoadWithRequest`拦截
+
+### Cookie
+
+> 使用`NSHTTPCookieStorage`管理
+
+- 添加到Header中
+```objc
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.LynkCo.com"]];
+   [request addValue:@"cookitnmae=78965420;" forHTTPHeaderField:@"Set-Cookie"];
+   [self.webView loadRequest:request];
+
+- 自定义Cookie
+```objc
+NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:@{
+    NSHTTPCookieName: @"fname",
+    NSHTTPCookieDomain: @".neverland.com",
+    NSHTTPCookiePath: @"/"
+    NSHTTPCookieValue: @"1234567890",
+}];
+//Cookie存在则覆盖，不存在添加
+[[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+```
+- 读取所有Cookie，Cookie转换成HTTPHeaderFields，并添加到request的header中
+```objc
+NSArray *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage].cookies;
+//Cookies数组转换为requestHeaderFields
+NSDictionary *requestHeaderFields = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+//设置请求头
+request.allHTTPHeaderFields = requestHeaderFields;
 ```
 
 ## WKWebView
@@ -45,6 +100,33 @@ WKWebsiteDataStore | 包含网页数据存储和查找。
 [WKNavigationDelegate](#awknavdelegate) | 提供了追踪主窗口网页加载过程和判断主窗口和子窗口是否进行页面加载新页面的相关方法。
 WKUIDelegate | 提供用原生控件显示网页的方法回调。
 WKScriptMessageHandler | 提供从网页中收消息的回调方法。
+
+### 初始化示例
+
+```objc
+//属性设置
+WKWebViewConfiguration *webViewConfig = [[WKWebViewConfiguration alloc] init];
+webViewConfig.preferences = [WKPreferences new];
+webViewConfig.preferences.javaScriptEnabled = YES;
+//不通过用户交互，是否可以打开窗口
+webViewConfig.preferences.javaScriptCanOpenWindowsAutomatically = YES;
+
+//添加Cookie
+NSString *cookieStr = [NSMutableString stringWithFormat:@"document.cookie='%@=%@;path=/';",@"fname", @"Rake Yang"];
+WKUserScript *cookieScript = [[WKUserScript alloc] initWithSource:cookieStr injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+[webViewConfig.userContentController addUserScript:cookieScript];
+
+//注册自定义脚本
+WKUserScript *userScript = [[WKUserScript alloc] initWithSource:@"" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+[webViewConfig.userContentController addUserScript:userScript];
+[webViewConfig.userContentController addScriptMessageHandler:self name:@"objc"];
+
+self.wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:webViewConfig];
+self.wkWebView.UIDelegate = self;
+self.wkWebView.navigationDelegate = self;
+[self.view addSubview:self.wkWebView];
+[self.wkWebView loadRequest:[self requestWithPath:htmlPath]];
+```
 
 ### <a name="awknavdelegate"><a>WKNavigationDelegate
 
@@ -80,15 +162,9 @@ WKScriptMessageHandler | 提供从网页中收消息的回调方法。
 // 网页中调用脚本是调用
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
 ```
+### Cookie
 
-## JavaScriptCore
-
-常用的类
-
-名称 | 说明
----- | ----
-JSContext | 脚本执行上下文
-JSValue | 对象转换
-JSManagedValue | 内存管理辅助对象
-JSVirtualMachine | 虚拟机，有独立的空间和垃圾回收机制
-JSExport | 对象协议
+通过脚本注入添加
+```js
+document.cookie="fname=Rake Yang;path=/";
+```

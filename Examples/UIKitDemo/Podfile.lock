@@ -4,6 +4,9 @@ PODS:
   - CocoaLumberjack/Core (3.6.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - MCFoundation (0.2.2)
+  - MCJSONKit (0.5.2):
+    - MCFoundation (~> 0.2)
   - MCLogger (0.6.1):
     - CocoaLumberjack (~> 3.0)
     - MJExtension (~> 3.0)
@@ -17,24 +20,27 @@ PODS:
     - MCUIKit/Category
     - MCUIKit/Gesonry
   - MJExtension (3.2.1)
-  - Peregrine/LibTooling (0.5.0)
+  - Peregrine (0.5.1)
   - SAMKeychain (1.5.3)
   - SocketRocket (0.5.1)
   - TIRouterAction (0.1.0):
     - Masonry (~> 1.0)
     - MBProgressHUD
-    - MCLogger (~> 0.6.0)
+    - MCJSONKit (~> 0.5)
+    - MCLogger (~> 0.6)
     - MCUIKit (~> 0.3)
-    - Peregrine/LibTooling (~> 0.3)
+    - Peregrine (~> 0.5)
 
 DEPENDENCIES:
   - TIRouterAction (from `../TIRouterAction`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - CocoaLumberjack
     - Masonry
     - MBProgressHUD
+    - MCFoundation
+    - MCJSONKit
     - MCLogger
     - MCUIKit
     - MJExtension
@@ -50,14 +56,16 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MCFoundation: 1c05141cbc900ec15618d7d4c75fb88719d7b658
+  MCJSONKit: 64251bf517b756436c185735b6f4edfdede9ec8e
   MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
   MCUIKit: 4d9fb8d30b0cf44bf99605ecd248a3092d6f4e13
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
-  Peregrine: 12e131f84b4e50c8a4323dabbbc131344a55c132
+  Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  TIRouterAction: 454442dceccd43352e8436738a54a15d0694431d
+  TIRouterAction: 646e81e30bb64892b38b06dab2d6c7399a030391
 
 PODFILE CHECKSUM: c065011df9938965f7300f2c0b113c524526ffe2
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

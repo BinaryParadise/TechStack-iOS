@@ -19,10 +19,16 @@
     [self pushViewControllerWithIdentify:context.config.actionName];
 }
 
-+ (void)webViewAction:(PGRouterContext *)context {
++ (void)uiWebViewAction:(PGRouterContext *)context {
     GDWebViewController *vc = [GDWebViewController new];
+    vc.useWKWebview = [context.userInfo mc_boolForKey:@"wkwebview"];
     UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [nav pushViewController:vc animated:YES];
+    [context finished];
+}
+
++ (void)wkWebViewAction:(PGRouterContext *)context {
+    [self uiWebViewAction:context];
 }
 
 + (void)labelDemo:(PGRouterContext *)context {

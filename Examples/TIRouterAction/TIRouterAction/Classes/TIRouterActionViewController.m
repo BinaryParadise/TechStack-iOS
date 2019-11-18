@@ -57,6 +57,9 @@
     self.tableView.estimatedSectionHeaderHeight = 0;
     self.tableView.estimatedSectionFooterHeight = 0;
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
+//    if (@available(iOS 11.0, *)) {
+//        self.tableView.insetsContentViewsToSafeArea = NO;
+//    }
     [self.tableView registerClass:[TIRouterActionCell class] forCellReuseIdentifier:@"TIRouterActionCell"];
 }
 
@@ -83,7 +86,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 10;
+    return section < self.data.count - 1 ? 10 : 0.01;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

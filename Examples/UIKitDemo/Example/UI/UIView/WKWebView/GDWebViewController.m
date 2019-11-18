@@ -9,10 +9,10 @@
 #import "GDWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
+#import <Masonry/Masonry.h>
 
 @interface GDWebViewController () <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
-@property (nonatomic, assign) BOOL useWKWebview;
 @property (nonatomic, strong) UIWebView *uiWebView;
 @property (nonatomic, strong) WKWebView *wkWebView;
 
@@ -24,21 +24,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"是否使用WKWebView?" preferredStyle:UIAlertControllerStyleAlert];
-    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [self setupWebView];
-    }]];
-    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.useWKWebview = YES;
-        [self setupWebView];
-    }]];
-    [self presentViewController:alertVC animated:YES completion:^{
-        
-    }];
+    [self setupWebView];
 }
-    
+
 - (void)setupWebView {
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"webview.html" ofType:nil];
+    [self addCustomCookie];
     if (self.useWKWebview) {
         //属性设置
         WKWebViewConfiguration *webViewConfig = [[WKWebViewConfiguration alloc] init];
@@ -46,6 +37,11 @@
         webViewConfig.preferences.javaScriptEnabled = YES;
         //不通过用户交互，是否可以打开窗口
         webViewConfig.preferences.javaScriptCanOpenWindowsAutomatically = YES;
+        
+        //添加Cookie
+        NSString *cookieStr = [NSMutableString stringWithFormat:@"document.cookie=\"%@=%@;path=/\";",@"fname", @"Rake Yang"];
+        WKUserScript *cookieScript = [[WKUserScript alloc] initWithSource:cookieStr injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+        [webViewConfig.userContentController addUserScript:cookieScript];
         
         //注册自定义脚本
         WKUserScript *userScript = [[WKUserScript alloc] initWithSource:@"" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
@@ -56,13 +52,63 @@
         self.wkWebView.UIDelegate = self;
         self.wkWebView.navigationDelegate = self;
         [self.view addSubview:self.wkWebView];
-        [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlPath]]];
-    }else {
+        [self.wkWebView loadRequest:[self requestWithPath:htmlPath]];
+    } else {
         self.uiWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
         self.uiWebView.delegate = self;
         [self.view addSubview:self.uiWebView];
-        [self.uiWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlPath]]];
+        [self.uiWebView loadRequest:[self requestWithPath:htmlPath]];
     }
+    
+    UIButton *callJSButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    callJSButton.backgroundColor = [UIColor orangeColor];
+    callJSButton.layer.cornerRadius = 5;
+    [callJSButton setTitle:@"OC调用JS" forState:UIControlStateNormal];
+    [callJSButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.view addSubview:callJSButton];
+    [callJSButton addTarget:self action:@selector(callJSAction:) forControlEvents:UIControlEventTouchUpInside];
+    [callJSButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.height.mas_equalTo(@50);
+        make.width.equalTo(self.view).multipliedBy(0.8);
+        make.bottom.equalTo(self.view).offset(-8 - [GDUIHelper safeAreaBottom]);
+    }];
+}
+
+- (NSMutableURLRequest *)requestWithPath:(NSString *)path {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    NSDictionary *headerFields = [NSHTTPCookie requestHeaderFieldsWithCookies:NSHTTPCookieStorage.sharedHTTPCookieStorage.cookies];
+    request.allHTTPHeaderFields = headerFields;
+    return request;
+}
+
+#pragma mark - Actions
+
+- (IBAction)callJSAction:(UIButton *)sender {
+    NSString *jsCode = [NSString stringWithFormat:@"callJSFunc('%@')", [NSDate date]];
+    if (self.useWKWebview) {
+        [self.wkWebView evaluateJavaScript:jsCode completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+            if (error) {
+                DDLogError(@"%@ %@", obj, error);
+            } else {
+                DDLogDebug(@"%@", obj);
+            }
+        }];
+    } else {
+        jsCode = [self.uiWebView stringByEvaluatingJavaScriptFromString:jsCode];
+        DDLogDebug(@"%@", jsCode);
+    }
+}
+
+- (void)addCustomCookie {
+    NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:@{
+                                                                NSHTTPCookieName: @"fname",
+                                                                NSHTTPCookieDomain: @".apple.com",
+                                                                NSHTTPCookiePath: @"/",
+                                                                NSHTTPCookieValue: @"Rake Yang"
+                                                                }];
+    [NSHTTPCookieStorage.sharedHTTPCookieStorage setCookie:cookie];
+    [NSHTTPCookieStorage.sharedHTTPCookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
 }
 
 #pragma mark - UIWebViewDelegate
@@ -71,25 +117,35 @@
     //加载之前或者重定向的时候调用
     LogInfo(@"");
     if ([request.URL.absoluteString hasPrefix:@"mc://"]) {
-        LogWarn(@"来自JS的调用");
         if ([request.URL.absoluteString isEqualToString:@"mc://1"]) {
             //调用JS方法
-            NSString *result = [webView stringByEvaluatingJavaScriptFromString:@"callJSFunc('来自OC的调用!')"];
+            NSString *result = [webView stringByEvaluatingJavaScriptFromString:@"callJSFunc('来自JS的调用1!')"];
             LogWarn(@"结果：%@", result);
-            LogError(@"不是真的发生Error只是为了演示效果!");
-        }else {
-            self.title = @"标题被JS代码修改了哦!";
+        } else if ([request.URL.absoluteString isEqualToString:@"mc://2"]) {
+            NSString *result = [webView stringByEvaluatingJavaScriptFromString:@"callJSFunc('来自OC的调用1!')"];
+            LogWarn(@"结果：%@", result);
+        } else if ([request.URL.absoluteString isEqualToString:@"mc://3"]) {
+            JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+            [context[@"callJSFunc"] callWithArguments:@[@"来自OC的调用2!"]];
         }
         return NO;
     }
     return YES;
 }
+
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     //开始加载时调用
 }
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     //加载完成时调用
     [webView stringByEvaluatingJavaScriptFromString:@"disableWKWebView()"];
+    
+    //获取该UIWebView的javascript上下文
+    JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    context[@"callFromJS"] = ^(NSString *title) {
+        self.title = title;
+    };
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
@@ -134,7 +190,7 @@
 
 // 当main frame导航完成时，会回调
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    [webView evaluateJavaScript:@"disableUIWebBtn()" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+    [webView evaluateJavaScript:@"disableUIWebBtn('callFromOC1!')" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
         LogError(@"%@", error);
     }];
 }
@@ -162,7 +218,19 @@
  @param message 脚本消息
  */
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    LogDebug(@"%@", message.body);
+    if ([message.name isEqualToString:@"objc"]) {
+        NSNumber *tag = message.body;
+        LogDebug(@"%@", message.body);
+        if ([tag isEqual:@2]) {
+            [message.webView evaluateJavaScript:@"callJSFunc('callFromOC2!')" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+                DDLogInfo(@"%@", obj);
+            }];
+        } else if ([tag isEqual:@4]) {
+            [message.webView evaluateJavaScript:@"callJSFunc('callFromOC3!')" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+                DDLogInfo(@"%@", obj);
+            }];
+        }
+    }
 }
 
 - (void)dealloc {

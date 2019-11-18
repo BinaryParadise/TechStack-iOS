@@ -14,6 +14,7 @@
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
 		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
+		248709D82382570F00145E98 /* GDUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248709D72382570F00145E98 /* GDUIHelper.m */; };
 		249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* GDDemoView.m */; };
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
@@ -60,6 +61,8 @@
 		2461DF35222D677800D4382F /* UKPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKPageViewController.m; sourceTree = "<group>"; };
 		248237662292F23500B9DF7B /* GDUIViewAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIViewAction.h; sourceTree = "<group>"; };
 		248237672292F23500B9DF7B /* GDUIViewAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIViewAction.m; sourceTree = "<group>"; };
+		248709D62382570F00145E98 /* GDUIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIHelper.h; sourceTree = "<group>"; };
+		248709D72382570F00145E98 /* GDUIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIHelper.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* GDDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* GDDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDDemoView.m; sourceTree = "<group>"; };
 		24DD1F38228B0C49001713EC /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
@@ -201,7 +204,6 @@
 				4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */,
 				CF3D4B675A048E20C5C582EC /* Pods-UIKitDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -237,6 +239,8 @@
 				C5ECF4DC1F89D82800CECF8B /* Support File */,
 				CE21AC1C229CDB3E0083822A /* GDTest.h */,
 				CE21AC1D229CDB3E0083822A /* GDTest.m */,
+				248709D62382570F00145E98 /* GDUIHelper.h */,
+				248709D72382570F00145E98 /* GDUIHelper.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -379,7 +383,7 @@
 				TargetAttributes = {
 					C532E4081F889834009E38CA = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -440,7 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
+			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\" \"-ferror-limit=0 -w\"";
 		};
 		D4354FE2F418808C7863B09A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -496,6 +500,7 @@
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
 				CE18B3642292912000271B72 /* GDControlAction.m in Sources */,
 				CE21AC1E229CDB3E0083822A /* GDTest.m in Sources */,
+				248709D82382570F00145E98 /* GDUIHelper.m in Sources */,
 				CED84ADE235EDA8400C1A3BC /* GDUIViewController.m in Sources */,
 				CE46D4CA22C49C5300685E2F /* GDUIButtonViewController.m in Sources */,
 				CE58F64422CC47C000A98A6F /* GDInterfaceBuildAction.m in Sources */,
@@ -647,17 +652,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UIKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = U4CGWM3X77;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Example/Header.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hangzhoucaimi.jizhang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neverland.uikitdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = JiZhangTest_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -669,17 +674,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UIKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = U4CGWM3X77;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Example/Header.pch;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hangzhoucaimi.jizhang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neverland.uikitdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = JiZhangTest_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

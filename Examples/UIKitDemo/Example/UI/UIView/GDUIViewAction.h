@@ -10,11 +10,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GDUIViewAction : TIRouterActionBase
 
-+ (void)viewLifecycleAction:(PGRouterContext *)context PGTarget("gd://UIView/Lifecycle?c=生命周期");
+PGMethod(viewLifecycleAction, "gd://UIView/Lifecycle?c=生命周期");
 
-+ (void)webViewAction:(PGRouterContext *)context PGTarget("gd://UIView/WKWebView");
+PGMethod(uiWebViewAction, "gd://UIView/WebView/UIWebView");
 
-+ (void)labelDemo:(PGRouterContext *)context PGTarget("gd://UIView/UILabelInset");
+PGMethod(wkWebViewAction, "gd://UIView/WebView/WKWebView?wkwebview=1");
+
+PGMethod(labelDemo, "gd://UIView/UILabelInset");
 
 @end
 

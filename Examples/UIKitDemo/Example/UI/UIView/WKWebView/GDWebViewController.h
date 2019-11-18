@@ -10,6 +10,6 @@
 
 @interface GDWebViewController : UIViewController
     
-
+@property (nonatomic, assign) BOOL useWKWebview;
 
 @end

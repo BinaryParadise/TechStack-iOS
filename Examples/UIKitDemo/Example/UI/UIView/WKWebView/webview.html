@@ -13,7 +13,7 @@
 
 	//提供给OC调用
 	function callJSFunc(str) {
-		alert(str);
+        $("#tip").text(str);
 		return "JS返回结果";
 	};
 
@@ -23,17 +23,23 @@
 	}
 
 	//WKWebView
-	function postMessage() {
-		window.webkit.messageHandlers.objc.postMessage('message send from js');
+	function postMessage(msg) {
+		window.webkit.messageHandlers.objc.postMessage(msg);
 	}
 
-    function disableUIWebBtn() {
+    function disableUIWebBtn(msg) {
         $('#btn1').attr('disabled','disabled');
         $('#btn2').attr('disabled','disabled');
+        $('#btn3').attr('disabled','disabled');
+        $('#btn4').attr('disabled','disabled');
+        callJSFunc(msg)
     }
 
     function disableWKWebView() {
-        $('#btn3').attr('disabled','disabled');
+        $('#btn5').attr('disabled','disabled');
+        $('#btn6').attr('disabled','disabled');
+        $('#btn7').attr('disabled','disabled');
+        $('#btn8').attr('disabled','disabled');
     }
 </script>
 <style type="text/css">
@@ -112,24 +118,46 @@ th.specalt {
 				<th>说明</th>
 			</tr>
 			<tr>
-				<td colspan="2">UIWebView
+				<td colspan="2"><b>UIWebView</b>
 			</tr>
 			<tr>
-				<td><button id="btn1" onclick="callOCFunc(1)">callJSFunc</button></td>
-				<td>OC调用JS代码</td>
-			</tr>
-			<tr>
-				<td><button id="btn2" onclick="callOCFunc(2)">callOCFunc</button></td>
+				<td><button id="btn1" onclick="callOCFunc(1)">URL拦截</button></td>
 				<td>调用OC代码</td>
 			</tr>
+            <tr>
+                <td><button id="btn2" onclick="callFromJS('通过OC修改')">JavaScriptCore</button></td>
+                <td>调用OC代码</td>
+            </tr>
 			<tr>
-				<td colspan="2">WkWebView</td>
+				<td><button id="btn3" onclick="callOCFunc(2)">stringByEvaluatingJavaScriptFromString</button></td>
+				<td>调用JS代码</td>
 			</tr>
+            <tr>
+                <td><button id="btn4" onclick="callOCFunc(3)">JavaScriptCore</button></td>
+                <td>调用JS代码</td>
+            </tr>
 			<tr>
-				<td><button id="btn3" onclick="postMessage()">postMessage</button></td>
-				<td>调用OC代码</td>
+				<td colspan="2"><b>WkWebView</b></td>
 			</tr>
+            <tr>
+                <td><button id="btn6" onclick="postMessage(2)">addScriptMessageHandler</button></td>
+                <td>调用OC代码</td>
+            </tr>
+            <tr>
+                <td><button id="btn8" onclick="postMessage(4)">evaluateJavaScript</button></td>
+                <td>调用JS代码</td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Cookie</b>
+            </tr>
+            <tr>
+                <td><a href="https://www.apple.com"><h3>添加Cookie</h3></a></td>
+                <td>自定义添加，用于登录等业务场景</td>
+            </tr>
 		</table>
+        <div><br/>
+            <label>信息: </label><p id="tip">...</p>
+        </div>
 	</div>
 </body>
 </html>

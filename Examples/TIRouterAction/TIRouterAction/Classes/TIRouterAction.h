@@ -9,6 +9,7 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <TIRouterAction/TIRouterActionBase.h>
 #import <TIRouterAction/TIRouterActionManager.h>
+#import <MCJSONKit/MCJSONKit.h>
 
 static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
