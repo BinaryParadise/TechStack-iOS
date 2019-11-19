@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MCThreadActions : TIRouterActionBase
 
-+ (void)demo_NSThread:(PGRouterContext *)context PGTarget("fd://Thread/NSThread");
+PGMethod(demo_NSThread, "fd://Thread/NSThread");
 
-+ (void)demo_GCD:(PGRouterContext *)context PGTarget("fd://Thread/GCD");
+PGMethod(demo_GCD, "fd://Thread/GCD");
 
-+ (void)demo_GCDGroup:(PGRouterContext *)context PGTarget("fd://Thread/GCD_Group");
+PGMethod(demo_GCDGroup, "fd://Thread/GCD_Group");
 
-+ (void)dem_temp:(PGRouterContext *)context PGTarget("fd://Thread/Temp");
+PGMethod(dem_temp, "fd://Thread/Temp");
 
 @end
 

@@ -13,7 +13,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.backgroundColor = [UIColor ti_white];
+        self.backgroundColor = [UIColor ti_background2];
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.nameLabel = [[UILabel alloc] init];
         self.nameLabel.font = [UIFont systemFontOfSize:15];

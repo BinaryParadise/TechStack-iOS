@@ -27,10 +27,14 @@
     }
 }
 
-+ (UIColor *)ti_background {
-    return [UIColor ti_colorNamed:@"TI_Background"]?:MCHexColor(0xF6F6F6);
-
++ (UIColor *)ti_background1 {
+    return [UIColor ti_colorNamed:@"TI_Background1"]?:MCHexColor(0xF6F6F6);
 }
+
++ (UIColor *)ti_background2 {
+    return [UIColor ti_colorNamed:@"TI_Background2"]?:MCHexColor(0xF6F6F6);
+}
+
 + (UIColor *)ti_section {
     return [UIColor ti_colorNamed:@"TI_Section"]?:MCHexColor(0xF1FFFF);
 }

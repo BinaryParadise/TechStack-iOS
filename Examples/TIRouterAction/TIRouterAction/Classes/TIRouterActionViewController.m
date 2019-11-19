@@ -100,6 +100,7 @@
     
     PGRouterNode *node = self.data[section];
     UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(16, 8, 0, 0)];
+    header.textColor = [UIColor ti_white];
     header.font = [UIFont fontWithName:@"DINAlternate-Bold" size:13];
     header.text = [NSString stringWithFormat:@"%@（%ld）", node.name, node.childs.count];
     [headerView addSubview:header];
@@ -143,6 +144,7 @@
     if (!node.config) {
         TIRouterActionViewController *nodeVC = [[TIRouterActionViewController alloc] init];
         nodeVC.routerNode = node;
+        nodeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:nodeVC animated:YES];
         return;
     }
@@ -161,6 +163,10 @@
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        MCLogWarn(@"------------------------%@ CALLBACK TIMEOUT------------------------", config.actionName);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 - (void)gidle:(BOOL)begin name:(NSString *)name {

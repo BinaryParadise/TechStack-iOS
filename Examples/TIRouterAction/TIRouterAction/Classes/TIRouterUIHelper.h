@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (named)
 
-+ (UIColor *)ti_background;
++ (UIColor *)ti_background1;
++ (UIColor *)ti_background2;
 + (UIColor *)ti_section;
 + (UIColor *)ti_line1;
 + (UIColor *)ti_special;

@@ -88,7 +88,7 @@ static pthread_mutex_t _mutex;
     });
 }
 
-+ (void)go_nslock:(PGRouterContext *)context PGTarget("ft://Lock/NSLock") {
++ (void)go_nslock:(PGRouterContext *)context {
     _count = 5;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self selliPhone];

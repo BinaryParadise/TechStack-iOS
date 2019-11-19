@@ -24,5 +24,6 @@
   - [AutoLayout](UIKit/AutoLayout/README.md)
   - [WebView](UIKit/WebView.md)
 * [ApplePay](Other/ApplePay.md)
+* [In-App Purchase](Other/IAP.md)
 * [Reveal](Other/Reveal.md)
 * [Xcode](Xcode/README.md)

@@ -9,7 +9,6 @@
 #import "GCDActions.h"
 #import <AddressBook/AddressBook.h>
 #import <UIKit/UIKit.h>
-#import "NSDictionary+ScriptNative.h"
 
 @interface GCDActions ()
 
@@ -297,7 +296,7 @@
 }
 
 + (void)dispatchSemaphore:(PGRouterContext *)context {
-    BOOL useSemap = [context.config.parameters sn_boolForKey:@"use"];
+    BOOL useSemap = [context.config.parameters mc_boolForKey:@"use"];
     
     NSMutableArray *marr = [NSMutableArray array];
     

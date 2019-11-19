@@ -32,6 +32,6 @@ static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 #define MACH_TIME_START    NSDate *startDate = [NSDate date];\
 
-#define MACH_TIME_END(fmt)   MCLogWarn(fmt @"：%f", [NSDate date].timeIntervalSince1970 - startDate.timeIntervalSince1970);
+#define MACH_TIME_END(fmt)   MCLogWarn(fmt @"耗时：%.3fs", [NSDate date].timeIntervalSince1970 - startDate.timeIntervalSince1970);
 
 #endif

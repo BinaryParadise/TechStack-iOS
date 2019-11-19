@@ -13,6 +13,6 @@
  */
 @interface MCFloatNumberActions : TIRouterActionBase
 
-+ (void)processFloat:(PGRouterContext *)context PGTarget("fd://Number/Float");
+PGMethod(processFloat, "fd://Basic/Number/Float");
 
 @end

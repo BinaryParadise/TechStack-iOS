@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FDBasicActions : TIRouterActionBase
 
-+ (void)kvoDemo:(PGRouterContext *)context PGTarget("fd://Basic/KVO");
+PGMethod(kvoDemo, "fd://Basic/KVO");
 
-+ (void)kvcDemo:(PGRouterContext *)context PGTarget("fd://Basic/KVC");
+PGMethod(kvcDemo, "fd://Basic/KVC");
 
 @end
 

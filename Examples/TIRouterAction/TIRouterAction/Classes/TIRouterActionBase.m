@@ -21,13 +21,24 @@
 
 + (void)pushViewControllerWithIdentify:(NSString *)identify {
     UIViewController *controller = [self controllerForIdentify:identify];
-    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
-    [nav pushViewController:controller animated:YES];
+    [self pushViewController:controller animated:YES];
 }
 
 + (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    UINavigationController *nav = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
-    [nav pushViewController:viewController animated:animated];
+    viewController.hidesBottomBarWhenPushed = YES;
+    UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UINavigationController *nav;
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        nav = [(UITabBarController *)rootVC selectedViewController];
+    } else {
+        nav = rootVC;
+    }
+    if (![nav isKindOfClass:[UINavigationController class]]) {
+        nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+        [rootVC presentViewController:nav animated:animated completion:nil];
+    } else {
+        [nav pushViewController:viewController animated:animated];
+    }
 }
 
 @end
