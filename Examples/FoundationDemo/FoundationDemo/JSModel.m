@@ -18,7 +18,7 @@
 }
 
 - (void)dealloc {
-    MCLogWarn(@"%@ > %@", NSStringFromClass(self.class), self.tag);
+    MCLogDebug(@"%@ > %@", NSStringFromClass(self.class), self.tag);
 }
 
 @end

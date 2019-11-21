@@ -10,8 +10,16 @@
 
 @implementation TestModel1
 
++ (void)load {
+    NSLog(@"%s +%d 类", __FUNCTION__, __LINE__);
+}
+
++ (void)initialize {
+    NSLog(@"%s +%d 类", __FUNCTION__, __LINE__);
+}
+
 - (void)testMethod {
-    MCLogWarn(@"");
+    MCLogWarn(@"原始方法");
 }
 
 @end

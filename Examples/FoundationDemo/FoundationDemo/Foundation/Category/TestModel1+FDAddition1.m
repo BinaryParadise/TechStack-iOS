@@ -1,17 +1,25 @@
 //
-//  TestModel1+Addition.m
+//  TestModel1+Addition1.m
 //  iOSGuide
 //
 //  Created by Rake Yang on 2017/10/10.
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "TestModel1+Addition.h"
+#import "TestModel1+FDAddition1.h"
 #import <objc/runtime.h>
 
 static void *exstensionKey = &exstensionKey;
 
-@implementation TestModel1 (Addition)
+@implementation TestModel1 (FDAddition1)
+
++ (void)load {
+    NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);
+}
+
++ (void)initialize {
+    NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);
+}
 
 - (NSString *)exstension {
     return objc_getAssociatedObject(self, exstensionKey);

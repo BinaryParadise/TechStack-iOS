@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MCThreadActions : TIRouterActionBase
 
-PGMethod(demo_NSThread, "fd://Thread/NSThread");
+PGMethod(demo_NSThread, "fd://Foundation/Thread/NSThread");
 
-PGMethod(demo_GCD, "fd://Thread/GCD");
+PGMethod(demo_GCD, "fd://Foundation/Thread/GCD");
 
-PGMethod(demo_GCDGroup, "fd://Thread/GCD_Group");
+PGMethod(demo_GCDGroup, "fd://Foundation/Thread/GCD_Group");
 
-PGMethod(dem_temp, "fd://Thread/Temp");
+PGMethod(dem_temp, "fd://Foundation/Thread/Temp");
 
 @end
 

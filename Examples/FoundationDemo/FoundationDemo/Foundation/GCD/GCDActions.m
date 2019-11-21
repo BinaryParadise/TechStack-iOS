@@ -82,6 +82,7 @@
         MCLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
+        MCLogVerbose(@"完成");
         [context finished];
     });
 }

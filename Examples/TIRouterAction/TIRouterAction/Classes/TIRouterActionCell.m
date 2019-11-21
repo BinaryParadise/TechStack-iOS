@@ -35,4 +35,16 @@
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self.nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentView).offset(16);
+        if (self.descLabel.text.length) {
+            make.top.equalTo(self.contentView).offset(12);
+        } else {
+            make.centerY.equalTo(self.contentView);
+        }
+    }];
+}
+
 @end

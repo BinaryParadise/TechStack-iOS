@@ -13,6 +13,6 @@
  */
 @interface MCFloatNumberActions : TIRouterActionBase
 
-PGMethod(processFloat, "fd://Basic/Number/Float");
+PGMethod(processFloat, "fd://Foundation/Number/Float");
 
 @end

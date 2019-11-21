@@ -13,10 +13,11 @@
 
 @property (nonatomic, assign) JSARCDemoA *assignDemo;
 @property (nonatomic, weak) JSARCDemoA *weakDemo;
-@property (nonatomic, weak) id demoB;
+@property (nonatomic, strong) id strongDemo;
 
 - (void)testAssign;
 - (void)testWeak;
+- (void)testStrong;
 
 - (void)doSomething:(void (^)(void))block;
 - (void)doNothing;

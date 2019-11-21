@@ -1,14 +1,35 @@
 # Category
-- 定义的协议、方法、属性会在加载二进制代码的时候附加到目标类中
+
+- Protocol、方法、属性会在加载二进制代码的时候附加到目标类中
+- 不支持添加成员变量，Category的结构未定义，可通过runtime变相添加
 - 如果存在同名方法会覆盖主类方法，方法列表中会存在两个同名方法，Category的方法会在前面默认调用
 - 如果多个Category存在相同的方法名，最后一个编译的Category中的方法会在最前面
-- <mark>*所有方法建议增加前缀*</mark>
+- 仅调用一次
+- **所有方法建议增加前缀**
 
 # +load
-- 附加Category到类的工作会先于+load方法的执行
-- +load的执行顺序是先类，后category，而category的+load执行顺序是根据编译顺序决定的。
+
+- 附加Category到类的工作会先于`+load`方法的执行
+- `+load`的执行顺序是先类后分类，而分类的执行顺序是根据编译顺序先后决定的。
+- 调用子类的+load之前会先调用父类的`+load`
+- 类加载时通过函数指针直接调用，早于main函数
+
+# +initialize
+
+- 子类调用一次
+- 子类未实现，调用父类(`可能多次`)的
+- 可被分类覆盖，准寻编译顺序规则
 
 # 关联对象/属性
 
 通过runtime增加的属性是有AssociationsManager来统一管理，里面是由一个静态AssociationsHashMap来存储所有的关联对象的。这相当于把所有对象的关联对象都存在一个全局map里面。而map的的key是这个对象的指针地址（任意两个不同对象的指针地址一定是不同的），而这个map的value又是另外一个AssociationsHashMap，里面保存了关联对象的kv对。
 而在对象的销毁逻辑里面
+- 通过runtime变相添加
+
+# Class Extension
+
+```objc
+@interface TestModle () //我居然一直不知道是这个，在.m中不是天天这么写么，真的是最熟悉的陌生人
+
+@end
+```

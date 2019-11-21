@@ -12,9 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FDBasicActions : TIRouterActionBase
 
-PGMethod(kvoDemo, "fd://Basic/KVO");
+PGMethod(kvoDemo, "fd://Foundation/KVO&KVC/KVO?c=Key-Value Observing");
 
-PGMethod(kvcDemo, "fd://Basic/KVC");
+PGMethod(kvcDemo, "fd://Foundation/KVO&KVC/KVC?c=Key-Value Coding");
+
+PGMethod(arcDemo, "fd://Foundation/ARC?c=自动内存管理");
 
 @end
 

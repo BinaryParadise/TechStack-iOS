@@ -1,5 +1,5 @@
 //
-//  TestModel1+Addition.h
+//  TestModel1+Addition1.h
 //  iOSGuide
 //
 //  Created by Rake Yang on 2017/10/10.
@@ -9,7 +9,7 @@
 #import "TestModel1.h"
 #import <TIRouterAction/TIRouterAction.h>
 
-@interface TestModel1 (Addition)
+@interface TestModel1 (FDAddition1)
 
 @property (nonatomic, copy) NSString *exstension;
 

@@ -19,7 +19,6 @@ target 'FoundationDemo' do
   # use_frameworks!
 
   # Pods for FoundationDemo
-  # pod 'Peregrine', :path => '../../../Peregrine'
   pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
@@ -32,6 +31,7 @@ target 'FoundationDemo' do
   pod 'MJRefresh'
   pod 'MCObserverKit'
   pod 'Toast'
+  pod 'MLeaksFinder'
 
   target 'FoundationDemoTests' do
     inherit! :search_paths

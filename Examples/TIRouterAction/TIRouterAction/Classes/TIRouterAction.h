@@ -17,13 +17,13 @@ static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #define Header_h
 
 #if DEBUG
-    #define MCLogInfo(frmt, ...)      DDLogInfo(@"" frmt, ##__VA_ARGS__)
+    #define MCLogError(frmt, ...)     DDLogError(@"" frmt, ##__VA_ARGS__)
     #define MCLogDebug(frmt, ...)     DDLogDebug(@"" frmt,  ##__VA_ARGS__)
     #define MCLogWarn(frmt, ...)      DDLogWarn(@"" frmt, ##__VA_ARGS__)
-    #define MCLogError(frmt, ...)     DDLogError(@"" frmt, ##__VA_ARGS__)
+    #define MCLogInfo(frmt, ...)      DDLogInfo(@"" frmt, ##__VA_ARGS__)
     #define MCLogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__)
     #define NSLog(frmt, ...)          DDLogInfo(@"" frmt, ##__VA_ARGS__)
-    #else
+#else
     #define MCLogInfo(frmt, ...)
     #define MCLogWarn(frmt, ...)
     #define MCLogError(frmt, ...)

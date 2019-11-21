@@ -36,7 +36,7 @@
 }
 
 + (UIColor *)ti_section {
-    return [UIColor ti_colorNamed:@"TI_Section"]?:MCHexColor(0xF1FFFF);
+    return [UIColor ti_colorNamed:@"TI_Section"]?:MCHexColor(0xF6F6F6);
 }
 
 + (UIColor *)ti_line1 {

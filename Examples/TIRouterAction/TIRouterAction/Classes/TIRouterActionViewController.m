@@ -128,7 +128,7 @@
         cell.descLabel.text = [item.config.parameters[@"c"] stringByRemovingPercentEncoding];
     } else {
         cell.nameLabel.text = item.name;
-        cell.descLabel.text = @"就是懒...";
+        cell.descLabel.text = nil;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return cell;
@@ -149,32 +149,38 @@
         return;
     }
     PGRouterConfig *config = node.config;
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES].graceTime = 10;
-    [self gidle:YES name:nil];
-    [self gidle:YES name:config.actionName];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self actionBegin:config.actionName];
     __block BOOL finished;
     [PGRouterManager openURL:config.URL.absoluteString  completion:^(BOOL ret, id object) {
         finished = YES;
         if (!ret) {
             MCLogError(@"%@", object);
         }
-        [self gidle:NO name:config.actionName];
+        [self actionEnd:config.actionName];
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        MCLogWarn(@"------------------------%@ CALLBACK TIMEOUT------------------------", config.actionName);
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (!finished) {
+            finished = YES;
+            [self actionTimeout:config.actionName];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
     });
 }
 
-- (void)gidle:(BOOL)begin name:(NSString *)name {
-    if (name.length) {
-        MCLogVerbose(@"------------------------%@ %@------------------------", name, begin ? @"BEGIN":@"END");
-    } else {
-        MCLogInfo(@"");
-    }
+- (void)actionBegin:(NSString *)name {
+    MCLogInfo(@"------------------------%@ BEGIN------------------------", name);
+}
+
+- (void)actionEnd:(NSString *)name {
+    MCLogInfo(@"------------------------%@ END------------------------", name);
+}
+
+- (void)actionTimeout:(NSString *)name {
+    MCLogInfo(@"------------------------%@ END TIMEOUT------------------------", name);
 }
 
 @end
