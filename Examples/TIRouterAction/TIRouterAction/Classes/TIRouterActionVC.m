@@ -176,11 +176,11 @@
 }
 
 - (void)actionEnd:(NSString *)name {
-    MCLogInfo(@"------------------------%@ END------------------------", name);
+    MCLogInfo(@"------------------------%@ END  ------------------------", name);
 }
 
 - (void)actionTimeout:(NSString *)name {
-    MCLogInfo(@"------------------------%@ END TIMEOUT------------------------", name);
+    MCLogInfo(@"------------------------%@ END  ------------------------", name);
 }
 
 @end

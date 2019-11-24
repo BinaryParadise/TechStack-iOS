@@ -2,45 +2,89 @@
 
 # OSSpinLock
 
-`OSSpinLock`是一种自旋锁
+`OSSpinLock`是一种自旋锁，性能最好
+
+>  [不再安全的OSSpinLock](http://www.cocoachina.com/articles/18088)
+>
+> 具体来说，如果一个低优先级的线程获得锁并访问共享资源，这时一个高优先级的线程也尝试获得这个锁，它会处于 spin lock 的忙等状态从而占用大量 CPU。此时低优先级线程无法与高优先级线程争夺 CPU 时间，从而导致任务迟迟完不成、无法释放 lock。这并不只是理论上的问题，libobjc 已经遇到了很多次这个问题了，于是苹果的工程师停用了 OSSpinLock。》优先级反转
+>
+> 建议使用dispatch_semaphore
+
+## os_unfair_lock
+
+是一个互斥锁，使用方式和自旋锁类似
+
+```objc
+//初始化
+os_unfair_lock oslock = OS_UNFAIR_LOCK_INIT;
+
+//获取锁，等待解锁后继续执行
+os_unfair_lock_lock(&oslock);
+
+//尝试获得锁，不等待继续往下执行
+os_unfair_lock_trylock(&oslock);
+  
+//解锁
+os_unfair_lock_unlock(&oslock);
+```
+
+
 
 # 信号量
 
 ## dispatch_semaphore_create
 
-> 通过给定初始值创建新的计数信号量创建失败返回`NULL`，`0`表示无信号
 ```objc
+//通过给定一个不小于0初始值（`0表示无信号`）创建新的计数信号量，创建失败返回`NULL`
 dispatch_semaphore_t dispatch_semaphore_create(long value);
 ```
 
 ## dispatch_semaphore_wait
 
->  等待或减少一个信号量
-信号量`>=1`时，计数`减1`，继续往下执行，返回值为`0`
-信号量`=0`时，线程在超时时间内阻塞，到期后继续向下执行，返回值为非`0`
+>  等待信号量
+>  信号量`>=1`时，计数`减1`，继续往下执行
+>  信号量`=0`时，线程在超时时间内等待，到期后继续向下执行
+>  成功返回0，等待超时返回非0
 
 ```objc
 long dispatch_semaphore_wait(dispatch_semaphore_t dsema, dispatch_time_t timeout);
 ```
 
-> 增加一个信号量，如果之前的信号量小于0，则次函数返回之前唤醒等待的线程
 > 如果线程被唤醒返回非0值，否则返回0
 
 ## dispatch_semaphore_signal
 
-> `当返回值为0时`：表示无线程等待，信号加1。
-`当返回值不为0时`：表示当前有一个或多个线程线程等待，并且该函数唤醒了一个“等待的线程”（当线程有优先级时，唤醒优先级最高的线程；否则随机唤醒）。
+> 增加一个信号量，如果之前的信号量小于0，则此函数返回之前唤醒等待的线程
+> `当返回0时`：表示无线程等待，信号加1。
+> `当返回非0时`：表示当前有一个或多个线程线程等待，并且该函数唤醒了一个“等待的线程”（当线程有优先级时，唤醒优先级最高的线程；否则随机唤醒）。
 ```objc
 long dispatch_semaphore_signal(dispatch_semaphore_t dsema);
 ```
 
 # pthread_mutex
 
+C语言实现的互斥锁
+
+```c
+pthread_mutex_t _mutex;
+pthread_mutexattr_t attr;
+pthread_mutexattr_init(&attr);
+pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_NORMAL);
+//初始化锁
+pthread_mutex_init(&_mutex, &attr);
+//加锁，成功才会继续执行，否则等待解锁
+pthread_mutex_lock(&_mutex)
+//解锁
+pthread_mutex_unlock(&_mutex);
+```
+
 # @synchronized
+
+使用的是递归互斥锁
 
 # NSLock
 
-> `NSLock`通过实现NSLocking协议实现了一种简单的互斥锁
+> `NSLock`通过实现NSLocking协议实现了一种简单的互斥锁，面向对象
 
 ```objc
 @protocol NSLocking
@@ -61,7 +105,7 @@ long dispatch_semaphore_signal(dispatch_semaphore_t dsema);
 /**
   尝试在给定时间之前获取锁，并返回一个布尔值，该值表示获取是否成功。（阻塞线程）
 */
-- (BOOL)lockBeforeDate:(NSDate \*)limit;
+- (BOOL)lockBeforeDate:(NSDate *)limit;
 ```
 
 > 举个卖iPhone的例子
@@ -90,5 +134,9 @@ long dispatch_semaphore_signal(dispatch_semaphore_t dsema);
 ```
 
 # NSConditionLock 条件锁
+
+在指定条件时可获得锁
+
+解锁指定条件
 
 # NSRecursiveLock 递归锁

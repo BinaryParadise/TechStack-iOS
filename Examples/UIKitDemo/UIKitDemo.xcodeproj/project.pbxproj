@@ -16,6 +16,7 @@
 		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
 		248709D82382570F00145E98 /* GDUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248709D72382570F00145E98 /* GDUIHelper.m */; };
 		249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* GDDemoView.m */; };
+		24C9F172238A79DD00334431 /* GDAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9F171238A79DD00334431 /* GDAnimationVC.m */; };
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
 		C532E4161F889834009E38CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C532E4151F889834009E38CA /* Assets.xcassets */; };
@@ -65,6 +66,8 @@
 		248709D72382570F00145E98 /* GDUIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIHelper.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* GDDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* GDDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDDemoView.m; sourceTree = "<group>"; };
+		24C9F170238A79DD00334431 /* GDAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAnimationVC.h; sourceTree = "<group>"; };
+		24C9F171238A79DD00334431 /* GDAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAnimationVC.m; sourceTree = "<group>"; };
 		24DD1F38228B0C49001713EC /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
 		4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C532E4091F889834009E38CA /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,8 @@
 				243A11E522B46B3900429B09 /* Animation.storyboard */,
 				243A11E822B46B6900429B09 /* GDAnimationAction.h */,
 				243A11E922B46B6900429B09 /* GDAnimationAction.m */,
+				24C9F170238A79DD00334431 /* GDAnimationVC.h */,
+				24C9F171238A79DD00334431 /* GDAnimationVC.m */,
 				243A11E722B46B5100429B09 /* Loading */,
 			);
 			path = Animation;
@@ -517,6 +522,7 @@
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */,
 				CEAA13CA2320A310005D1800 /* GDTabBarController.m in Sources */,
+				24C9F172238A79DD00334431 /* GDAnimationVC.m in Sources */,
 				249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

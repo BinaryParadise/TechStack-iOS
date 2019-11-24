@@ -8,6 +8,7 @@
 
 #import "GDAnimationAction.h"
 #import <Peregrine/Peregrine.h>
+#import "GDAnimationVC.h"
 
 @implementation GDAnimationAction
 
@@ -15,9 +16,19 @@
     return @"Animation";
 }
 
-+ (void)loadingView:(PGRouterContext *)context {
-    [self pushViewControllerWithIdentify:context.config.actionName];
++ (void)animationNormal:(PGRouterContext *)context {
+    [self animationCustom:context];
+}
+
++ (void)animationCustom:(PGRouterContext *)context {
+    GDAnimationVC *vc = [self controllerForIdentify:@"Normal"];
+    vc.type = [context.userInfo mc_intForKey:@"type"];
+    [self pushViewController:vc animated:YES];
     [context finished];
+}
+
++ (void)animationKeyFrame:(PGRouterContext *)context {
+    [self animationNormal:context];
 }
 
 @end

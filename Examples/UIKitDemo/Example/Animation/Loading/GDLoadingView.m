@@ -25,7 +25,7 @@
     opacityAnimation.fromValue = @(1.0);
     opacityAnimation.toValue = @(0.0);
     opacityAnimation.beginTime = start;
-    return (id)opacityAnimation;
+//    return (id)opacityAnimation;
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.duration = 2.0f;

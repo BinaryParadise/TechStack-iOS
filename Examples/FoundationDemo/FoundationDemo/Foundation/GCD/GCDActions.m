@@ -31,7 +31,7 @@
 + (void)asyncConcurrent:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_queue_create("com.yuqi.concurrent", DISPATCH_QUEUE_CONCURRENT);
     
-    MCLogInfo(@"创建串行队列: %@", queue);
+    MCLogInfo(@"创建并行队列: %@", queue);
     //异步执行将开启新线程
     dispatch_async(queue, ^{
         MCLogDebug(@"任务1：%@", [NSThread currentThread]);
@@ -49,7 +49,7 @@
 
 + (void)syncConcurrent:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_queue_create("com.yuqi.concurrent", DISPATCH_QUEUE_CONCURRENT);
-    MCLogInfo(@"创建串行队列: %@", queue);
+    MCLogInfo(@"创建并行队列: %@", queue);
     //同步执行必须执行完后才能继续往下执行，不会开启新线程
     dispatch_sync(queue, ^{
         MCLogDebug(@"任务1：%@", [NSThread currentThread]);
