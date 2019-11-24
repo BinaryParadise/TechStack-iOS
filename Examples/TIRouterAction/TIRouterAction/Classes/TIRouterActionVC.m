@@ -6,7 +6,7 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "TIRouterActionViewController.h"
+#import "TIRouterActionVC.h"
 #import <Peregrine/Peregrine.h>
 #import "TIRouterActionCell.h"
 #import <Masonry/Masonry.h>
@@ -14,7 +14,7 @@
 #import "TIRouterAction.h"
 #import "TIRouterUIHelper.h"
 
-@interface TIRouterActionViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TIRouterActionVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, copy) NSArray<PGRouterNode *> *data;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation TIRouterActionViewController
+@implementation TIRouterActionVC
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:[self.class routerActionBundle]]) {
@@ -142,7 +142,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PGRouterNode *node = self.data[indexPath.section].childs[indexPath.row];
     if (!node.config) {
-        TIRouterActionViewController *nodeVC = [[TIRouterActionViewController alloc] init];
+        TIRouterActionVC *nodeVC = [[TIRouterActionVC alloc] init];
         nodeVC.routerNode = node;
         nodeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:nodeVC animated:YES];

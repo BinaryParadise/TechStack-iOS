@@ -8,18 +8,18 @@
 
 #import "TestModel1.h"
 
+@interface TestModel1 ()
+
+@end
+
 @implementation TestModel1
 
 + (void)load {
-    NSLog(@"%s +%d 类", __FUNCTION__, __LINE__);
-}
-
-+ (void)initialize {
-    NSLog(@"%s +%d 类", __FUNCTION__, __LINE__);
+    NSLog(@"%s +%d 父类", __FUNCTION__, __LINE__);
 }
 
 - (void)testMethod {
-    MCLogWarn(@"原始方法");
+    MCLogWarn(@"父类方法");
 }
 
 @end

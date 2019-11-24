@@ -7,7 +7,7 @@
 //
 
 #import "TIRouterActionManager.h"
-#import "TIRouterActionViewController.h"
+#import "TIRouterActionVC.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface TILogFormatter : NSObject <DDLogFormatter>
@@ -29,7 +29,7 @@
 }
 
 + (UIViewController *)mangerController {
-    return [[TIRouterActionViewController alloc] initWithNibName:nil bundle:nil];
+    return [[TIRouterActionVC alloc] initWithNibName:nil bundle:nil];
 }
 
 @end

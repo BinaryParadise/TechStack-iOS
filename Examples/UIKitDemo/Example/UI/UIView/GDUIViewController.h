@@ -2,7 +2,7 @@
 //  GDUIViewController.h
 //  UIKitDemo
 //
-//  Created by lingjing on 2019/10/22.
+//  Created by Rake Yang on 2019/10/22.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 

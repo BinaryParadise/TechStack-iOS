@@ -6,11 +6,11 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "TestModel1.h"
+#import "FDTestModel2.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDTestModel3 : TestModel1
+@interface FDTestModel3 : FDTestModel2
 
 @end
 

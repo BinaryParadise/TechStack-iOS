@@ -17,10 +17,6 @@ static void *exstensionKey = &exstensionKey;
     NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);
 }
 
-+ (void)initialize {
-    NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);
-}
-
 - (NSString *)exstension {
     return objc_getAssociatedObject(self, exstensionKey);
 }

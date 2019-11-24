@@ -22,7 +22,6 @@ static DDLogLevel ddLogLevel = DDLogLevelVerbose;
     #define MCLogWarn(frmt, ...)      DDLogWarn(@"" frmt, ##__VA_ARGS__)
     #define MCLogInfo(frmt, ...)      DDLogInfo(@"" frmt, ##__VA_ARGS__)
     #define MCLogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__)
-    #define NSLog(frmt, ...)          DDLogInfo(@"" frmt, ##__VA_ARGS__)
 #else
     #define MCLogInfo(frmt, ...)
     #define MCLogWarn(frmt, ...)

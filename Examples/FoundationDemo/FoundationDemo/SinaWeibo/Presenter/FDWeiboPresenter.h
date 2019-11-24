@@ -17,8 +17,8 @@
 @property (nonatomic, copy) NSArray<FWBStatus *> *statuses;
 @property (nonatomic, assign) BOOL authChanged;
 
-PGMethod(initWeibo, "fd://weibo/init");
-PGMethod(openWeiboURL, "fd://weibo/openurl");
+PGMethod(initWeibo, "fd://Weibo/init");
+PGMethod(openWeiboURL, "fd://Weibo/openurl");
 
 /**
  开始认证如果当前认证无效

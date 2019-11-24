@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,19 +19,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-rh-yQD" customClass="GDDemoView">
-                                <rect key="frame" x="16" y="44" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-rh-yQD" customClass="GDDemoView">
+                                <rect key="frame" x="16" y="36" width="343" height="539"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jlU-uW-KrC">
+                                        <rect key="frame" x="17" y="489" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="TI_Section"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-300" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="ycO-LF-kQS">
+                                <rect key="frame" x="14" y="583" width="331" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="Y6a-Fk-Loc" eventType="valueChanged" id="zfT-He-J2W"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-300" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="Z8G-vU-XAV">
+                                <rect key="frame" x="14" y="621" width="331" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="Y6a-Fk-Loc" eventType="valueChanged" id="7YI-Xp-lvJ"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ycO-LF-kQS" firstAttribute="top" secondItem="UPF-rh-yQD" secondAttribute="bottom" constant="8" id="1Yh-XJ-iT5"/>
+                            <constraint firstItem="6qq-R1-aU6" firstAttribute="bottom" secondItem="Z8G-vU-XAV" secondAttribute="bottom" constant="16" id="5dv-d4-kTM"/>
+                            <constraint firstItem="UPF-rh-yQD" firstAttribute="top" secondItem="6qq-R1-aU6" secondAttribute="top" constant="16" id="JuC-tO-c9e"/>
+                            <constraint firstItem="Z8G-vU-XAV" firstAttribute="leading" secondItem="ycO-LF-kQS" secondAttribute="leading" id="PBN-eb-kEo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ycO-LF-kQS" secondAttribute="trailing" constant="16" id="cTu-Dn-Cz3"/>
+                            <constraint firstItem="UPF-rh-yQD" firstAttribute="leading" secondItem="6qq-R1-aU6" secondAttribute="leading" constant="16" id="hRR-No-xnQ"/>
+                            <constraint firstItem="Z8G-vU-XAV" firstAttribute="top" secondItem="ycO-LF-kQS" secondAttribute="bottom" constant="8" id="r46-Ms-3tg"/>
+                            <constraint firstItem="6qq-R1-aU6" firstAttribute="trailing" secondItem="UPF-rh-yQD" secondAttribute="trailing" constant="16" id="rS5-6Z-cR4"/>
+                            <constraint firstItem="ycO-LF-kQS" firstAttribute="leading" secondItem="UPF-rh-yQD" secondAttribute="leading" id="y2h-1a-GMN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z8G-vU-XAV" secondAttribute="trailing" constant="16" id="zkc-b4-gVS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6qq-R1-aU6"/>
                     </view>
+                    <connections>
+                        <outlet property="dview" destination="UPF-rh-yQD" id="It4-Yj-dgI"/>
+                        <outlet property="sliderX" destination="ycO-LF-kQS" id="Q7P-Nj-BgW"/>
+                        <outlet property="sliderY" destination="Z8G-vU-XAV" id="E0n-CL-VZk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIw-R4-1uE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="134"/>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
         <!--Label Inset View Controller-->
         <scene sceneID="PoN-bq-2tc">
@@ -46,4 +84,9 @@
             <point key="canvasLocation" x="137" y="-564"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="TI_Section">
+            <color red="0.49399998784065247" green="0.0" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

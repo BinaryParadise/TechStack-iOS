@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TIRouterActionViewController.h"
+#import "TIRouterActionVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MCSingletonDemo : NSObject
 
++ (instancetype)sharedManager;
+
 @end
 
 NS_ASSUME_NONNULL_END

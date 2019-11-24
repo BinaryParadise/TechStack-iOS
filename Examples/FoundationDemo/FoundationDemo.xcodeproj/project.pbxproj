@@ -25,10 +25,13 @@
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
 		248D61A42386958E00CBBAC1 /* FDTestModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 248D61A32386958E00CBBAC1 /* FDTestModel2.m */; };
 		248D61A72386959A00CBBAC1 /* FDTestModel3.m in Sources */ = {isa = PBXBuildFile; fileRef = 248D61A62386959A00CBBAC1 /* FDTestModel3.m */; };
+		24BE6CAE2387742300F379E9 /* FDTM2.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BE6CAD2387742300F379E9 /* FDTM2.m */; };
 		24C2AC902383D5F30092B1AF /* FDNSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2AC8E2383D5F30092B1AF /* FDNSArrayViewController.m */; };
 		24C2AC912383D5F30092B1AF /* FDNSArrayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C2AC8F2383D5F30092B1AF /* FDNSArrayViewController.xib */; };
+		24C9F135238A542A00334431 /* FDDataTypeActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9F134238A542A00334431 /* FDDataTypeActions.m */; };
 		24CAC199237054EF0011EC07 /* FDPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAC198237054EF0011EC07 /* FDPlaceholderView.m */; };
 		24F1FB6F22241F9E0066D008 /* MCArithmeticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */; };
+		24F855F7238A354700F79251 /* FDNetworkActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F855F6238A354700F79251 /* FDNetworkActions.m */; };
 		24FFBA1D236DC39C009773A7 /* FWBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFBA1C236DC39C009773A7 /* FWBUser.m */; };
 		9BF7343FBED96F66FF3055CB /* libPods-FoundationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA8DCE4211F3FAADC364528 /* libPods-FoundationDemoTests.a */; };
 		CE17E77F236BDBEE00F259C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* Main.storyboard */; };
@@ -112,13 +115,19 @@
 		248D61A52386959A00CBBAC1 /* FDTestModel3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDTestModel3.h; sourceTree = "<group>"; };
 		248D61A62386959A00CBBAC1 /* FDTestModel3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDTestModel3.m; sourceTree = "<group>"; };
 		249FA9D9236D2E5600CEA3B7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		24BE6CAC2387742300F379E9 /* FDTM2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDTM2.h; sourceTree = "<group>"; };
+		24BE6CAD2387742300F379E9 /* FDTM2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDTM2.m; sourceTree = "<group>"; };
 		24C2AC8D2383D5F30092B1AF /* FDNSArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDNSArrayViewController.h; sourceTree = "<group>"; };
 		24C2AC8E2383D5F30092B1AF /* FDNSArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDNSArrayViewController.m; sourceTree = "<group>"; };
 		24C2AC8F2383D5F30092B1AF /* FDNSArrayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FDNSArrayViewController.xib; sourceTree = "<group>"; };
+		24C9F133238A542A00334431 /* FDDataTypeActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDDataTypeActions.h; sourceTree = "<group>"; };
+		24C9F134238A542A00334431 /* FDDataTypeActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDDataTypeActions.m; sourceTree = "<group>"; };
 		24CAC197237054EF0011EC07 /* FDPlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDPlaceholderView.h; sourceTree = "<group>"; };
 		24CAC198237054EF0011EC07 /* FDPlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDPlaceholderView.m; sourceTree = "<group>"; };
 		24F1FB6D22241F9E0066D008 /* MCArithmeticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCArithmeticTableViewController.h; sourceTree = "<group>"; };
 		24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCArithmeticTableViewController.m; sourceTree = "<group>"; };
+		24F855F5238A354700F79251 /* FDNetworkActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDNetworkActions.h; sourceTree = "<group>"; };
+		24F855F6238A354700F79251 /* FDNetworkActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDNetworkActions.m; sourceTree = "<group>"; };
 		24FFBA1B236DC39C009773A7 /* FWBUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBUser.h; sourceTree = "<group>"; };
 		24FFBA1C236DC39C009773A7 /* FWBUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBUser.m; sourceTree = "<group>"; };
 		85354DE5695070DF8D465055 /* Pods-FoundationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoundationDemoTests/Pods-FoundationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -253,10 +262,12 @@
 		240BB62A22280A6900CB0722 /* DataType */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
 				CE6E274022057076003AB8FB /* Collection */,
+				24C9F133238A542A00334431 /* FDDataTypeActions.h */,
+				24C9F134238A542A00334431 /* FDDataTypeActions.m */,
 				CE17ED612373CE4700F259C1 /* FDNSDate.h */,
 				CE17ED622373CE4700F259C1 /* FDNSDate.m */,
+				CE6E270C2202F8F1003AB8FB /* FloatNumber */,
 			);
 			path = DataType;
 			sourceTree = "<group>";
@@ -335,6 +346,15 @@
 				24F1FB6E22241F9E0066D008 /* MCArithmeticTableViewController.m */,
 			);
 			path = Arithmetic;
+			sourceTree = "<group>";
+		};
+		24F855F4238A352600F79251 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24F855F5238A354700F79251 /* FDNetworkActions.h */,
+				24F855F6238A354700F79251 /* FDNetworkActions.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		CE17E780236BDF5A00F259C1 /* Controllers */ = {
@@ -448,17 +468,18 @@
 		CE6E26E72202F743003AB8FB /* FoundationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				246E4EFF236C51E200DC139C /* Base */,
 				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
 				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
-				240BB62B22280C2400CB0722 /* Foundation */,
+				246E4EFF236C51E200DC139C /* Base */,
 				CE17E780236BDF5A00F259C1 /* Controllers */,
 				240BB62A22280A6900CB0722 /* DataType */,
+				240BB62B22280C2400CB0722 /* Foundation */,
 				CE32B926221C066E00567417 /* JSModel.h */,
 				CE32B927221C066E00567417 /* JSModel.m */,
 				CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */,
 				CE17E77E236BDBEE00F259C1 /* Main.storyboard */,
+				24F855F4238A352600F79251 /* Network */,
 				CE17E787236BE1D800F259C1 /* SinaWeibo */,
 				24741EC3224678F100BF7DE5 /* SupportFile */,
 				242D4E27224727590022BD45 /* View */,
@@ -500,18 +521,20 @@
 		CE6E272822043EC8003AB8FB /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E272922043EC8003AB8FB /* TestModel1.h */,
-				CE6E272C22043EC8003AB8FB /* TestModel1.m */,
-				CE6E272A22043EC8003AB8FB /* TestModel1+FDAddition1.h */,
-				CE6E272B22043EC8003AB8FB /* TestModel1+FDAddition1.m */,
-				2455595F238682D000390028 /* TestModel1+FDAddition2.h */,
-				24555960238682D000390028 /* TestModel1+FDAddition2.m */,
 				245559622386837A00390028 /* FDCategoryAction.h */,
 				245559632386837A00390028 /* FDCategoryAction.m */,
 				248D61A22386958E00CBBAC1 /* FDTestModel2.h */,
 				248D61A32386958E00CBBAC1 /* FDTestModel2.m */,
 				248D61A52386959A00CBBAC1 /* FDTestModel3.h */,
 				248D61A62386959A00CBBAC1 /* FDTestModel3.m */,
+				24BE6CAC2387742300F379E9 /* FDTM2.h */,
+				24BE6CAD2387742300F379E9 /* FDTM2.m */,
+				CE6E272922043EC8003AB8FB /* TestModel1.h */,
+				CE6E272C22043EC8003AB8FB /* TestModel1.m */,
+				CE6E272A22043EC8003AB8FB /* TestModel1+FDAddition1.h */,
+				CE6E272B22043EC8003AB8FB /* TestModel1+FDAddition1.m */,
+				2455595F238682D000390028 /* TestModel1+FDAddition2.h */,
+				24555960238682D000390028 /* TestModel1+FDAddition2.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -765,8 +788,10 @@
 				248D61A42386958E00CBBAC1 /* FDTestModel2.m in Sources */,
 				CE6E273A22043EC9003AB8FB /* TestModel1.m in Sources */,
 				CE17E790236C059E00F259C1 /* FDWeiboTableViewCell.m in Sources */,
+				24F855F7238A354700F79251 /* FDNetworkActions.m in Sources */,
 				CE6E273C22043EC9003AB8FB /* JSARCDemoA.m in Sources */,
 				CE25BB612265E0190067E97B /* MCMacroController.m in Sources */,
+				24C9F135238A542A00334431 /* FDDataTypeActions.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
 				CE17E78A236C02BB00F259C1 /* FDAutoRefreshTableView.m in Sources */,
 				2426ECCD227AF1D4001947A9 /* MCFloatNumberActions.m in Sources */,
@@ -782,6 +807,7 @@
 				CE17ED1E2372C10B00F259C1 /* FDRefreshFooterView.m in Sources */,
 				CED9E4092320FFCA002276BF /* FDBasicActions.m in Sources */,
 				24C2AC902383D5F30092B1AF /* FDNSArrayViewController.m in Sources */,
+				24BE6CAE2387742300F379E9 /* FDTM2.m in Sources */,
 				CE25BB6D2265E0F80067E97B /* MCMacroTest.m in Sources */,
 				CE17E923236FCCD800F259C1 /* FWBBase.m in Sources */,
 				242D4E3D22472E0B0022BD45 /* UITableViewHeaderFooterView+MCRegister.m in Sources */,

@@ -11,6 +11,10 @@
 
 @interface GDUIViewController ()
 
+@property (nonatomic, weak) IBOutlet GDDemoView *dview;
+@property (nonatomic, weak) IBOutlet UISlider *sliderX;
+@property (nonatomic, weak) IBOutlet UISlider *sliderY;
+
 @end
 
 @implementation GDUIViewController
@@ -20,6 +24,21 @@
     // Do any additional setup after loading the view.
     GDDemoView *demoView = [[GDDemoView alloc] init];
     [demoView setNeedsLayout];
+    
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];    
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)slider {
+    CGRect bounds = self.dview.bounds;
+    if (slider == self.sliderX) {
+        bounds.origin.x = slider.value;
+    } else {
+        bounds.origin.y = slider.value;
+    }
+    self.dview.bounds = bounds;
 }
 
 /*

@@ -51,6 +51,7 @@ describe(@"Foundation", ^{
     context(@"单例模式", ^{
         MCSingletonDemo *singleton = [[MCSingletonDemo alloc] init];
         it(@"校验", ^{
+            expect(singleton).equal([MCSingletonDemo sharedManager]);
             expect(singleton).equal([MCSingletonDemo new]);
             expect(singleton).equal([singleton copy]);
             expect(singleton).equal([singleton mutableCopy]);

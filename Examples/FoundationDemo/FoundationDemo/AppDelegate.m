@@ -31,11 +31,14 @@
     // Override point for customization after application launch.
     [self initMCLogger];
     
-    [PGRouterManager openURL:@"fd://weibo/init?appKey=3609616584" completion:^(BOOL ret, id object) {
+    [PGRouterManager openURL:@"fd://Weibo/init?appKey=3609616584" completion:^(BOOL ret, id object) {
         if (!ret) {
             DDLogError(@"%@", object);
         }
     }];
+    
+    extern NSString * const kTestKey1;
+    NSAssert(kTestKey1, @"应该是99");
     
     return YES;
 }
@@ -73,7 +76,7 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     __block BOOL canOpen;
-    [PGRouterManager openURL:@"fd://weibo/openurl" object:url completion:^(BOOL ret, id object) {
+    [PGRouterManager openURL:@"fd://Weibo/openurl" object:url completion:^(BOOL ret, id object) {
         canOpen = ret;
     }];
     return canOpen;

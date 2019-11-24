@@ -14,10 +14,6 @@
     NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);
 }
 
-+ (void)initialize {
-    NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);
-}
-
 - (void)testMethod {
     MCLogWarn(@"覆盖方法");
 }
