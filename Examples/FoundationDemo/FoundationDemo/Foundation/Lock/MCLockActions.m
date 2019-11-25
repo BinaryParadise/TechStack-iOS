@@ -32,7 +32,32 @@ static pthread_mutex_t _mutex;
     pthread_mutex_init(&_mutex, &attr);//创建锁
 }
 
-#pragma mark - Actions
++ (void)trigger_DeadLock:(PGRouterContext *)context {
+    static NSLock *lock;
+    if (!lock) {
+        lock = [[NSLock alloc] init];
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        static void (^RecursiveMethod)(int);
+        
+        RecursiveMethod = ^(int value) {
+            
+            [lock lock];
+            if (value > 0) {
+                
+                MCLogDebug(@"value = %d", value);
+                sleep(1);
+                RecursiveMethod(value - 1);
+            }
+            [lock unlock];
+        };
+        
+        RecursiveMethod(5);
+    });
+    [context finished];
+}
 
 + (void)go_OSSpinLock:(PGRouterContext *)context {
     static OSSpinLock oslock = OS_SPINLOCK_INIT;
@@ -167,6 +192,35 @@ static pthread_mutex_t _mutex;
     [context finished];
 }
 
++ (void)go_NSCondition:(PGRouterContext *)context {
+    static NSCondition *condition;
+    static NSMutableArray *marr;
+    if (!condition) {
+        condition = [[NSCondition alloc] init];
+        marr = [NSMutableArray array];
+    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [condition lock];
+        while (marr.count == 0) {
+            MCLogDebug(@"等待产品");//让当前线程处于等待状态
+            [condition wait];
+        }
+        [marr removeObjectAtIndex:0];
+        MCLogDebug(@"包装产品");
+        [condition unlock];
+        [context finished];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [condition lock];
+        sleep(2);
+        [marr addObject:[NSDate date]];
+        MCLogDebug(@"生产产品");
+        [condition signal];//CPU发信号告诉线程不用在等待，可以继续执行
+        [condition unlock];
+    });
+}
+
 + (void)go_NSConditionLock:(PGRouterContext *)context {
     //主线程中
     NSConditionLock *lock = [[NSConditionLock alloc] initWithCondition:0];
@@ -206,6 +260,33 @@ static pthread_mutex_t _mutex;
         sleep(2);
         MCLogDebug(@"线程4解锁成功");
         [lock unlockWithCondition:4];
+    });
+}
+
++ (void)go_NSRecursiveLock:(PGRouterContext *)context {
+    static NSRecursiveLock *lock;
+    if (!lock) {
+        lock = [[NSRecursiveLock alloc] init];
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        static void (^RecursiveMethod)(int);
+        
+        RecursiveMethod = ^(int value) {
+            
+            [lock lock];
+            if (value > 0) {
+                
+                MCLogDebug(@"value = %d", value);
+                sleep(1);
+                RecursiveMethod(value - 1);
+            }
+            [lock unlock];
+        };
+        
+        RecursiveMethod(5);
+        [context finished];
     });
 }
 

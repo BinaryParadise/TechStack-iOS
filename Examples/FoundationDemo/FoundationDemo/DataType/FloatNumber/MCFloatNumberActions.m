@@ -24,7 +24,7 @@
     NSDecimalNumber *decimalPrice = [NSDecimalNumber decimalNumberWithString:priceStr];
     MCLogDebug(@"处理之后：%@", [decimalPrice stringValue]);
     
-    NSString *inputStr = @"0.2";
+    NSString *inputStr = @"0.21";
     
     MCLogDebug(@"%@", @(inputStr.doubleValue * 1.0));
     

@@ -6,3 +6,7 @@ iOS重要知识点介绍、演示
 ## Demo目录
 
 > Examples/*
+
+**预览**
+
+![image](https://user-images.githubusercontent.com/8289395/69512756-381ee200-0f80-11ea-9b7f-45c1a00e3952.png)

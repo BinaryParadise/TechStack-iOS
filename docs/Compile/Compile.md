@@ -122,7 +122,7 @@ Objective C采用Clang(swift采用[swift](https://swift.org/compiler-stdlib/#com
 
 简单的编译过程如图
 
-<img src="./images/compile_1.png">
+<img src="../images/compile_1.png">
 
 ### 编译器前端
 

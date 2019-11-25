@@ -1,6 +1,6 @@
-# 各种锁
+## 各种锁
 
-# OSSpinLock
+## OSSpinLock
 
 `OSSpinLock`是一种自旋锁，性能最好
 
@@ -30,16 +30,16 @@ os_unfair_lock_unlock(&oslock);
 
 
 
-# 信号量
+## 信号量
 
-## dispatch_semaphore_create
+### dispatch_semaphore_create
 
 ```objc
 //通过给定一个不小于0初始值（`0表示无信号`）创建新的计数信号量，创建失败返回`NULL`
 dispatch_semaphore_t dispatch_semaphore_create(long value);
 ```
 
-## dispatch_semaphore_wait
+### dispatch_semaphore_wait
 
 >  等待信号量
 >  信号量`>=1`时，计数`减1`，继续往下执行
@@ -52,7 +52,7 @@ long dispatch_semaphore_wait(dispatch_semaphore_t dsema, dispatch_time_t timeout
 
 > 如果线程被唤醒返回非0值，否则返回0
 
-## dispatch_semaphore_signal
+### dispatch_semaphore_signal
 
 > 增加一个信号量，如果之前的信号量小于0，则此函数返回之前唤醒等待的线程
 > `当返回0时`：表示无线程等待，信号加1。
@@ -61,7 +61,7 @@ long dispatch_semaphore_wait(dispatch_semaphore_t dsema, dispatch_time_t timeout
 long dispatch_semaphore_signal(dispatch_semaphore_t dsema);
 ```
 
-# pthread_mutex
+## pthread_mutex
 
 C语言实现的互斥锁
 
@@ -69,6 +69,7 @@ C语言实现的互斥锁
 pthread_mutex_t _mutex;
 pthread_mutexattr_t attr;
 pthread_mutexattr_init(&attr);
+//PTHREAD_MUTEX_RECURSIVE递归锁
 pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_NORMAL);
 //初始化锁
 pthread_mutex_init(&_mutex, &attr);
@@ -78,11 +79,11 @@ pthread_mutex_lock(&_mutex)
 pthread_mutex_unlock(&_mutex);
 ```
 
-# @synchronized
+## @synchronized
 
 使用的是递归互斥锁
 
-# NSLock
+## NSLock
 
 > `NSLock`通过实现NSLocking协议实现了一种简单的互斥锁，面向对象
 
@@ -133,10 +134,16 @@ pthread_mutex_unlock(&_mutex);
 
 ```
 
-# NSConditionLock 条件锁
+## NSCondition
+
+**NSCondition 的对象**实际上**作为一个锁**和一个**线程检查器**：锁主要为了当检测条件时保护数据源，执行条件引发的任务；线程检查器主要是**根据条件决定是否继续运行线程，即线程是否被阻塞。**
+
+## NSConditionLock 条件锁
 
 在指定条件时可获得锁
 
 解锁指定条件
 
-# NSRecursiveLock 递归锁
+## NSRecursiveLock 递归锁
+
+NSRecursiveLock实际上定义的是一个递归锁，这个锁可以被同一线程多次请求，而不会引起死锁。这主要是用在循环或递归操作中。它可以允许同一线程多次加锁，而不会造成死锁。递归锁会跟踪它被lock的次数。每次成功的lock都必须平衡调用unlock操作。只有所有达到这种平衡，锁最后才能被释放，以供其它线程使用。

@@ -21,7 +21,12 @@
 
 ```objc
 // 创建线程
-NSThread
+NSThread *thread = [[NSThread alloc] initWithBlock:threadBlock];
+//启动线程
+[thread start];
+  
+// 隐式创建并启动线程
+[self performSelectorInBackground:@selector(run) withObject:nil];
 ```
 
 ### 类方法&属性
@@ -59,8 +64,8 @@ NSThread
 
 | 执行方式 | 并行队列 | 串行队列 | 主队列 |
 | ---- | ---- | ---- | ---- |
-| 异步执行 | 开启多个线程，任务同时执行 | 开启一个新线程，任务按顺序执行 | 在主线程按顺序执行任务 |
-| 同步执行 | 不开启线程，按顺序执行任务 | 在主线程按顺序执行任务 | DealLock |
+| 异步执行 | 开启多个线程，任务同步执行 | 开启一个新线程，任务按顺序执行 | 在主线程按顺序执行任务 |
+| 同步执行 | 不开启线程，按顺序在主线程执行任务 | 在主线程按顺序执行任务 | DealLock |
 
 ### 主队列
 
@@ -86,9 +91,13 @@ dispatch_queue_create("queue_concurrent", DISPATCH_QUEUE_CONCURRENT)
 dispatch_get_global_queue(0, 0);
 ```
 
-### 栅栏
+## 栅栏
 
 > 当任务需要异步进行，但是这些任务需要分成两组来执行，第一组完成之后才能进行第二组的操作。这时候就用了到GCD的栅栏方法dispatch_barrier_async
+>
+> dispatch_barrier_sync会在主线程执行，后续任务需要等待
+>
+> 在使用栅栏函数时.使用自定义队列才有意义,如果用的是串行队列或者系统提供的全局并发队列,这个栅栏函数的作用等同于一个同步函数的作用
 
 ```objc
 dispatch_queue_t queue3 = dispatch_queue_create("queue3", DISPATCH_QUEUE_CONCURRENT);
@@ -119,13 +128,17 @@ dispatch_async(queue3, ^{
 });
 ```
 
-### 延时执行
+### dispatch_after（延时执行）
 
 > dispatch_after
 
-### 快速迭代
+### dispatch_apply（快速迭代）
 
-> dispatch_apply按指定的次数将指定的block追加到指定的队列中，并等待全部处理执行结束，好处是可以重复执行某项操作并复用我们的block了！
+> dispatch_apply按指定的次数将指定的block追加到指定的队列中，并等待全部处理执行结束，好处是可以重复执行某项操作并复用我们的block了
+>
+> 第一个参数为重复次数；
+> 第二个参数为追加对象的Dispatch Queue；
+> 第三个参数为追加的操作，追加的Block中带有参数，这是为了按第一个参数重复追加Block并区分各个Block而使用。
 
 ```objc
 dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -156,6 +169,8 @@ dispatch_group_t group = dispatch_group_create();
         LogDebug(@"队列分组任务全部执行完成 %@", [NSThread currentThread]);
     });
 ```
+
+
 
 ## NSOperation
 
