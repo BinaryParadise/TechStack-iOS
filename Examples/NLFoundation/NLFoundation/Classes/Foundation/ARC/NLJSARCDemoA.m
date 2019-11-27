@@ -6,28 +6,28 @@
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "JSARCDemoA.h"
+#import "NLJSARCDemoA.h"
 
-@interface JSARCDemoA ()
+@interface NLJSARCDemoA ()
 
 @property (nonatomic, copy) void (^completion)(void);
 
 @end
 
-@implementation JSARCDemoA
+@implementation NLJSARCDemoA
 
 - (void)testAssign {
-    self.assignDemo = [[JSARCDemoA alloc] initWithTag:@"立即释放"];
+    self.assignDemo = [[NLJSARCDemoA alloc] initWithTag:@"立即释放"];
     
     MCLogDebug(@"使用assign修饰对象，会在方法执行完成后立即释放,造成野指针");
 }
 
 - (void)testWeak {
-    self.weakDemo = [[JSARCDemoA alloc] initWithTag:@"弱引用对象"];
+    self.weakDemo = [[NLJSARCDemoA alloc] initWithTag:@"弱引用对象"];
 }
 
 - (void)testStrong {
-    self.strongDemo = [[JSARCDemoA alloc] initWithTag:@"强引用对象"];
+    self.strongDemo = [[NLJSARCDemoA alloc] initWithTag:@"强引用对象"];
 }
 
 - (void)doSomething:(void (^)(void))block {

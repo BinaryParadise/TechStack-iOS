@@ -1,12 +1,12 @@
 //
-//  FDDataTypeActions.m
+//  NLDataTypeActions.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/24.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDDataTypeActions.h"
+#import "NLDataTypeActions.h"
 
 const int   *p1;
 int const   *p2;
@@ -19,7 +19,7 @@ NSString * const kTestKey1 = @"https://www.apple.com.cn";
 static NSString const * kTestKey2 = @"https://www.apple.com.cn";
 FOUNDATION_EXTERN NSString * const KTestKey3 = @"xxxxx";
 
-@implementation FDDataTypeActions
+@implementation NLDataTypeActions
 
 + (void)constVariable:(PGRouterContext *)context {
     MCLogWarn(@"const右边无法更改");

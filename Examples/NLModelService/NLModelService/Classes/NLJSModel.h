@@ -1,5 +1,5 @@
 //
-//  JSModel.h
+//  NLJSModel.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/2/19.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSModel : NSObject
+@interface NLJSModel : NSObject
 
 @property (nonatomic, copy) NSString *tag;
 

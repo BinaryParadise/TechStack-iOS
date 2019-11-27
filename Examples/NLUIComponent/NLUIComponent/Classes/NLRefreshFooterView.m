@@ -1,17 +1,17 @@
 //
-//  FDRefreshFooterView.m
+//  NLRefreshFooterView.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDAutoRefreshTableView.h"
+#import "NLAutoRefreshTableView.h"
 #import <objc/runtime.h>
 #import <MCUIKit/UIView+MCFrameGeometry.h>
 #import <Masonry/Masonry.h>
 
-@interface FDRefreshFooterView ()
+@interface NLRefreshFooterView ()
 
 @property (nonatomic, strong) UIActivityIndicatorView *indictorView;
 @property (nonatomic, weak) id target;
@@ -21,10 +21,10 @@
 
 @end
 
-@implementation FDRefreshFooterView
+@implementation NLRefreshFooterView
 
 + (instancetype)initWithTarget:(id)target selector:(SEL)selector {
-    FDRefreshFooterView *view = [[FDRefreshFooterView alloc] initWithFrame:CGRectMake(0, 0, 0, 36)];
+    NLRefreshFooterView *view = [[NLRefreshFooterView alloc] initWithFrame:CGRectMake(0, 0, 0, 36)];
     view.target = target;
     view.selector = selector;
     return view;

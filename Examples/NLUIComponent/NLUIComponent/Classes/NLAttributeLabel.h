@@ -1,5 +1,5 @@
 //
-//  FDAttributeLabel.h
+//  NLAttributeLabel.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FDAttributeLabel : UILabel
+@interface NLAttributeLabel : UILabel
 
 @end

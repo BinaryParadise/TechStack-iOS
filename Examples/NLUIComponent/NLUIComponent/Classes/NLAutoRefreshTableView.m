@@ -1,17 +1,17 @@
 //
-//  FDAutoRefreshTableView.m
+//  NLAutoRefreshTableView.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDAutoRefreshTableView.h"
+#import "NLAutoRefreshTableView.h"
 #import <objc/runtime.h>
 #import <MCUIKit/UIView+MCFrameGeometry.h>
 #import <Masonry/Masonry.h>
 
-@implementation FDAutoRefreshTableView
+@implementation NLAutoRefreshTableView
 
 - (void)setContentSize:(CGSize)contentSize {
     if (!CGSizeEqualToSize(self.contentSize, CGSizeZero) && !self.isRefreshing) {
@@ -45,12 +45,12 @@
 
 @implementation UITableView (FDRefresh)
 
-- (void)setFd_footer:(FDRefreshFooterView *)fd_footer {
+- (void)setFd_footer:(NLRefreshFooterView *)fd_footer {
     [self insertSubview:fd_footer atIndex:0];
     objc_setAssociatedObject(self, @selector(fd_footer), fd_footer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (FDRefreshFooterView *)fd_footer {
+- (NLRefreshFooterView *)fd_footer {
     return objc_getAssociatedObject(self, _cmd);
 }
 

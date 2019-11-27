@@ -1,18 +1,18 @@
 //
-//  FDBasicActions.m
+//  NLBasicActions.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/9/5.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDBasicActions.h"
-#import "FDRefrigerator.h"
-#import "FDARCViewController.h"
+#import "NLBasicActions.h"
+#import "NLRefrigerator.h"
+#import "NLARCViewController.h"
 
 static FDAutoMonitor *monitor;
 
-@implementation FDBasicActions
+@implementation NLBasicActions
 
 + (void)load {
     monitor = [FDAutoMonitor new];
@@ -28,7 +28,7 @@ static FDAutoMonitor *monitor;
 }
 
 + (void)arcDemo:(PGRouterContext *)context {
-    FDARCViewController *vc = [[FDARCViewController alloc] init];
+    NLARCViewController *vc = [[NLARCViewController alloc] init];
     [self pushViewController:vc animated:YES];
     [context finished];
 }

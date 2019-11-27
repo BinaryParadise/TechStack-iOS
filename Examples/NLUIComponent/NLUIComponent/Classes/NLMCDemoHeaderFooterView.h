@@ -1,5 +1,5 @@
 //
-//  MCDemoHeaderFooterView.h
+//  NLMCDemoHeaderFooterView.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/3/24.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCDemoHeaderFooterView : UIView
+@interface NLMCDemoHeaderFooterView : UIView
 
 - (void)setTitle:(NSString *)title;
 

@@ -1,5 +1,5 @@
 //
-//  FDDataTypeActions.h
+//  NLDataTypeActions.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/24.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDDataTypeActions : TIRouterActionBase
+@interface NLDataTypeActions : TIRouterActionBase
 
 PGMethod(constVariable, "fd://Foundation/DataType/Const");
 

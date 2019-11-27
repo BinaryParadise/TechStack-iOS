@@ -1,25 +1,25 @@
 //
-//  FDWeiboPresenter.m
+//  NLWeiboPresenter.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDWeiboPresenter.h"
+#import "NLWeiboPresenter.h"
 #import <Weibo_SDK/WeiboSDK.h>
 #import <MCLogger/MCLogger.h>
 #import <TIRouterAction/TIRouterAction.h>
-#import "FDWeiboResponse.h"
+#import "NLWeiboResponse.h"
 
-@interface FDWeiboPresenter () <WeiboSDKDelegate>
+@interface NLWeiboPresenter () <WeiboSDKDelegate>
 
-@property (nonatomic, strong) FDWeiboResponse *header;
+@property (nonatomic, strong) NLWeiboResponse *header;
 
 
 @end
 
-@implementation FDWeiboPresenter
+@implementation NLWeiboPresenter
 
 + (void)initWeibo:(PGRouterContext *)context {
     static dispatch_once_t onceToken;
@@ -33,9 +33,9 @@
 }
 
 + (void)openWeiboURL:(PGRouterContext *)context {
-    static FDWeiboPresenter *wbp;
+    static NLWeiboPresenter *wbp;
     if (!wbp) {
-        wbp = [FDWeiboPresenter new];
+        wbp = [NLWeiboPresenter new];
     }
     BOOL canOpen = [WeiboSDK handleOpenURL:context.object delegate:wbp];
     [context onDone:canOpen object:nil];
@@ -56,9 +56,9 @@
     if (self.header) {
         params = @{@"max_id": @(self.statuses.lastObject.mid)};
     }
-    [FWBRequestManager getDataWithURL:@"statuses/home_timeline.json" params:params completion:^(id  _Nonnull data, NSError * _Nonnull error) {
-        self.header = [FDWeiboResponse fd_objectFromKeyValues:data];
-        NSArray *statuses = [FWBStatus fd_arrayOfModelsFromKeyValues:data[@"statuses"]];
+    [NLFWBRequestManager getDataWithURL:@"statuses/home_timeline.json" params:params completion:^(id  _Nonnull data, NSError * _Nonnull error) {
+        self.header = [NLWeiboResponse fd_objectFromKeyValues:data];
+        NSArray *statuses = [NLFWBStatus fd_arrayOfModelsFromKeyValues:data[@"statuses"]];
         if (self.statuses) {
             self.statuses = [self.statuses arrayByAddingObjectsFromArray:statuses];
         } else {
@@ -71,7 +71,7 @@
 }
 
 - (void)fetchEmotions {
-    [FWBRequestManager getDataWithURL:@"emotions.json" params:nil completion:^(id  _Nullable data, NSError * _Nullable error) {
+    [NLFWBRequestManager getDataWithURL:@"emotions.json" params:nil completion:^(id  _Nullable data, NSError * _Nullable error) {
         if (error) {
             DDLogError(@"%@", error);
         }

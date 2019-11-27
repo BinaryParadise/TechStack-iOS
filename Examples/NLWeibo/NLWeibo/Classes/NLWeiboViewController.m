@@ -1,35 +1,35 @@
 //
-//  FDWeiboViewController.m
+//  NLWeiboViewController.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDWeiboViewController.h"
-#import "FDAutoRefreshTableView.h"
-#import "FDWeiboTableViewCell.h"
-#import "FDWeiboPresenter.h"
+#import "NLWeiboViewController.h"
+#import "NLAutoRefreshTableView.h"
+#import "NLWeiboTableViewCell.h"
+#import "NLWeiboPresenter.h"
 #import <Masonry/Masonry.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/Toast.h>
-#import "FDPlaceholderView.h"
+#import "NLPlaceholderView.h"
 
-@interface FDWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface NLWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) FDWeiboPresenter *presenter;
-@property (nonatomic, strong) FDPlaceholderView *emptyView;
+@property (nonatomic, strong) NLWeiboPresenter *presenter;
+@property (nonatomic, strong) NLPlaceholderView *emptyView;
 
 
 @end
 
-@implementation FDWeiboViewController
+@implementation NLWeiboViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.presenter = [[FDWeiboPresenter alloc] init];
+    self.presenter = [[NLWeiboPresenter alloc] init];
     [CSToastManager setDefaultPosition:CSToastPositionCenter];
 }
 
@@ -39,7 +39,7 @@
     
     self.view.backgroundColor = MCHexColor(0xF6F6F6);
     
-    self.emptyView = [[FDPlaceholderView alloc] init];
+    self.emptyView = [[NLPlaceholderView alloc] init];
     self.emptyView.hidden = YES;
     self.emptyView.onButtonClick = ^{
         [self refreshData:FDRefreshStateFirst];
@@ -49,19 +49,19 @@
         make.edges.equalTo(self.view);
     }];
     
-    self.tableView = [[FDAutoRefreshTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = [[NLAutoRefreshTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.tableView.hidden = YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.fd_footer = [FDRefreshFooterView initWithTarget:self selector:@selector(refreshData:)];
+    self.tableView.fd_footer = [NLRefreshFooterView initWithTarget:self selector:@selector(refreshData:)];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
     
-    [FDWeiboTableViewCell registerForTableView:self.tableView];
+    [NLWeiboTableViewCell registerForTableView:self.tableView];
     
     [MCObserver(self.presenter, authChanged) valueChanged:^(id target, id value) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -112,13 +112,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FDWeiboTableViewCell *cell = [FDWeiboTableViewCell cellForTableView:tableView indexPath:indexPath];
+    NLWeiboTableViewCell *cell = [NLWeiboTableViewCell cellForTableView:tableView indexPath:indexPath];
     cell.status = self.presenter.statuses[indexPath.section];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [FDWeiboTableViewCell defaultHeightForData:self.presenter.statuses[indexPath.section]];
+    return [NLWeiboTableViewCell defaultHeightForData:self.presenter.statuses[indexPath.section]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

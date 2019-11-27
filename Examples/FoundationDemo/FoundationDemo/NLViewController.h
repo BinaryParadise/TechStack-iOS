@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NLViewController.h
 //  iOSGuide
 //
 //  Created by mylcode on 2017/10/7.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface NLViewController : UITableViewController
 
 
 @end

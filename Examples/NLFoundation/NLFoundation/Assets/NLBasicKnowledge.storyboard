@@ -8,7 +8,7 @@
         <!--Lock-->
         <scene sceneID="eFL-pq-kon">
             <objects>
-                <tableViewController storyboardIdentifier="MCLockTableViewController" id="kq8-70-eiy" userLabel="Lock" customClass="MCLockActions" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MCLockTableViewController" id="kq8-70-eiy" userLabel="Lock" customClass="NLMCLockActions" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hmA-gb-K1h">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,5 +1,5 @@
 //
-//  FDCategoryAction.h
+//  NLCategoryAction.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/21.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDCategoryAction : TIRouterActionBase
+@interface NLCategoryAction : TIRouterActionBase
 
 PGMethod(methodCover, "fd://Foundation/Category/Method?c=分类方法将被编译源文件列表中最后编译的覆盖");
 

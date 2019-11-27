@@ -1,5 +1,5 @@
 //
-//  FDTM2.h
+//  NLTM2.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/22.
@@ -13,22 +13,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  initialize调用演示
  */
-@interface FDTM2 : NSObject
+@interface NLTM2 : NSObject
 
 - (NSInteger)hello;
 
 @end
 
-@interface FDTM2 (Extra1)
+@interface NLTM2 (Extra1)
 
 @end
 
 
-@interface FDTM2 (Extra2)
+@interface NLTM2 (Extra2)
 
 @end
 
-@interface FDTM2Child1 : FDTM2
+@interface FDTM2Child1 : NLTM2
 
 @end
 

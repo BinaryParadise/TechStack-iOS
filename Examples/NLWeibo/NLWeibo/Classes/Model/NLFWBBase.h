@@ -1,16 +1,16 @@
 //
-//  FWBBase.h
+//  NLFWBBase.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/4.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <NLModelService/FDBase.h>
+#import <NLModelService/NLBase.h>
 
 /**
  微博基础模型
  */
-@interface FWBBase : FDBase
+@interface NLFWBBase : NLBase
 
 @end

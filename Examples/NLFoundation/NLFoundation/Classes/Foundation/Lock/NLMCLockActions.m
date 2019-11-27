@@ -6,7 +6,7 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "MCLockActions.h"
+#import "NLMCLockActions.h"
 #import <libkern/OSAtomic.h>
 #include <pthread/pthread.h>
 #include <os/lock.h>
@@ -14,7 +14,7 @@
 static NSUInteger _count;
 static pthread_mutex_t _mutex;
 
-@interface MCLockActions () {
+@interface NLMCLockActions () {
 }
 
 @property (nonatomic, copy) NSDictionary<NSNumber *, NSString *> *actionsDict;
@@ -23,7 +23,7 @@ static pthread_mutex_t _mutex;
 
 @end
 
-@implementation MCLockActions
+@implementation NLMCLockActions
 
 + (void)load {
     pthread_mutexattr_t attr;

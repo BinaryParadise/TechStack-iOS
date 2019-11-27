@@ -1,5 +1,5 @@
 //
-//  FDNetworkActions.h
+//  NLNetworkActions.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/24.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDNetworkActions : TIRouterActionBase
+@interface NLNetworkActions : TIRouterActionBase
 
 PGMethod(_SyncRef, "fd://Network/NSURLConnection/SyncRef?c=同步请求，传引用");
 PGMethod(_SyncBlock, "fd://Network/NSURLConnection/SyncBlock?c=同步请求，block回调");

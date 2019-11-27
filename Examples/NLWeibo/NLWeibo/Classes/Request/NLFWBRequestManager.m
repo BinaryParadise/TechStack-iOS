@@ -6,10 +6,10 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FWBRequestManager.h"
+#import "NLFWBRequestManager.h"
 #import <MCJSONKit/MCJSONKit.h>
 
-@implementation FWBRequestManager
+@implementation NLFWBRequestManager
 
 + (NSURL *)getParams:(NSString *)url params:(NSDictionary *)params {
     NSMutableString *mstr = [NSMutableString string];

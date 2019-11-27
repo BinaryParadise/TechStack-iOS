@@ -1,5 +1,5 @@
 //
-//  FWBStatus.h
+//  NLFWBStatus.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FWBUser.h"
+#import "NLFWBUser.h"
 
 /**
  微博详情
  */
-@interface FWBStatus : FWBBase
+@interface NLFWBStatus : NLFWBBase
 
 /**
  微博创建时间
@@ -92,7 +92,7 @@
 /**
  微博作者的用户信息字段 详细
  */
-@property (nonatomic, strong) FWBUser *user;
+@property (nonatomic, strong) NLFWBUser *user;
 
 /**
  被转发的原微博信息字段，当该微博为转发微博时返回 详细

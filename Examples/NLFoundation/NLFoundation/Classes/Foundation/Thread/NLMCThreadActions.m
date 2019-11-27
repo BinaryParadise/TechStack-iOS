@@ -6,13 +6,13 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "MCThreadActions.h"
+#import "NLMCThreadActions.h"
 
-@interface MCThreadActions ()
+@interface NLMCThreadActions ()
 
 @end
 
-@implementation MCThreadActions
+@implementation NLMCThreadActions
 
 + (void)demo_NSThread:(PGRouterContext *)context {
     //休眠指定秒数

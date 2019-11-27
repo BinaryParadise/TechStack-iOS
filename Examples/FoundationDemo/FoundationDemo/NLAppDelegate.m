@@ -1,12 +1,12 @@
 //
-//  AppDelegate.m
+//  NLAppDelegate.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/1/31.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "NLAppDelegate.h"
 #import <TIRouterAction/TIRouterAction.h>
 #import <MCLogger/MCLogger.h>
 
@@ -20,11 +20,11 @@
 
 @end
 
-@interface AppDelegate ()
+@interface NLAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation NLAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

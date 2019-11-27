@@ -1,5 +1,5 @@
 //
-//  FDAutoRefreshTableView.h
+//  NLAutoRefreshTableView.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <MCUIKit/UIView+MCFrameGeometry.h>
-#import "FDRefreshFooterView.h"
+#import "NLRefreshFooterView.h"
 
-@interface FDAutoRefreshTableView : UITableView
+@interface NLAutoRefreshTableView : UITableView
 
 @end
 
 @interface UITableView (FDRefresh)
 
-@property (nonatomic, strong) FDRefreshFooterView *fd_footer;
+@property (nonatomic, strong) NLRefreshFooterView *fd_footer;
 
 @end

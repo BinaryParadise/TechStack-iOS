@@ -6,16 +6,16 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "MCCollectionActions.h"
+#import "NLMCCollectionActions.h"
 #import "NSMutableArray+JSSafety.h"
-#import "FDNSArrayViewController.h"
+#import "NLNSArrayViewController.h"
 
 static NSMutableArray *_marr;
-@interface MCCollectionActions ()
+@interface NLMCCollectionActions ()
 
 @end
 
-@implementation MCCollectionActions
+@implementation NLMCCollectionActions
 
 + (void)unsafeArray:(PGRouterContext *)context {
     [self safeArray:context];
@@ -78,7 +78,7 @@ static NSMutableArray *_marr;
 }
 
 + (void)uiDemo:(PGRouterContext *)context {
-    UIViewController *vc = [[FDNSArrayViewController alloc] initWithNibName:nil bundle:nil];
+    UIViewController *vc = [[NLNSArrayViewController alloc] initWithNibName:nil bundle:nil];
     [self pushViewController:vc animated:YES];
     [context finished];
 }

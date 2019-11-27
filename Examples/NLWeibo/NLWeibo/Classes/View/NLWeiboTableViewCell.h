@@ -1,5 +1,5 @@
 //
-//  FDWeiboTableViewCell.h
+//  NLWeiboTableViewCell.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+MCRegister.h"
-#import "../Model/FWBStatus.h"
+#import "../Model/NLFWBStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDWeiboTableViewCell : UITableViewCell
+@interface NLWeiboTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) FWBStatus *status;
+@property (nonatomic, strong) NLFWBStatus *status;
 
 @end
 

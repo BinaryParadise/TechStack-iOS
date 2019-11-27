@@ -6,18 +6,18 @@
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "GCDActions.h"
+#import "NLGCDActions.h"
 #import <AddressBook/AddressBook.h>
 #import <UIKit/UIKit.h>
 
-@interface GCDActions ()
+@interface NLGCDActions ()
 
 @property (nonatomic, strong) NSMutableArray *marr;
 @property (nonatomic, strong) NSObject *object;
 
 @end
 
-@implementation GCDActions
+@implementation NLGCDActions
 
 - (instancetype)init
 {
@@ -314,7 +314,7 @@
     dispatch_queue_t queue = dispatch_queue_create("arraySafeQueue", DISPATCH_QUEUE_CONCURRENT);
     
     for (int i=0; i<2000000; i++) {
-        [marr addObject:[GCDActions new]];
+        [marr addObject:[NLGCDActions new]];
     }
     dispatch_async(queue, ^{
         NSDate *date = [NSDate date];

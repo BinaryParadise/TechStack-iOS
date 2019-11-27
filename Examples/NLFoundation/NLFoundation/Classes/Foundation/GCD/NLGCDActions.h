@@ -15,7 +15,7 @@
  任务：其实就是代码块，需要执行的内容
  队列：用来存放任务的数组
  */
-@interface GCDActions : TIRouterActionBase
+@interface NLGCDActions : TIRouterActionBase
 
 @property (nonatomic, copy) NSString *taskName;
 

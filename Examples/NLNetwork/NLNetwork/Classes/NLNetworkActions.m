@@ -1,22 +1,22 @@
 //
-//  FDNetworkActions.m
+//  NLNetworkActions.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/24.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDNetworkActions.h"
+#import "NLNetworkActions.h"
 #import <AFNetworking/AFNetworking.h>
 #import <CFNetwork/CFNetwork.h>
 
 NSString * const kRequestURL = @"http://2000019.ip138.com";
 
-@interface FDNetworkActions () <NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSURLConnectionDownloadDelegate, NSURLSessionDataDelegate>
+@interface NLNetworkActions () <NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSURLConnectionDownloadDelegate, NSURLSessionDataDelegate>
 
 @end
 
-@implementation FDNetworkActions
+@implementation NLNetworkActions
 
 NSString * subStrData(NSData *data) {
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -96,8 +96,8 @@ void cfCallback (CFReadStreamRef stream,CFStreamEventType type,void *clientCallB
 }
 
 + (void)_URLSessionDelegate:(PGRouterContext *)context {
-    static FDNetworkActions *delegate;
-    delegate = [FDNetworkActions new];
+    static NLNetworkActions *delegate;
+    delegate = [NLNetworkActions new];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:delegate delegateQueue:[NSOperationQueue new]];
     NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:kRequestURL]];
     [task resume];

@@ -1,5 +1,5 @@
 //
-//  MCMacroDefine3.h
+//  NLMCMacroDefine3.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/4/16.
@@ -10,6 +10,6 @@
 
 #define kMCMacroTestValue 3
 
-@interface MCMacroDefine3 : NSObject
+@interface NLMCMacroDefine3 : NSObject
 
 @end

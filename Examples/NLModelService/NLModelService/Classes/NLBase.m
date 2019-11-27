@@ -1,19 +1,19 @@
 //
-//  FDBase.m
+//  NLBase.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDBase.h"
+#import "NLBase.h"
 #import <MCJSONKit/MCJSONKit.h>
 
-@implementation FDBase
+@implementation NLBase
 
 @end
 
-@implementation FDBase (JSONModel)
+@implementation NLBase (JSONModel)
 
 + (instancetype)fd_objectFromKeyValues:(id)keyValues {
     return [self mc_objectFromKeyValues:keyValues];

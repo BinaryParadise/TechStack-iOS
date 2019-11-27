@@ -1,5 +1,5 @@
 //
-//  FDWeiboResponse.h
+//  NLWeiboResponse.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FDBase.h"
+#import "NLBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDWeiboResponse : FDBase
+@interface NLWeiboResponse : NLBase
 
 @property(nonatomic, copy) NSArray *advertises;
 @property(nonatomic, copy) NSArray *ad;

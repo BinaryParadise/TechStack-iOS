@@ -6,13 +6,13 @@
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "JSModel.h"
+#import "NLJSModel.h"
 
 //自动内存管理演示
-@interface JSARCDemoA : JSModel<NSCopying>
+@interface NLJSARCDemoA : NLJSModel<NSCopying>
 
-@property (nonatomic, assign) JSARCDemoA *assignDemo;
-@property (nonatomic, weak) JSARCDemoA *weakDemo;
+@property (nonatomic, assign) NLJSARCDemoA *assignDemo;
+@property (nonatomic, weak) NLJSARCDemoA *weakDemo;
 @property (nonatomic, strong) id strongDemo;
 
 - (void)testAssign;

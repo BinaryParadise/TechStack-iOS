@@ -1,28 +1,28 @@
 //
-//  FDARCViewController.m
+//  NLARCViewController.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/21.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDARCViewController.h"
-#import "JSARCDemoA.h"
-#import "JSARCDemoB.h"
+#import "NLARCViewController.h"
+#import "NLJSARCDemoA.h"
+#import "NLJSARCDemoB.h"
 
-@interface FDARCViewController ()
+@interface NLARCViewController ()
 
-@property (nonatomic, strong) JSARCDemoA *demoA;
-@property (nonatomic, strong) JSARCDemoB *demoB;
+@property (nonatomic, strong) NLJSARCDemoA *demoA;
+@property (nonatomic, strong) NLJSARCDemoB *demoB;
 
 @end
 
-@implementation FDARCViewController
+@implementation NLARCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    JSARCDemoA *demoA = [[JSARCDemoA alloc] initWithTag:@"强引用对象"];
+    NLJSARCDemoA *demoA = [[NLJSARCDemoA alloc] initWithTag:@"强引用对象"];
     [demoA testAssign];
     [demoA testWeak];
     __weak typeof(self) self_weak = self;

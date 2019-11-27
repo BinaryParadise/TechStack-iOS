@@ -6,8 +6,8 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "Arithmetic/MCArithmeticTableViewController.h"
-#import "Lock/MCLockActions.h"
-#import "Thread/MCThreadActions.h"
+#import "Arithmetic/NLMCArithmeticTableViewController.h"
+#import "Lock/NLMCLockActions.h"
+#import "Thread/NLMCThreadActions.h"
 #import "ARC/ARCViewController.h"
 #import "GCD/GCDViewController.h"

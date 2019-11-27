@@ -1,5 +1,5 @@
 //
-//  MCArithmeticTableViewController.h
+//  NLMCArithmeticTableViewController.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/2/25.
@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  算法
  */
-@interface MCArithmeticTableViewController : UITableViewController
+@interface NLMCArithmeticTableViewController : UITableViewController
 
 @end
 

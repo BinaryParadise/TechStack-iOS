@@ -1,5 +1,5 @@
 //
-//  FDBase.h
+//  NLBase.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <MCFoundation/MCFoundation.h>
-#import "FDNSDate.h"
+#import "NLNSDate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  基础对象
  */
-@interface FDBase : NSObject
+@interface NLBase : NSObject
 
 @end
 
-@interface FDBase (JSONModel)
+@interface NLBase (JSONModel)
 
 /**
  通过字典创建模型

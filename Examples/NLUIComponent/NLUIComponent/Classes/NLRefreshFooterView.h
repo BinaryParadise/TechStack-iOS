@@ -1,5 +1,5 @@
 //
-//  FDRefreshFooterView.h
+//  NLRefreshFooterView.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MCUIKit/UIView+MCFrameGeometry.h>
-#import "FDUIDefine.h"
+#import "NLUIDefine.h"
 
 /**
  底部刷新
  */
-@interface FDRefreshFooterView : UIView
+@interface NLRefreshFooterView : UIView
 
 @property (nonatomic, assign) FDRefreshFooterViewState state;
 @property (nonatomic, weak, readonly) UIScrollView *scrollView;

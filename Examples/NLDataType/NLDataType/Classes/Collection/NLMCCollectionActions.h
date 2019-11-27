@@ -8,7 +8,7 @@
 
 #import <TIRouterAction/TIRouterAction.h>
 
-@interface MCCollectionActions : TIRouterActionBase
+@interface NLMCCollectionActions : TIRouterActionBase
 
 PGMethod(unsafeArray, "fd://Foundation/Collection/NSArray/unsafe?c=正常使用（不安全🔞）");
 PGMethod(safeArray, "fd://Foundation/Collection/NSArray/safe?safe=1&c=安全使用");

@@ -1,22 +1,22 @@
 //
-//  FDPlaceholderView.m
+//  NLPlaceholderView.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/4.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDPlaceholderView.h"
+#import "NLPlaceholderView.h"
 #import <Masonry/Masonry.h>
 
-@interface FDPlaceholderView ()
+@interface NLPlaceholderView ()
 
 @property (nonatomic, strong) UIButton *retryButton;
 
 
 @end
 
-@implementation FDPlaceholderView
+@implementation NLPlaceholderView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

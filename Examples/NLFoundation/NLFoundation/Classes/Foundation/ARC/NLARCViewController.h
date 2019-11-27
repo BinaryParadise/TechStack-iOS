@@ -1,5 +1,5 @@
 //
-//  FDARCViewController.h
+//  NLARCViewController.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/21.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDARCViewController : UIViewController
+@interface NLARCViewController : UIViewController
 
 @end
 

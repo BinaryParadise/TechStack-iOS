@@ -1,5 +1,5 @@
 //
-//  MCFloatNumberActions
+//  NLMCFloatNumberActions
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/1/31.
@@ -11,7 +11,7 @@
 /**
  浮点数
  */
-@interface MCFloatNumberActions : TIRouterActionBase
+@interface NLMCFloatNumberActions : TIRouterActionBase
 
 PGMethod(processFloat, "fd://Foundation/DataType/Float");
 

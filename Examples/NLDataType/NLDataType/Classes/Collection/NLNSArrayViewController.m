@@ -1,12 +1,12 @@
 //
-//  FDNSArrayViewController.m
+//  NLNSArrayViewController.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/19.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDNSArrayViewController.h"
+#import "NLNSArrayViewController.h"
 #import <NLUIComponent/NLUIComponent.h>
 #import <MCUIKit/UIColor+MCExtension.h>
 
@@ -19,14 +19,14 @@
 
 @end
 
-@interface FDNSArrayViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface NLNSArrayViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *data;
 
 @end
 
-@implementation FDNSArrayViewController
+@implementation NLNSArrayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

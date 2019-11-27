@@ -12,11 +12,11 @@
 		248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D619E2386917B00CBBAC1 /* UIKit.framework */; };
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
 		C6D9C85BA7AB6F1A650C10BC /* libPods-FoundationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E06CADDE45B094493449EF6 /* libPods-FoundationDemo.a */; };
-		CE17E77F236BDBEE00F259C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* Main.storyboard */; };
-		CE17E783236BDF7A00F259C1 /* FDRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* FDRouterViewController.m */; };
-		CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* AppDelegate.m */; };
+		CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */; };
+		CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */; };
+		CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* NLAppDelegate.m */; };
 		CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F12202F745003AB8FB /* Assets.xcassets */; };
-		CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */; };
+		CE6E26F52202F745003AB8FB /* NLLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */; };
 		CE6E26F82202F745003AB8FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26F72202F745003AB8FB /* main.m */; };
 		CE6E27022202F745003AB8FB /* FoundationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E27012202F745003AB8FB /* FoundationDemoTests.m */; };
 /* End PBXBuildFile section */
@@ -41,14 +41,14 @@
 		5E06CADDE45B094493449EF6 /* libPods-FoundationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1BD256E69DE650DACC7310 /* libPods-FoundationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoundationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEB38D2892B0EA044EB816D /* Pods-FoundationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoundationDemo.release.xcconfig"; path = "Target Support Files/Pods-FoundationDemo/Pods-FoundationDemo.release.xcconfig"; sourceTree = "<group>"; };
-		CE17E77E236BDBEE00F259C1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CE17E781236BDF7A00F259C1 /* FDRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDRouterViewController.h; sourceTree = "<group>"; };
-		CE17E782236BDF7A00F259C1 /* FDRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDRouterViewController.m; sourceTree = "<group>"; };
+		CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NLMain.storyboard; sourceTree = "<group>"; };
+		CE17E781236BDF7A00F259C1 /* NLRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLRouterViewController.h; sourceTree = "<group>"; };
+		CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLRouterViewController.m; sourceTree = "<group>"; };
 		CE6E26E52202F743003AB8FB /* FoundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE6E26E82202F743003AB8FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CE6E26E92202F743003AB8FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE6E26E82202F743003AB8FB /* NLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLAppDelegate.h; sourceTree = "<group>"; };
+		CE6E26E92202F743003AB8FB /* NLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLAppDelegate.m; sourceTree = "<group>"; };
 		CE6E26F12202F745003AB8FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE6E26F42202F745003AB8FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE6E26F42202F745003AB8FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NLLaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6E26F62202F745003AB8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6E26F72202F745003AB8FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6E26FD2202F745003AB8FB /* FoundationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,8 +115,8 @@
 		CE17E780236BDF5A00F259C1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE17E781236BDF7A00F259C1 /* FDRouterViewController.h */,
-				CE17E782236BDF7A00F259C1 /* FDRouterViewController.m */,
+				CE17E781236BDF7A00F259C1 /* NLRouterViewController.h */,
+				CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,12 +144,12 @@
 		CE6E26E72202F743003AB8FB /* FoundationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E26E82202F743003AB8FB /* AppDelegate.h */,
-				CE6E26E92202F743003AB8FB /* AppDelegate.m */,
+				CE6E26E82202F743003AB8FB /* NLAppDelegate.h */,
+				CE6E26E92202F743003AB8FB /* NLAppDelegate.m */,
 				CE6E26F12202F745003AB8FB /* Assets.xcassets */,
 				CE17E780236BDF5A00F259C1 /* Controllers */,
-				CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */,
-				CE17E77E236BDBEE00F259C1 /* Main.storyboard */,
+				CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */,
+				CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */,
 				24741EC3224678F100BF7DE5 /* SupportFile */,
 			);
 			path = FoundationDemo;
@@ -251,9 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6E26F52202F745003AB8FB /* LaunchScreen.storyboard in Resources */,
+				CE6E26F52202F745003AB8FB /* NLLaunchScreen.storyboard in Resources */,
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
-				CE17E77F236BDBEE00F259C1 /* Main.storyboard in Resources */,
+				CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
-				CE6E26EA2202F743003AB8FB /* AppDelegate.m in Sources */,
-				CE17E783236BDF7A00F259C1 /* FDRouterViewController.m in Sources */,
+				CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */,
+				CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,12 +379,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE6E26F32202F745003AB8FB /* LaunchScreen.storyboard */ = {
+		CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE6E26F42202F745003AB8FB /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = NLLaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

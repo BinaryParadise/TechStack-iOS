@@ -8,7 +8,7 @@
 
 #import "TestModel1+FDAddition2.h"
 
-@implementation TestModel1 (FDAddition2)
+@implementation NLTestModel1 (FDAddition2)
 
 + (void)load {
     NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);

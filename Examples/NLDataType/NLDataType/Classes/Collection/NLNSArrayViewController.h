@@ -1,5 +1,5 @@
 //
-//  FDNSArrayViewController.h
+//  NLNSArrayViewController.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/19.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDNSArrayViewController : UIViewController
+@interface NLNSArrayViewController : UIViewController
 
 @end
 

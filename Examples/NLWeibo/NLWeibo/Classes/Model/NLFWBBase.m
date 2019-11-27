@@ -1,15 +1,15 @@
 //
-//  FWBBase.m
+//  NLFWBBase.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/4.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FWBBase.h"
+#import "NLFWBBase.h"
 #import <MCJSONKit/MCJSONKit.h>
 
-@implementation FWBBase
+@implementation NLFWBBase
 
 - (id)fd_newValueFromOldValue:(id)oldValue property:(MCJSONKitProperty *)property {
     if ([oldValue isKindOfClass:[NSString class]] && property.typeClass == [NSDate class]) {

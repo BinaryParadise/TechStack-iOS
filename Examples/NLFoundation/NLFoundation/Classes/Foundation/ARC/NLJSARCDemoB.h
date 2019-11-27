@@ -1,16 +1,16 @@
 //
-//  JSARCDemoB.h
+//  NLJSARCDemoB.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/2/19.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "JSModel.h"
+#import "NLJSModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSARCDemoB : JSModel
+@interface NLJSARCDemoB : NLJSModel
 
 @property (nonatomic, strong) id arcDemo;
 

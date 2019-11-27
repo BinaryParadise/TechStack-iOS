@@ -1,5 +1,5 @@
 //
-//  MCSingletonDemo.h
+//  NLMCSingletonDemo.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/3/5.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCSingletonDemo : NSObject
+@interface NLMCSingletonDemo : NSObject
 
 + (instancetype)sharedManager;
 

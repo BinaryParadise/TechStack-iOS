@@ -1,5 +1,5 @@
 //
-//  FDBasicActions.h
+//  NLBasicActions.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/9/5.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDBasicActions : TIRouterActionBase
+@interface NLBasicActions : TIRouterActionBase
 
 PGMethod(kvoDemo, "fd://Foundation/KVO&KVC/KVO?c=Key-Value Observing");
 

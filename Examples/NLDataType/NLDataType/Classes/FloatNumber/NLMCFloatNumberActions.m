@@ -1,18 +1,18 @@
 //
-//  MCFloatNumberActions.m
+//  NLMCFloatNumberActions.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/1/31.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "MCFloatNumberActions.h"
+#import "NLMCFloatNumberActions.h"
 
-@interface MCFloatNumberActions ()
+@interface NLMCFloatNumberActions ()
 
 @end
 
-@implementation MCFloatNumberActions
+@implementation NLMCFloatNumberActions
 
 + (void)processFloat:(PGRouterContext *)context {
     NSString *jsonStr = @"{\"price\":71.6356867}";

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCThreadActions : TIRouterActionBase
+@interface NLMCThreadActions : TIRouterActionBase
 
 PGMethod(demo_NSThread, "fd://Foundation/Thread/NSThread");
 

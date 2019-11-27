@@ -1,5 +1,5 @@
 //
-//  FDWeiboViewController.h
+//  NLWeiboViewController.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDWeiboViewController : UIViewController
+@interface NLWeiboViewController : UIViewController
 
 @end
 

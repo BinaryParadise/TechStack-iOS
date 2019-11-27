@@ -11,7 +11,7 @@
 
 static void *exstensionKey = &exstensionKey;
 
-@implementation TestModel1 (FDAddition1)
+@implementation NLTestModel1 (FDAddition1)
 
 + (void)load {
     NSLog(@"%s +%d 分类", __FUNCTION__, __LINE__);

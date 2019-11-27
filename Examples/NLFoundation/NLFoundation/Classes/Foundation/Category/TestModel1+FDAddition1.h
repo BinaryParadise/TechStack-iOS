@@ -6,10 +6,10 @@
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "TestModel1.h"
+#import "NLTestModel1.h"
 #import <TIRouterAction/TIRouterAction.h>
 
-@interface TestModel1 (FDAddition1)
+@interface NLTestModel1 (FDAddition1)
 
 @property (nonatomic, copy) NSString *exstension;
 

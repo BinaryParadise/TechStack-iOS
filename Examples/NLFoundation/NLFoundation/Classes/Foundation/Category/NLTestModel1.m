@@ -1,18 +1,18 @@
 //
-//  TestModel1.m
+//  NLTestModel1.m
 //  iOSGuide
 //
 //  Created by Rake Yang on 2017/10/10.
 //  Copyright © 2017年 BinaryParadise. All rights reserved.
 //
 
-#import "TestModel1.h"
+#import "NLTestModel1.h"
 
-@interface TestModel1 ()
+@interface NLTestModel1 ()
 
 @end
 
-@implementation TestModel1
+@implementation NLTestModel1
 
 + (void)load {
     NSLog(@"%s +%d 父类", __FUNCTION__, __LINE__);

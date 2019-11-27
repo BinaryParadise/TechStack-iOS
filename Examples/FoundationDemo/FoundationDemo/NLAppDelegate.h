@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  NLAppDelegate.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/1/31.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface NLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

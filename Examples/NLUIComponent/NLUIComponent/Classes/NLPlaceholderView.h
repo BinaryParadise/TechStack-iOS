@@ -1,5 +1,5 @@
 //
-//  FDPlaceholderView.h
+//  NLPlaceholderView.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/4.
@@ -12,7 +12,7 @@
 /**
  占位视图：错误、重试、无数据等等
  */
-@interface FDPlaceholderView : UIView
+@interface NLPlaceholderView : UIView
 
 @property (nonatomic, copy) void (^onButtonClick)(void);
 

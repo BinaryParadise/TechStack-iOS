@@ -1,12 +1,12 @@
 //
-//  FDRefrigerator.m
+//  NLRefrigerator.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/9/5.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDRefrigerator.h"
+#import "NLRefrigerator.h"
 #import <TIRouterAction/TIRouterAction.h>
 
 @implementation FDColdRoom
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation FDRefrigerator
+@implementation NLRefrigerator
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -37,7 +37,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _refrigerator = [[FDRefrigerator alloc] init];
+        _refrigerator = [[NLRefrigerator alloc] init];
         [_refrigerator addObserver:self forKeyPath:@"cold.temperature" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;

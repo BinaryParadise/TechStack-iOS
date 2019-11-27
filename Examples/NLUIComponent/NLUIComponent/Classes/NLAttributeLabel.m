@@ -1,15 +1,15 @@
 //
-//  FDAttributeLabel.m
+//  NLAttributeLabel.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/7.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDAttributeLabel.h"
+#import "NLAttributeLabel.h"
 #import <MCUIKit/UIColor+MCExtension.h>
 
-@implementation FDAttributeLabel
+@implementation NLAttributeLabel
 
 - (void)setText:(NSString *)text {
     if (text.length == 0) {

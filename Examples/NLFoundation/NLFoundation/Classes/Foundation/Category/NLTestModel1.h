@@ -1,5 +1,5 @@
 //
-//  TestModel1.h
+//  NLTestModel1.h
 //  iOSGuide
 //
 //  Created by Rake Yang on 2017/10/10.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <TIRouterAction/TIRouterAction.h>
 
-@interface TestModel1 : NSObject
+@interface NLTestModel1 : NSObject
 
 @property (nonatomic, assign) int tag;
 

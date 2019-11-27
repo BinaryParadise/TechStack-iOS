@@ -1,14 +1,14 @@
 //
-//  FDTM2.m
+//  NLTM2.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/22.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FDTM2.h"
+#import "NLTM2.h"
 
-@implementation FDTM2
+@implementation NLTM2
 
 + (void)initialize {
     MCLogDebug(@"父类");
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation FDTM2 (Extra1)
+@implementation NLTM2 (Extra1)
 
 + (void)initialize {
     MCLogDebug(@"分类");
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation FDTM2 (Extra2)
+@implementation NLTM2 (Extra2)
 
 + (void)initialize {
     MCLogDebug(@"分类");

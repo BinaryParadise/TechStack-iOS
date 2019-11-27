@@ -1,5 +1,5 @@
 //
-//  FWBRequestManager.h
+//  NLFWBRequestManager.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -12,7 +12,7 @@ typedef void(^FDActionCompletion)(id _Nullable data, NSError * _Nullable error);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FWBRequestManager : NSObject
+@interface NLFWBRequestManager : NSObject
 
 + (void)getDataWithURL:(NSString *)url params:(NSDictionary * _Nullable)params completion:(FDActionCompletion)completion;
 

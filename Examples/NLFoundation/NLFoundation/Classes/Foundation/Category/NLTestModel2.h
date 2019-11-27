@@ -1,16 +1,16 @@
 //
-//  FDTestModel2.h
+//  NLTestModel2.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/21.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "TestModel1.h"
+#import "NLTestModel1.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FDTestModel2 : TestModel1
+@interface NLTestModel2 : NLTestModel1
 
 @end
 

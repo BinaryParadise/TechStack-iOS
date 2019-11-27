@@ -1,5 +1,5 @@
 //
-//  FDWeiboPresenter.h
+//  NLWeiboPresenter.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <TIRouterAction/TIRouterAction.h>
-#import "FWBRequestManager.h"
-#import "FWBStatus.h"
+#import "NLFWBRequestManager.h"
+#import "NLFWBStatus.h"
 #import <MCObserverKit/MCObserverKit.h>
 
-@interface FDWeiboPresenter : NSObject
+@interface NLWeiboPresenter : NSObject
 
-@property (nonatomic, copy) NSArray<FWBStatus *> *statuses;
+@property (nonatomic, copy) NSArray<NLFWBStatus *> *statuses;
 @property (nonatomic, assign) BOOL authChanged;
 
 PGMethod(initWeibo, "fd://Weibo/init");

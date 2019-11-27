@@ -1,5 +1,5 @@
 //
-//  FDRefrigerator.h
+//  NLRefrigerator.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/9/5.
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  冰箱
  */
-@interface FDRefrigerator : NSObject
+@interface NLRefrigerator : NSObject
 
 @property (nonatomic, strong) FDColdRoom *cold;
 
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FDAutoMonitor : NSObject
 
-@property (nonatomic, strong) FDRefrigerator *refrigerator;
+@property (nonatomic, strong) NLRefrigerator *refrigerator;
 
 @end
 

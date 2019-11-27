@@ -1,17 +1,17 @@
 //
-//  FWBUser.h
+//  NLFWBUser.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/2.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "FWBBase.h"
+#import "NLFWBBase.h"
 
 /**
  微博用户
  */
-@interface FWBUser : FDBase
+@interface NLFWBUser : NLBase
 
 /**
  用户UID

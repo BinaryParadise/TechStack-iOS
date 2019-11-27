@@ -1,5 +1,5 @@
 //
-//  FDNSDate.h
+//  NLNSDate.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/7.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FDNSDate : NSObject
+@interface NLNSDate : NSObject
 
 @end
 

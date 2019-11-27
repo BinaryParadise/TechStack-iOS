@@ -1,17 +1,17 @@
 //
-//  MCMacroTest.m
+//  NLMCMacroTest.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/4/16.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "MCMacroTest.h"
-#import "MCMacroDefine1.h"
-#import "MCMacroDefine3.h"
-#import "MCMacroDefine2.h"
+#import "NLMCMacroTest.h"
+#import "NLMCMacroDefine1.h"
+#import "NLMCMacroDefine3.h"
+#import "NLMCMacroDefine2.h"
 
-@implementation MCMacroTest
+@implementation NLMCMacroTest
 
 - (instancetype)init {
     if (self = [super init]) {

@@ -1,14 +1,14 @@
 //
-//  JSARCDemoB.m
+//  NLJSARCDemoB.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/2/19.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "JSARCDemoB.h"
+#import "NLJSARCDemoB.h"
 
-@implementation JSARCDemoB
+@implementation NLJSARCDemoB
 
 - (void)doSomething {
     

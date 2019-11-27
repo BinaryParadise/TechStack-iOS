@@ -8,7 +8,7 @@
 
 #import <TIRouterAction/TIRouterAction.h>
 
-@interface MCLockActions : TIRouterActionBase
+@interface NLMCLockActions : TIRouterActionBase
 
 PGMethod(trigger_DeadLock, "fd://Foundation/Lock/DeadLock?c=造成线程死锁");
 PGMethod(go_OSSpinLock, "fd://Foundation/Lock/OSSpinLock?c=自旋锁（不再安全）");

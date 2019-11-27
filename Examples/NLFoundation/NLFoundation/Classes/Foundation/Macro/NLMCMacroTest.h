@@ -1,5 +1,5 @@
 //
-//  MCMacroTest.h
+//  NLMCMacroTest.h
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/4/16.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCMacroTest : NSObject
+@interface NLMCMacroTest : NSObject
 
 @end
 

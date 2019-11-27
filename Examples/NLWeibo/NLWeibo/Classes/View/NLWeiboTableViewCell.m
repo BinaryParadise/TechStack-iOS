@@ -1,15 +1,15 @@
 //
-//  FDWeiboTableViewCell.m
+//  NLWeiboTableViewCell.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "FDWeiboTableViewCell.h"
+#import "NLWeiboTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface FDWeiboTableViewCell ()
+@interface NLWeiboTableViewCell ()
 
 @property (nonatomic, weak) IBOutlet UIImageView *avatorView;
 
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation FDWeiboTableViewCell
+@implementation NLWeiboTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -46,7 +46,7 @@
     self.contentLabel.text = self.status.text;
 }
 
-+ (CGFloat)defaultHeightForData:(FWBStatus *)data {
++ (CGFloat)defaultHeightForData:(NLFWBStatus *)data {
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     paragraph.lineSpacing = 4;
     paragraph.minimumLineHeight = 20;

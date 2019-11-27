@@ -65,7 +65,7 @@
         <!--路由-->
         <scene sceneID="Z1R-tv-5ju">
             <objects>
-                <viewController id="els-DJ-ATT" customClass="FDRouterViewController" sceneMemberID="viewController">
+                <viewController id="els-DJ-ATT" customClass="NLRouterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i5h-NB-aZR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
         <!--微博-->
         <scene sceneID="alN-se-UGv">
             <objects>
-                <viewController id="dap-C2-VtK" customClass="FDWeiboViewController" sceneMemberID="viewController">
+                <viewController id="dap-C2-VtK" customClass="NLWeiboViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MPk-PJ-ACT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

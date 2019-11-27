@@ -1,14 +1,14 @@
 //
-//  MCSingletonDemo.m
+//  NLMCSingletonDemo.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/3/5.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "MCSingletonDemo.h"
+#import "NLMCSingletonDemo.h"
 
-@implementation MCSingletonDemo
+@implementation NLMCSingletonDemo
 
 #pragma mark - Singleton
 

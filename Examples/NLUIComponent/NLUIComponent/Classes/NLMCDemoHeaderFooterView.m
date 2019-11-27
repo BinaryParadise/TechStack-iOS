@@ -1,22 +1,22 @@
 //
-//  MCDemoHeaderFooterView.m
+//  NLMCDemoHeaderFooterView.m
 //  FoundationDemo
 //
 //  Created by Rake Yang on 2019/3/24.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "MCDemoHeaderFooterView.h"
+#import "NLMCDemoHeaderFooterView.h"
 #import <Masonry/Masonry.h>
 #import <MCUIKit/UIColor+MCExtension.h>
 
-@interface MCDemoHeaderFooterView ()
+@interface NLMCDemoHeaderFooterView ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
 @end
 
-@implementation MCDemoHeaderFooterView
+@implementation NLMCDemoHeaderFooterView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
