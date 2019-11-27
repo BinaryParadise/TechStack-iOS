@@ -57,6 +57,7 @@ PODS:
     - MCJSONKit (~> 0.5)
     - MCLogger (~> 0.6)
     - MCUIKit (~> 0.3)
+    - NLModuleService
     - Peregrine (~> 0.5)
   - NLUIComponent (0.1.0)
   - NLUtility (0.1.0)
@@ -160,7 +161,7 @@ SPEC CHECKSUMS:
   NLLogger: 1e4b5c11d46cd0ebea28252c23c8bcec43e06b82
   NLModelService: 4a8bf9ef1d2bf1f649b10d441948a567d40cc13f
   NLModuleService: 92d495f4d4c86e8201f7d6edb7b6c33b16b8afe6
-  NLRouterAction: 55c23bb37a4de65248fef2e1c76fa3492c330863
+  NLRouterAction: e6746501c6bb9c4d8e75f706a47a09511d16cfb4
   NLUIComponent: 28c9fdc90d84830027d2f9bbfdb660b04bbd056d
   NLUtility: 07b6efce83b718fcd3c589a9cdd91f7f87723312
   NLWeibo: 0b9c9657a786c92e559596158c6746d6932168c4

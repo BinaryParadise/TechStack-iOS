@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint TIRouterAction.podspec' to ensure this is a
+# Be sure to run `pod lib lint NLRouterAction.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -46,5 +46,6 @@ TODO: Add long description of the pod here.
   s.dependency 'MCLogger', '~> 0.6'
   s.dependency 'MCJSONKit', '~> 0.5'
   s.dependency 'Masonry', '~> 1.0'
+  s.dependency 'NLModuleService'
 
 end

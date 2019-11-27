@@ -1,6 +1,6 @@
 //
-//  TIRouterActionViewController.m
-//  TIRouterAction
+//  NLRouterActionViewController.m
+//  NLRouterAction
 //
 //  Created by Rake Yang on 2019/8/14.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -14,7 +14,7 @@
 #import "NLRouterAction.h"
 #import "NLRouterUIHelper.h"
 
-@interface TIRouterActionVC () <UITableViewDelegate, UITableViewDataSource>
+@interface NLRouterActionVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, copy) NSArray<PGRouterNode *> *data;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation TIRouterActionVC
+@implementation NLRouterActionVC
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:[self.class routerActionBundle]]) {
@@ -32,7 +32,7 @@
 }
 
 + (NSBundle *)routerActionBundle {
-    return [NSBundle bundleWithURL:[[NSBundle mainBundle].bundleURL URLByAppendingPathComponent:@"TIRouterAction.bundle"]];
+    return [NSBundle bundleWithURL:[[NSBundle mainBundle].bundleURL URLByAppendingPathComponent:@"NLRouterAction.bundle"]];
 }
 
 - (void)viewDidLoad {
@@ -60,7 +60,7 @@
 //    if (@available(iOS 11.0, *)) {
 //        self.tableView.insetsContentViewsToSafeArea = NO;
 //    }
-    [self.tableView registerClass:[TIRouterActionCell class] forCellReuseIdentifier:@"TIRouterActionCell"];
+    [self.tableView registerClass:[NLRouterActionCell class] forCellReuseIdentifier:@"NLRouterActionCell"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -120,7 +120,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TIRouterActionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TIRouterActionCell" forIndexPath:indexPath];
+    NLRouterActionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NLRouterActionCell" forIndexPath:indexPath];
     PGRouterNode *item = self.data[indexPath.section].childs[indexPath.row];
     if (item.config) {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -142,7 +142,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PGRouterNode *node = self.data[indexPath.section].childs[indexPath.row];
     if (!node.config) {
-        TIRouterActionVC *nodeVC = [[TIRouterActionVC alloc] init];
+        NLRouterActionVC *nodeVC = [[NLRouterActionVC alloc] init];
         nodeVC.routerNode = node;
         nodeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:nodeVC animated:YES];

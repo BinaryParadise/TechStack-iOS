@@ -1,6 +1,6 @@
 //
-//  TIRouterActionCell.h
-//  TIRouterAction
+//  NLRouterActionCell.h
+//  NLRouterAction
 //
 //  Created by Rake Yang on 2019/8/14.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TIRouterActionCell : UITableViewCell
+@interface NLRouterActionCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *descLabel;

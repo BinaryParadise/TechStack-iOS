@@ -1,6 +1,6 @@
 //
-//  TIRouterActionCell.m
-//  TIRouterAction
+//  NLRouterActionCell.m
+//  NLRouterAction
 //
 //  Created by Rake Yang on 2019/8/14.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NLRouterActionCell.h"
 #import <Masonry/Masonry.h>
 
-@implementation TIRouterActionCell
+@implementation NLRouterActionCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

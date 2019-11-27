@@ -7,7 +7,9 @@
 //
 
 #import "NLAppDelegate.h"
+#import <NLModuleService/NLModuleService.h>
 #import <NLRouterAction/NLRouterAction.h>
+#import <NLFoundation/NLFoundation.h>
 #import <MCLogger/MCLogger.h>
 
 @interface testClass : NSObject
@@ -40,12 +42,19 @@
     extern NSString * const kTestKey1;
     NSAssert(kTestKey1, @"应该是99");
     
+    [self registerModules];
+    
     return YES;
 }
 
 - (void)initMCLogger {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
+}
+
+- (void)registerModules {
+    [NLModuleService.new registerModule:[NLRouterAction new] forProtocol:@protocol(NLRouterActionProtocol)];
+    [NLModuleService.new registerModule:[NLFoundation new] forProtocol:@protocol(NLFoundationProtocol)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

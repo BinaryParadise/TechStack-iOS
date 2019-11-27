@@ -1,9 +1,9 @@
-# TIRouterAction
+# NLRouterAction
 
-[![CI Status](https://img.shields.io/travis/rakeyang/TIRouterAction.svg?style=flat)](https://travis-ci.org/rakeyang/TIRouterAction)
-[![Version](https://img.shields.io/cocoapods/v/TIRouterAction.svg?style=flat)](https://cocoapods.org/pods/TIRouterAction)
-[![License](https://img.shields.io/cocoapods/l/TIRouterAction.svg?style=flat)](https://cocoapods.org/pods/TIRouterAction)
-[![Platform](https://img.shields.io/cocoapods/p/TIRouterAction.svg?style=flat)](https://cocoapods.org/pods/TIRouterAction)
+[![CI Status](https://img.shields.io/travis/rakeyang/NLRouterAction.svg?style=flat)](https://travis-ci.org/rakeyang/NLRouterAction)
+[![Version](https://img.shields.io/cocoapods/v/NLRouterAction.svg?style=flat)](https://cocoapods.org/pods/NLRouterAction)
+[![License](https://img.shields.io/cocoapods/l/NLRouterAction.svg?style=flat)](https://cocoapods.org/pods/NLRouterAction)
+[![Platform](https://img.shields.io/cocoapods/p/NLRouterAction.svg?style=flat)](https://cocoapods.org/pods/NLRouterAction)
 
 ## Example
 
@@ -13,13 +13,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-TIRouterAction is available through [CocoaPods](https://cocoapods.org). To install
+NLRouterAction is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TIRouterAction'
+pod 'NLRouterAction'
 ```
 
 ## License
 
-TIRouterAction is available under the MIT license. See the LICENSE file for more info.
+NLRouterAction is available under the MIT license. See the LICENSE file for more info.

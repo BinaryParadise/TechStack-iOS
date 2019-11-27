@@ -1,6 +1,6 @@
 //
-//  TIRouterActionVC.h
-//  TIRouterAction
+//  NLRouterActionVC.h
+//  NLRouterAction
 //
 //  Created by Rake Yang on 2019/8/14.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TIRouterActionVC : UIViewController
+@interface NLRouterActionVC : UIViewController
 
 @property (nonatomic, weak) PGRouterNode *routerNode;
 

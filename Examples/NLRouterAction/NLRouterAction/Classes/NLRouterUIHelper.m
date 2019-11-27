@@ -1,6 +1,6 @@
 //
 //  TIRouterUIHelper.m
-//  TIRouterAction
+//  NLRouterAction
 //
 //  Created by Rake Yang on 2019/8/01.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -12,7 +12,7 @@
 @implementation TIRouterUIHelper
 
 + (NSBundle *)resourceBundle {
-    return [NSBundle bundleWithPath:[[NSBundle mainBundle].resourcePath stringByAppendingString:@"/TIRouterAction.bundle"]];
+    return [NSBundle bundleWithPath:[[NSBundle mainBundle].resourcePath stringByAppendingString:@"/NLRouterAction.bundle"]];
 }
 
 @end

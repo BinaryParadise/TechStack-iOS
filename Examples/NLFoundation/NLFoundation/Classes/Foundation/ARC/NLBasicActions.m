@@ -9,6 +9,7 @@
 #import "NLBasicActions.h"
 #import "NLRefrigerator.h"
 #import "NLARCViewController.h"
+#import <NLModuleService/NLModuleService.h>
 
 static FDAutoMonitor *monitor;
 
@@ -28,7 +29,7 @@ static FDAutoMonitor *monitor;
 }
 
 + (void)arcDemo:(PGRouterContext *)context {
-    NLARCViewController *vc = [[NLARCViewController alloc] init];
+    NLARCViewController *vc = [[NLARCViewController alloc] initWithNibName:nil bundle:NLM_Foundation.resourceBundle];
     [self pushViewController:vc animated:YES];
     [context finished];
 }
