@@ -42,6 +42,19 @@ PODS:
   - MJRefresh (3.2.2)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - NLDataType (0.1.0)
+  - NLFoundation (0.1.0):
+    - NLModuleService
+  - NLLogger (0.1.0):
+    - MCLogger (~> 0.5)
+  - NLModelService (0.1.0):
+    - NLUtility
+  - NLModuleService (0.1.0):
+    - NLModelService
+  - NLUIComponent (0.1.0)
+  - NLUtility (0.1.0)
+  - NLWeibo (0.1.0):
+    - Weibo_SDK (~> 3.2)
   - Peregrine (0.5.1)
   - Realm (3.21.0):
     - Realm/Headers (= 3.21.0)
@@ -72,12 +85,19 @@ DEPENDENCIES:
   - MCUIKit
   - MJRefresh
   - MLeaksFinder
+  - NLDataType (from `../NLDataType`)
+  - NLFoundation (from `../NLFoundation`)
+  - NLLogger (from `../NLLogger`)
+  - NLModelService (from `../NLModelService`)
+  - NLModuleService (from `../NLModuleService`)
+  - NLUIComponent (from `../NLUIComponent`)
+  - NLUtility (from `../NLUtility`)
+  - NLWeibo (from `../NLWeibo`)
   - Realm (~> 3.2)
   - SDWebImage
   - Specta
   - TIRouterAction (from `../TIRouterAction`)
   - Toast
-  - Weibo_SDK (~> 3.2)
 
 SPEC REPOS:
   trunk:
@@ -106,6 +126,22 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   MCJSONKit:
     :path: "../../../MCJSONKit"
+  NLDataType:
+    :path: "../NLDataType"
+  NLFoundation:
+    :path: "../NLFoundation"
+  NLLogger:
+    :path: "../NLLogger"
+  NLModelService:
+    :path: "../NLModelService"
+  NLModuleService:
+    :path: "../NLModuleService"
+  NLUIComponent:
+    :path: "../NLUIComponent"
+  NLUtility:
+    :path: "../NLUtility"
+  NLWeibo:
+    :path: "../NLWeibo"
   TIRouterAction:
     :path: "../TIRouterAction"
 
@@ -124,6 +160,14 @@ SPEC CHECKSUMS:
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  NLDataType: 6227c1da60802456c05ae4699003b2dac099a19e
+  NLFoundation: 7efb3434238b1ef4931c5f517f5e931fe37b942d
+  NLLogger: e3f414b6cbf166569623c4ac0301a588804c5af8
+  NLModelService: 3ca71b7a5a1ef7de44a536b32d2477703dbec41b
+  NLModuleService: 5d06ff5017401573ef1b36376566abbc8a91a676
+  NLUIComponent: 26b60d518c97b6a2d5f9864cbabf259863b7a6a9
+  NLUtility: a9a7d28e8e5e6a0d3278b0fc25f2bea2bad1a0e1
+  NLWeibo: 97168b9453cf790476e25e2ecb55d36cc10041eb
   Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
@@ -134,6 +178,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
 
-PODFILE CHECKSUM: bfe10d77ca9896e1978f2410379e1af64da7ac00
+PODFILE CHECKSUM: 9d3a960d4fba429b41a959535e3cae2572bb4f3c
 
 COCOAPODS: 1.8.4

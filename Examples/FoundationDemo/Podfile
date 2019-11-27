@@ -16,16 +16,23 @@ end
 
 target 'FoundationDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
 
   # Pods for FoundationDemo
   pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
   pod 'MCJSONKit', :path => '../../../MCJSONKit'
+  pod 'NLModuleService', :path => '../NLModuleService'
+  pod 'NLModelService', :path => '../NLModelService'
+  pod 'NLFoundation', :path => '../NLFoundation'
+  pod 'NLDataType', :path => '../NLDataType'
+  pod 'NLWeibo', :path => '../NLWeibo'
+  pod 'NLLogger', :path => '../NLLogger'
+  pod 'NLUtility', :path => '../NLUtility'
+  pod 'NLUIComponent', :path => '../NLUIComponent'
   pod 'Masonry'
   pod 'AFNetworking'
-  pod 'Weibo_SDK', '~> 3.2'
   pod 'Realm', '~> 3.2'
   pod 'SDWebImage'
   pod 'MJRefresh'
