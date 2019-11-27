@@ -7,7 +7,7 @@
 //
 
 #import "NLTestModel1.h"
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
 @interface NLTestModel1 (FDAddition1)
 

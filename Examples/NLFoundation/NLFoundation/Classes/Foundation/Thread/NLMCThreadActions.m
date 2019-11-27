@@ -25,7 +25,7 @@
     if (!thread) {
         void(^threadBlock)(void) = ^() {
             [NSThread sleepForTimeInterval:2];//= sleep(2)
-            MCLogDebug(@"执行任务 %@", [NSThread currentThread]);
+            NLLogDebug(@"执行任务 %@", [NSThread currentThread]);
             [context finished];
         };
         thread = [[NSThread alloc] initWithBlock:threadBlock];
@@ -34,7 +34,7 @@
     }
     
     //当前线程
-    MCLogDebug(@"当前线程 %@", [NSThread currentThread]);
+    NLLogDebug(@"当前线程 %@", [NSThread currentThread]);
 }
 
 + (void)demo_GCD_main:(PGRouterContext *)context {
@@ -47,13 +47,13 @@
     });*/
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        MCLogDebug(@"主队列异步任务1 %@", [NSThread currentThread]);
+        NLLogDebug(@"主队列异步任务1 %@", [NSThread currentThread]);
     });
     dispatch_async(dispatch_get_main_queue(), ^{
-        MCLogDebug(@"主队列异步任务2 %@", [NSThread currentThread]);
+        NLLogDebug(@"主队列异步任务2 %@", [NSThread currentThread]);
     });
     dispatch_async(dispatch_get_main_queue(), ^{
-        MCLogDebug(@"主队列异步任务3 %@", [NSThread currentThread]);
+        NLLogDebug(@"主队列异步任务3 %@", [NSThread currentThread]);
     });
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -61,7 +61,7 @@
     //在全局队列queue上执行十次输出操作
     //该函数按指定的次数将指定的Block追加到指定的Dispatch Queue中，并等待全部处理执行结束，好处是可以重复执行某项操作并复用我们的Block了
     dispatch_apply(10, queue, ^(size_t index) {
-        MCLogDebug(@"%zu", index);
+        NLLogDebug(@"%zu", index);
     });
     
     [context finished];
@@ -72,23 +72,23 @@
     dispatch_queue_t queue1 = dispatch_queue_create("queue1", DISPATCH_QUEUE_SERIAL);
     
     dispatch_sync(queue1, ^{
-        MCLogDebug(@"串行同步任务1 %@", [NSThread currentThread]);
+        NLLogDebug(@"串行同步任务1 %@", [NSThread currentThread]);
     });
     dispatch_sync(queue1, ^{
-        MCLogDebug(@"串行同步任务2 %@", [NSThread currentThread]);
+        NLLogDebug(@"串行同步任务2 %@", [NSThread currentThread]);
     });
     dispatch_sync(queue1, ^{
-        MCLogDebug(@"串行同步任务3 %@", [NSThread currentThread]);
+        NLLogDebug(@"串行同步任务3 %@", [NSThread currentThread]);
     });
     
     dispatch_async(queue1, ^{
-        MCLogDebug(@"串行异步任务1 %@", [NSThread currentThread]);
+        NLLogDebug(@"串行异步任务1 %@", [NSThread currentThread]);
     });
     dispatch_async(queue1, ^{
-        MCLogDebug(@"串行异步任务2 %@", [NSThread currentThread]);
+        NLLogDebug(@"串行异步任务2 %@", [NSThread currentThread]);
     });
     dispatch_async(queue1, ^{
-        MCLogDebug(@"串行异步任务3 %@", [NSThread currentThread]);
+        NLLogDebug(@"串行异步任务3 %@", [NSThread currentThread]);
     });
 }
 
@@ -97,24 +97,24 @@
     dispatch_queue_t queue2 = dispatch_queue_create("queue2", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_sync(queue2, ^{
-        MCLogDebug(@"并行-同步-1 %@", [NSThread currentThread]);
+        NLLogDebug(@"并行-同步-1 %@", [NSThread currentThread]);
     });
     dispatch_sync(queue2, ^{
-        MCLogDebug(@"并行-同步-2 %@", [NSThread currentThread]);
+        NLLogDebug(@"并行-同步-2 %@", [NSThread currentThread]);
     });
     dispatch_sync(queue2, ^{
-        MCLogDebug(@"并行-同步-3 %@", [NSThread currentThread]);
+        NLLogDebug(@"并行-同步-3 %@", [NSThread currentThread]);
     });
     
     dispatch_async(queue2, ^{
-        MCLogDebug(@"并行-异步-1 %@", [NSThread currentThread]);
+        NLLogDebug(@"并行-异步-1 %@", [NSThread currentThread]);
     });
     dispatch_async(queue2, ^{
         sleep(1);
-        MCLogDebug(@"并行-异步-2 %@", [NSThread currentThread]);
+        NLLogDebug(@"并行-异步-2 %@", [NSThread currentThread]);
     });
     dispatch_async(queue2, ^{
-        MCLogDebug(@"并行-异步-3 %@", [NSThread currentThread]);
+        NLLogDebug(@"并行-异步-3 %@", [NSThread currentThread]);
     });
     [context finished];
 }
@@ -124,33 +124,33 @@
     dispatch_queue_t queue3 = dispatch_queue_create("queue3", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(queue3, ^{
         for (int i=0; i<3; i++) {
-            MCLogDebug(@"并发-异步1-%d %@", i, [NSThread currentThread]);
+            NLLogDebug(@"并发-异步1-%d %@", i, [NSThread currentThread]);
         }
     });
     dispatch_async(queue3, ^{
         sleep(1);
         for (int i=0; i<3; i++) {
-            MCLogDebug(@"并发-异步2-%d %@", i, [NSThread currentThread]);
+            NLLogDebug(@"并发-异步2-%d %@", i, [NSThread currentThread]);
         }
     });
     
     dispatch_barrier_async(queue3, ^{
         sleep(2);
-        MCLogDebug(@"---------barrier---------%@", [NSThread currentThread]);
+        NLLogDebug(@"---------barrier---------%@", [NSThread currentThread]);
     });
     
-    MCLogWarn(@"继续执行 %@", [NSThread currentThread]);
+    NLLogWarn(@"继续执行 %@", [NSThread currentThread]);
     
     dispatch_async(queue3, ^{
         sleep(1);
         for (int i=0; i<3; i++) {
-            MCLogDebug(@"并发-异步3-%d %@", i, [NSThread currentThread]);
+            NLLogDebug(@"并发-异步3-%d %@", i, [NSThread currentThread]);
         }
         [context finished];
     });
     dispatch_async(queue3, ^{
         for (int i=0; i<3; i++) {
-            MCLogDebug(@"并发-异步4-%d %@", i, [NSThread currentThread]);
+            NLLogDebug(@"并发-异步4-%d %@", i, [NSThread currentThread]);
         }
     });
 }
@@ -165,26 +165,26 @@
 //    dispatch_group_enter(group);
     dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         sleep(2);
-        MCLogDebug(@"队列分组异步1 %@", [NSThread currentThread]);
+        NLLogDebug(@"队列分组异步1 %@", [NSThread currentThread]);
     });
     dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         sleep(1);
-        MCLogDebug(@"队列分组异步2 %@", [NSThread currentThread]);
+        NLLogDebug(@"队列分组异步2 %@", [NSThread currentThread]);
     });
     dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         sleep(1);
-        MCLogDebug(@"队列分组异步3 %@", [NSThread currentThread]);
+        NLLogDebug(@"队列分组异步3 %@", [NSThread currentThread]);
     });
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         dispatch_group_enter(group);
         sleep(2);
-        MCLogWarn(@"手动管理任务");
+        NLLogWarn(@"手动管理任务");
         dispatch_group_leave(group);
     });
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        MCLogDebug(@"全部完成 %@", [NSThread currentThread]);
+        NLLogDebug(@"全部完成 %@", [NSThread currentThread]);
         [context finished];
     });
 }

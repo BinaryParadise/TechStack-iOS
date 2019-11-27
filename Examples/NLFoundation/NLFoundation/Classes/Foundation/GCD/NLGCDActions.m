@@ -31,16 +31,16 @@
 + (void)asyncConcurrent:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_queue_create("com.yuqi.concurrent", DISPATCH_QUEUE_CONCURRENT);
     
-    MCLogInfo(@"创建并行队列: %@", queue);
+    NLLogInfo(@"创建并行队列: %@", queue);
     //异步执行将开启新线程
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         [context finished];
@@ -49,17 +49,17 @@
 
 + (void)syncConcurrent:(PGRouterContext *)context {
     dispatch_queue_t queue = dispatch_queue_create("com.yuqi.concurrent", DISPATCH_QUEUE_CONCURRENT);
-    MCLogInfo(@"创建并行队列: %@", queue);
+    NLLogInfo(@"创建并行队列: %@", queue);
     //同步执行必须执行完后才能继续往下执行，不会开启新线程
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
         sleep(3);
     });
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
         [context finished];
@@ -72,17 +72,17 @@
     
     //虽然是异步执行，由于是放入串行队列中将不会开启新线程
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         sleep(1);
-        MCLogDebug(@"任务2：%@（等待1秒)", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@（等待1秒)", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogVerbose(@"完成");
+        NLLogVerbose(@"完成");
         [context finished];
     });
 }
@@ -93,14 +93,14 @@
     
     //同步执行必须执行完后才能继续往下执行，不会开启新线程
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
         sleep(5);
-        MCLogDebug(@"任务2：%@ sleep(5)", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@ sleep(5)", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
         [context finished];
@@ -112,14 +112,14 @@
     
     //需要等待任务1执行完成，造成UI阻塞
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务1：%@ sleep(5)", [NSThread currentThread]);
+        NLLogWarn(@"任务1：%@ sleep(5)", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         sleep(5);
-        MCLogWarn(@"任务2：%@", [NSThread currentThread]);
+        NLLogWarn(@"任务2：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+        NLLogWarn(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         [context finished];
@@ -133,13 +133,13 @@
     //在主队列或者串行队列中执行同步任务会造成Deadlock
     dispatch_sync(queue, ^{
         sleep(1);
-        MCLogWarn(@"任务1：%@ sleep(1)", [NSThread currentThread]);
+        NLLogWarn(@"任务1：%@ sleep(1)", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
-        MCLogWarn(@"任务2：%@", [NSThread currentThread]);
+        NLLogWarn(@"任务2：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
-        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+        NLLogWarn(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
         [context finished];
@@ -150,13 +150,13 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_async(queue, ^{
         [context finished];
@@ -167,13 +167,13 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务1：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     dispatch_sync(queue, ^{
         [context finished];
@@ -187,20 +187,20 @@
     //dispatch_group_async_f表示执行C语言函数
     dispatch_group_async(group, queue, ^{
         sleep(2);
-        MCLogDebug(@"任务1：%@ sleep(2)", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@ sleep(2)", [NSThread currentThread]);
     });
     
     dispatch_group_async(group, queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     
     dispatch_group_async(group, queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     
     //dispatch_group_notify_f表示执行C语言函数
     dispatch_group_notify(group, queue, ^{
-        MCLogWarn(@"执行完成：%@", [NSThread currentThread]);
+        NLLogWarn(@"执行完成：%@", [NSThread currentThread]);
         [context finished];
     });
 }
@@ -212,20 +212,20 @@
     //dispatch_group_async_f表示执行C语言函数
     dispatch_group_async(group, queue, ^{
         sleep(2);
-        MCLogDebug(@"任务1：%@ sleep(2)", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@ sleep(2)", [NSThread currentThread]);
     });
     
     dispatch_group_async(group, queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     
     dispatch_group_async(group, queue, ^{
-        MCLogDebug(@"任务3：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务3：%@", [NSThread currentThread]);
     });
     
     //dispatch_group_notify_f表示执行C语言函数
     dispatch_group_notify(group, queue, ^{
-        MCLogDebug(@"执行完成：%@", [NSThread currentThread]);
+        NLLogDebug(@"执行完成：%@", [NSThread currentThread]);
         [context finished];
     });
 }
@@ -235,11 +235,11 @@
     
     dispatch_async(queue, ^{
         sleep(5);
-        MCLogDebug(@"任务1：%@ sleep(5)", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@ sleep(5)", [NSThread currentThread]);
     });
     
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     
     //dispatch_barrier_async的任务只能单独执行，且只对并行队列有效
@@ -247,13 +247,13 @@
     //2、不会等待自己的任务结束，它会继续把后面的任务插入到队列，然后等待自己的任务结束后才执行后面任务。
     dispatch_barrier_async(queue, ^{
         sleep(2);
-        MCLogWarn(@"插入任务：%@", [NSThread currentThread]);
+        NLLogWarn(@"插入任务：%@", [NSThread currentThread]);
     });
     
-    MCLogVerbose(@"继续加入任务");
+    NLLogVerbose(@"继续加入任务");
     
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+        NLLogWarn(@"任务3：%@", [NSThread currentThread]);
     });
     
     dispatch_barrier_async(queue, ^{
@@ -265,16 +265,16 @@
     dispatch_queue_t queue = dispatch_queue_create("dispatchQueue", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_barrier_async(queue, ^{
-        MCLogDebug(@"开始：%@", [NSThread currentThread]);
+        NLLogDebug(@"开始：%@", [NSThread currentThread]);
     });
     
     dispatch_async(queue, ^{
         sleep(5);
-        MCLogDebug(@"任务1：%@ sleep(5)", [NSThread currentThread]);
+        NLLogDebug(@"任务1：%@ sleep(5)", [NSThread currentThread]);
     });
     
     dispatch_async(queue, ^{
-        MCLogDebug(@"任务2：%@", [NSThread currentThread]);
+        NLLogDebug(@"任务2：%@", [NSThread currentThread]);
     });
     
     //dispatch_barrier_async的任务只能单独执行，且只对并行队列有效
@@ -282,13 +282,13 @@
     //2、需要等待自己的任务结束之后才会继续插入被后面的任务，然后执行
     dispatch_barrier_sync(queue, ^{
         sleep(2);
-        MCLogWarn(@"插入任务：%@", [NSThread currentThread]);
+        NLLogWarn(@"插入任务：%@", [NSThread currentThread]);
     });
     
-    MCLogVerbose(@"继续加入任务");
+    NLLogVerbose(@"继续加入任务");
     
     dispatch_async(queue, ^{
-        MCLogWarn(@"任务3：%@", [NSThread currentThread]);
+        NLLogWarn(@"任务3：%@", [NSThread currentThread]);
     });
     
     dispatch_barrier_async(queue, ^{
@@ -328,7 +328,7 @@
         //除了使用信号量也可以使用copy的后的数组，这样不会被异步改变
         [nmarr addObjectsFromArray:marr];
         
-        MCLogDebug(@"循环耗时：%.3fs, %zd/%zd", [[NSDate date] timeIntervalSinceDate:date], marr.count, nmarr.count);
+        NLLogDebug(@"循环耗时：%.3fs, %zd/%zd", [[NSDate date] timeIntervalSinceDate:date], marr.count, nmarr.count);
         if (useSemap) {
             dispatch_semaphore_signal(semaphore);
         }
@@ -350,7 +350,7 @@
         if (useSemap) {
             dispatch_semaphore_signal(semaphore);
         }
-        MCLogDebug(@"修改耗时：%.3fs, %zd", [[NSDate date] timeIntervalSinceDate:date], marr.count);
+        NLLogDebug(@"修改耗时：%.3fs, %zd", [[NSDate date] timeIntervalSinceDate:date], marr.count);
     });
     
     dispatch_barrier_async(queue, ^{

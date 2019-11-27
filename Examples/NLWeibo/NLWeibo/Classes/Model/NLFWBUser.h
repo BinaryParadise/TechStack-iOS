@@ -11,7 +11,7 @@
 /**
  微博用户
  */
-@interface NLFWBUser : NLBase
+@interface NLFWBUser : NLObject
 
 /**
  用户UID

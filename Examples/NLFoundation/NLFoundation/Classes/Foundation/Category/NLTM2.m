@@ -11,11 +11,11 @@
 @implementation NLTM2
 
 + (void)initialize {
-    MCLogDebug(@"父类");
+    NLLogDebug(@"父类");
 }
 
 - (NSInteger)hello {
-    MCLogDebug(@"");
+    NLLogDebug(@"");
     return 0;
 }
 
@@ -24,11 +24,11 @@
 @implementation NLTM2 (Extra1)
 
 + (void)initialize {
-    MCLogDebug(@"分类");
+    NLLogDebug(@"分类");
 }
 
 - (NSInteger)hello {
-    MCLogDebug(@"");
+    NLLogDebug(@"");
     return 1;
 }
 
@@ -37,11 +37,11 @@
 @implementation NLTM2 (Extra2)
 
 + (void)initialize {
-    MCLogDebug(@"分类");
+    NLLogDebug(@"分类");
 }
 
 - (NSInteger)hello {
-    MCLogDebug(@"");
+    NLLogDebug(@"");
     return 2;
 }
 
@@ -50,7 +50,7 @@
 @implementation FDTM2Child1
 
 + (void)initialize {
-    MCLogDebug(@"子类1，此处未实现时父类将多次调用");
+    NLLogDebug(@"子类1，此处未实现时父类将多次调用");
 }
 
 @end
@@ -58,7 +58,7 @@
 @implementation FDTM2Child2
 
 + (void)initialize {
-    MCLogDebug(@"子类2");
+    NLLogDebug(@"子类2");
 }
 
 @end

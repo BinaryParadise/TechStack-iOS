@@ -7,7 +7,7 @@
 //
 
 #import "NLRouterViewController.h"
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 #import <Masonry/Masonry.h>
 
 @interface NLRouterViewController ()
@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIViewController *vc = [TIRouterActionManager mangerController];
+    UIViewController *vc = [NLRouterActionManager mangerController];
     [self addChildViewController:vc];
     [self.view addSubview:vc.view];
     [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {

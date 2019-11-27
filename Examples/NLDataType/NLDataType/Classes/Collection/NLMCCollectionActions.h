@@ -6,9 +6,9 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
-@interface NLMCCollectionActions : TIRouterActionBase
+@interface NLMCCollectionActions : NLRouterActionBase
 
 PGMethod(unsafeArray, "fd://Foundation/Collection/NSArray/unsafe?c=正常使用（不安全🔞）");
 PGMethod(safeArray, "fd://Foundation/Collection/NSArray/safe?safe=1&c=安全使用");

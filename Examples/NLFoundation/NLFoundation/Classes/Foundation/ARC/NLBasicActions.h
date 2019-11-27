@@ -6,11 +6,11 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <TIRouterAction/TIRouterActionBase.h>
+#import <NLRouterAction/NLRouterActionBase.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLBasicActions : TIRouterActionBase
+@interface NLBasicActions : NLRouterActionBase
 
 PGMethod(kvoDemo, "fd://Foundation/KVO&KVC/KVO?c=Key-Value Observing");
 

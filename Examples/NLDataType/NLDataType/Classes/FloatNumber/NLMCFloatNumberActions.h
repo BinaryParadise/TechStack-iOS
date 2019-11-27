@@ -6,12 +6,12 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
 /**
  浮点数
  */
-@interface NLMCFloatNumberActions : TIRouterActionBase
+@interface NLMCFloatNumberActions : NLRouterActionBase
 
 PGMethod(processFloat, "fd://Foundation/DataType/Float");
 

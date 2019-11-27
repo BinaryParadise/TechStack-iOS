@@ -47,7 +47,7 @@ static pthread_mutex_t _mutex;
             [lock lock];
             if (value > 0) {
                 
-                MCLogDebug(@"value = %d", value);
+                NLLogDebug(@"value = %d", value);
                 sleep(1);
                 RecursiveMethod(value - 1);
             }
@@ -67,13 +67,13 @@ static pthread_mutex_t _mutex;
      */
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if(OSSpinLockTry(&oslock)) {
-            MCLogDebug(@"%@ 上锁%d", [NSThread currentThread], oslock);
+            NLLogDebug(@"%@ 上锁%d", [NSThread currentThread], oslock);
             sleep(3);
-            MCLogDebug(@"%@ 恢复%d", [NSThread currentThread], oslock);
+            NLLogDebug(@"%@ 恢复%d", [NSThread currentThread], oslock);
             OSSpinLockUnlock(&oslock);
-            MCLogDebug(@"%@ 解锁%d", [NSThread currentThread], oslock);
+            NLLogDebug(@"%@ 解锁%d", [NSThread currentThread], oslock);
         } else {
-            MCLogWarn(@"%@ 锁住了", [NSThread currentThread]);
+            NLLogWarn(@"%@ 锁住了", [NSThread currentThread]);
         }
     });
     [context finished];
@@ -81,16 +81,16 @@ static pthread_mutex_t _mutex;
 
 + (void)go_OSUnfairLock:(PGRouterContext *)context {
     static os_unfair_lock uflock = OS_UNFAIR_LOCK_INIT;
-    MCLogVerbose(@"%p", &uflock);
+    NLLogVerbose(@"%p", &uflock);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        if(os_unfair_lock_trylock(&uflock)) {
         os_unfair_lock_lock(&uflock);//解锁后继续执行
-            MCLogDebug(@"%@ 上锁", [NSThread currentThread]);
+            NLLogDebug(@"%@ 上锁", [NSThread currentThread]);
             sleep(3);
             os_unfair_lock_unlock(&uflock);
-            MCLogDebug(@"%@ 解锁", [NSThread currentThread]);
+            NLLogDebug(@"%@ 解锁", [NSThread currentThread]);
 //        }
-        MCLogWarn(@"线程即将结束");
+        NLLogWarn(@"线程即将结束");
     });
     [context finished];
 }
@@ -101,12 +101,12 @@ static pthread_mutex_t _mutex;
     dispatch_async(queue, ^{
         sleep(1);
         long ret = dispatch_semaphore_signal(semaphore);
-        MCLogDebug(@"准备完成，发送信号，当前等待=%ld", ret);
+        NLLogDebug(@"准备完成，发送信号，当前等待=%ld", ret);
     });
     dispatch_async(queue, ^{
         long ret = dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         sleep(3);
-        MCLogDebug(@"任务1完成 %@, %d", [NSThread currentThread], ret);
+        NLLogDebug(@"任务1完成 %@, %d", [NSThread currentThread], ret);
         dispatch_semaphore_signal(semaphore);
     });
     dispatch_async(queue, ^{
@@ -114,16 +114,16 @@ static pthread_mutex_t _mutex;
         long ret = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC));
         if (ret == 0) {//分支处理
             //收到信号，继续执行
-            MCLogDebug(@"任务2完成 %@", [NSThread currentThread]);
+            NLLogDebug(@"任务2完成 %@", [NSThread currentThread]);
             dispatch_semaphore_signal(semaphore);
         } else {
             //超时时间内未收到信号
-            MCLogDebug(@"线程阻塞 %@", [NSThread currentThread]);
+            NLLogDebug(@"线程阻塞 %@", [NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        MCLogDebug(@"任务3完成 %@", [NSThread currentThread]);
+        NLLogDebug(@"任务3完成 %@", [NSThread currentThread]);
         dispatch_semaphore_signal(semaphore);
         [context finished];
     });
@@ -153,10 +153,10 @@ static pthread_mutex_t _mutex;
         [lock lock];
         if (_count > 0) {
             _count--;
-            MCLogDebug(@"剩余iPhone = %ld，%@", _count, [NSThread currentThread]);
+            NLLogDebug(@"剩余iPhone = %ld，%@", _count, [NSThread currentThread]);
             [lock unlock];
         } else {
-            MCLogDebug(@"iPhone卖光了 %@", [NSThread currentThread]);
+            NLLogDebug(@"iPhone卖光了 %@", [NSThread currentThread]);
             [lock unlock];
             break;
         }
@@ -171,21 +171,21 @@ static pthread_mutex_t _mutex;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         if ([context.userInfo mc_boolForKey:@"try"]) {
             if (pthread_mutex_trylock(&_mutex) == 0) {
-                MCLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
+                NLLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
                 sleep(3);
-                MCLogDebug(@"解锁... %@", [NSThread currentThread]);
+                NLLogDebug(@"解锁... %@", [NSThread currentThread]);
                 pthread_mutex_unlock(&_mutex);
             } else {
-                MCLogWarn(@"锁住了 %@", [NSThread currentThread]);
+                NLLogWarn(@"锁住了 %@", [NSThread currentThread]);
             }
         } else {
             if (pthread_mutex_lock(&_mutex) == 0) {
-                MCLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
+                NLLogDebug(@"进入临界区,开始锁定 %@", [NSThread currentThread]);
                 sleep(3);
-                MCLogDebug(@"解锁... %@", [NSThread currentThread]);
+                NLLogDebug(@"解锁... %@", [NSThread currentThread]);
                 pthread_mutex_unlock(&_mutex);
             } else {
-                MCLogWarn(@"锁住了 %@", [NSThread currentThread]);
+                NLLogWarn(@"锁住了 %@", [NSThread currentThread]);
             }
         }
     });
@@ -202,11 +202,11 @@ static pthread_mutex_t _mutex;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [condition lock];
         while (marr.count == 0) {
-            MCLogDebug(@"等待产品");//让当前线程处于等待状态
+            NLLogDebug(@"等待产品");//让当前线程处于等待状态
             [condition wait];
         }
         [marr removeObjectAtIndex:0];
-        MCLogDebug(@"包装产品");
+        NLLogDebug(@"包装产品");
         [condition unlock];
         [context finished];
     });
@@ -215,7 +215,7 @@ static pthread_mutex_t _mutex;
         [condition lock];
         sleep(2);
         [marr addObject:[NSDate date]];
-        MCLogDebug(@"生产产品");
+        NLLogDebug(@"生产产品");
         [condition signal];//CPU发信号告诉线程不用在等待，可以继续执行
         [condition unlock];
     });
@@ -230,7 +230,7 @@ static pthread_mutex_t _mutex;
         [lock lockWhenCondition:4];
         NSLog(@"线程1");
         sleep(2);
-        MCLogDebug(@"线程1解锁成功");
+        NLLogDebug(@"线程1解锁成功");
         [lock unlockWithCondition:5];
         [context finished];
     });
@@ -240,7 +240,7 @@ static pthread_mutex_t _mutex;
         [lock lockWhenCondition:0];
         NSLog(@"线程2");
         sleep(3);
-        MCLogDebug(@"线程2解锁成功");
+        NLLogDebug(@"线程2解锁成功");
         [lock unlockWithCondition:2];
     });
     
@@ -249,7 +249,7 @@ static pthread_mutex_t _mutex;
         [lock lockWhenCondition:2];
         NSLog(@"线程3");
         sleep(3);
-        MCLogDebug(@"线程3解锁成功");
+        NLLogDebug(@"线程3解锁成功");
         [lock unlockWithCondition:3];
     });
     
@@ -258,7 +258,7 @@ static pthread_mutex_t _mutex;
         [lock lockWhenCondition:3];
         NSLog(@"线程4");
         sleep(2);
-        MCLogDebug(@"线程4解锁成功");
+        NLLogDebug(@"线程4解锁成功");
         [lock unlockWithCondition:4];
     });
 }
@@ -278,7 +278,7 @@ static pthread_mutex_t _mutex;
             [lock lock];
             if (value > 0) {
                 
-                MCLogDebug(@"value = %d", value);
+                NLLogDebug(@"value = %d", value);
                 sleep(1);
                 RecursiveMethod(value - 1);
             }

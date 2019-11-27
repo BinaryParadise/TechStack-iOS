@@ -11,15 +11,24 @@
 @interface NLJSARCDemoA ()
 
 @property (nonatomic, copy) void (^completion)(void);
+@property (nonatomic, copy) NSString *identify;
+
 
 @end
 
 @implementation NLJSARCDemoA
 
+- (instancetype)initWithTag:(NSString *)tag {
+    if (self = [super init]) {
+        _identify = tag;
+    }
+    return self;
+}
+
 - (void)testAssign {
     self.assignDemo = [[NLJSARCDemoA alloc] initWithTag:@"立即释放"];
     
-    MCLogDebug(@"使用assign修饰对象，会在方法执行完成后立即释放,造成野指针");
+    NLLogDebug(@"使用assign修饰对象，会在方法执行完成后立即释放,造成野指针");
 }
 
 - (void)testWeak {

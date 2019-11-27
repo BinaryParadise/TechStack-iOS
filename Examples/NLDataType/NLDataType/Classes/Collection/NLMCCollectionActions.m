@@ -10,6 +10,10 @@
 #import "NSMutableArray+JSSafety.h"
 #import "NLNSArrayViewController.h"
 
+#define MACH_TIME_START    NSDate *startDate = [NSDate date];\
+
+#define MACH_TIME_END(fmt)   NLLogWarn(fmt @"耗时：%.3fs", [NSDate date].timeIntervalSince1970 - startDate.timeIntervalSince1970);
+
 static NSMutableArray *_marr;
 @interface NLMCCollectionActions ()
 
@@ -40,7 +44,7 @@ static NSMutableArray *_marr;
         if ([context.userInfo mc_boolForKey:@"safe"]) {
             [marr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if (!running && show) {
-                    MCLogWarn(@"%@", obj);
+                    NLLogWarn(@"%@", obj);
                     show = NO;
                 }
             }];
@@ -49,12 +53,12 @@ static NSMutableArray *_marr;
                 //不要直接遍历NSMutableArray
                 for (id obj1 in marr) {//遍历的同时元素被修改导致crash
                     if (!running && show) {
-                        MCLogWarn(@"%@", obj1);
+                        NLLogWarn(@"%@", obj1);
                         show = NO;
                     }
                 }
             } @catch (NSException *exception) {
-                MCLogError(@"%@", exception);
+                NLLogError(@"%@", exception);
             } @finally {
                 
             }
@@ -65,15 +69,15 @@ static NSMutableArray *_marr;
     });
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        MCLogDebug(@"休眠");
+        NLLogDebug(@"休眠");
         [NSThread sleepForTimeInterval:0.2];
-        MCLogDebug(@"取消");
+        NLLogDebug(@"取消");
         running = NO;
-        MCLogInfo(@"遍历移除数组元素[52428000-58981500]");
+        NLLogInfo(@"遍历移除数组元素[52428000-58981500]");
         for (NSUInteger i=65535*800; i<=65535*900; i++) {
             [marr removeObjectAtIndex:i];
         }
-        MCLogDebug(@"移除完成...");
+        NLLogDebug(@"移除完成...");
     });
 }
 

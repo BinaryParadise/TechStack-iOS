@@ -11,6 +11,7 @@ sourcePaths:  #源码目录列表
   - ../NLWeibo/NLWeibo
   - ../NLFoundation/NLFoundation
   - ../NLDataType/NLDataType
+  - ../TIRouterAction/TIRouterAction
 imagePaths: #图片目录列表
 prefix: FD=NL #旧前缀=新前缀
 ignorePaths: #忽略的文件夹列表

@@ -6,11 +6,11 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLMCThreadActions : TIRouterActionBase
+@interface NLMCThreadActions : NLRouterActionBase
 
 PGMethod(demo_NSThread, "fd://Foundation/Thread/NSThread");
 

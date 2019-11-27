@@ -17,7 +17,7 @@
     if (self = [super init]) {
         //宏定义已寸在时以最后导入的定义为准
         int i = kMCMacroTestValue;
-        MCLogDebug(@"%d", i);
+        NLLogDebug(@"%d", i);
     }
     return self;
 }

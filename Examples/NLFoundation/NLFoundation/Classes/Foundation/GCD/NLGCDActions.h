@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
 /**
  警告：在主队列中执行同步任务会造成Dead Lock
@@ -15,7 +15,7 @@
  任务：其实就是代码块，需要执行的内容
  队列：用来存放任务的数组
  */
-@interface NLGCDActions : TIRouterActionBase
+@interface NLGCDActions : NLRouterActionBase
 
 @property (nonatomic, copy) NSString *taskName;
 

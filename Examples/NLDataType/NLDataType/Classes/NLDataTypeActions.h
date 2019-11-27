@@ -6,11 +6,11 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "TIRouterActionBase.h"
+#import <NLRouterAction/NLRouterActionBase.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLDataTypeActions : TIRouterActionBase
+@interface NLDataTypeActions : NLRouterActionBase
 
 PGMethod(constVariable, "fd://Foundation/DataType/Const");
 

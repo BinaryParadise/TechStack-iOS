@@ -7,7 +7,7 @@
 //
 
 #import "NLAppDelegate.h"
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 #import <MCLogger/MCLogger.h>
 
 @interface testClass : NSObject

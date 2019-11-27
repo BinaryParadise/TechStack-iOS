@@ -7,13 +7,12 @@
 //
 
 #import "NLWeiboViewController.h"
-#import "NLAutoRefreshTableView.h"
-#import "NLWeiboTableViewCell.h"
+#import <NLUIComponent/NLUIComponent.h>
 #import "NLWeiboPresenter.h"
 #import <Masonry/Masonry.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/Toast.h>
-#import "NLPlaceholderView.h"
+#import "NLWeiboTableViewCell.h"
 
 @interface NLWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
 @interface NLTestModel1 : NSObject
 

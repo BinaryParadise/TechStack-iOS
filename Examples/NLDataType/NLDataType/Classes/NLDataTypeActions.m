@@ -22,7 +22,7 @@ FOUNDATION_EXTERN NSString * const KTestKey3 = @"xxxxx";
 @implementation NLDataTypeActions
 
 + (void)constVariable:(PGRouterContext *)context {
-    MCLogWarn(@"const右边无法更改");
+    NLLogWarn(@"const右边无法更改");
     int a = 99;
     p1 = &a;
     //*p1 = 10; 无法修改
@@ -37,7 +37,7 @@ FOUNDATION_EXTERN NSString * const KTestKey3 = @"xxxxx";
     //kTestKey1 = @"https://www.apple.com"; 无法修改
     kTestKey2 = @"https://www.apple.com";
     
-    MCLogDebug(@"p1=%d p2=%d p3=%d, key=%@", *p1, *p2, p3, kTestKey2);
+    NLLogDebug(@"p1=%d p2=%d p3=%d, key=%@", *p1, *p2, p3, kTestKey2);
     
     [context finished];
 }

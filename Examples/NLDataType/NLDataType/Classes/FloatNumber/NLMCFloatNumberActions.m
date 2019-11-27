@@ -19,14 +19,14 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
     NSNumber *price = dict[@"price"];
     NSString *priceStr = [NSString stringWithFormat:@"%lf", price.doubleValue];
-    MCLogInfo(@"处理之前：%@ = %@ %d", [price stringValue], priceStr, [priceStr isEqualToString:price.stringValue]);
+    NLLogInfo(@"处理之前：%@ = %@ %d", [price stringValue], priceStr, [priceStr isEqualToString:price.stringValue]);
     
     NSDecimalNumber *decimalPrice = [NSDecimalNumber decimalNumberWithString:priceStr];
-    MCLogDebug(@"处理之后：%@", [decimalPrice stringValue]);
+    NLLogDebug(@"处理之后：%@", [decimalPrice stringValue]);
     
     NSString *inputStr = @"0.21";
     
-    MCLogDebug(@"%@", @(inputStr.doubleValue * 1.0));
+    NLLogDebug(@"%@", @(inputStr.doubleValue * 1.0));
     
     [context onDone:YES object:nil];
 }

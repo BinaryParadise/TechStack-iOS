@@ -9,7 +9,7 @@
 #import "NLWeiboPresenter.h"
 #import <Weibo_SDK/WeiboSDK.h>
 #import <MCLogger/MCLogger.h>
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 #import "NLWeiboResponse.h"
 
 @interface NLWeiboPresenter () <WeiboSDKDelegate>
@@ -73,7 +73,7 @@
 - (void)fetchEmotions {
     [NLFWBRequestManager getDataWithURL:@"emotions.json" params:nil completion:^(id  _Nullable data, NSError * _Nullable error) {
         if (error) {
-            DDLogError(@"%@", error);
+            NLLogError(@"%@", error);
         }
     }];
 }
@@ -91,7 +91,7 @@
             [[NSUserDefaults standardUserDefaults] setObject:response.userInfo forKey:@"weibo_sso_data"];
         }
     } else {
-        DDLogError(@"%@", response.userInfo);
+        NLLogError(@"%@", response.userInfo);
     }
 }
 

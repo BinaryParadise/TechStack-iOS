@@ -7,7 +7,7 @@
 //
 
 #import "NLRefrigerator.h"
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
 
 @implementation FDColdRoom
 
@@ -45,7 +45,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSNumber *temperature = change[NSKeyValueChangeNewKey];
-    MCLogDebug(@"当前冰箱冷藏室设定温度:%.2f°C", temperature.doubleValue);
+    NLLogDebug(@"当前冰箱冷藏室设定温度:%.2f°C", temperature.doubleValue);
 }
 
 @end

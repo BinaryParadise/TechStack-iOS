@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UITableViewCell+MCRegister.h"
+#import <NLUIComponent/NLUIComponent.h>
 #import "../Model/NLFWBStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN

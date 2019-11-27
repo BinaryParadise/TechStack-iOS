@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NLBase.h"
+#import <NLModelService/NLObject.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLWeiboResponse : NLBase
+@interface NLWeiboResponse : NLObject
 
 @property(nonatomic, copy) NSArray *advertises;
 @property(nonatomic, copy) NSArray *ad;

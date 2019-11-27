@@ -26,7 +26,7 @@ static void *exstensionKey = &exstensionKey;
 }
 
 - (void)testMethod {
-    MCLogWarn(@"覆盖方法");
+    NLLogWarn(@"覆盖方法");
 }
 
 @end

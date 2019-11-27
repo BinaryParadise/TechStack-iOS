@@ -19,7 +19,7 @@
 }
 
 - (void)testMethod {
-    MCLogWarn(@"父类方法");
+    NLLogWarn(@"父类方法");
 }
 
 @end

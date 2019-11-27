@@ -38,11 +38,11 @@
 
 - (IBAction)brokeRecycle:(id)sender {
     self.demoA.strongDemo = nil;
-    MCLogDebug(@"打破循环引用");
+    NLLogDebug(@"打破循环引用");
 }
 
 - (void)dealloc {
-    MCLogWarn(@"");
+    NLLogWarn(@"");
 }
 
 @end

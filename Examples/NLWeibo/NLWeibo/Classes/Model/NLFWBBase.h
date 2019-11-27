@@ -6,11 +6,11 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <NLModelService/NLBase.h>
+#import <NLModelService/NLObject.h>
 
 /**
  微博基础模型
  */
-@interface NLFWBBase : NLBase
+@interface NLFWBBase : NLObject
 
 @end

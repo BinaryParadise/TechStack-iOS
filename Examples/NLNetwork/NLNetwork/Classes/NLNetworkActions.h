@@ -6,11 +6,11 @@
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
 //
 
-#import "TIRouterActionBase.h"
+#import "NLTIRouterActionBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLNetworkActions : TIRouterActionBase
+@interface NLNetworkActions : NLTIRouterActionBase
 
 PGMethod(_SyncRef, "fd://Network/NSURLConnection/SyncRef?c=同步请求，传引用");
 PGMethod(_SyncBlock, "fd://Network/NSURLConnection/SyncBlock?c=同步请求，block回调");

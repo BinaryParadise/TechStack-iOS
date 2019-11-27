@@ -14,14 +14,14 @@ if File.exists?("Podfile.lock")
   `rm Podfile.lock`
 end
 
-target 'FoundationDemo' do
+target 'Neverland' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
   # Pods for FoundationDemo
-  pod 'TIRouterAction', :path => '../TIRouterAction'
   pod 'MBProgressHUD'
   pod 'MCUIKit'
+  pod 'NLRouterAction', :path => '../NLRouterAction'
   pod 'MCJSONKit', :path => '../../../MCJSONKit'
   pod 'NLModuleService', :path => '../NLModuleService'
   pod 'NLModelService', :path => '../NLModelService'
@@ -39,17 +39,10 @@ target 'FoundationDemo' do
   pod 'MCObserverKit'
   pod 'Toast'
   pod 'MLeaksFinder'
-
-  target 'FoundationDemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'Specta'
-    pod 'Expecta'
-  end
-
+#  pod 'Peregrine', :path => '../../../Peregrine'
 end
 
 post_install do |installer|
-    require_relative 'Pods/Peregrine/Peregrine/PGConfiguration.rb'
+    require_relative '../../../Peregrine/Peregrine/PGConfiguration.rb'
     PGConfiguration::configure_project(installer)
 end

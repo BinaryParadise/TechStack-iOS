@@ -17,7 +17,6 @@ PODS:
   - CocoaLumberjack (3.6.0):
     - CocoaLumberjack/Core (= 3.6.0)
   - CocoaLumberjack/Core (3.6.0)
-  - Expecta (1.0.6)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
@@ -48,12 +47,21 @@ PODS:
   - NLLogger (0.1.0):
     - MCLogger (~> 0.5)
   - NLModelService (0.1.0):
+    - NLLogger
     - NLUtility
   - NLModuleService (0.1.0):
     - NLModelService
+  - NLRouterAction (0.1.0):
+    - Masonry (~> 1.0)
+    - MBProgressHUD
+    - MCJSONKit (~> 0.5)
+    - MCLogger (~> 0.6)
+    - MCUIKit (~> 0.3)
+    - Peregrine (~> 0.5)
   - NLUIComponent (0.1.0)
   - NLUtility (0.1.0)
   - NLWeibo (0.1.0):
+    - NLLogger
     - Weibo_SDK (~> 3.2)
   - Peregrine (0.5.1)
   - Realm (3.21.0):
@@ -64,20 +72,11 @@ PODS:
     - SDWebImage/Core (= 5.3.1)
   - SDWebImage/Core (5.3.1)
   - SocketRocket (0.5.1)
-  - Specta (1.0.7)
-  - TIRouterAction (0.1.0):
-    - Masonry (~> 1.0)
-    - MBProgressHUD
-    - MCJSONKit (~> 0.5)
-    - MCLogger (~> 0.6)
-    - MCUIKit (~> 0.3)
-    - Peregrine (~> 0.5)
   - Toast (4.0.0)
   - Weibo_SDK (3.2.5.1)
 
 DEPENDENCIES:
   - AFNetworking
-  - Expecta
   - Masonry
   - MBProgressHUD
   - MCJSONKit (from `../../../MCJSONKit`)
@@ -90,20 +89,18 @@ DEPENDENCIES:
   - NLLogger (from `../NLLogger`)
   - NLModelService (from `../NLModelService`)
   - NLModuleService (from `../NLModuleService`)
+  - NLRouterAction (from `../NLRouterAction`)
   - NLUIComponent (from `../NLUIComponent`)
   - NLUtility (from `../NLUtility`)
   - NLWeibo (from `../NLWeibo`)
   - Realm (~> 3.2)
   - SDWebImage
-  - Specta
-  - TIRouterAction (from `../TIRouterAction`)
   - Toast
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - CocoaLumberjack
-    - Expecta
     - FBRetainCycleDetector
     - Masonry
     - MBProgressHUD
@@ -119,7 +116,6 @@ SPEC REPOS:
     - SAMKeychain
     - SDWebImage
     - SocketRocket
-    - Specta
     - Toast
     - Weibo_SDK
 
@@ -136,19 +132,18 @@ EXTERNAL SOURCES:
     :path: "../NLModelService"
   NLModuleService:
     :path: "../NLModuleService"
+  NLRouterAction:
+    :path: "../NLRouterAction"
   NLUIComponent:
     :path: "../NLUIComponent"
   NLUtility:
     :path: "../NLUtility"
   NLWeibo:
     :path: "../NLWeibo"
-  TIRouterAction:
-    :path: "../TIRouterAction"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
-  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -160,24 +155,23 @@ SPEC CHECKSUMS:
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
-  NLDataType: 6227c1da60802456c05ae4699003b2dac099a19e
-  NLFoundation: 7efb3434238b1ef4931c5f517f5e931fe37b942d
-  NLLogger: e3f414b6cbf166569623c4ac0301a588804c5af8
-  NLModelService: 3ca71b7a5a1ef7de44a536b32d2477703dbec41b
-  NLModuleService: 5d06ff5017401573ef1b36376566abbc8a91a676
-  NLUIComponent: 26b60d518c97b6a2d5f9864cbabf259863b7a6a9
-  NLUtility: a9a7d28e8e5e6a0d3278b0fc25f2bea2bad1a0e1
-  NLWeibo: 97168b9453cf790476e25e2ecb55d36cc10041eb
+  NLDataType: cd29bba6318753b409c36d12135f9919025afefa
+  NLFoundation: 19da3d0f33a2bf4f6070d2d3f78e4610d08a34c7
+  NLLogger: 1e4b5c11d46cd0ebea28252c23c8bcec43e06b82
+  NLModelService: 4a8bf9ef1d2bf1f649b10d441948a567d40cc13f
+  NLModuleService: 92d495f4d4c86e8201f7d6edb7b6c33b16b8afe6
+  NLRouterAction: 55c23bb37a4de65248fef2e1c76fa3492c330863
+  NLUIComponent: 28c9fdc90d84830027d2f9bbfdb660b04bbd056d
+  NLUtility: 07b6efce83b718fcd3c589a9cdd91f7f87723312
+  NLWeibo: 0b9c9657a786c92e559596158c6746d6932168c4
   Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
-  TIRouterAction: 646e81e30bb64892b38b06dab2d6c7399a030391
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
 
-PODFILE CHECKSUM: 9d3a960d4fba429b41a959535e3cae2572bb4f3c
+PODFILE CHECKSUM: 55e7f5bdd1ed62f80fc06644b56e746837873065
 
 COCOAPODS: 1.8.4

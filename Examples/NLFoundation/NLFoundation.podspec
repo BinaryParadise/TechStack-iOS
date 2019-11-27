@@ -31,10 +31,12 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'NLFoundation/Classes/**/*'
-  
-   s.resource_bundles = {
-     'NLFoundation' => ['NLFoundation/Assets/**']
-   }
+  s.prefix_header_contents = '#import <NLLogger/NLLogger.h>'
+  s.script_phase = { :name => '[Peregrine] Generator Routing Table', :script => 'ruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb "${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app/Peregrine.bundle"' }
+
+  s.resource_bundles = {
+    'NLFoundation' => ['NLFoundation/Assets/**']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

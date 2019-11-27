@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NLRouterAction/NLRouterActionBase.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLCategoryAction : TIRouterActionBase
+@interface NLCategoryAction : NLRouterActionBase
 
 PGMethod(methodCover, "fd://Foundation/Category/Method?c=分类方法将被编译源文件列表中最后编译的覆盖");
 
