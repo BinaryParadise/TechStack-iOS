@@ -19,4 +19,12 @@
  */
 - (UIViewController *)mangerController;
 
+/**
+ 打开路由
+
+ @param URLString 地址
+ @param completion 回调
+ */
+- (void)openURL:(NSString *)URLString completion:(void (^)(BOOL, id))completion;
+
 @end

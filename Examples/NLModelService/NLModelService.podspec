@@ -42,5 +42,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'NLUtility'
   s.dependency  'NLLogger'
+  s.dependency  'MCJSONKit', '~> 0.5'
 
 end

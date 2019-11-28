@@ -21,26 +21,6 @@
 
 @implementation NLWeiboPresenter
 
-+ (void)initWeibo:(PGRouterContext *)context {
-    static dispatch_once_t onceToken;
-    __block BOOL ret;
-    dispatch_once(&onceToken, ^{
-        [WeiboSDK enableDebugMode:YES];
-        //bundle id不能大写
-        ret = [WeiboSDK registerApp:context.userInfo[@"appKey"]];
-    });
-    [context onDone:ret object:nil];
-}
-
-+ (void)openWeiboURL:(PGRouterContext *)context {
-    static NLWeiboPresenter *wbp;
-    if (!wbp) {
-        wbp = [NLWeiboPresenter new];
-    }
-    BOOL canOpen = [WeiboSDK handleOpenURL:context.object delegate:wbp];
-    [context onDone:canOpen object:nil];
-}
-
 - (void)authorizeIfInvalid {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"weibo_sso_data"]) {
         [self fetchEmotions];
@@ -76,23 +56,6 @@
             NLLogError(@"%@", error);
         }
     }];
-}
-
-#pragma mark - WeiboSDKDelegate
-
-- (void)didReceiveWeiboRequest:(WBBaseRequest *)request {
-    
-}
-
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
-    if (response.statusCode == WeiboSDKResponseStatusCodeSuccess) {
-        if ([response isKindOfClass:[WBAuthorizeResponse class]]) {
-            self.authChanged = YES;
-            [[NSUserDefaults standardUserDefaults] setObject:response.userInfo forKey:@"weibo_sso_data"];
-        }
-    } else {
-        NLLogError(@"%@", response.userInfo);
-    }
 }
 
 @end

@@ -1,0 +1,6 @@
+{
+    "config": {
+        "categories": ["组件服务","内部组件", "二方库", "其它"],
+        "categoryRegexes": ["NLModuleService", "^NL.*", "^MC.*", ".*"]
+    }
+}

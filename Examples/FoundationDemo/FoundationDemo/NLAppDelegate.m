@@ -7,10 +7,10 @@
 //
 
 #import "NLAppDelegate.h"
-#import <NLModuleService/NLModuleService.h>
+#import <NLLogger/NLLogger.h>
 #import <NLRouterAction/NLRouterAction.h>
 #import <NLFoundation/NLFoundation.h>
-#import <MCLogger/MCLogger.h>
+#import <NLWeibo/NLWeibo.h>
 
 @interface testClass : NSObject
 
@@ -31,13 +31,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self initMCLogger];
-    
-    [PGRouterManager openURL:@"fd://Weibo/init?appKey=3609616584" completion:^(BOOL ret, id object) {
-        if (!ret) {
-            DDLogError(@"%@", object);
-        }
-    }];
     
     extern NSString * const kTestKey1;
     NSAssert(kTestKey1, @"应该是99");
@@ -47,14 +40,11 @@
     return YES;
 }
 
-- (void)initMCLogger {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
-}
-
 - (void)registerModules {
+    [NLModuleService.new registerModule:[NLLogger new] forProtocol:@protocol(NLLoggerProtocol)];
     [NLModuleService.new registerModule:[NLRouterAction new] forProtocol:@protocol(NLRouterActionProtocol)];
     [NLModuleService.new registerModule:[NLFoundation new] forProtocol:@protocol(NLFoundationProtocol)];
+    [NLModuleService.new registerModule:[NLWeibo new] forProtocol:@protocol(NLWeiboProtocol)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -84,11 +74,7 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    __block BOOL canOpen;
-    [PGRouterManager openURL:@"fd://Weibo/openurl" object:url completion:^(BOOL ret, id object) {
-        canOpen = ret;
-    }];
-    return canOpen;
+    return [NLM_Weibo application:app openURL:url options:options];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

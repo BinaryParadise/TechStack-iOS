@@ -10,9 +10,12 @@
 #import "NLModuleServiceDefine.h"
 #import "NLRouterActionProtocol.h"
 #import "NLFoundationProtocol.h"
+#import "NLWeiboProtocol.h"
+#import "NLLoggerProtocol.h"
 
 #define NLM_RouterAction    NLModuleForProtocol(NLRouterActionProtocol)
 #define NLM_Foundation      NLModuleForProtocol(NLFoundationProtocol)
+#define NLM_Weibo           NLModuleForProtocol(NLWeiboProtocol)
 
 /**
  提供模块相关服务

@@ -20,4 +20,8 @@
     return [[NLRouterActionVC alloc] initWithNibName:nil bundle:nil];
 }
 
+- (void)openURL:(NSString *)URLString completion:(void (^)(BOOL, id))completion {
+    [PGRouterManager openURL:URLString completion:completion];
+}
+
 @end

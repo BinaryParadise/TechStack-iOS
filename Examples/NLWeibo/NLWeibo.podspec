@@ -41,5 +41,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'Weibo_SDK', '~> 3.2'
-  s.dependency  'NLLogger'
+  s.dependency  'NLModuleService'
+  s.dependency  'Realm', '~> 3.2'
+
 end
