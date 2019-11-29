@@ -7,6 +7,11 @@
 //
 
 #import "NLFoundation.h"
+#import <NLProtocols/NLFoundationProtocol.h>
+
+@interface NLFoundation () <NLFoundationProtocol>
+
+@end
 
 @implementation NLFoundation
 

@@ -41,7 +41,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'NLUtility'
-  s.dependency  'NLLogger'
   s.dependency  'MCJSONKit', '~> 0.5'
 
 end

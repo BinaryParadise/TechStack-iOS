@@ -6,11 +6,11 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <NLModuleService/NLFoundationProtocol.h>
+#import <Foundation/Foundation.h>
 
 /**
  框架组件
  */
-@interface NLFoundation : NSObject <NLFoundationProtocol>
+@interface NLFoundation : NSObject
 
 @end

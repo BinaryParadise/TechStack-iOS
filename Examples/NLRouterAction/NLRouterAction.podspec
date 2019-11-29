@@ -40,7 +40,7 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Peregrine', '~> 0.5'
-  s.dependency 'NLModuleService'
+  s.dependency  'Peregrine', '~> 0.5'
+  s.dependency  'NLUIComponent'
 
 end

@@ -50,8 +50,6 @@ dispatch_semaphore_t dispatch_semaphore_create(long value);
 long dispatch_semaphore_wait(dispatch_semaphore_t dsema, dispatch_time_t timeout);
 ```
 
-> 如果线程被唤醒返回非0值，否则返回0
-
 ### dispatch_semaphore_signal
 
 > 增加一个信号量，如果之前的信号量小于0，则此函数返回之前唤醒等待的线程

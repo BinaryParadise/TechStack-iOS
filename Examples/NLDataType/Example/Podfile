@@ -1,16 +1,24 @@
+if File::exists?("Podfile.lock")
+  `rm Podfile.lock`
+end
 use_frameworks!
 
 platform :ios, '8.0'
 
 target 'NLDataType_Example' do
   pod 'NLDataType', :path => '../'
+  pod 'NLModuleService', :path => '../../NLModuleService'
+  pod 'NLModelService', :path => '../../NLModelService'
+  pod 'NLUtility', :path => '../../NLUtility'
+  pod 'NLLogger', :path => '../../NLLogger'
+  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLRouterAction', :path => '../../NLRouterAction'
+  pod 'NLUIComponent', :path => '../../NLUIComponent'
 
   target 'NLDataType_Tests' do
     inherit! :search_paths
 
     pod 'Specta'
     pod 'Expecta'
-    pod 'FBSnapshotTestCase'
-    pod 'Expecta+Snapshots'
   end
 end

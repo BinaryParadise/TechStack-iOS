@@ -189,8 +189,24 @@
     });
 }
 
-+ (void)demo_NSOperation {
-    printf("------------------NSOperation------------------\n");
++ (void)demo_NSOpertaion:(PGRouterContext *)context {
+    NSBlockOperation *blockO = [NSBlockOperation blockOperationWithBlock:^{
+        sleep(1);
+        NLLogDebug(@"任务1完成 %@", [NSThread currentThread]);
+        [context finished];
+    }];
+    
+    NSBlockOperation *dependency = [NSBlockOperation blockOperationWithBlock:^{
+        sleep(2);
+        NLLogDebug(@"依赖任务 %@", [NSThread currentThread]);
+    }];
+    
+    [blockO addDependency:dependency];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    queue.maxConcurrentOperationCount = 1;//1：串行队列 -1：不限制 >1：限制
+    [queue addOperation:blockO];
+    [queue addOperation:dependency];
 }
 
 + (void)demo_RunLoop:(PGRouterContext *)context {

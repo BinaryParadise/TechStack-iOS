@@ -46,4 +46,5 @@ TODO: Add long description of the pod here.
   s.dependency 'SDWebImage'
   s.dependency 'MJRefresh'
   s.dependency 'Toast'
+  s.dependency 'NLLogger'
 end

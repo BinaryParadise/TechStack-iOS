@@ -45,12 +45,12 @@ __Block_byref_val_0 val = {
 > - NSStackBlock：栈区（需要小心野指针）
 > - NSMallocBlock: 堆区
 
-|         | retain        | strong、copy 变量 | retain 变量    | strong、copy 变量 |
-| ------- | ------------- | ----------------- | -------------- | ----------------- |
-| **MRC** | NSGlobalBlock | NSGlobalBlock     | `NSStackBlock` | NSMallocBlock     |
-| **ARC** | NSGlobalBlock | NSGlobalBlock     | NSMallocBlock  | NSMallocBlock     |
+|         | retain        | strong、copy  | retain 变量    | strong、copy 变量 |
+| ------- | ------------- | ------------- | -------------- | ----------------- |
+| **MRC** | NSGlobalBlock | NSGlobalBlock | `NSStackBlock` | NSMallocBlock     |
+| **ARC** | NSGlobalBlock | NSGlobalBlock | NSMallocBlock  | NSMallocBlock     |
 
 ## 总结
 
-- **所以说block的属性修饰符应该用`strong`或`copy`比较安全些。A**
+- **所以说block的属性修饰符应该用`strong`或`copy`比较安全些。**
 - **对block来说，属性修饰符用`strong`或`copy`效果是一样的。**

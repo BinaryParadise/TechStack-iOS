@@ -43,5 +43,6 @@ TODO: Add long description of the pod here.
   s.dependency  'Weibo_SDK', '~> 3.2'
   s.dependency  'NLModuleService'
   s.dependency  'Realm', '~> 3.2'
+  s.dependency  'AFNetworking', '~> 3.2'
 
 end

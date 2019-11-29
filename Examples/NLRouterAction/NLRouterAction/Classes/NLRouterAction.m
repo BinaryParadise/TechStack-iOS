@@ -8,6 +8,11 @@
 
 #import "NLRouterAction.h"
 #import "NLRouterActionVC.h"
+#import <NLProtocols/NLRouterActionProtocol.h>
+
+@interface NLRouterAction () <NLRouterActionProtocol>
+
+@end
 
 @implementation NLRouterAction
 

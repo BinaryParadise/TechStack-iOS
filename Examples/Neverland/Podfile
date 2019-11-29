@@ -20,7 +20,6 @@ target 'Neverland' do
 
   # Pods for Neverland
   pod 'MBProgressHUD'
-  pod 'MCUIKit', :path => '../../../MCUIKit'
   pod 'NLRouterAction', :path => '../NLRouterAction'
   pod 'MCJSONKit', :path => '../../../MCJSONKit'
   pod 'NLModuleService', :path => '../NLModuleService'
@@ -31,6 +30,7 @@ target 'Neverland' do
   pod 'NLLogger', :path => '../NLLogger'
   pod 'NLUtility', :path => '../NLUtility'
   pod 'NLUIComponent', :path => '../NLUIComponent'
+  pod 'NLProtocols', :path => '../NLProtocols'
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'

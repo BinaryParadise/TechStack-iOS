@@ -18,6 +18,7 @@ PGMethod(demo_GCD_serial, "fd://Foundation/Thread/GCD/serial?c=串行队列");
 PGMethod(demo_GCD_concurrent, "fd://Foundation/Thread/GCD/concurrent?c=并行队列");
 PGMethod(demo_GCD_barrier, "fd://Foundation/Thread/GCD/barrier?c=栅栏");
 PGMethod(demo_GCDGroup, "fd://Foundation/Thread/GCD/Group?c=分组队列");
+PGMethod(demo_NSOpertaion, "fd://Foundation/Thread/NSOpertaion?c=线程操作");
 PGMethod(demo_RunLoop, "fd://Foundation/Thread/RunLoop?c=考试要考");
 
 @end

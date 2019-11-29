@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D619E2386917B00CBBAC1 /* UIKit.framework */; };
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
-		37D132D256D625E9BFD96A96 /* libPods-Neverland.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB30E0C37FFF6B63194ED12 /* libPods-Neverland.a */; };
 		CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */; };
 		CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */; };
 		CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* NLAppDelegate.m */; };
 		CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F12202F745003AB8FB /* Assets.xcassets */; };
 		CE6E26F52202F745003AB8FB /* NLLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */; };
 		CE6E26F82202F745003AB8FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26F72202F745003AB8FB /* main.m */; };
+		D5D10B940D01F2CD59C6D997 /* libPods-Neverland.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A238DC4BA621AF154AD52A /* libPods-Neverland.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +23,7 @@
 		248D619E2386917B00CBBAC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		248D61A02386918100CBBAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		249FA9D9236D2E5600CEA3B7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		3BD6E9E27665D5C80059399E /* Pods-Neverland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.debug.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.debug.xcconfig"; sourceTree = "<group>"; };
-		8FB30E0C37FFF6B63194ED12 /* libPods-Neverland.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neverland.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
 		CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NLMain.storyboard; sourceTree = "<group>"; };
 		CE17E781236BDF7A00F259C1 /* NLRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLRouterViewController.h; sourceTree = "<group>"; };
 		CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLRouterViewController.m; sourceTree = "<group>"; };
@@ -38,7 +37,8 @@
 		CE6E27012202F745003AB8FB /* FoundationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationDemoTests.m; sourceTree = "<group>"; };
 		CE6E27032202F745003AB8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6E27142203E750003AB8FB /* TestPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPrefix.h; sourceTree = "<group>"; };
-		ECAC29AC5A925552ADB5A841 /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
+		D7A238DC4BA621AF154AD52A /* libPods-Neverland.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neverland.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.debug.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			files = (
 				248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */,
 				248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */,
-				37D132D256D625E9BFD96A96 /* libPods-Neverland.a in Frameworks */,
+				D5D10B940D01F2CD59C6D997 /* libPods-Neverland.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 			children = (
 				248D61A02386918100CBBAC1 /* Foundation.framework */,
 				248D619E2386917B00CBBAC1 /* UIKit.framework */,
-				8FB30E0C37FFF6B63194ED12 /* libPods-Neverland.a */,
+				D7A238DC4BA621AF154AD52A /* libPods-Neverland.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,8 +78,8 @@
 		6431FF8E1F56A89D9E62F23B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3BD6E9E27665D5C80059399E /* Pods-Neverland.debug.xcconfig */,
-				ECAC29AC5A925552ADB5A841 /* Pods-Neverland.release.xcconfig */,
+				F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */,
+				7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -144,12 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6E27062202F745003AB8FB /* Build configuration list for PBXNativeTarget "Neverland" */;
 			buildPhases = (
-				746943D6C0201DA5F663F621 /* [CP] Check Pods Manifest.lock */,
+				56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */,
 				CE6E26E12202F743003AB8FB /* Sources */,
 				CE6E26E22202F743003AB8FB /* Frameworks */,
 				CE6E26E32202F743003AB8FB /* Resources */,
 				B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */,
-				38750664D51B4F6EFCA885BB /* [CP] Copy Pods Resources */,
+				6E541EA635357CCD761B3C15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,24 +207,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38750664D51B4F6EFCA885BB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		746943D6C0201DA5F663F621 /* [CP] Check Pods Manifest.lock */ = {
+		56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -244,6 +227,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E541EA635357CCD761B3C15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */ = {
@@ -405,7 +405,7 @@
 		};
 		CE6E27072202F745003AB8FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BD6E9E27665D5C80059399E /* Pods-Neverland.debug.xcconfig */;
+			baseConfigurationReference = F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -429,7 +429,7 @@
 		};
 		CE6E27082202F745003AB8FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECAC29AC5A925552ADB5A841 /* Pods-Neverland.release.xcconfig */;
+			baseConfigurationReference = 7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

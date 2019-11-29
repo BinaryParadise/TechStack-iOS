@@ -7,9 +7,7 @@
 
 修饰访问申明，主要用于内存管理
 
-retain主要是MRC中使用，和strong等价
-
-修饰block不同
+retain主要是MRC中使用，和strong等价，修饰`block`有些许不同
 
 ## atomic、nonatomic
 
@@ -37,8 +35,8 @@ retain主要是MRC中使用，和strong等价
 ```objc
 @property long number1;
 @property NSString *name1;
-|-ObjCPropertyDecl number1 'long' assign readwrite atomic unsafe_unretained > @property long number1;
-|-ObjCPropertyDecl name1 'NSString *' readwrite atomic strong > @property NSString *name1;
+|-ObjCPropertyDecl number1 'long' assign readwrite atomic unsafe_unretained
+|-ObjCPropertyDecl name1 'NSString *' readwrite atomic strong
 ```
 
 

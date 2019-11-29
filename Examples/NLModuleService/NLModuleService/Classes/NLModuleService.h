@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NLModuleServiceDefine.h"
-#import "NLRouterActionProtocol.h"
-#import "NLFoundationProtocol.h"
-#import "NLWeiboProtocol.h"
-#import "NLLoggerProtocol.h"
+#import <NLProtocols/NLProtocols.h>
+
+#define NLModuleForProtocol(protocolName) ((id<protocolName>)[NLModuleService.new moduleForProtocol:@protocol(protocolName)])
 
 #define NLM_RouterAction    NLModuleForProtocol(NLRouterActionProtocol)
 #define NLM_Foundation      NLModuleForProtocol(NLFoundationProtocol)
