@@ -18,7 +18,7 @@ target 'Neverland' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for FoundationDemo
+  # Pods for Neverland
   pod 'MBProgressHUD'
   pod 'MCUIKit', :path => '../../../MCUIKit'
   pod 'NLRouterAction', :path => '../NLRouterAction'
@@ -41,5 +41,5 @@ post_install do |installer|
     require_relative '../../../Peregrine/Peregrine/PGConfiguration.rb'
     PGConfiguration::configure_project(installer)
 
-    `efpodsanalyzer ../FoundationDemo/Podfile`
+    `efpodsanalyzer ../Neverland/Podfile`
 end

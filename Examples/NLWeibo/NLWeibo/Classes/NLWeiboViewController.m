@@ -1,6 +1,6 @@
 //
 //  NLWeiboViewController.m
-//  FoundationDemo
+//  Neverland
 //
 //  Created by Rake Yang on 2019/11/1.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -13,6 +13,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/Toast.h>
 #import "NLWeiboTableViewCell.h"
+#import <NLModuleService/NLModuleService.h>
 
 @interface NLWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -60,7 +61,7 @@
         make.edges.equalTo(self.view);
     }];
     
-    [NLWeiboTableViewCell registerForTableView:self.tableView];
+    [NLWeiboTableViewCell registerForTableView:self.tableView inBundle:NLM_Weibo.resourceBundle];
     
     [MCObserver(self.presenter, authChanged) valueChanged:^(id target, id value) {
         dispatch_async(dispatch_get_main_queue(), ^{

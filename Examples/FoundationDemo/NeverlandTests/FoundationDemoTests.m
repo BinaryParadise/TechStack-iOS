@@ -1,6 +1,6 @@
 //
-//  FoundationDemoTests.m
-//  FoundationDemoTests
+//  NeverlandTests.m
+//  NeverlandTests
 //
 //  Created by Rake Yang on 2019/1/31.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSNumber+JSConvert.h"
 #import "MCSingletonDemo.h"
 
-SpecBegin(FoundationDemoSpec)
+SpecBegin(NeverlandSpec)
 
 describe(@"Foundation", ^{
 

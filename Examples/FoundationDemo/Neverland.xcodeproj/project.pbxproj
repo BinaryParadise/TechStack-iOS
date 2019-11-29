@@ -96,8 +96,8 @@
 		CE6E26DC2202F743003AB8FB = {
 			isa = PBXGroup;
 			children = (
-				CE6E26E72202F743003AB8FB /* FoundationDemo */,
-				CE6E27002202F745003AB8FB /* FoundationDemoTests */,
+				CE6E26E72202F743003AB8FB /* Neverland */,
+				CE6E27002202F745003AB8FB /* NeverlandTests */,
 				0F0544F8C968687FC18B3AE7 /* Frameworks */,
 				CE6E26E62202F743003AB8FB /* Products */,
 				6431FF8E1F56A89D9E62F23B /* Pods */,
@@ -112,7 +112,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE6E26E72202F743003AB8FB /* FoundationDemo */ = {
+		CE6E26E72202F743003AB8FB /* Neverland */ = {
 			isa = PBXGroup;
 			children = (
 				CE6E26E82202F743003AB8FB /* NLAppDelegate.h */,
@@ -123,10 +123,10 @@
 				CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */,
 				24741EC3224678F100BF7DE5 /* SupportFile */,
 			);
-			path = FoundationDemo;
+			path = Neverland;
 			sourceTree = "<group>";
 		};
-		CE6E27002202F745003AB8FB /* FoundationDemoTests */ = {
+		CE6E27002202F745003AB8FB /* NeverlandTests */ = {
 			isa = PBXGroup;
 			children = (
 				CE6E27012202F745003AB8FB /* FoundationDemoTests.m */,
@@ -134,7 +134,7 @@
 				CE6E27142203E750003AB8FB /* TestPrefix.h */,
 				240F179B221D8C7600E4830D /* JSFoundationTests.m */,
 			);
-			path = FoundationDemoTests;
+			path = NeverlandTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,14 +412,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = FoundationDemo/SupportFile/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Neverland/SupportFile/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
 					"MCLoggerEnable=1",
 				);
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "$(SRCROOT)/FoundationDemo/SupportFile/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Neverland/SupportFile/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.neverland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -436,9 +436,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = FoundationDemo/SupportFile/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Neverland/SupportFile/PrefixHeader.pch;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "$(SRCROOT)/FoundationDemo/SupportFile/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Neverland/SupportFile/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.neverland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

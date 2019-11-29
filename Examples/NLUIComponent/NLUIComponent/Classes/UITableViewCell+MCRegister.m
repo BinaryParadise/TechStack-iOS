@@ -1,6 +1,6 @@
 //
 //  UITableViewCell+MCRegister.m
-//  FoundationDemo
+//  Neverland
 //
 //  Created by Rake Yang on 2019/3/24.
 //  Copyright © 2019年 BinaryParadise. All rights reserved.
@@ -11,7 +11,10 @@
 @implementation UITableViewCell (MCRegister)
 
 + (void)registerForTableView:(UITableView *)tableView {
-    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil];
+    [self registerForTableView:tableView inBundle:nil];
+}
++ (void)registerForTableView:(UITableView *)tableView inBundle:(nullable NSBundle *)bundle {
+    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:bundle];
     if (cellNib) {
         [tableView registerNib:cellNib forCellReuseIdentifier:NSStringFromClass([self class])];
     } else {
