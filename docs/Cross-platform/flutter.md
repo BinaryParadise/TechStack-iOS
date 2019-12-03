@@ -11,3 +11,30 @@ export PATH="$HOME/flutter/bin:$PATH"
 flutter doctor
 ```
 
+## Android Studio
+
+```bash
+Plugins中搜索Flutter、Dart并安装
+```
+
+## Intellij Idea
+
+```bash
+Plugins中搜索Flutter、Dart并安装
+```
+
+
+
+## 调试
+
+```bash
+# 打开iOS模拟器
+open -a Simulator
+# 打开安卓模拟器
+flutter emulators --launch Pixel_2_API_26
+# 创建项目
+flutter create my_app
+# 启动调试
+flutter run
+```
+
