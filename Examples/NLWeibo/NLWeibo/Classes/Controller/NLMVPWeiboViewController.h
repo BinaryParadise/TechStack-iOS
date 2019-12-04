@@ -1,5 +1,5 @@
 //
-//  NLWeiboViewController.h
+//  NLMVPWeiboViewController.h
 //  Neverland
 //
 //  Created by Rake Yang on 2019/11/1.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLWeiboViewController : UIViewController
+@interface NLMVPWeiboViewController : UIViewController
 
 @end
 

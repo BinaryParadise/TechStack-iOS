@@ -9,22 +9,26 @@
 #import <Foundation/Foundation.h>
 #import <NLRouterAction/NLRouterAction.h>
 #import "NLFWBRequestManager.h"
-#import "NLFWBStatus.h"
+#import "../ViewModel/NLWBStatusViewModel.h"
 #import <MCObserverKit/MCObserverKit.h>
 
 @interface NLWeiboPresenter : NSObject
 
-@property (nonatomic, copy) NSArray<NLFWBStatus *> *statuses;
+@property (nonatomic, copy) NSArray<NLWBStatusViewModel *> *statuses;
 @property (nonatomic, assign) BOOL authChanged;
 
 /**
- 开始认证如果当前认证无效
+ 如果当前认证无效时请求验证
+ @return 是否失效
  */
-- (void)authorizeIfInvalid;
+- (BOOL)authorizeIfInvalid;
 
 /**
  前登录用户及其所关注（授权）用户的最新微博
  */
 - (void)fetchHomeTimeline:(FDActionCompletion)completion;
+
+- (NSDictionary *)authData;
+- (void)clearAuthData;
 
 @end

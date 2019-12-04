@@ -12,37 +12,43 @@
 #import <NLRouterAction/NLRouterAction.h>
 #import "NLWeiboResponse.h"
 
-@interface NLWeiboPresenter () <WeiboSDKDelegate>
+@interface NLWeiboPresenter ()
 
 @property (nonatomic, strong) NLWeiboResponse *header;
-
 
 @end
 
 @implementation NLWeiboPresenter
 
-- (void)authorizeIfInvalid {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"weibo_sso_data"]) {
-        [self fetchEmotions];
-        return;
+- (BOOL)authorizeIfInvalid {
+    if ([self authData]) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            [self fetchEmotions];
+        });
+        return NO;
     }
     WBAuthorizeRequest *request =[[WBAuthorizeRequest alloc] init];
     request.redirectURI = @"http://www.sina.com";
     [WeiboSDK sendRequest:request];
+    return YES;
 }
 
 - (void)fetchHomeTimeline:(FDActionCompletion)completion {
     NSDictionary *params;
+    if ([self authorizeIfInvalid]) {
+        return;
+    }
     if (self.header) {
-        params = @{@"max_id": @(self.statuses.lastObject.mid)};
+        params = @{@"max_id": @(self.statuses.lastObject.maxId)};
     }
     [NLFWBRequestManager getDataWithURL:@"statuses/home_timeline.json" params:params completion:^(id  _Nonnull data, NSError * _Nonnull error) {
         self.header = [NLWeiboResponse fd_objectFromKeyValues:data];
         NSArray *statuses = [NLFWBStatus fd_arrayOfModelsFromKeyValues:data[@"statuses"]];
         if (self.statuses) {
-            self.statuses = [self.statuses arrayByAddingObjectsFromArray:statuses];
+            self.statuses = [self.statuses arrayByAddingObjectsFromArray:[NLWBStatusViewModel arrayWithStatuses:statuses]];
         } else {
-            self.statuses = statuses;
+            self.statuses = [NLWBStatusViewModel arrayWithStatuses:statuses];
         }
         if (completion) {
             completion(statuses, error);
@@ -56,6 +62,15 @@
             NLLogError(@"%@", error);
         }
     }];
+}
+
+- (NSDictionary *)authData {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"weibo_sso_data"];
+}
+
+- (void)clearAuthData {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"weibo_sso_data"];
+    self.authChanged = NO;
 }
 
 @end

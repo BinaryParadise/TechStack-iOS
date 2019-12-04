@@ -37,6 +37,9 @@ PODS:
     - FBRetainCycleDetector
   - NLDataType (0.1.0):
     - NLRouterAction
+  - NLExtension (0.1.0):
+    - NLModelService
+    - NLRouterAction
   - NLFoundation (0.1.0):
     - NLModelService
     - NLProtocols
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - MCObserverKit
   - MLeaksFinder
   - NLDataType (from `../NLDataType`)
+  - NLExtension (from `../NLExtension`)
   - NLFoundation (from `../NLFoundation`)
   - NLLogger (from `../NLLogger`)
   - NLModelService (from `../NLModelService`)
@@ -122,6 +126,8 @@ EXTERNAL SOURCES:
     :path: "../../../MCJSONKit"
   NLDataType:
     :path: "../NLDataType"
+  NLExtension:
+    :path: "../NLExtension"
   NLFoundation:
     :path: "../NLFoundation"
   NLLogger:
@@ -156,6 +162,7 @@ SPEC CHECKSUMS:
   MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   NLDataType: b2f7eca6226f6530a52f9467e2303cd9cb33a8a1
+  NLExtension: 899dd67cd52cdea619ed6e87b1c2df0ca28dcc0b
   NLFoundation: 20a498df3647afa76aa8afd2e9fccbae359cc142
   NLLogger: 8802c62f4548ec773886be0bdbc44bfb6addac5b
   NLModelService: a3af292787d1ad8f73d71c001114ead68f3a299b
@@ -173,6 +180,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
 
-PODFILE CHECKSUM: cf544616e9525cfa723a78f605ea353fe6c7972e
+PODFILE CHECKSUM: cba164650a2bdedd101df5a1422614eee2aecec3
 
 COCOAPODS: 1.8.4

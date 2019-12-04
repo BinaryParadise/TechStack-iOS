@@ -1,5 +1,5 @@
 //
-//  NLDataTypeProtocol.h
+//  NLExtensionProtocol.h
 //  NLModuleService
 //
 //  Created by Rake Yang on 2019/11/27.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NLProtocolDefine.h"
 
-@protocol NLDataTypeProtocol <NLModuleService>
+@protocol NLExtensionProtocol <NLModuleService>
 
 @end

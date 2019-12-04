@@ -6,7 +6,7 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "NLWeiboViewController.h"
+#import "NLMVPWeiboViewController.h"
 #import <NLUIComponent/NLUIComponent.h>
 #import "NLWeiboPresenter.h"
 #import <Masonry/Masonry.h>
@@ -14,8 +14,9 @@
 #import <Toast/Toast.h>
 #import "NLWeiboTableViewCell.h"
 #import <NLModuleService/NLModuleService.h>
+#import "NLWBAccountViewController.h"
 
-@interface NLWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface NLMVPWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NLWeiboPresenter *presenter;
@@ -24,7 +25,7 @@
 
 @end
 
-@implementation NLWeiboViewController
+@implementation NLMVPWeiboViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -41,8 +42,9 @@
     
     self.emptyView = [[NLPlaceholderView alloc] init];
     self.emptyView.hidden = YES;
+    __weak typeof(self) self_weak = self;
     self.emptyView.onButtonClick = ^{
-        [self refreshData:FDRefreshStateFirst];
+        [self_weak refreshData:FDRefreshStateFirst];
     };
     [self.view addSubview:self.emptyView];
     [self.emptyView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,7 +71,6 @@
         });
     }];
     
-    [self.presenter authorizeIfInvalid];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self refreshData:FDRefreshStateFirst];
 }
@@ -79,6 +80,13 @@
 }
 
 #pragma mark - Actions
+
+- (void)rightButtonClick:(id)sender {
+    NLWBAccountViewController *accountVC = [NLWBAccountViewController new];
+    accountVC.presenter = self.presenter;
+    accountVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:accountVC animated:YES];
+}
 
 - (void)refreshData:(FDRefreshState)state {
     if (state == FDRefreshStateFirst) {
@@ -100,8 +108,15 @@
 }
 
 - (void)reloadData {
+    if ([self.presenter authData]) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"账号" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClick:)];
+    } else {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
     [self.tableView reloadData];
 }
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.presenter.statuses.count;
@@ -113,9 +128,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NLWeiboTableViewCell *cell = [NLWeiboTableViewCell cellForTableView:tableView indexPath:indexPath];
-    cell.status = self.presenter.statuses[indexPath.section];
+    [cell fillWithViewModel:self.presenter.statuses[indexPath.section]];
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [NLWeiboTableViewCell defaultHeightForData:self.presenter.statuses[indexPath.section]];

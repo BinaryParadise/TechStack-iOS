@@ -166,7 +166,7 @@
 		CE6E26DD2202F743003AB8FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = FD;
+				CLASSPREFIX = NL;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = BinaryParadise;
 				TargetAttributes = {

@@ -14,6 +14,7 @@
 #define NLM_RouterAction    NLModuleForProtocol(NLRouterActionProtocol)
 #define NLM_Foundation      NLModuleForProtocol(NLFoundationProtocol)
 #define NLM_Weibo           NLModuleForProtocol(NLWeiboProtocol)
+#define NLM_Extension       NLModuleForProtocol(NLExtensionProtocol)
 
 /**
  提供模块相关服务

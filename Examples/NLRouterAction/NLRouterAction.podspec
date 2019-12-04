@@ -42,5 +42,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'Peregrine', '~> 0.5'
   s.dependency  'NLUIComponent'
+  s.dependency  'MCJSONKit'
 
 end

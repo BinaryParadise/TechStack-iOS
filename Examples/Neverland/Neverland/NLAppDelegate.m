@@ -11,6 +11,7 @@
 #import <NLRouterAction/NLRouterAction.h>
 #import <NLFoundation/NLFoundation.h>
 #import <NLWeibo/NLWeibo.h>
+#import <NLExtension/NLExtension.h>
 
 @interface testClass : NSObject
 
@@ -45,6 +46,7 @@
     [NLModuleService.new registerModule:[NLRouterAction new] forProtocol:@protocol(NLRouterActionProtocol)];
     [NLModuleService.new registerModule:[NLFoundation new] forProtocol:@protocol(NLFoundationProtocol)];
     [NLModuleService.new registerModule:[NLWeibo new] forProtocol:@protocol(NLWeiboProtocol)];
+    [NLModuleService.new registerModule:[NLExtension new] forProtocol:@protocol(NLExtensionProtocol)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

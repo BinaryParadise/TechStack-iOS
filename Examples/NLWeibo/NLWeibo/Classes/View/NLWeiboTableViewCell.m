@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *contentLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sourceLabel;
+@property (nonatomic, strong) NLWBStatusViewModel *viewModel;
 
 
 @end
@@ -30,20 +31,18 @@
     self.avatorView.layer.masksToBounds = YES;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)fillWithViewModel:(NLWBStatusViewModel *)viewModel {
+    _viewModel = viewModel;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    [self.avatorView sd_setImageWithURL:[NSURL URLWithString:self.status.user.avatar_large]];
-    self.nameLabel.text = self.status.user.screen_name;
-    self.timeLabel.text = [self.status.created_at localTimeString];
-    self.sourceLabel.text = self.status.source;
-    self.contentLabel.text = self.status.text;
+    [self.avatorView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.avatar]];
+    self.nameLabel.text = self.viewModel.screen_name;
+    self.timeLabel.text = self.viewModel.createdStr;
+    self.sourceLabel.text = self.viewModel.source;
+    self.contentLabel.text = self.viewModel.text;
 }
 
 + (CGFloat)defaultHeightForData:(NLFWBStatus *)data {

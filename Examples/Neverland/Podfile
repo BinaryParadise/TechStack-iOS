@@ -31,6 +31,7 @@ target 'Neverland' do
   pod 'NLUtility', :path => '../NLUtility'
   pod 'NLUIComponent', :path => '../NLUIComponent'
   pod 'NLProtocols', :path => '../NLProtocols'
+  pod 'NLExtension', :path => '../NLExtension'
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'

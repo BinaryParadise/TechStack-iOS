@@ -1,16 +1,21 @@
-use_frameworks!
+#use_frameworks!
 
 platform :ios, '8.0'
 
 target 'NLFoundation_Example' do
   pod 'NLFoundation', :path => '../'
+  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLModelService', :path => '../../NLModelService'
+  pod 'NLModuleService', :path => '../../NLModuleService'
+  pod 'NLUtility', :path => '../../NLUtility'
+  pod 'NLLogger', :path => '../../NLLogger'
+  pod 'NLRouterAction', :path => '../../NLRouterAction'
+  pod 'NLUIComponent', :path => '../../NLUIComponent'
 
   target 'NLFoundation_Tests' do
     inherit! :search_paths
 
     pod 'Specta'
     pod 'Expecta'
-    pod 'FBSnapshotTestCase'
-    pod 'Expecta+Snapshots'
   end
 end

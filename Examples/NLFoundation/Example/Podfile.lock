@@ -1,42 +1,133 @@
 PODS:
+  - CocoaLumberjack (3.6.0):
+    - CocoaLumberjack/Core (= 3.6.0)
+  - CocoaLumberjack/Core (3.6.0)
   - Expecta (1.0.6)
-  - "Expecta+Snapshots (3.1.1)":
-    - Expecta (~> 1.0)
-    - FBSnapshotTestCase/Core (~> 2.0)
-    - Specta (~> 1.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - NLFoundation (0.1.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MCFoundation (0.2.2)
+  - MCJSONKit (0.5.2):
+    - MCFoundation (~> 0.2)
+  - MCLogger (0.6.1):
+    - CocoaLumberjack (~> 3.0)
+    - MJExtension (~> 3.0)
+    - SAMKeychain (~> 1.5)
+    - SocketRocket (~> 0.5)
+  - MCUIKit (0.3.1)
+  - MJExtension (3.2.1)
+  - MJRefresh (3.2.3)
+  - NLFoundation (0.1.0):
+    - NLModelService
+    - NLModuleService
+    - NLProtocols
+    - NLRouterAction
+  - NLLogger (0.1.0):
+    - MCLogger (~> 0.5)
+    - NLProtocols
+  - NLModelService (0.1.0):
+    - MCJSONKit (~> 0.5)
+    - NLUtility
+  - NLModuleService (0.1.0):
+    - NLLogger
+  - NLProtocols (0.1.0)
+  - NLRouterAction (0.1.0):
+    - MCJSONKit
+    - NLUIComponent
+    - Peregrine (~> 0.5)
+  - NLUIComponent (0.1.0):
+    - Masonry (~> 1.0)
+    - MBProgressHUD
+    - MCUIKit (~> 0.3)
+    - MJRefresh
+    - NLLogger
+    - SDWebImage
+    - Toast
+  - NLUtility (0.1.0):
+    - NLLogger
+  - Peregrine (0.5.1)
+  - SAMKeychain (1.5.3)
+  - SDWebImage (5.3.2):
+    - SDWebImage/Core (= 5.3.2)
+  - SDWebImage/Core (5.3.2)
+  - SocketRocket (0.5.1)
   - Specta (1.0.7)
+  - Toast (4.0.0)
 
 DEPENDENCIES:
   - Expecta
-  - "Expecta+Snapshots"
-  - FBSnapshotTestCase
   - NLFoundation (from `../`)
+  - NLLogger (from `../../NLLogger`)
+  - NLModelService (from `../../NLModelService`)
+  - NLModuleService (from `../../NLModuleService`)
+  - NLProtocols (from `../../NLProtocols`)
+  - NLRouterAction (from `../../NLRouterAction`)
+  - NLUIComponent (from `../../NLUIComponent`)
+  - NLUtility (from `../../NLUtility`)
   - Specta
 
 SPEC REPOS:
   trunk:
+    - CocoaLumberjack
     - Expecta
-    - "Expecta+Snapshots"
-    - FBSnapshotTestCase
+    - Masonry
+    - MBProgressHUD
+    - MCFoundation
+    - MCJSONKit
+    - MCLogger
+    - MCUIKit
+    - MJExtension
+    - MJRefresh
+    - Peregrine
+    - SAMKeychain
+    - SDWebImage
+    - SocketRocket
     - Specta
+    - Toast
 
 EXTERNAL SOURCES:
   NLFoundation:
     :path: "../"
+  NLLogger:
+    :path: "../../NLLogger"
+  NLModelService:
+    :path: "../../NLModelService"
+  NLModuleService:
+    :path: "../../NLModuleService"
+  NLProtocols:
+    :path: "../../NLProtocols"
+  NLRouterAction:
+    :path: "../../NLRouterAction"
+  NLUIComponent:
+    :path: "../../NLUIComponent"
+  NLUtility:
+    :path: "../../NLUtility"
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  NLFoundation: 05895464271af04884900790700eba684886ae54
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MCFoundation: 1c05141cbc900ec15618d7d4c75fb88719d7b658
+  MCJSONKit: 64251bf517b756436c185735b6f4edfdede9ec8e
+  MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
+  MCUIKit: cdf31d6c54a0c3e8a371885a55212efff72b14fa
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
+  NLFoundation: 1f90b028f64a5024164cd236f59430984e2f7c27
+  NLLogger: 8802c62f4548ec773886be0bdbc44bfb6addac5b
+  NLModelService: a3af292787d1ad8f73d71c001114ead68f3a299b
+  NLModuleService: 763d3d2e825aa8ad34d67cfc7f54f3c1d7fe97b0
+  NLProtocols: 59d72832b9c0318549e438789139f34e70d9f7c2
+  NLRouterAction: 8a3235133aaae0f6ebfa63ffdd1352399a51a8f1
+  NLUIComponent: 25cbbb2d25bd16464520cc0a1bd84145aa82ac2a
+  NLUtility: 829a3a30f65daa85d406095ff25efa5ecb5d1f05
+  Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 84ea9e83b89d862b6e28a6142400d04cff2957d9
+PODFILE CHECKSUM: 198c2e76c162757e3f2e9afe04bf9e9de235f7f3
 
 COCOAPODS: 1.8.4

@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <NLUIComponent/NLUIComponent.h>
-#import "../Model/NLFWBStatus.h"
+#import "../ViewModel/NLWBStatusViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NLWeiboTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) NLFWBStatus *status;
+
+- (void)fillWithViewModel:(NLWBStatusViewModel *)viewModel;
 
 @end
 

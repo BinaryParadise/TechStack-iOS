@@ -10,3 +10,6 @@
 #import <NLProtocols/NLFoundationProtocol.h>
 #import <NLProtocols/NLWeiboProtocol.h>
 #import <NLProtocols/NLLoggerProtocol.h>
+#import <NLProtocols/NLExtensionProtocol.h>
+#import <NLProtocols/NLDataTypeProtocol.h>
+#import <NLProtocols/NLProtocolDefine.h>
