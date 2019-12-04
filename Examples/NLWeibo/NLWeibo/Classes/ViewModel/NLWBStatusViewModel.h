@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../Model/NLFWBStatus.h"
+#import "NLFWBStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

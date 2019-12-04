@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <NLRouterAction/NLRouterAction.h>
 #import "NLFWBRequestManager.h"
-#import "../ViewModel/NLWBStatusViewModel.h"
+#import "NLWBStatusViewModel.h"
 #import <MCObserverKit/MCObserverKit.h>
 
 @interface NLWeiboPresenter : NSObject

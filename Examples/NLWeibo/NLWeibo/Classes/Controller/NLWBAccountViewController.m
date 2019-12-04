@@ -7,6 +7,7 @@
 
 #import "NLWBAccountViewController.h"
 #import "../View/NLWBAccountView.h"
+#import "NLWeibo-Bridging-Header.h"
 #import <Masonry/Masonry.h>
 
 @interface NLWBAccountViewController () <NLWBAccountViewDelegate>

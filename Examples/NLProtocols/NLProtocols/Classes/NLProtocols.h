@@ -6,6 +6,9 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
+FOUNDATION_EXPORT double NLProtocolsVersionNumber;
+FOUNDATION_EXPORT const unsigned char NLProtocolsVersionString[];
+
 #import <NLProtocols/NLRouterActionProtocol.h>
 #import <NLProtocols/NLFoundationProtocol.h>
 #import <NLProtocols/NLWeiboProtocol.h>

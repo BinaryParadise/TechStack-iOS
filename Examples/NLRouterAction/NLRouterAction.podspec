@@ -43,5 +43,6 @@ TODO: Add long description of the pod here.
   s.dependency  'Peregrine', '~> 0.5'
   s.dependency  'NLUIComponent'
   s.dependency  'MCJSONKit'
+  s.dependency  'NLModelService'
 
 end

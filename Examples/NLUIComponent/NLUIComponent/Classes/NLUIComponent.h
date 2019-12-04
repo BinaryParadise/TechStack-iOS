@@ -9,3 +9,4 @@
 #import <NLUIComponent/NLPlaceholderView.h>
 #import <NLUIComponent/NLAutoRefreshTableView.h>
 #import <NLUIComponent/UITableViewCell+MCRegister.h>
+#import <NLUIComponent/NLViewController.h>

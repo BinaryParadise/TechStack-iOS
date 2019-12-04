@@ -6,7 +6,7 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "NLJSModel.h"
+#import <NLModelService/NLJSModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

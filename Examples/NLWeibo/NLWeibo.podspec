@@ -34,15 +34,19 @@ TODO: Add long description of the pod here.
   s.prefix_header_contents = '#import <NLLogger/NLLogger.h>'
   s.script_phase = { :name => '[Peregrine] Generator Routing Table', :script => 'ruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb "${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app/Peregrine.bundle"' }
 
-   s.resource_bundles = {
-     'NLWeibo' => ['NLWeibo/Assets/**']
-   }
-
+  s.resource_bundles = {
+   'NLWeibo' => ['NLWeibo/Assets/**']
+  }
+  
+  s.swift_versions = ['3.2', '4.0', '4.2']
+  s.static_framework = true
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'Weibo_SDK', '~> 3.2'
   s.dependency  'NLModuleService'
   s.dependency  'Realm', '~> 3.2'
   s.dependency  'AFNetworking', '~> 3.2'
+  s.dependency  'NLRouterAction'
 
 end

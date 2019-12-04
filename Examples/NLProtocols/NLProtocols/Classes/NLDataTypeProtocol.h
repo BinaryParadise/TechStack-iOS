@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NLProtocolDefine.h"
 
 @protocol NLDataTypeProtocol <NLModuleService>
 

@@ -42,16 +42,21 @@ PODS:
     - NLRouterAction
   - NLFoundation (0.1.0):
     - NLModelService
+    - NLModuleService
     - NLProtocols
+    - NLRouterAction
   - NLLogger (0.1.0):
     - MCLogger (~> 0.5)
     - NLProtocols
   - NLModelService (0.1.0):
     - MCJSONKit (~> 0.5)
     - NLUtility
-  - NLModuleService (0.1.0)
+  - NLModuleService (0.1.0):
+    - NLLogger
   - NLProtocols (0.1.0)
   - NLRouterAction (0.1.0):
+    - MCJSONKit
+    - NLModelService
     - NLUIComponent
     - Peregrine (~> 0.5)
   - NLUIComponent (0.1.0):
@@ -63,10 +68,12 @@ PODS:
     - SDWebImage
     - Toast
   - NLUtility (0.1.0):
+    - MCObserverKit
     - NLLogger
   - NLWeibo (0.1.0):
     - AFNetworking (~> 3.2)
     - NLModuleService
+    - NLRouterAction
     - Realm (~> 3.2)
     - Weibo_SDK (~> 3.2)
   - Peregrine (0.5.1)
@@ -163,15 +170,15 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   NLDataType: b2f7eca6226f6530a52f9467e2303cd9cb33a8a1
   NLExtension: 899dd67cd52cdea619ed6e87b1c2df0ca28dcc0b
-  NLFoundation: 20a498df3647afa76aa8afd2e9fccbae359cc142
+  NLFoundation: 1f90b028f64a5024164cd236f59430984e2f7c27
   NLLogger: 8802c62f4548ec773886be0bdbc44bfb6addac5b
   NLModelService: a3af292787d1ad8f73d71c001114ead68f3a299b
-  NLModuleService: 30150ee43a8ff4f2024691bcf1d5552b2e386966
+  NLModuleService: 763d3d2e825aa8ad34d67cfc7f54f3c1d7fe97b0
   NLProtocols: 59d72832b9c0318549e438789139f34e70d9f7c2
-  NLRouterAction: 96d6d546e604ad11aeff8b2be9d8828a203abc75
+  NLRouterAction: 7d972fed9231f5ef437c6622052db9d7fe43fd5d
   NLUIComponent: 25cbbb2d25bd16464520cc0a1bd84145aa82ac2a
-  NLUtility: 829a3a30f65daa85d406095ff25efa5ecb5d1f05
-  NLWeibo: 58da8247514276d62ff003621ee5af75ba4bcd71
+  NLUtility: 3d481cd193d79520ea043a6f6b0c32ceb39c9ce9
+  NLWeibo: d5c049b8b053cf8ea5fe39040282f2644d20764d
   Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
@@ -180,6 +187,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
 
-PODFILE CHECKSUM: cba164650a2bdedd101df5a1422614eee2aecec3
+PODFILE CHECKSUM: b48966fe44b998b7efd6ed8bd8ac183422827382
 
 COCOAPODS: 1.8.4

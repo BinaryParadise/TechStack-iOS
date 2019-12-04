@@ -6,8 +6,8 @@
 //
 
 
-#import <NLUIComponent/NLViewController.h>
-#import "../Presenter/NLWeiboPresenter.h"
+#import <NLUIComponent/NLUIComponent.h>
+#import "NLWeiboPresenter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

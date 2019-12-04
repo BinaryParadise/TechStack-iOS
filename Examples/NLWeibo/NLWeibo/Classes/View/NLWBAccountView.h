@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../ViewModel/WBAccountViewModel.h"
+#import "WBAccountViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <NLUIComponent/NLUIComponent.h>
-#import "../ViewModel/NLWBStatusViewModel.h"
+#import "NLWBStatusViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D619E2386917B00CBBAC1 /* UIKit.framework */; };
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
+		41A3116DC7A6F58016EA3063 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */; };
 		CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */; };
 		CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */; };
 		CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* NLAppDelegate.m */; };
 		CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F12202F745003AB8FB /* Assets.xcassets */; };
 		CE6E26F52202F745003AB8FB /* NLLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */; };
 		CE6E26F82202F745003AB8FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26F72202F745003AB8FB /* main.m */; };
-		D5D10B940D01F2CD59C6D997 /* libPods-Neverland.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A238DC4BA621AF154AD52A /* libPods-Neverland.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +24,7 @@
 		248D61A02386918100CBBAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		249FA9D9236D2E5600CEA3B7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
+		8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NLMain.storyboard; sourceTree = "<group>"; };
 		CE17E781236BDF7A00F259C1 /* NLRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLRouterViewController.h; sourceTree = "<group>"; };
 		CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLRouterViewController.m; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		CE6E27012202F745003AB8FB /* FoundationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationDemoTests.m; sourceTree = "<group>"; };
 		CE6E27032202F745003AB8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6E27142203E750003AB8FB /* TestPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPrefix.h; sourceTree = "<group>"; };
-		D7A238DC4BA621AF154AD52A /* libPods-Neverland.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neverland.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.debug.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +48,7 @@
 			files = (
 				248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */,
 				248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */,
-				D5D10B940D01F2CD59C6D997 /* libPods-Neverland.a in Frameworks */,
+				41A3116DC7A6F58016EA3063 /* Pods_Neverland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 			children = (
 				248D61A02386918100CBBAC1 /* Foundation.framework */,
 				248D619E2386917B00CBBAC1 /* UIKit.framework */,
-				D7A238DC4BA621AF154AD52A /* libPods-Neverland.a */,
+				8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +150,7 @@
 				CE6E26E32202F743003AB8FB /* Resources */,
 				B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */,
 				6E541EA635357CCD761B3C15 /* [CP] Copy Pods Resources */,
+				F60EA81B34BC5026F36CA720 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +264,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
+		};
+		F60EA81B34BC5026F36CA720 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
