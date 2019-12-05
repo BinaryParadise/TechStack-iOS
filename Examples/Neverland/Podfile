@@ -35,12 +35,12 @@ target 'Neverland' do
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
-#  pod 'Peregrine', :path => '../../../Peregrine'
+  pod 'Peregrine', :path => '../../../Peregrine'
 end
 
 post_install do |installer|
     require_relative '../../../Peregrine/Peregrine/PGConfiguration.rb'
-    PGConfiguration::configure_project(installer)
+    PGConfiguration::configure_project(installer, '${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app')
 
     `efpodsanalyzer ../Neverland/Podfile`
 end

@@ -8,21 +8,12 @@
 
 #import "NLRouterAction.h"
 #import "NLRouterActionVC.h"
-#import <NLProtocols/NLRouterActionProtocol.h>
-
-@interface NLRouterAction () <NLRouterActionProtocol>
-
-@end
+#import <Peregrine/Peregrine.h>
 
 @implementation NLRouterAction
 
-- (NSBundle *)resourceBundle {
-    NSString *path = [NSString stringWithFormat:@"%@/%@.bundle", NSBundle.mainBundle.bundlePath, NSStringFromClass(self.class)];
-    return [NSBundle bundleWithPath:path];
-}
-
 - (UIViewController *)mangerController {
-    return [[NLRouterActionVC alloc] initWithNibName:nil bundle:nil];
+    return [[NLRouterActionVC alloc] initWithNibName:nil bundle:[self resourceBundle]];
 }
 
 - (void)openURL:(NSString *)URLString completion:(void (^)(BOOL, id))completion {

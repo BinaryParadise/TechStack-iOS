@@ -28,14 +28,10 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/rakeyang/NLDataType.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'NLDataType/Classes/**/*'
   s.prefix_header_contents = '#import <NLLogger/NLLogger.h>'
-  s.script_phase = { :name => '[Peregrine] Generator Routing Table', :script => 'export LANG=en_US.UTF-8
-    export LANGUAGE=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8
-    ruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb "${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app/Peregrine.bundle"' }
 
   s.resource_bundles = {
     'NLDataType' => ['NLDataType/Assets/**']

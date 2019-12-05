@@ -6,15 +6,25 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-FOUNDATION_EXPORT double NLLoggerVersionNumber;
-FOUNDATION_EXPORT const unsigned char NLLoggerVersionString[];
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <NLLogger/NLLoggerModule.h>
 
-#import <NLLogger/NLLoggerDefine.h>
+static DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
-NS_ASSUME_NONNULL_BEGIN
+#ifndef Header_h
+#define Header_h
 
-@interface NLLogger : NSObject
+#if DEBUG
+    #define NLLogError(frmt, ...)     DDLogError(@"" frmt, ##__VA_ARGS__)
+    #define NLLogDebug(frmt, ...)     DDLogDebug(@"" frmt,  ##__VA_ARGS__)
+    #define NLLogWarn(frmt, ...)      DDLogWarn(@"" frmt, ##__VA_ARGS__)
+    #define NLLogInfo(frmt, ...)      DDLogInfo(@"" frmt, ##__VA_ARGS__)
+    #define NLLogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__)
+#else
+    #define NLLogInfo(frmt, ...)
+    #define NLLogWarn(frmt, ...)
+    #define NLLogError(frmt, ...)
+    #define NSLog(...)
+#endif
 
-@end
-
-NS_ASSUME_NONNULL_END
+#endif

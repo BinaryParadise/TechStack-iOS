@@ -42,7 +42,7 @@
 }
 
 - (void)registerModules {
-    [NLModuleService.new registerModule:[NLLogger new] forProtocol:@protocol(NLLoggerProtocol)];
+    [NLModuleService.new registerModule:[NLLoggerModule new] forProtocol:@protocol(NLLoggerProtocol)];
     [NLModuleService.new registerModule:[NLRouterAction new] forProtocol:@protocol(NLRouterActionProtocol)];
     [NLModuleService.new registerModule:[NLFoundation new] forProtocol:@protocol(NLFoundationProtocol)];
     [NLModuleService.new registerModule:[NLWeibo new] forProtocol:@protocol(NLWeiboProtocol)];

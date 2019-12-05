@@ -13,6 +13,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "NLRouterAction.h"
 #import "NLRouterUIHelper.h"
+#import <NLModuleService/NLModuleService.h>
 
 @interface NLRouterActionVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,14 +26,10 @@
 @implementation NLRouterActionVC
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:[self.class routerActionBundle]]) {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.title = @"路由表";
     }
     return self;
-}
-
-+ (NSBundle *)routerActionBundle {
-    return [NSBundle bundleWithURL:[[NSBundle mainBundle].bundleURL URLByAppendingPathComponent:@"NLRouterAction.bundle"]];
 }
 
 - (void)viewDidLoad {
@@ -142,7 +139,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PGRouterNode *node = self.data[indexPath.section].childs[indexPath.row];
     if (!node.config) {
-        NLRouterActionVC *nodeVC = [[NLRouterActionVC alloc] init];
+        NLRouterActionVC *nodeVC = [[NLRouterActionVC alloc] initWithNibName:nil bundle:NLM_RouterAction.resourceBundle];
         nodeVC.routerNode = node;
         nodeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:nodeVC animated:YES];

@@ -1,5 +1,5 @@
 //
-//  NLProtocolVersion.h
+//  NLModule.h
 //  NLProtocols
 //
 //  Created by Rake Yang on 2019/12/4.
@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLProtocolVersion : NSObject
+@interface NLModule : NSObject
+
+- (NSBundle *)resourceBundle;
 
 @end
 

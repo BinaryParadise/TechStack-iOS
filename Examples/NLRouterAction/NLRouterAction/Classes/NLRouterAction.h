@@ -6,8 +6,9 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import <NLRouterAction/NLRouterActionBase.h>
+#import "NLRouterActionBase.h"
+#import <NLProtocols/NLProtocols.h>
 
-@interface NLRouterAction : NSObject
+@interface NLRouterAction : NLModule <NLRouterActionProtocol>
 
 @end

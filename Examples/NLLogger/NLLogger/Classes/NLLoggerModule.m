@@ -1,12 +1,12 @@
 //
-//  NLJSModel.m
+//  NLLoggerModule.m
 //  Neverland
 //
 //  Created by Rake Yang on 2019/2/19.
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "NLLogger.h"
+#import "NLLoggerModule.h"
 #import <MCLogger/MCLogger.h>
 #import <NLProtocols/NLProtocols.h>
 
@@ -22,11 +22,11 @@
 
 @end
 
-@interface NLLogger () <NLLoggerProtocol>
+@interface NLLoggerModule () <NLLoggerProtocol>
 
 @end
 
-@implementation NLLogger
+@implementation NLLoggerModule
 
 + (void)load {
     DDTTYLogger.sharedInstance.logFormatter = [NLLogFormatter new];

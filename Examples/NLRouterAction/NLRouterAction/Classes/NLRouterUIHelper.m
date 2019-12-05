@@ -12,7 +12,7 @@
 @implementation TIRouterUIHelper
 
 + (NSBundle *)resourceBundle {
-    return [NSBundle bundleWithPath:[[NSBundle mainBundle].resourcePath stringByAppendingString:@"/NLRouterAction.bundle"]];
+    return [NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingString:@"/NLRouterAction.bundle"]];
 }
 
 @end

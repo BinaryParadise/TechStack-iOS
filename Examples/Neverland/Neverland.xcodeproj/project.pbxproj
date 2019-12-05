@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241CE8DB23980E780007F22E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CE8DA23980E780007F22E /* File.swift */; };
 		248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D619E2386917B00CBBAC1 /* UIKit.framework */; };
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
+		24912ADC2398AACD004E3DDA /* main1.m in Sources */ = {isa = PBXBuildFile; fileRef = 24912ADB2398AACD004E3DDA /* main1.m */; };
 		41A3116DC7A6F58016EA3063 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */; };
 		CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */; };
 		CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */; };
@@ -20,9 +22,11 @@
 
 /* Begin PBXFileReference section */
 		240F179B221D8C7600E4830D /* JSFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFoundationTests.m; sourceTree = "<group>"; };
+		241CE8D923980E780007F22E /* Neverland-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neverland-Bridging-Header.h"; sourceTree = "<group>"; };
+		241CE8DA23980E780007F22E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		248D619E2386917B00CBBAC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		248D61A02386918100CBBAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		249FA9D9236D2E5600CEA3B7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		24912ADB2398AACD004E3DDA /* main1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main1.m; sourceTree = "<group>"; };
 		7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
 		8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NLMain.storyboard; sourceTree = "<group>"; };
@@ -70,7 +74,7 @@
 			children = (
 				CE6E26F62202F745003AB8FB /* Info.plist */,
 				CE6E26F72202F745003AB8FB /* main.m */,
-				249FA9D9236D2E5600CEA3B7 /* PrefixHeader.pch */,
+				24912ADB2398AACD004E3DDA /* main1.m */,
 			);
 			path = SupportFile;
 			sourceTree = "<group>";
@@ -122,6 +126,8 @@
 				CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */,
 				CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */,
 				24741EC3224678F100BF7DE5 /* SupportFile */,
+				241CE8DA23980E780007F22E /* File.swift */,
+				241CE8D923980E780007F22E /* Neverland-Bridging-Header.h */,
 			);
 			path = Neverland;
 			sourceTree = "<group>";
@@ -148,9 +154,9 @@
 				CE6E26E12202F743003AB8FB /* Sources */,
 				CE6E26E22202F743003AB8FB /* Frameworks */,
 				CE6E26E32202F743003AB8FB /* Resources */,
-				B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */,
 				6E541EA635357CCD761B3C15 /* [CP] Copy Pods Resources */,
 				F60EA81B34BC5026F36CA720 /* [CP] Embed Pods Frameworks */,
+				378A6DD7E6F1E41C31FA55BE /* [Peregrine] Generator Routing Table */,
 			);
 			buildRules = (
 			);
@@ -173,6 +179,7 @@
 				TargetAttributes = {
 					CE6E26E42202F743003AB8FB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -208,6 +215,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		378A6DD7E6F1E41C31FA55BE /* [Peregrine] Generator Routing Table */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Peregrine] Generator Routing Table";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby /Users/bonana/Github/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"\n";
+			showEnvVarsInLog = 0;
+		};
 		56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,24 +273,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B498EC717C6551BA87443B66 /* [Peregrine] Generator Routing Table */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Peregrine] Generator Routing Table";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"";
-		};
 		F60EA81B34BC5026F36CA720 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
+				241CE8DB23980E780007F22E /* File.swift in Sources */,
 				CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */,
+				24912ADC2398AACD004E3DDA /* main1.m in Sources */,
 				CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,11 +436,10 @@
 			baseConfigurationReference = F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Neverland/SupportFile/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -438,9 +447,16 @@
 				);
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Neverland/SupportFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.neverland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neverland/Neverland-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -450,16 +466,21 @@
 			baseConfigurationReference = 7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Neverland/SupportFile/PrefixHeader.pch;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Neverland/SupportFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.neverland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neverland/Neverland-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

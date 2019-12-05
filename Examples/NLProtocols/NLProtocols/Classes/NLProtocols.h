@@ -16,3 +16,4 @@ FOUNDATION_EXPORT const unsigned char NLProtocolsVersionString[];
 #import <NLProtocols/NLExtensionProtocol.h>
 #import <NLProtocols/NLDataTypeProtocol.h>
 #import <NLProtocols/NLProtocolDefine.h>
+#import <NLProtocols/NLModule.h>

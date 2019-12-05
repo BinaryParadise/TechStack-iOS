@@ -1,8 +1,8 @@
 # Block
 
 ```
-Block也可以叫做闭包，简单来说就是一种带有局部变量的匿名函数
-ARC中编译器自动完成从栈到堆的copy操作
+Block本质上也是一个oc对象，他内部也有一个isa指针。Block是封装了函数调用以及函数调用环境的OC对象。
+Block也可以叫做闭包，简单来说就是一种带有局部变量的匿名函数，ARC中编译器自动完成从栈到堆的copy操作。
 ```
 
 ```objc
@@ -12,6 +12,28 @@ id (^blockName)(parameterTypes) = ^(parameters) {
   return nil;
 };
 ```
+
+## 本质
+
+```bash
+xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m
+```
+
+```objc
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        int age = 10;
+        void(^block)(int ,int) = ^(int a, int b){
+            NSLog(@"this is block,a = %d,b = %d",a,b);
+            NSLog(@"this is block,age = %d",age);
+        };
+        block(3,5);
+    }
+    return 0;
+}
+```
+
+
 
 ## 外部变量
 

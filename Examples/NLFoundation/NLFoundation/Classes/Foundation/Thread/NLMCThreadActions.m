@@ -7,6 +7,7 @@
 //
 
 #import "NLMCThreadActions.h"
+#import "NLRunLoopViewController.h"
 
 @interface NLMCThreadActions ()
 
@@ -210,20 +211,9 @@
 }
 
 + (void)demo_RunLoop:(PGRouterContext *)context {
-    NLLogWarn(@"主要:%p", CFRunLoopGetCurrent());
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        sleep(1);
-        NLLogDebug(@"%p %@", CFRunLoopGetCurrent(), [NSThread currentThread]);
-        NSTimer *timer = [NSTimer timerWithTimeInterval:3 repeats:NO block:^(NSTimer * _Nonnull timer) {
-            NLLogDebug(@"计时器结束");
-            [timer invalidate];
-            [context finished];
-        }];
-        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    });
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NLLogDebug(@"%p %@", CFRunLoopGetCurrent(), [NSThread currentThread]);
-    });
+    UIViewController *vc = [NLRunLoopViewController new];
+    [self pushViewController:vc animated:YES];
+    [context finished];
 }
 
 @end

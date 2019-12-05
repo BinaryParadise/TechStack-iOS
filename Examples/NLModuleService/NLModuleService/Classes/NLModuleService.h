@@ -21,7 +21,7 @@
  */
 @interface NLModuleService : NSObject
 
-- (void)registerModule:(id<NLModuleService>)module forProtocol:(Protocol *)protocol;
+- (void)registerModule:(id)module forProtocol:(Protocol *)protocol;
 
 - (id)moduleForProtocol:(Protocol *)protocol;
 

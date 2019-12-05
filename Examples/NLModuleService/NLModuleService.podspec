@@ -28,11 +28,10 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/rakeyang/NLModuleService.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'NLModuleService/Classes/**/*'
   s.prefix_header_contents = '#import <NLLogger/NLLogger.h>'
-  s.script_phase = { :name => '[Peregrine] Generator Routing Table', :script => 'ruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb "${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app/Peregrine.bundle"' }
 
   # s.resource_bundles = {
   #   'NLModuleService' => ['NLModuleService/Assets/*.png']
@@ -41,5 +40,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'NLLogger'
+  s.dependency  'NLProtocols'
 
 end
