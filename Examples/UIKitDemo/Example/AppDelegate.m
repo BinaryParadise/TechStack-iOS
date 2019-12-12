@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import <MCLogger/MCLogger.h>
-#import <TIRouterAction/TIRouterAction.h>
+#import <NLRouterAction/NLRouterAction.h>
+#import <NLModuleService/NLModuleService.h>
 #import <AuthenticationServices/AuthenticationServices.h>
 
 @interface AppDelegate ()
@@ -23,8 +24,10 @@
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [MCLogger startMonitor:[NSURL URLWithString:@"ws://172.16.106.113:8081"]];
 
+    [NLModuleService.new registerModule:[NLRouterAction new] forProtocol:@protocol(NLRouterActionProtocol)];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TIRouterActionManager mangerController]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[NLM_RouterAction mangerController]];
     [self.window makeKeyAndVisible];
     
     return YES;

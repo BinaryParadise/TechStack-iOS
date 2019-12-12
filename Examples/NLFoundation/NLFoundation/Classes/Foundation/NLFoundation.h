@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <NLProtocols/NLProtocols.h>
 
 /**
  框架组件
  */
-@interface NLFoundation : NSObject
+@interface NLFoundation : NLModule
 
 @end

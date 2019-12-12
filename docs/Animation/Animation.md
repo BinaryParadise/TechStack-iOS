@@ -10,7 +10,7 @@
 
 #### CAMediaTiming
 
-这是一个协议，`CAAnimation`实现了这个协议，里面有一些跟时间相关的属性挺：
+这是一个协议，`CAAnimation`实现了这个协议，里面有一些跟时间相关的属性：
 
 - duration 动画时间
 - repeatCount 重复次数

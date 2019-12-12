@@ -135,7 +135,7 @@
         }
     });
     
-    dispatch_barrier_async(queue3, ^{
+    dispatch_barrier_sync(queue3, ^{
         sleep(2);
         NLLogDebug(@"---------barrier---------%@", [NSThread currentThread]);
     });
@@ -211,7 +211,7 @@
 }
 
 + (void)demo_RunLoop:(PGRouterContext *)context {
-    UIViewController *vc = [NLRunLoopViewController new];
+    UIViewController *vc = [[NLRunLoopViewController alloc] initWithNibName:nil bundle:NLM_Foundation.resourceBundle];
     [self pushViewController:vc animated:YES];
     [context finished];
 }

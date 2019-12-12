@@ -8,8 +8,6 @@
 
 #import "GDLoadingView.h"
 
-#define radians(angle) ((angle) / 180.0 * M_PI)
-
 @interface GDLoadingView ()
 
 @property (nonatomic, strong) CAShapeLayer *gossipLayer;

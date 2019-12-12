@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PGAutoLayout : TIRouterActionBase
+@interface PGAutoLayout : NLRouterActionBase
 
 PGMethod(equalization, "gd://UIView/Equalization");
 

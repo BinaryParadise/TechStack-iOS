@@ -10,6 +10,8 @@
 		243A11E622B46B3900429B09 /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243A11E522B46B3900429B09 /* Animation.storyboard */; };
 		243A11EA22B46B6900429B09 /* GDAnimationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A11E922B46B6900429B09 /* GDAnimationAction.m */; };
 		243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A11EC22B46CE900429B09 /* GDLoadingView.m */; };
+		243D9B83239F8598003A900D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243D9B82239F8598003A900D /* File.swift */; };
+		243D9B86239F8CAF003A900D /* GDNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243D9B85239F8CAF003A900D /* GDNormalView.m */; };
 		244826E2229F63DB00861F97 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244826E1229F63DB00861F97 /* WebKit.framework */; };
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
@@ -56,6 +58,10 @@
 		243A11E922B46B6900429B09 /* GDAnimationAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAnimationAction.m; sourceTree = "<group>"; };
 		243A11EB22B46CE900429B09 /* GDLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDLoadingView.h; sourceTree = "<group>"; };
 		243A11EC22B46CE900429B09 /* GDLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDLoadingView.m; sourceTree = "<group>"; };
+		243D9B81239F8598003A900D /* UIKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		243D9B82239F8598003A900D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		243D9B84239F8CAF003A900D /* GDNormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDNormalView.h; sourceTree = "<group>"; };
+		243D9B85239F8CAF003A900D /* GDNormalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDNormalView.m; sourceTree = "<group>"; };
 		244826E1229F63DB00861F97 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		244848D3223CA92100A37FC7 /* UKPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKPageViewController.xib; sourceTree = "<group>"; };
 		2461DF34222D677800D4382F /* UKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKPageViewController.h; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 			children = (
 				243A11EB22B46CE900429B09 /* GDLoadingView.h */,
 				243A11EC22B46CE900429B09 /* GDLoadingView.m */,
+				243D9B84239F8CAF003A900D /* GDNormalView.h */,
+				243D9B85239F8CAF003A900D /* GDNormalView.m */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -246,6 +254,8 @@
 				CE21AC1D229CDB3E0083822A /* GDTest.m */,
 				248709D62382570F00145E98 /* GDUIHelper.h */,
 				248709D72382570F00145E98 /* GDUIHelper.m */,
+				243D9B82239F8598003A900D /* File.swift */,
+				243D9B81239F8598003A900D /* UIKitDemo-Bridging-Header.h */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -388,6 +398,7 @@
 				TargetAttributes = {
 					C532E4081F889834009E38CA = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -449,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\" \"-ferror-limit=0 -w\"";
+			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby /Users/bonana/Github/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"\n";
 		};
 		D4354FE2F418808C7863B09A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -458,13 +469,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/NLRouterAction/NLRouterAction.bundle",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/TIRouterAction/TIRouterAction.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NLRouterAction.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TIRouterAction.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -500,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243D9B83239F8598003A900D /* File.swift in Sources */,
 				C5FB165D1F8B998400350055 /* GDWebViewController.m in Sources */,
 				CE1C0ED0234DB40100AB7EAB /* GDGeneralAction.m in Sources */,
 				CEA02DB0223B913000157527 /* UKUITextFieldViewController.m in Sources */,
@@ -519,6 +533,7 @@
 				CECEB5E92320B2F4008A4639 /* GDCloseViewController.m in Sources */,
 				CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
+				243D9B86239F8CAF003A900D /* GDNormalView.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,
 				243A11ED22B46CE900429B09 /* GDLoadingView.m in Sources */,
 				CEAA13CA2320A310005D1800 /* GDTabBarController.m in Sources */,
@@ -656,6 +671,7 @@
 			baseConfigurationReference = 4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = UIKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -669,6 +685,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neverland.uikitdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/UIKitDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -678,6 +697,7 @@
 			baseConfigurationReference = CF3D4B675A048E20C5C582EC /* Pods-UIKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = UIKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -691,6 +711,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neverland.uikitdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/UIKitDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

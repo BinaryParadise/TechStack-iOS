@@ -7,7 +7,6 @@
 //
 
 #import "GDTabBarController.h"
-#import <TIRouterAction/TIRouterAction.h>
 
 @implementation GDTabBarController
 

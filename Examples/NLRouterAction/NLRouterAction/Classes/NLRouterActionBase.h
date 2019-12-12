@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Peregrine/Peregrine.h>
 #import <MCJSONKit/MCJSONKit.h>
+#import <NLModuleService/NLModuleService.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

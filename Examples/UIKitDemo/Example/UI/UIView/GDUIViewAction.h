@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDUIViewAction : TIRouterActionBase
+@interface GDUIViewAction : NLRouterActionBase
 
 PGMethod(viewLifecycleAction, "gd://UIView/Lifecycle?c=生命周期");
 

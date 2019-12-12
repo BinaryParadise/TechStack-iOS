@@ -39,8 +39,8 @@ target 'Neverland' do
 end
 
 post_install do |installer|
-    require_relative '../../../Peregrine/Peregrine/PGConfiguration.rb'
-    PGConfiguration::configure_project(installer, '${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app')
+    require_relative '../../../Peregrine/Peregrine/PGGenerator.rb'
+    PGGenerator::configure_project(installer, '${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app')
 
     `efpodsanalyzer ../Neverland/Podfile`
 end

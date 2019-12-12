@@ -1,30 +1,36 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
-if Gem::Version.new(`pod --version`) >= Gem::Version.new('1.7.3')
+if Gem::Version.new(`pod --version`) >= Gem::Version.new('1.7.5')
   install! 'cocoapods',
     :generate_multiple_pod_projects => true,
     :incremental_installation => true
 else
-    raise 'cocoapods 最低要求1.7.0'
+    raise 'cocoapods 最低要求1.7.5'
     return
 end
 
-`rm Podfile.lock`
+if File::exists?("Podfile.lock")  
+  `rm Podfile.lock`
+end
 #use_frameworks!
 
 target 'UIKitDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for iOSGuide
-  # pod 'Peregrine', :path => '../Peregrine'
-  # pod 'Peregrine', :git => 'git@github.com:BinaryParadise/Peregrine.git', :branch => 'master'
-  pod 'TIRouterAction', :path => '../TIRouterAction'
+  pod 'Peregrine', :path => '../../../Peregrine'
+  pod 'NLUtility', :path => '../NLUtility'
+  pod 'NLModelService', :path => '../NLModelService'
+  pod 'NLModuleService', :path => '../NLModuleService'
+  pod 'NLProtocols', :path => '../NLProtocols'
+  pod 'NLLogger', :path => '../NLLogger'
+  pod 'NLUIComponent', :path => '../NLUIComponent'
+  pod 'NLRouterAction', :path => '../NLRouterAction'
 
 end
 
 post_install do |installer|
-  require File.expand_path('PGConfiguration.rb', installer.sandbox.root.to_s + '/Peregrine/Peregrine/')
-  PGConfiguration::configure_project(installer)
+  require_relative '../../../Peregrine/Peregrine/PGGenerator.rb'
+  PGGenerator::configure_project(installer, '${PODS_CONFIGURATION_BUILD_DIR}/UIKitDemo.app')
 end

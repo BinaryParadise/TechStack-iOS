@@ -77,12 +77,13 @@
     animation.calculationMode = kCAAnimationPaced;
     
     UIBezierPath *path = [[UIBezierPath alloc] init];
-    CGFloat y = view.mcTop + view.mcHeight/2.0;
-    CGFloat radius = (self.view.mcWidth-60)/4.0;
-    [path moveToPoint:CGPointMake(30, y)];
-    [path addArcWithCenter:CGPointMake(30+radius, y) radius:radius startAngle:radians(180) endAngle:radians(0) clockwise:YES];
-    [path addArcWithCenter:CGPointMake(30+radius*3, y) radius:radius startAngle:radians(180) endAngle:radians(-180) clockwise:NO];
-    [path addArcWithCenter:CGPointMake(30+radius, y) radius:radius startAngle:radians(0) endAngle:radians(180) clockwise:YES];
+    CGFloat x = 30;
+    CGFloat y = view.mcTop + view.mcHeight/2.0 + 50;
+    CGFloat radius = (self.view.mcWidth-60)/4.0 + 50;
+    [path moveToPoint:CGPointMake(x+radius, y)];
+    [path addArcWithCenter:CGPointMake(x+radius, y) radius:radius startAngle:radians(180+30) endAngle:radians(30) clockwise:YES];
+    [path addArcWithCenter:CGPointMake(x+radius*3, y) radius:radius startAngle:radians(180-30) endAngle:radians(-180+30) clockwise:NO];
+    [path addArcWithCenter:CGPointMake(x+radius, y) radius:radius startAngle:radians(30) endAngle:radians(180-30) clockwise:YES];
     animation.path = path.CGPath;
     
     [view.layer addAnimation:animation forKey:@"move"];

@@ -6,11 +6,11 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "TIRouterActionBase.h"
+#import "NLRouterActionBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDGeneralAction : TIRouterActionBase
+@interface GDGeneralAction : NLRouterActionBase
 
 + (void)signInWithApple:(PGRouterContext *)context PGTarget("ap://General/SignInWithApple?c=使用苹果登录");
 

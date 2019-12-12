@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDInterfaceBuildAction : TIRouterActionBase
+@interface GDInterfaceBuildAction : NLRouterActionBase
 
 + (void)xibDemo:(PGRouterContext *)context PGTarget("gd://InterfaceBuild/Storyboard");
 

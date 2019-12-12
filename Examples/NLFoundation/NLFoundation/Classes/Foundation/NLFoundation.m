@@ -15,9 +15,4 @@
 
 @implementation NLFoundation
 
-- (NSBundle *)resourceBundle {
-    NSString *path = [NSString stringWithFormat:@"%@/%@.bundle", NSBundle.mainBundle.bundlePath, NSStringFromClass(self.class)];
-    return [NSBundle bundleWithPath:path];
-}
-
 @end

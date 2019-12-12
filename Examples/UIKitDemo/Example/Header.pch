@@ -9,7 +9,10 @@
 #ifndef Header_h
 #define Header_h
 
-#import <TIRouterAction/TIRouterAction.h>
+#define radians(angle) ((angle) / 180.0 * M_PI)
+
+#import <NLRouterAction/NLRouterAction.h>
+#import <NLLogger/NLLogger.h>
 #import "GDUIHelper.h"
 
 #if DEBUG

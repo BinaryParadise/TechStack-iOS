@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDControlAction : TIRouterActionBase
+@interface GDControlAction : NLRouterActionBase
 
 + (void)buttonAction:(PGRouterContext *)context PGTarget("gd://UIControl/UIButton");
 

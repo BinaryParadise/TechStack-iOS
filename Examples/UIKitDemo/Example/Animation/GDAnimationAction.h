@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GDAnimationAction : TIRouterActionBase
+@interface GDAnimationAction : NLRouterActionBase
 
 PGMethod(animationNormal, "ap://General/Animation/Normal?c=一般动画");
 PGMethod(animationCustom, "ap://General/Animation/Custom?c=自定义动画&type=1");
