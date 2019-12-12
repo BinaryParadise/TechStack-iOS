@@ -8,6 +8,7 @@
 
 #import "NLWeibo.h"
 #import <Weibo_SDK/WeiboSDK.h>
+#import "NLWeiboPresenter.h"
 
 @interface NLWeibo () <WeiboSDKDelegate>
 
@@ -28,8 +29,16 @@
     NLLogWarn(@"微博SDK注册结果: %@", ret?@"成功":@"失败");
 }
 
+- (void)authorizeIfInvalid {
+    [NLWeiboPresenter authorizeIfInvalid];
+}
+
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+- (void)openReactNative {
+    
 }
 
 #pragma mark - WeiboSDKDelegate
@@ -46,6 +55,10 @@
     } else {
         NLLogError(@"%@", response.userInfo);
     }
+}
+
+- (void)dealloc {
+    NSLog(@"");
 }
 
 @end

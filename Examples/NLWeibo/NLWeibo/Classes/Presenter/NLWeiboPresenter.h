@@ -21,7 +21,7 @@
  如果当前认证无效时请求验证
  @return 是否失效
  */
-- (BOOL)authorizeIfInvalid;
++ (BOOL)authorizeIfInvalid;
 
 /**
  前登录用户及其所关注（授权）用户的最新微博

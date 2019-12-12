@@ -14,6 +14,10 @@
  */
 @protocol NLWeiboProtocol <NLModuleService>
 
+- (void)authorizeIfInvalid;
+
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
+
+- (void)openReactNative;
 
 @end

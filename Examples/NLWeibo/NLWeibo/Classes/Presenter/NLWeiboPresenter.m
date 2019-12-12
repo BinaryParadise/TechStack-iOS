@@ -20,7 +20,7 @@
 
 @implementation NLWeiboPresenter
 
-- (BOOL)authorizeIfInvalid {
++ (BOOL)authorizeIfInvalid {
     if ([self authData]) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -36,7 +36,7 @@
 
 - (void)fetchHomeTimeline:(FDActionCompletion)completion {
     NSDictionary *params;
-    if ([self authorizeIfInvalid]) {
+    if ([self.class authorizeIfInvalid]) {
         return;
     }
     if (self.header) {
@@ -56,7 +56,7 @@
     }];
 }
 
-- (void)fetchEmotions {
++ (void)fetchEmotions {
     [NLFWBRequestManager getDataWithURL:@"emotions.json" params:nil completion:^(id  _Nullable data, NSError * _Nullable error) {
         if (error) {
             NLLogError(@"%@", error);
@@ -64,7 +64,7 @@
     }];
 }
 
-- (NSDictionary *)authData {
++ (NSDictionary *)authData {
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"weibo_sso_data"];
 }
 

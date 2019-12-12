@@ -46,5 +46,5 @@ TODO: Add long description of the pod here.
   s.dependency 'MJRefresh'
   s.dependency 'Toast'
   s.dependency 'NLLogger'
-  s.dependency 'SnapKit'
+  s.dependency 'SnapKit', '~> 4.2'
 end
