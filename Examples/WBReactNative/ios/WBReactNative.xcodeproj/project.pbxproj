@@ -24,6 +24,7 @@
 		24746DB823A1EA30006BC009 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24746DB723A1EA30006BC009 /* libz.tbd */; };
 		24746DBA23A1EA35006BC009 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24746DB923A1EA35006BC009 /* libsqlite3.tbd */; };
 		24746DBC23A1EA40006BC009 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24746DBB23A1EA40006BC009 /* WebKit.framework */; };
+		24B2BCFD23A391D300818306 /* RNBridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2BCFC23A391D300818306 /* RNBridgeModule.m */; };
 		9F025005273A4E6F5674C344 /* Pods_WBReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731A67BF5CDA6092344B14F9 /* Pods_WBReactNative.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		24746DB723A1EA30006BC009 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		24746DB923A1EA35006BC009 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		24746DBB23A1EA40006BC009 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		24B2BCFB23A391D300818306 /* RNBridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBridgeModule.h; sourceTree = "<group>"; };
+		24B2BCFC23A391D300818306 /* RNBridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridgeModule.m; sourceTree = "<group>"; };
 		592B71D06886D15BC30B82FC /* Pods-WBReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBReactNative.debug.xcconfig"; path = "Target Support Files/Pods-WBReactNative/Pods-WBReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		731A67BF5CDA6092344B14F9 /* Pods_WBReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA3A7BD4E2ADEAD77A7982E /* Pods-WBReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBReactNative.release.xcconfig"; path = "Target Support Files/Pods-WBReactNative/Pods-WBReactNative.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				24746BA023A1D771006BC009 /* main.m */,
 				24746C9523A1E43B006BC009 /* File.swift */,
 				24746C9423A1E43B006BC009 /* WBReactNative-Bridging-Header.h */,
+				24B2BCFB23A391D300818306 /* RNBridgeModule.h */,
+				24B2BCFC23A391D300818306 /* RNBridgeModule.m */,
 			);
 			path = WBReactNative;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			files = (
 				24746B9623A1D771006BC009 /* ViewController.m in Sources */,
 				24746C9623A1E43B006BC009 /* File.swift in Sources */,
+				24B2BCFD23A391D300818306 /* RNBridgeModule.m in Sources */,
 				24746BA123A1D771006BC009 /* main.m in Sources */,
 				24746B9323A1D770006BC009 /* AppDelegate.m in Sources */,
 			);

@@ -92,7 +92,6 @@ PODS:
     - AFNetworking (~> 3.2)
     - NLModuleService
     - NLRouterAction
-    - React (= 0.61.5)
     - Realm (~> 3.2)
     - Weibo_SDK (~> 3.2)
   - Peregrine (0.5.1)
@@ -297,6 +296,8 @@ PODS:
   - Realm (3.21.0):
     - Realm/Headers (= 3.21.0)
   - Realm/Headers (3.21.0)
+  - RNGestureHandler (1.5.2):
+    - React
   - SAMKeychain (1.5.3)
   - SDWebImage (5.3.2):
     - SDWebImage/Core (= 5.3.2)
@@ -346,6 +347,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -440,6 +442,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -470,7 +474,7 @@ SPEC CHECKSUMS:
   NLRouterAction: 0ea0f02812ccae3d2a2b0419c409d9b101629f63
   NLUIComponent: 4ec6dbb9adc24d82321874d1d80ac8cff6f0cf73
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1
-  NLWeibo: c6c509ecd396f69a519515335416b6ba60d0c4e3
+  NLWeibo: 8dcd3ee58180e945e0481fe5ee8b7497c83d3d9d
   Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
   RCTTypeSafety: 9aa1b91d7f9310fc6eadc3cf95126ffe818af320
@@ -492,6 +496,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
+  RNGestureHandler: 946a7691e41df61e2c4b1884deab41a4cdc3afff
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -500,6 +505,6 @@ SPEC CHECKSUMS:
   Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: cc1737c7ec8e0d3450724433c2b6eff7e8de7775
+PODFILE CHECKSUM: e399cf39641715dbaa70474b7d82f73c64317794
 
 COCOAPODS: 1.8.4
