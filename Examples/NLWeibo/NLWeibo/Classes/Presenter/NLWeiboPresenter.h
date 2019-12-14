@@ -28,7 +28,7 @@
  */
 - (void)fetchHomeTimeline:(FDActionCompletion)completion;
 
-- (NSDictionary *)authData;
++ (NSDictionary *)authData;
 - (void)clearAuthData;
 
 @end

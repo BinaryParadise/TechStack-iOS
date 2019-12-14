@@ -10,6 +10,7 @@
 #import <NLModuleService/NLModuleService.h>
 #import <NLWeibo/NLWeibo.h>
 #import <NLLogger/NLLogger.h>
+#import <SDWebImage/SDWebImage.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,13 @@
     // Override point for customization after application launch.
     [NLModuleService.new registerModule:[NLLoggerModule new] forProtocol:@protocol(NLLoggerProtocol)];
     [NLModuleService.new registerModule:[NLWeibo new] forProtocol:@protocol(NLWeiboProtocol)];
+    
+    //磁盘缓存文件最大字节数
+    SDImageCacheConfig.defaultCacheConfig.maxDiskSize = 1024 * 1024;
+    //内存最大缓存字节数
+    SDImageCacheConfig.defaultCacheConfig.maxMemoryCost = 1024 * 1024 * 16;
+    //内存最大缓存图片数
+    SDImageCacheConfig.defaultCacheConfig.maxMemoryCount = 32;
     return YES;
 }
 

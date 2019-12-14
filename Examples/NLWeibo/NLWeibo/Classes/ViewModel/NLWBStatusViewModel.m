@@ -7,6 +7,7 @@
 //
 
 #import "NLWBStatusViewModel.h"
+#import <NLUIComponent/NLUIComponent.h>
 
 @interface NLWBStatusViewModel ()
 
@@ -28,6 +29,15 @@
         _createdStr = status.created_at.localTimeString;
         _source = status.source;
         _text = status.text;
+        _picURL = status.bmiddle_pic ? :status.thumbnail_pic;
+        if (_picURL) {
+            _picSize = CGSizeMake(288, 256);
+            [UIImage remoteSize:_picURL completion:^(NSString * imgURL, CGSize size) {
+                if (!CGSizeEqualToSize(size, CGSizeZero)) {
+                    self->_picSize = size;
+                }
+            }];
+        }
     }
     return self;
 }

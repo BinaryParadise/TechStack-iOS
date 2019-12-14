@@ -8,6 +8,7 @@
 
 #import "NLWeiboTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <Masonry/Masonry.h>
 
 @interface NLWeiboTableViewCell ()
 
@@ -17,6 +18,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *contentLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sourceLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
+
 @property (nonatomic, strong) NLWBStatusViewModel *viewModel;
 
 
@@ -26,7 +29,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    // Initialization codethumbnail_pic
     self.avatorView.layer.cornerRadius = 40/2.0;
     self.avatorView.layer.masksToBounds = YES;
 }
@@ -43,16 +46,32 @@
     self.timeLabel.text = self.viewModel.createdStr;
     self.sourceLabel.text = self.viewModel.source;
     self.contentLabel.text = self.viewModel.text;
+    self.thumbnailImageView.hidden = self.viewModel.picURL.length <= 0;
+    if (!self.thumbnailImageView.hidden) {
+        self.thumbnailImageView.mcLeft = self.contentLabel.mcLeft;
+        self.thumbnailImageView.mcTop = self.contentLabel.mcBottom + 8;
+        self.thumbnailImageView.mcSize = adjustSizeWithLimit(self.viewModel.picSize, CGSizeMake(288, 256));
+        [self.thumbnailImageView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.picURL] placeholderImage:self.thumbnailImageView.image];
+    }
 }
 
-+ (CGFloat)defaultHeightForData:(NLFWBStatus *)data {
++ (CGFloat)defaultHeightForData:(NLWBStatusViewModel *)data {
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     paragraph.lineSpacing = 4;
     paragraph.minimumLineHeight = 20;
     
-    CGFloat textH = [data.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 16*2, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName:paragraph} context:nil].size.height;
-    DDLogWarn(@"%f", textH);
-    return 16 + 40 + 16 + MIN(textH, 8*24) + 8;
+    CGFloat contentHeight = 16 + 40 + 16;
+    
+    if (data.text.length) {
+        CGFloat textH = [data.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 16*2, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName:paragraph} context:nil].size.height;
+        contentHeight += MIN(textH, 8*24) + 8;
+    }
+    
+    if (data.picSize.height > 0) {
+        contentHeight += data.picSize.height + 8;
+    }
+    
+    return contentHeight;
 }
 
 @end

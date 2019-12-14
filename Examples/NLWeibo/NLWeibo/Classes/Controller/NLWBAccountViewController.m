@@ -30,7 +30,7 @@
         make.edges.equalTo(self.view);
     }];
     
-    [self.accountView fillWithViewModel:[[WBAccountViewModel alloc] initWithAuthData:[self.presenter authData]]];
+    [self.accountView fillWithViewModel:[[WBAccountViewModel alloc] initWithAuthData:[NLWeiboPresenter authData]]];
 }
 
 #pragma mark - NLWBAccountViewDelegate

@@ -35,12 +35,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slB-sM-naY">
-                                <rect key="frame" x="74" y="240" width="188" height="129"/>
+                                <rect key="frame" x="74" y="369" width="188" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="ReactNative"/>
                                 <connections>
                                     <action selector="showRoot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4id-oO-WNq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-Wk-lga">
+                                <rect key="frame" x="74" y="283" width="188" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Native"/>
+                                <connections>
+                                    <action selector="showNative:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29s-eB-e7D"/>
                                 </connections>
                             </button>
                         </subviews>

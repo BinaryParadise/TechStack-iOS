@@ -10,3 +10,4 @@
 #import <NLUIComponent/NLAutoRefreshTableView.h>
 #import <NLUIComponent/UITableViewCell+MCRegister.h>
 #import <NLUIComponent/NLViewController.h>
+#import <NLUIComponent/UIImage+Size.h>

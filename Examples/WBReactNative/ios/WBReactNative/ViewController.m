@@ -25,6 +25,10 @@
     });
 }
 
+- (IBAction)showNative:(id)sender {
+    [self.navigationController pushViewController:NLM_Weibo.nativeController animated:YES];
+}
+
 - (IBAction)showRoot:(id)sender {
     
     NSURL *jsCodeLocation = [self bundleURL];
@@ -39,6 +43,7 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
     nav.topViewController.view = rootView;
     nav.navigationBarHidden = YES;
+    nav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:nav animated:YES completion:^{
         
     }];

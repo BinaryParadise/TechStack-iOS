@@ -9,6 +9,7 @@
 #import "NLWeibo.h"
 #import <Weibo_SDK/WeiboSDK.h>
 #import "NLWeiboPresenter.h"
+#import "NLMVPWeiboViewController.h"
 
 @interface NLWeibo () <WeiboSDKDelegate>
 
@@ -37,8 +38,12 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
-- (void)openReactNative {
-    
+- (UIViewController *)nativeController {
+    return [[NLMVPWeiboViewController alloc] initWithNibName:nil bundle:[self resourceBundle]];
+}
+
+- (UIViewController *)reactNativeController {
+    return nil;
 }
 
 #pragma mark - WeiboSDKDelegate

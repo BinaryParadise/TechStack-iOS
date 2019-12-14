@@ -15,8 +15,12 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(dismiss) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIViewController *vc = [[UIApplication sharedApplication].keyWindow.rootViewController presentedViewController];
-        [vc dismissViewControllerAnimated:YES completion:nil];
+        UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+        UIViewController *curVC = rootVC;
+        if (rootVC.presentedViewController) {
+            curVC = rootVC.presentedViewController;
+        }
+        [curVC dismissViewControllerAnimated:YES completion:nil];
     });
 }
 

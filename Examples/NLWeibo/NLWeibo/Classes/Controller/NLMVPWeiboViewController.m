@@ -27,18 +27,14 @@
 
 @implementation NLMVPWeiboViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    self.presenter = [[NLWeiboPresenter alloc] init];
-    [CSToastManager setDefaultPosition:CSToastPositionCenter];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = MCHexColor(0xF6F6F6);
+        
+    self.presenter = [[NLWeiboPresenter alloc] init];
+    [CSToastManager setDefaultPosition:CSToastPositionCenter];
     
     self.emptyView = [[NLPlaceholderView alloc] init];
     self.emptyView.hidden = YES;
@@ -108,7 +104,7 @@
 }
 
 - (void)reloadData {
-    if ([self.presenter authData]) {
+    if ([NLWeiboPresenter authData]) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"账号" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClick:)];
     } else {
         self.navigationItem.rightBarButtonItem = nil;

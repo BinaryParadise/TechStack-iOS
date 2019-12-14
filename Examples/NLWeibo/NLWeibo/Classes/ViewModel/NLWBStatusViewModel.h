@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *createdStr;
 @property (nonatomic, copy) NSString *source;
 @property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) NSString *picURL;
+@property (nonatomic, assign) CGSize picSize;
+
 @property (nonatomic, assign, readonly) long long maxId;
 
 - (instancetype)initWithStatus:(NLFWBStatus *)status;

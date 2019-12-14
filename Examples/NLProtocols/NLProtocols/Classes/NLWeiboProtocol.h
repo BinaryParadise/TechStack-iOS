@@ -18,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
 
-- (void)openReactNative;
+/**
+ 原生首页
+ */
+- (UIViewController *)nativeController;
+
+/**
+ RN首页
+ */
+- (UIViewController *)reactNativeController;
 
 @end
