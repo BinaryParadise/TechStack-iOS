@@ -9,6 +9,7 @@
 #import "NLWeiboTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
+#import "WBImageGroupView.h"
 
 @interface NLWeiboTableViewCell ()
 
@@ -19,6 +20,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *contentLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sourceLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
+@property (nonatomic, strong) IBOutlet WBImageGroupView *imageGroupView;
+
 
 @property (nonatomic, strong) NLWBStatusViewModel *viewModel;
 
@@ -29,7 +32,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization codethumbnail_pic
+    // Initialization code
     self.avatorView.layer.cornerRadius = 40/2.0;
     self.avatorView.layer.masksToBounds = YES;
 }
@@ -46,12 +49,22 @@
     self.timeLabel.text = self.viewModel.createdStr;
     self.sourceLabel.text = self.viewModel.source;
     self.contentLabel.text = self.viewModel.text;
-    self.thumbnailImageView.hidden = self.viewModel.picURL.length <= 0;
-    if (!self.thumbnailImageView.hidden) {
-        self.thumbnailImageView.mcLeft = self.contentLabel.mcLeft;
-        self.thumbnailImageView.mcTop = self.contentLabel.mcBottom + 8;
-        self.thumbnailImageView.mcSize = adjustSizeWithLimit(self.viewModel.picSize, CGSizeMake(288, 256));
-        [self.thumbnailImageView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.picURL] placeholderImage:self.thumbnailImageView.image];
+    self.thumbnailImageView.hidden = !self.viewModel.picURL;
+    self.imageGroupView.hidden = self.viewModel.picURLs.count <= 1;
+    if (self.viewModel.picURLs.count > 1) {
+        //九宫格模式
+        self.imageGroupView.frame = CGRectMake(self.avatorView.mcLeft, self.contentLabel.mcBottom+8, self.viewModel.imageGroupSize.width, self.viewModel.imageGroupSize.height);
+        [self.imageGroupView fillWithImageURLs:self.viewModel.picURLs];
+    } else {
+        //单张图片
+        if (!self.thumbnailImageView.hidden) {
+            [self.thumbnailImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.contentLabel);
+                make.top.equalTo(self.contentLabel.mas_bottom).offset(8);
+                make.size.mas_equalTo(adjustSizeWithLimit(self.viewModel.picSize, CGSizeMake(288, 256)));
+            }];
+            [self.thumbnailImageView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.picURL] placeholderImage:self.thumbnailImageView.image];
+        }
     }
 }
 
@@ -64,13 +77,18 @@
     
     if (data.text.length) {
         CGFloat textH = [data.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 16*2, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName:paragraph} context:nil].size.height;
-        contentHeight += MIN(textH, 8*24) + 8;
+        contentHeight += MIN(textH, 8*24);
     }
     
     if (data.picSize.height > 0) {
-        contentHeight += data.picSize.height + 8;
+        contentHeight += 8 + data.picSize.height;
     }
     
+    if (data.picURLs.count > 1) {
+        contentHeight += 8 + data.imageGroupSize.height;
+    }
+    
+    contentHeight += 16;
     return contentHeight;
 }
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MCFoundation/MCFoundation.h>
 #import <NLUtility/NLNSDate.h>
+#import <MCJSONKit/MCJSONKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

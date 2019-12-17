@@ -29,14 +29,40 @@
         _createdStr = status.created_at.localTimeString;
         _source = status.source;
         _text = status.text;
-        _picURL = status.bmiddle_pic ? :status.thumbnail_pic;
-        if (_picURL) {
-            _picSize = CGSizeMake(288, 256);
-            [UIImage remoteSize:_picURL completion:^(NSString * imgURL, CGSize size) {
-                if (!CGSizeEqualToSize(size, CGSizeZero)) {
-                    self->_picSize = size;
-                }
+        if (status.pic_urls.count > 1) {
+            NSMutableArray *marr = [NSMutableArray array];
+            [status.pic_urls enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [marr addObject:[obj mc_stringForKey:@"thumbnail_pic"]];
             }];
+            _picURLs = marr;
+            CGFloat imgW = ceil((UIScreen.mainScreen.bounds.size.width - 16.0*2-8*2) /3.0);
+            _picSize = CGSizeMake(imgW, imgW);
+            switch (self.picURLs.count) {
+                case 2:
+                case 3:
+                    _imageGroupSize = CGSizeMake(self.picURLs.count * (imgW+8)-8, imgW);
+                    break;
+                case 4:
+                    _imageGroupSize = CGSizeMake(imgW*2+8, imgW*2+8);
+                    break;
+                case 5:
+                case 6:
+                    _imageGroupSize = CGSizeMake(3 * (imgW+8)-8, 2*imgW+2*8);
+                    break;
+                default:
+                    _imageGroupSize = CGSizeMake(3 * (imgW+8)-8, 3*imgW+2*8);
+                    break;
+            }
+        } else {
+            _picURL = status.original_pic ? :status.thumbnail_pic;
+            _picSize = CGSizeMake(288, 256);
+            if (_picURL) {
+                [UIImage remoteSize:_picURL completion:^(NSString * imgURL, CGSize size) {
+                    if (!CGSizeEqualToSize(size, CGSizeZero)) {
+                        self->_picSize = size;
+                    }
+                }];
+            }
         }
     }
     return self;

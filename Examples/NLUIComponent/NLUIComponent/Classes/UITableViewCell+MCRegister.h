@@ -19,3 +19,11 @@
 + (CGFloat)defaultHeightForData:(id)data;
 
 @end
+
+@interface UICollectionViewCell (MCRegister)
+
++ (void)registerForCollectionView:(UICollectionView *)collectionView;
+
++ (instancetype)cellForCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath * _Nullable )indexPath;
+
+@end

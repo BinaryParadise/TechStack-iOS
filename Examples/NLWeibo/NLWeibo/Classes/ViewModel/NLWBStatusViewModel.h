@@ -19,7 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *source;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *picURL;
+@property (nonatomic, copy) NSArray<NSString *> *picURLs;
 @property (nonatomic, assign) CGSize picSize;
+@property (nonatomic, assign) CGSize imageGroupSize;
 
 @property (nonatomic, assign, readonly) long long maxId;
 

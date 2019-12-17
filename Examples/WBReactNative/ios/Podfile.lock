@@ -27,6 +27,7 @@ PODS:
     - React-Core (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/turbomodule/core (= 0.61.5)
+  - FBRetainCycleDetector (0.1.4)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -52,6 +53,8 @@ PODS:
   - MCUIKit (0.3.1)
   - MJExtension (3.2.1)
   - MJRefresh (3.2.3)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
   - NLExtension (0.1.0):
     - NLModelService
     - NLRouterAction
@@ -62,6 +65,7 @@ PODS:
     - NLRouterAction
   - NLLogger (0.1.0):
     - MCLogger (~> 0.5)
+    - MLeaksFinder
     - NLProtocols
   - NLModelService (0.1.0):
     - MCJSONKit (~> 0.5)
@@ -355,6 +359,7 @@ SPEC REPOS:
     - AFNetworking
     - boost-for-react-native
     - CocoaLumberjack
+    - FBRetainCycleDetector
     - Masonry
     - MBProgressHUD
     - MCFoundation
@@ -364,6 +369,7 @@ SPEC REPOS:
     - MCUIKit
     - MJExtension
     - MJRefresh
+    - MLeaksFinder
     - Peregrine
     - Realm
     - SAMKeychain
@@ -454,6 +460,7 @@ SPEC CHECKSUMS:
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -465,9 +472,10 @@ SPEC CHECKSUMS:
   MCUIKit: cdf31d6c54a0c3e8a371885a55212efff72b14fa
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   NLExtension: 7c829ecef916ddc4354dc099455308b20d6ef310
   NLFoundation: 74d23838dc2c00d0f81cad760effce1b9fcff81c
-  NLLogger: 375e16b814422642e6a49a0f7c0aa2544ed5fa8b
+  NLLogger: 0147d78e5530e8868a6379e3854a548695ff26ad
   NLModelService: 8e5ead1f3b62ac79a764c3390b3ccdf7c122bbfe
   NLModuleService: 02d39c759d5c353504ed6db09408c4bdeea02bac
   NLProtocols: 3c98d3358586cd7eeb7ce740cd3d21fa85872c87

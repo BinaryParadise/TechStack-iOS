@@ -71,6 +71,11 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6j-TC-pJy" customClass="WBImageGroupView">
+                        <rect key="frame" x="16" y="120" width="288" height="288"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yuqi.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-uW-UCD">
                         <rect key="frame" x="16" y="120" width="288" height="288"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -89,6 +94,7 @@
             <connections>
                 <outlet property="avatorView" destination="szd-55-SsV" id="9Kx-LA-c73"/>
                 <outlet property="contentLabel" destination="k0G-tc-1dR" id="rSZ-KV-9B4"/>
+                <outlet property="imageGroupView" destination="x6j-TC-pJy" id="cMQ-Um-UUv"/>
                 <outlet property="nameLabel" destination="efr-Oe-j3d" id="USK-ES-pf9"/>
                 <outlet property="sourceLabel" destination="95B-nq-zax" id="k1P-dC-KvX"/>
                 <outlet property="thumbnailImageView" destination="u0h-uW-UCD" id="ntf-aS-BAg"/>

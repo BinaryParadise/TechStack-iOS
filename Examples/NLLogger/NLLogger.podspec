@@ -40,5 +40,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'MCLogger', '~> 0.5'
   s.dependency  'NLProtocols'
+  s.dependency  'MLeaksFinder'
   
 end

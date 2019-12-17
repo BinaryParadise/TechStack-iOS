@@ -63,7 +63,7 @@
     
     [MCObserver(self.presenter, authChanged) valueChanged:^(id target, id value) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self refreshData:FDRefreshStateFirst];
+            [self_weak refreshData:FDRefreshStateFirst];
         });
     }];
     

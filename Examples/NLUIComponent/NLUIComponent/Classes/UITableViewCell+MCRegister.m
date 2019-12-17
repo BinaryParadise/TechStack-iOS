@@ -35,3 +35,15 @@
 }
 
 @end
+
+@implementation UICollectionViewCell (MCRegister)
+
++ (void)registerForCollectionView:(UICollectionView *)collectionView {
+    [collectionView registerClass:self.class forCellWithReuseIdentifier:NSStringFromClass(self.class)];
+}
+
++ (instancetype)cellForCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(self.class) forIndexPath:indexPath];
+}
+
+@end
