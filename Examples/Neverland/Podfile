@@ -21,7 +21,6 @@ target 'Neverland' do
   # Pods for Neverland
   pod 'MBProgressHUD'
   pod 'NLRouterAction', :path => '../NLRouterAction'
-  pod 'MCJSONKit', :path => '../../../MCJSONKit'
   pod 'NLModuleService', :path => '../NLModuleService'
   pod 'NLModelService', :path => '../NLModelService'
   pod 'NLFoundation', :path => '../NLFoundation'
@@ -35,11 +34,11 @@ target 'Neverland' do
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
-  pod 'Peregrine', :path => '../../../Peregrine'
+  # pod 'Peregrine', :path => '../../../Peregrine'
 end
 
 post_install do |installer|
-    require_relative '../../../Peregrine/Peregrine/PGGenerator.rb'
+    require_relative 'Pods/Peregrine/Peregrine/PGGenerator.rb'
     PGGenerator::configure_project(installer, '${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app')
 
     `efpodsanalyzer ../Neverland/Podfile`

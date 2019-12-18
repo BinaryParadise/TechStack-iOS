@@ -32,7 +32,7 @@ PODS:
     - MCFoundation (~> 0.2)
   - MCUIKit (0.3.1)
   - MJExtension (3.2.1)
-  - MJRefresh (3.2.3)
+  - MJRefresh (3.3.1)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - NLDataType (0.1.0):
@@ -47,6 +47,7 @@ PODS:
     - NLRouterAction
   - NLLogger (0.1.0):
     - MCLogger (~> 0.5)
+    - MLeaksFinder
     - NLProtocols
   - NLModelService (0.1.0):
     - MCJSONKit (~> 0.5)
@@ -84,18 +85,17 @@ PODS:
     - Realm/Headers (= 3.21.0)
   - Realm/Headers (3.21.0)
   - SAMKeychain (1.5.3)
-  - SDWebImage (5.3.2):
-    - SDWebImage/Core (= 5.3.2)
-  - SDWebImage/Core (5.3.2)
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
   - SnapKit (4.2.0)
   - SocketRocket (0.5.1)
   - Toast (4.0.0)
-  - Weibo_SDK (3.2.5.1)
+  - Weibo_SDK (3.2.6)
 
 DEPENDENCIES:
   - Masonry
   - MBProgressHUD
-  - MCJSONKit (from `../../../MCJSONKit`)
   - MCObserverKit
   - MLeaksFinder
   - NLDataType (from `../NLDataType`)
@@ -109,7 +109,6 @@ DEPENDENCIES:
   - NLUIComponent (from `../NLUIComponent`)
   - NLUtility (from `../NLUtility`)
   - NLWeibo (from `../NLWeibo`)
-  - Peregrine (from `../../../Peregrine`)
 
 SPEC REPOS:
   trunk:
@@ -119,12 +118,14 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MCFoundation
+    - MCJSONKit
     - MCLogger
     - MCObserverKit
     - MCUIKit
     - MJExtension
     - MJRefresh
     - MLeaksFinder
+    - Peregrine
     - Realm
     - SAMKeychain
     - SDWebImage
@@ -134,8 +135,6 @@ SPEC REPOS:
     - Weibo_SDK
 
 EXTERNAL SOURCES:
-  MCJSONKit:
-    :path: "../../../MCJSONKit"
   NLDataType:
     :path: "../NLDataType"
   NLExtension:
@@ -158,8 +157,6 @@ EXTERNAL SOURCES:
     :path: "../NLUtility"
   NLWeibo:
     :path: "../NLWeibo"
-  Peregrine:
-    :path: "../../../Peregrine"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -173,12 +170,12 @@ SPEC CHECKSUMS:
   MCObserverKit: e85df8596f0619a751dfc510e312f800b6ba1f70
   MCUIKit: cdf31d6c54a0c3e8a371885a55212efff72b14fa
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
-  MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   NLDataType: 67c8dbe88b17246482801f122151e1c4a239e564
   NLExtension: 7c829ecef916ddc4354dc099455308b20d6ef310
   NLFoundation: 74d23838dc2c00d0f81cad760effce1b9fcff81c
-  NLLogger: 375e16b814422642e6a49a0f7c0aa2544ed5fa8b
+  NLLogger: 0147d78e5530e8868a6379e3854a548695ff26ad
   NLModelService: 8e5ead1f3b62ac79a764c3390b3ccdf7c122bbfe
   NLModuleService: 02d39c759d5c353504ed6db09408c4bdeea02bac
   NLProtocols: 3c98d3358586cd7eeb7ce740cd3d21fa85872c87
@@ -189,12 +186,12 @@ SPEC CHECKSUMS:
   Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
-  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  Weibo_SDK: 76455315cb43d6a63c1990bf91483f05a98d45fd
+  Weibo_SDK: 13b51503b929ae645f52e5cf584093e6a269bcd9
 
-PODFILE CHECKSUM: a0c60f43378e86bfeb54c7a49d07b4c1b045b359
+PODFILE CHECKSUM: 17560e82ab9ccf99ac95bdb59279a0770a25725e
 
 COCOAPODS: 1.8.4
