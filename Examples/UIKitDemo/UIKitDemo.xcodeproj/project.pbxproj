@@ -15,6 +15,7 @@
 		244826E2229F63DB00861F97 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244826E1229F63DB00861F97 /* WebKit.framework */; };
 		244848D4223CA92100A37FC7 /* UKPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244848D3223CA92100A37FC7 /* UKPageViewController.xib */; };
 		2461DF37222D677800D4382F /* UKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461DF35222D677800D4382F /* UKPageViewController.m */; };
+		247F175B23BCDACF0022E1D9 /* GDUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F175A23BCDACF0022E1D9 /* GDUICollectionViewController.m */; };
 		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
 		248709D82382570F00145E98 /* GDUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248709D72382570F00145E98 /* GDUIHelper.m */; };
 		249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* GDDemoView.m */; };
@@ -66,6 +67,8 @@
 		244848D3223CA92100A37FC7 /* UKPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UKPageViewController.xib; sourceTree = "<group>"; };
 		2461DF34222D677800D4382F /* UKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UKPageViewController.h; sourceTree = "<group>"; };
 		2461DF35222D677800D4382F /* UKPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UKPageViewController.m; sourceTree = "<group>"; };
+		247F175923BCDACF0022E1D9 /* GDUICollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUICollectionViewController.h; sourceTree = "<group>"; };
+		247F175A23BCDACF0022E1D9 /* GDUICollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUICollectionViewController.m; sourceTree = "<group>"; };
 		248237662292F23500B9DF7B /* GDUIViewAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIViewAction.h; sourceTree = "<group>"; };
 		248237672292F23500B9DF7B /* GDUIViewAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIViewAction.m; sourceTree = "<group>"; };
 		248709D62382570F00145E98 /* GDUIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDUIHelper.h; sourceTree = "<group>"; };
@@ -180,7 +183,16 @@
 			path = UIPageViewController;
 			sourceTree = "<group>";
 		};
-		249DD24E21E1EF1F009B8781 /* UI */ = {
+		247F175823BCDAB30022E1D9 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				247F175923BCDACF0022E1D9 /* GDUICollectionViewController.h */,
+				247F175A23BCDACF0022E1D9 /* GDUICollectionViewController.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		249DD24E21E1EF1F009B8781 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				CE1C0EC8234DB35A00AB7EAB /* SIWA */,
@@ -191,12 +203,13 @@
 				CE1C0ECE234DB40100AB7EAB /* GDGeneralAction.h */,
 				CE1C0ECF234DB40100AB7EAB /* GDGeneralAction.m */,
 			);
-			path = UI;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		249DD24F21E1EF2D009B8781 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				247F175823BCDAB30022E1D9 /* UIScrollView */,
 				CE2845B72293CCE200E74616 /* SBUIView.storyboard */,
 				CEFAAC332316870D000CB2D9 /* GDUILabelInsetViewController.h */,
 				CEFAAC342316870D000CB2D9 /* GDUILabelInsetViewController.m */,
@@ -242,7 +255,7 @@
 		C532E40B1F889834009E38CA /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				249DD24E21E1EF1F009B8781 /* UI */,
+				249DD24E21E1EF1F009B8781 /* UIKit */,
 				CE861DF421762F19009927A8 /* Autolayout */,
 				243A11E422B46B2B00429B09 /* Animation */,
 				C532E40C1F889834009E38CA /* AppDelegate.h */,
@@ -532,6 +545,7 @@
 				CE1C0ECC234DB3AD00AB7EAB /* GDSignInWithAppleViewController.m in Sources */,
 				CECEB5E92320B2F4008A4639 /* GDCloseViewController.m in Sources */,
 				CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */,
+				247F175B23BCDACF0022E1D9 /* GDUICollectionViewController.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
 				243D9B86239F8CAF003A900D /* GDNormalView.m in Sources */,
 				248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */,

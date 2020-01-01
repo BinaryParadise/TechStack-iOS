@@ -18,6 +18,8 @@ PGMethod(wkWebViewAction, "gd://UIView/WebView/WKWebView?wkwebview=1");
 
 PGMethod(labelDemo, "gd://UIView/UILabelInset");
 
+PGMethod(_UICollectionView, "gd://UIView/UIScrollView/UICollectionView?c=自适应宽度");
+
 @end
 
 NS_ASSUME_NONNULL_END

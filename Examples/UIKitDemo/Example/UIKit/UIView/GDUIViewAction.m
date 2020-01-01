@@ -8,6 +8,7 @@
 
 #import "GDUIViewAction.h"
 #import "WKWebView/GDWebViewController.h"
+#import "GDUICollectionViewController.h"
 
 @implementation GDUIViewAction
 
@@ -33,6 +34,12 @@
 
 + (void)labelDemo:(PGRouterContext *)context {
     [self pushViewControllerWithIdentify:context.config.actionName];
+    [context finished];
+}
+
++ (void)_UICollectionView:(PGRouterContext *)context {
+    [self pushViewControllerWithIdentify:context.config.actionName];
+    [context finished];
 }
 
 @end

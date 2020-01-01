@@ -68,6 +68,21 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="B8z-Y3-yWL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eE1-eV-1aQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="UICollectionView" id="wgk-dF-zjF" customClass="GDUICollectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uh5-Vt-WRk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="by2-ji-tVn"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="764" y="134"/>
+        </scene>
         <!--Label Inset View Controller-->
         <scene sceneID="PoN-bq-2tc">
             <objects>

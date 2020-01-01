@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 PGMethod(equalization, "gd://UIView/Equalization");
 
-PGMethod(scrollView, "gd://UIView/UIScrollView");
+PGMethod(scrollView, "gd://AutoLayout/UIScrollView");
 
 @end
 
