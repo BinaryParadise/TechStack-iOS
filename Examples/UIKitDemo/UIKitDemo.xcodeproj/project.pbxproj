@@ -460,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8\nruby /Users/bonana/Github/Peregrine/Peregrine/PGGenerator.rb \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}${WRAPPER_SUFFIX}/Peregrine.bundle\"\n";
+			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 export PG_VERSION=0.6.2 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb";
 		};
 		D4354FE2F418808C7863B09A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

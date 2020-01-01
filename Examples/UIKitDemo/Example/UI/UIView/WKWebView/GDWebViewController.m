@@ -170,7 +170,10 @@
 
 // 当main frame的导航开始请求时，会调用此方法
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-    
+    if ([PGRouterManager dryRun:webView.URL.absoluteString]) {
+        [PGRouterManager openURL:webView.URL.absoluteString completion:nil];
+    }
+    LogDebug(@"%@", webView.URL.absoluteString);
 }
 
 // 当main frame接收到服务重定向时，会回调此方法
