@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GDGeneralAction : NLRouterActionBase
 
-+ (void)signInWithApple:(PGRouterContext *)context PGTarget("ap://General/SignInWithApple?c=使用苹果登录");
+PGMethod(signInWithApple, "ap://General/SignInWithApple?c=使用苹果登录")
 
-+ (void)darkMode:(PGRouterContext *)context PGTarget("ap://General/DarkMode?c=黑暗模式");
+PGMethod(darkMode, "ap://General/DarkMode?c=黑暗模式")
 
 @end
 

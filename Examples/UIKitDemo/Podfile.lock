@@ -49,7 +49,7 @@ PODS:
   - NLUtility (0.1.0):
     - MCObserverKit
     - NLLogger
-  - Peregrine (0.6.2)
+  - Peregrine (0.6.3)
   - SAMKeychain (1.5.3)
   - SDWebImage (5.4.1):
     - SDWebImage/Core (= 5.4.1)
@@ -125,7 +125,7 @@ SPEC CHECKSUMS:
   NLRouterAction: 0e45539d9bca9056974f02fbce4c1336c97fadd6
   NLUIComponent: 4ec6dbb9adc24d82321874d1d80ac8cff6f0cf73
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1
-  Peregrine: 8083cd7f9b48a815893755f1efb6cd10ec9fe7d5
+  Peregrine: d339ebce32d3ec21f46b15a9c23161427b6dce12
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a

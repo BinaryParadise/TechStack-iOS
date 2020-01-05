@@ -19,6 +19,7 @@
 		248237682292F23500B9DF7B /* GDUIViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 248237672292F23500B9DF7B /* GDUIViewAction.m */; };
 		248709D82382570F00145E98 /* GDUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 248709D72382570F00145E98 /* GDUIHelper.m */; };
 		249DD25221E1EF92009B8781 /* GDDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249DD25121E1EF92009B8781 /* GDDemoView.m */; };
+		24C6BD2223C1EAD0008EC844 /* GDFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6BD2123C1EAD0008EC844 /* GDFlowLayout.m */; };
 		24C9F172238A79DD00334431 /* GDAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9F171238A79DD00334431 /* GDAnimationVC.m */; };
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
@@ -75,6 +76,8 @@
 		248709D72382570F00145E98 /* GDUIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDUIHelper.m; sourceTree = "<group>"; };
 		249DD25021E1EF92009B8781 /* GDDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDemoView.h; sourceTree = "<group>"; };
 		249DD25121E1EF92009B8781 /* GDDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDDemoView.m; sourceTree = "<group>"; };
+		24C6BD2023C1EAD0008EC844 /* GDFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDFlowLayout.h; sourceTree = "<group>"; };
+		24C6BD2123C1EAD0008EC844 /* GDFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDFlowLayout.m; sourceTree = "<group>"; };
 		24C9F170238A79DD00334431 /* GDAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAnimationVC.h; sourceTree = "<group>"; };
 		24C9F171238A79DD00334431 /* GDAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAnimationVC.m; sourceTree = "<group>"; };
 		24DD1F38228B0C49001713EC /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 			children = (
 				247F175923BCDACF0022E1D9 /* GDUICollectionViewController.h */,
 				247F175A23BCDACF0022E1D9 /* GDUICollectionViewController.m */,
+				24C6BD2023C1EAD0008EC844 /* GDFlowLayout.h */,
+				24C6BD2123C1EAD0008EC844 /* GDFlowLayout.m */,
 			);
 			path = UIScrollView;
 			sourceTree = "<group>";
@@ -473,7 +478,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 export PG_VERSION=0.6.2 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb";
+			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 export PG_VERSION=0.6.3 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb";
 		};
 		D4354FE2F418808C7863B09A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -544,6 +549,7 @@
 				C532E40E1F889834009E38CA /* AppDelegate.m in Sources */,
 				CE1C0ECC234DB3AD00AB7EAB /* GDSignInWithAppleViewController.m in Sources */,
 				CECEB5E92320B2F4008A4639 /* GDCloseViewController.m in Sources */,
+				24C6BD2223C1EAD0008EC844 /* GDFlowLayout.m in Sources */,
 				CEFAAC352316870D000CB2D9 /* GDUILabelInsetViewController.m in Sources */,
 				247F175B23BCDACF0022E1D9 /* GDUICollectionViewController.m in Sources */,
 				CE0E301522966DE900E39428 /* GDViewControllerAction.m in Sources */,
