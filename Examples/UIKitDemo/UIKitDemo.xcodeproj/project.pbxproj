@@ -22,6 +22,7 @@
 		24C6BD2223C1EAD0008EC844 /* GDFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6BD2123C1EAD0008EC844 /* GDFlowLayout.m */; };
 		24C9F172238A79DD00334431 /* GDAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9F171238A79DD00334431 /* GDAnimationVC.m */; };
 		24DD1F39228B0C49001713EC /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD1F38228B0C49001713EC /* AutoLayout.storyboard */; };
+		24E6126923CAC39600B1904D /* UserScript.js in Resources */ = {isa = PBXBuildFile; fileRef = 24E6126823CAC39600B1904D /* UserScript.js */; };
 		C532E40E1F889834009E38CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C532E40D1F889834009E38CA /* AppDelegate.m */; };
 		C532E4161F889834009E38CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C532E4151F889834009E38CA /* Assets.xcassets */; };
 		C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C532E4171F889834009E38CA /* LaunchScreen.storyboard */; };
@@ -81,6 +82,7 @@
 		24C9F170238A79DD00334431 /* GDAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAnimationVC.h; sourceTree = "<group>"; };
 		24C9F171238A79DD00334431 /* GDAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAnimationVC.m; sourceTree = "<group>"; };
 		24DD1F38228B0C49001713EC /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
+		24E6126823CAC39600B1904D /* UserScript.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UserScript.js; sourceTree = "<group>"; };
 		4A930E0F8616DF53E22A0A59 /* Pods-UIKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-UIKitDemo/Pods-UIKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C532E4091F889834009E38CA /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C532E40C1F889834009E38CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				C5FB165B1F8B998400350055 /* GDWebViewController.h */,
 				C5FB165C1F8B998400350055 /* GDWebViewController.m */,
 				C5FB165E1F8B9AAB00350055 /* webview.html */,
+				24E6126823CAC39600B1904D /* UserScript.js */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				CE58F63A22CB895A00A98A6F /* GDXibTableViewCell.xib in Resources */,
 				C532E4191F889834009E38CA /* LaunchScreen.storyboard in Resources */,
 				C532E4161F889834009E38CA /* Assets.xcassets in Resources */,
+				24E6126923CAC39600B1904D /* UserScript.js in Resources */,
 				CE58F64122CC45C000A98A6F /* InterfaceBuilder.storyboard in Resources */,
 				CE0E301722966E0200E39428 /* SBViewController.storyboard in Resources */,
 				CE1C0ECD234DB3AD00AB7EAB /* GDSignInWithAppleViewController.xib in Resources */,

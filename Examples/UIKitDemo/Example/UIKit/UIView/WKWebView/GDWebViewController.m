@@ -44,7 +44,7 @@
         [webViewConfig.userContentController addUserScript:cookieScript];
         
         //注册自定义脚本
-        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:@"" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:[NSString stringWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"UserScript.js" ofType:nil] encoding:NSUTF8StringEncoding error:nil] injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
         [webViewConfig.userContentController addUserScript:userScript];
         [webViewConfig.userContentController addScriptMessageHandler:self name:@"objc"];
         
