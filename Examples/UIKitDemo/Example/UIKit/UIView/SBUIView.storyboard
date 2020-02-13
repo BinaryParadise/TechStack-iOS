@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-rh-yQD" customClass="GDDemoView">
-                                <rect key="frame" x="16" y="36" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="559"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jlU-uW-KrC">
                                         <rect key="frame" x="17" y="489" width="50" height="50"/>
@@ -71,7 +69,6 @@
         <!--Collection View Controller-->
         <scene sceneID="B8z-Y3-yWL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eE1-eV-1aQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="UICollectionView" id="wgk-dF-zjF" customClass="GDUICollectionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uh5-Vt-WRk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -80,6 +77,7 @@
                         <viewLayoutGuide key="safeArea" id="by2-ji-tVn"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eE1-eV-1aQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="134"/>
         </scene>
@@ -90,7 +88,42 @@
                     <view key="view" contentMode="scaleToFill" id="f9u-Rb-L6j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-9X-ZcK">
+                                <rect key="frame" x="141" y="311.5" width="93" height="44"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-49" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="9999" image="ic_comment">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7x-xt-us4">
+                                <rect key="frame" x="16" y="399" width="343" height="62.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="一抹水润，击退干燥，多种植物精华，喂饱饥渴皮肤，换发肌肤正能量">
+                                        <attributes>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EkZ-DI-cMu" firstAttribute="trailing" secondItem="d7x-xt-us4" secondAttribute="trailing" constant="16" id="5q7-fz-My7"/>
+                            <constraint firstItem="d7x-xt-us4" firstAttribute="leading" secondItem="EkZ-DI-cMu" secondAttribute="leading" constant="16" id="GSo-dq-K9c"/>
+                            <constraint firstItem="d7x-xt-us4" firstAttribute="top" secondItem="EkZ-DI-cMu" secondAttribute="top" constant="399" id="ONW-cr-SIJ"/>
+                            <constraint firstItem="EMj-9X-ZcK" firstAttribute="centerX" secondItem="EkZ-DI-cMu" secondAttribute="centerX" id="Q6M-N1-QOb"/>
+                            <constraint firstItem="EMj-9X-ZcK" firstAttribute="centerY" secondItem="EkZ-DI-cMu" secondAttribute="centerY" id="gd2-zV-XQg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EkZ-DI-cMu"/>
                     </view>
                 </viewController>
@@ -100,6 +133,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_comment" width="22" height="22"/>
         <namedColor name="TI_Section">
             <color red="0.49399998784065247" green="0.0" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
