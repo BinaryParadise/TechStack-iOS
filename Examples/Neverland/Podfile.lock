@@ -14,12 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CocoaLumberjack (3.6.0):
-    - CocoaLumberjack/Core (= 3.6.0)
-  - CocoaLumberjack/Core (3.6.0)
+  - CocoaLumberjack (3.6.1):
+    - CocoaLumberjack/Core (= 3.6.1)
+  - CocoaLumberjack/Core (3.6.1)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.1.0)
+  - MBProgressHUD (1.2.0)
   - MCFoundation (0.2.2)
   - MCJSONKit (0.5.2):
     - MCFoundation (~> 0.2)
@@ -61,7 +61,7 @@ PODS:
     - NLModelService
     - NLModuleService
     - NLUIComponent
-    - Peregrine (~> 0.5)
+    - Peregrine (~> 0.6.2)
   - NLUIComponent (0.1.0):
     - Masonry (~> 1.0)
     - MBProgressHUD
@@ -71,6 +71,10 @@ PODS:
     - SDWebImage
     - SnapKit (~> 4.2)
     - Toast
+  - NLUIKit (0.1.0):
+    - Masonry
+    - NLLogger
+    - NLRouterAction
   - NLUtility (0.1.0):
     - MCObserverKit
     - NLLogger
@@ -80,14 +84,14 @@ PODS:
     - NLRouterAction
     - Realm (~> 3.2)
     - Weibo_SDK (~> 3.2)
-  - Peregrine (0.5.1)
+  - Peregrine (0.6.7)
   - Realm (3.21.0):
     - Realm/Headers (= 3.21.0)
   - Realm/Headers (3.21.0)
   - SAMKeychain (1.5.3)
-  - SDWebImage (5.4.0):
-    - SDWebImage/Core (= 5.4.0)
-  - SDWebImage/Core (5.4.0)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - SnapKit (4.2.0)
   - SocketRocket (0.5.1)
   - Toast (4.0.0)
@@ -107,6 +111,7 @@ DEPENDENCIES:
   - NLProtocols (from `../NLProtocols`)
   - NLRouterAction (from `../NLRouterAction`)
   - NLUIComponent (from `../NLUIComponent`)
+  - NLUIKit (from `../NLUIKit`)
   - NLUtility (from `../NLUtility`)
   - NLWeibo (from `../NLWeibo`)
 
@@ -153,6 +158,8 @@ EXTERNAL SOURCES:
     :path: "../NLRouterAction"
   NLUIComponent:
     :path: "../NLUIComponent"
+  NLUIKit:
+    :path: "../NLUIKit"
   NLUtility:
     :path: "../NLUtility"
   NLWeibo:
@@ -160,10 +167,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MCFoundation: 1c05141cbc900ec15618d7d4c75fb88719d7b658
   MCJSONKit: 64251bf517b756436c185735b6f4edfdede9ec8e
   MCLogger: baac17a212e7026585e2f1528d6de3fe548474c0
@@ -179,19 +186,20 @@ SPEC CHECKSUMS:
   NLModelService: 8e5ead1f3b62ac79a764c3390b3ccdf7c122bbfe
   NLModuleService: 02d39c759d5c353504ed6db09408c4bdeea02bac
   NLProtocols: 3c98d3358586cd7eeb7ce740cd3d21fa85872c87
-  NLRouterAction: 0ea0f02812ccae3d2a2b0419c409d9b101629f63
+  NLRouterAction: 0e45539d9bca9056974f02fbce4c1336c97fadd6
   NLUIComponent: 4ec6dbb9adc24d82321874d1d80ac8cff6f0cf73
+  NLUIKit: 8955801a5ed4eceaa9bafbc986978c7bbee83a06
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1
   NLWeibo: 8dcd3ee58180e945e0481fe5ee8b7497c83d3d9d
-  Peregrine: 39509966cc7b4ea813197423c7df801ebe69056b
+  Peregrine: f66b4e8d6767fe633c9eeee5b43fa325a26f47c8
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
-  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 13b51503b929ae645f52e5cf584093e6a269bcd9
 
-PODFILE CHECKSUM: 17560e82ab9ccf99ac95bdb59279a0770a25725e
+PODFILE CHECKSUM: c240601ca33d72658a83e5523d2f8c5a88d80aea
 
 COCOAPODS: 1.8.4

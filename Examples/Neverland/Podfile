@@ -31,6 +31,7 @@ target 'Neverland' do
   pod 'NLUIComponent', :path => '../NLUIComponent'
   pod 'NLProtocols', :path => '../NLProtocols'
   pod 'NLExtension', :path => '../NLExtension'
+  pod 'NLUIKit', :path => '../NLUIKit'
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
@@ -39,7 +40,7 @@ end
 
 post_install do |installer|
     require_relative 'Pods/Peregrine/Peregrine/PGGenerator.rb'
-    PGGenerator::configure_project(installer, '${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app')
+    PGGenerator::configure_project(installer, true)
 
-    `efpodsanalyzer ../Neverland/Podfile`
+    # `efpodsanalyzer ../Neverland/Podfile`
 end
