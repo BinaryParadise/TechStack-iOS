@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Button View Controller-->
+        <scene sceneID="6vY-bi-9Qx">
+            <objects>
+                <viewController storyboardIdentifier="UIButton" id="IB7-IA-5xY" customClass="GDUIButtonViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWj-9G-FfL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1s-Qt-U3P">
+                                <rect key="frame" x="16" y="36" width="86" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="默认间距" image="icon_lock">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-JT-fh9">
+                                <rect key="frame" x="153" y="65" width="69" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="-2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="间距12" image="icon_lock">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-LK-4dO">
+                                <rect key="frame" x="16" y="94" width="16" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icon_lock">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-OR-Ee7">
+                                <rect key="frame" x="16" y="123" width="70" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="仅限文字">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-2j-5Pm">
+                                <rect key="frame" x="95" y="210" width="185" height="44"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.4549019608" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7Rh-gR-uqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="titleEdgeInsets" minX="-24" minY="29" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="79.5" minY="0.0" maxX="0.0" maxY="19"/>
+                                <state key="normal" title="图片左间隔是标题宽度的二分之一" image="icon_lock"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1AA-OR-Ee7" firstAttribute="top" secondItem="hN7-LK-4dO" secondAttribute="bottom" constant="8" id="10V-ON-iiI"/>
+                            <constraint firstItem="SQH-JT-fh9" firstAttribute="top" secondItem="D1s-Qt-U3P" secondAttribute="bottom" constant="8" id="6MM-ef-5q5"/>
+                            <constraint firstItem="1y0-2j-5Pm" firstAttribute="top" secondItem="9pe-i2-Zpy" secondAttribute="top" constant="190" id="A79-CO-qGJ"/>
+                            <constraint firstItem="hN7-LK-4dO" firstAttribute="top" secondItem="SQH-JT-fh9" secondAttribute="bottom" constant="8" id="Dbx-hn-t6N"/>
+                            <constraint firstItem="D1s-Qt-U3P" firstAttribute="leading" secondItem="9pe-i2-Zpy" secondAttribute="leading" constant="16" id="GSr-XS-KXc"/>
+                            <constraint firstItem="1y0-2j-5Pm" firstAttribute="centerX" secondItem="9pe-i2-Zpy" secondAttribute="centerX" id="JKy-3Q-KNT"/>
+                            <constraint firstItem="D1s-Qt-U3P" firstAttribute="top" secondItem="9pe-i2-Zpy" secondAttribute="top" constant="16" id="Lqa-ql-GSJ"/>
+                            <constraint firstItem="1AA-OR-Ee7" firstAttribute="leading" secondItem="hN7-LK-4dO" secondAttribute="leading" id="PkV-AS-tAg"/>
+                            <constraint firstItem="SQH-JT-fh9" firstAttribute="centerX" secondItem="9pe-i2-Zpy" secondAttribute="centerX" id="U3n-gT-INi"/>
+                            <constraint firstItem="hN7-LK-4dO" firstAttribute="leading" secondItem="9pe-i2-Zpy" secondAttribute="leading" constant="16" id="asU-tn-7AU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9pe-i2-Zpy"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="1y0-2j-5Pm" id="BSL-2O-VUV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZ9-E1-Al0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511.19999999999999" y="80.50974512743629"/>
+        </scene>
+        <!--Text Field View Controller-->
+        <scene sceneID="m3F-1f-S8C">
+            <objects>
+                <viewController storyboardIdentifier="UITextField" id="mBt-4U-qge" customClass="UKUITextFieldViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e16-hT-9ZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-Xt-oHY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-lI-3qv">
+                                        <rect key="frame" x="16" y="112" width="62" height="30"/>
+                                        <state key="normal" title="切换键盘"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="文本输入框" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9ed-n7-9zJ">
+                                        <rect key="frame" x="16" y="52" width="113" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="czX-nd-4bC"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="p4U-iu-EzZ" firstAttribute="trailing" secondItem="9ed-n7-9zJ" secondAttribute="trailing" constant="16" id="Ang-ri-chZ"/>
+                                    <constraint firstItem="VNd-lI-3qv" firstAttribute="top" secondItem="9ed-n7-9zJ" secondAttribute="bottom" constant="10" id="H1A-QP-Tfj"/>
+                                    <constraint firstItem="9ed-n7-9zJ" firstAttribute="leading" secondItem="p4U-iu-EzZ" secondAttribute="leading" constant="16" id="Z3F-IU-YtA"/>
+                                    <constraint firstItem="VNd-lI-3qv" firstAttribute="leading" secondItem="9ed-n7-9zJ" secondAttribute="leading" id="q9r-fM-kaa"/>
+                                    <constraint firstItem="9ed-n7-9zJ" firstAttribute="top" secondItem="p4U-iu-EzZ" secondAttribute="top" constant="32" id="rDF-QG-FK4"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="p4U-iu-EzZ"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fTn-6l-R3g"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0n4-Tc-zOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_lock" width="16" height="16"/>
+    </resources>
+</document>

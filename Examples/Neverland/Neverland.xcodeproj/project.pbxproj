@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1313734D28B839461A39B169 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91998FAECD8931176509C28 /* Pods_Neverland.framework */; };
 		241CE8DB23980E780007F22E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CE8DA23980E780007F22E /* File.swift */; };
 		248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D619E2386917B00CBBAC1 /* UIKit.framework */; };
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
 		24912ADC2398AACD004E3DDA /* main1.m in Sources */ = {isa = PBXBuildFile; fileRef = 24912ADB2398AACD004E3DDA /* main1.m */; };
-		41A3116DC7A6F58016EA3063 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */; };
 		CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */; };
 		CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */; };
 		CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* NLAppDelegate.m */; };
@@ -28,7 +28,7 @@
 		248D61A02386918100CBBAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24912ADB2398AACD004E3DDA /* main1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main1.m; sourceTree = "<group>"; };
 		7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
-		8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91998FAECD8931176509C28 /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NLMain.storyboard; sourceTree = "<group>"; };
 		CE17E781236BDF7A00F259C1 /* NLRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLRouterViewController.h; sourceTree = "<group>"; };
 		CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLRouterViewController.m; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			files = (
 				248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */,
 				248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */,
-				41A3116DC7A6F58016EA3063 /* Pods_Neverland.framework in Frameworks */,
+				1313734D28B839461A39B169 /* Pods_Neverland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 			children = (
 				248D61A02386918100CBBAC1 /* Foundation.framework */,
 				248D619E2386917B00CBBAC1 /* UIKit.framework */,
-				8DB785A23A0B005D7D7B93A4 /* Pods_Neverland.framework */,
+				A91998FAECD8931176509C28 /* Pods_Neverland.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,12 +151,12 @@
 			buildConfigurationList = CE6E27062202F745003AB8FB /* Build configuration list for PBXNativeTarget "Neverland" */;
 			buildPhases = (
 				56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */,
+				30251F0C5CE7F7F1E06FB4E5 /* [Peregrine] Generator Routing Table */,
 				CE6E26E12202F743003AB8FB /* Sources */,
 				CE6E26E22202F743003AB8FB /* Frameworks */,
 				CE6E26E32202F743003AB8FB /* Resources */,
 				6E541EA635357CCD761B3C15 /* [CP] Copy Pods Resources */,
-				F60EA81B34BC5026F36CA720 /* [CP] Embed Pods Frameworks */,
-				378A6DD7E6F1E41C31FA55BE /* [Peregrine] Generator Routing Table */,
+				558C08DB89149BC83CB07FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,9 +215,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		378A6DD7E6F1E41C31FA55BE /* [Peregrine] Generator Routing Table */ = {
+		30251F0C5CE7F7F1E06FB4E5 /* [Peregrine] Generator Routing Table */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
@@ -231,7 +231,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 export PG_VERSION=0.6.6 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb";
+			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb";
+		};
+		558C08DB89149BC83CB07FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -270,23 +287,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F60EA81B34BC5026F36CA720 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -82,12 +82,8 @@ PODS:
     - AFNetworking (~> 3.2)
     - NLModuleService
     - NLRouterAction
-    - Realm (~> 3.2)
     - Weibo_SDK (~> 3.2)
-  - Peregrine (0.6.7)
-  - Realm (3.21.0):
-    - Realm/Headers (= 3.21.0)
-  - Realm/Headers (3.21.0)
+  - Peregrine (0.6.8)
   - SAMKeychain (1.5.3)
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
@@ -114,6 +110,7 @@ DEPENDENCIES:
   - NLUIKit (from `../NLUIKit`)
   - NLUtility (from `../NLUtility`)
   - NLWeibo (from `../NLWeibo`)
+  - Peregrine (~> 0.6.7)
 
 SPEC REPOS:
   trunk:
@@ -131,7 +128,6 @@ SPEC REPOS:
     - MJRefresh
     - MLeaksFinder
     - Peregrine
-    - Realm
     - SAMKeychain
     - SDWebImage
     - SnapKit
@@ -190,9 +186,8 @@ SPEC CHECKSUMS:
   NLUIComponent: 4ec6dbb9adc24d82321874d1d80ac8cff6f0cf73
   NLUIKit: 8955801a5ed4eceaa9bafbc986978c7bbee83a06
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1
-  NLWeibo: 8dcd3ee58180e945e0481fe5ee8b7497c83d3d9d
-  Peregrine: f66b4e8d6767fe633c9eeee5b43fa325a26f47c8
-  Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
+  NLWeibo: 7d3555a9af1c5ba9136deae9fd8e98ee8bab11b8
+  Peregrine: 757c64fe37e3dd604e8e2164d9fcdd3171627b27
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -200,6 +195,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 13b51503b929ae645f52e5cf584093e6a269bcd9
 
-PODFILE CHECKSUM: c240601ca33d72658a83e5523d2f8c5a88d80aea
+PODFILE CHECKSUM: 0247c4bd488917824d4f726054f739fdb2e17b80
 
 COCOAPODS: 1.8.4

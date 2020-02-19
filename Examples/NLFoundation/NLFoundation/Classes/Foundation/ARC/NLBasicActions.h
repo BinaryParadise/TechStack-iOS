@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NLBasicActions : NLRouterActionBase
 
-PGMethod(kvoDemo, "fd://Foundation/KVO&KVC/KVO?c=Key-Value Observing");
+PGMethod(kvoDemo, "fd://Foundation/KVO?c=Key-Value Observing");
 
-PGMethod(kvcDemo, "fd://Foundation/KVO&KVC/KVC?c=Key-Value Coding");
+PGMethod(kvcDemo, "fd://Foundation/KVC/KVC?c=Key-Value Coding");
 
 PGMethod(arcDemo, "fd://Foundation/ARC?c=自动内存管理");
 

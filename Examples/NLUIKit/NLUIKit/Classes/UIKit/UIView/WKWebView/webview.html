@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
+<meta charset="UTF-8">
+<title>WebView功能演示</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	jQuery(function() {
+	});
+
+	//提供给OC调用
+	function callJSFunc(str) {
+        $("#tip").text(str);
+		return "JS返回结果";
+	};
+
+	//调用OC代码
+	function callOCFunc(tag) {
+		document.location = "mc://" + tag;
+	}
+
+	//WKWebView
+	function postMessage(msg) {
+		window.webkit.messageHandlers.objc.postMessage(msg);
+	}
+
+    function disableUIWebBtn(msg) {
+        $('#btn1').attr('disabled','disabled');
+        $('#btn2').attr('disabled','disabled');
+        $('#btn3').attr('disabled','disabled');
+        $('#btn4').attr('disabled','disabled');
+        callJSFunc(msg)
+    }
+
+    function disableWKWebView() {
+        $('#btn5').attr('disabled','disabled');
+        $('#btn6').attr('disabled','disabled');
+        $('#btn7').attr('disabled','disabled');
+        $('#btn8').attr('disabled','disabled');
+    }
+</script>
+<style type="text/css">
+body {
+	font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica,
+		sans-serif;
+	color: #4f6b72;
+	background: #E6EAE9;
+}
+
+a {
+	color: #c75f3e;
+}
+
+#rstable {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+th {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA no-repeat;
+}
+
+th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+
+td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	font-size: 11px;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+}
+
+td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+
+th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #f5fafa no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #797268;
+}
+</style>
+</head>
+<body>
+	<div id="result">
+		<table id="rstable" cellspacing="0">
+			<tr>
+				<th>功能</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td colspan="2"><b>UIWebView</b>
+			</tr>
+			<tr>
+				<td><button id="btn1" onclick="callOCFunc(1)">URL拦截</button></td>
+				<td>调用OC代码</td>
+			</tr>
+            <tr>
+                <td><button id="btn2" onclick="callFromJS('通过OC修改')">JavaScriptCore</button></td>
+                <td>调用OC代码</td>
+            </tr>
+			<tr>
+				<td><button id="btn3" onclick="callOCFunc(2)">stringByEvaluatingJavaScriptFromString</button></td>
+				<td>调用JS代码</td>
+			</tr>
+            <tr>
+                <td><button id="btn4" onclick="callOCFunc(3)">JavaScriptCore</button></td>
+                <td>调用JS代码</td>
+            </tr>
+			<tr>
+				<td colspan="2"><b>WkWebView</b></td>
+			</tr>
+            <tr>
+                <td><button id="btn6" onclick="postMessage(2)">addScriptMessageHandler</button></td>
+                <td>调用OC代码</td>
+            </tr>
+            <tr>
+                <td><button id="btn8" onclick="postMessage(4)">evaluateJavaScript</button></td>
+                <td>调用JS代码</td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>路由</b></td>
+            </tr>
+            <tr>
+                <td><a href="gd://UIView/UILabelInset"><h3>gd://UIView/UILabelInset</h3></a></td>
+                <td>路由跳转</td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Cookie</b></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.apple.com"><h3>添加Cookie</h3></a></td>
+                <td>自定义添加，用于登录等业务场景</td>
+            </tr>
+		</table>
+        <div><br/>
+            <label>信息: </label><p id="tip">...</p>
+        </div>
+	</div>
+</body>
+</html>

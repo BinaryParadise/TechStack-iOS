@@ -13,7 +13,7 @@
  */
 @interface NLDesignPatternsActions : NLRouterActionBase
 
-PGMethod(simpleFactory, "fd://Extension/设计模式/创建型/简单工厂模式");
-PGMethod(factoryFunction, "fd://Extension/设计模式/创建型/工厂方法模式");
+PGMethod(simpleFactory, "fd://Extension/DesignPattern/Factory/Simpify?c=简单工厂模式");
+PGMethod(factoryFunction, "fd://Extension/DesignPattern/Factory/Method?c=工厂方法模式");
 
 @end

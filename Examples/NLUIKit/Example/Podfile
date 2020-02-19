@@ -1,0 +1,20 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'NLUIKit_Example' do
+  pod 'NLUIKit', :path => '../'
+  pod 'NLLogger', :path => '../../NLLogger'
+  pod 'NLRouterAction', :path => '../../NLRouterAction'
+  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLUIComponent', :path => '../../NLUIComponent'
+  pod 'NLModelService', :path => '../../NLModelService'
+  pod 'NLModuleService', :path => '../../NLModuleService'
+  pod 'NLUtility', :path => '../../NLUtility'
+
+  target 'NLUIKit_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end

@@ -32,7 +32,6 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'NLWeibo/Classes/**/*'
   s.prefix_header_contents = '#import <NLLogger/NLLogger.h>'
-#  s.script_phase = { :name => '[Peregrine] Generator Routing Table', :script => 'ruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb "${PODS_CONFIGURATION_BUILD_DIR}/Neverland.app/Peregrine.bundle"' }
 
   s.resource_bundles = {
    'NLWeibo' => ['NLWeibo/Assets/**']
@@ -45,7 +44,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency  'Weibo_SDK', '~> 3.2'
   s.dependency  'NLModuleService'
-  s.dependency  'Realm', '~> 3.2'
   s.dependency  'AFNetworking', '~> 3.2'
   s.dependency  'NLRouterAction'
 
