@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <NLProtocols/NLProtocols.h>
+#import <NLModuleProtocols/NLModuleProtocols.h>
 
 /**
  框架组件

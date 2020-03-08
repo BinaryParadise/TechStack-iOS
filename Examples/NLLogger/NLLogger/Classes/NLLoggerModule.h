@@ -10,6 +10,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NLLoggerModule : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
++ (void)configuration;
+
 @end
 
 NS_ASSUME_NONNULL_END

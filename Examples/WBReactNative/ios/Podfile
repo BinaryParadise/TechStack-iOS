@@ -52,7 +52,7 @@ target 'WBReactNative' do
   pod 'NLLogger', :path => '../../NLLogger'
   pod 'NLUtility', :path => '../../NLUtility'
   pod 'NLUIComponent', :path => '../../NLUIComponent'
-  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLModuleProtocols', :path => '../../NLModuleProtocols'
   pod 'NLExtension', :path => '../../NLExtension'
 
 end

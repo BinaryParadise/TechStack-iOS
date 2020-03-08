@@ -7,7 +7,7 @@
 //
 
 #import "NLRouterActionBase.h"
-#import <NLProtocols/NLProtocols.h>
+#import <NLModuleProtocols/NLModuleProtocols.h>
 
 @interface NLRouterAction : NLModule <NLRouterActionProtocol>
 

@@ -11,7 +11,7 @@ target 'NLDataType_Example' do
   pod 'NLModelService', :path => '../../NLModelService'
   pod 'NLUtility', :path => '../../NLUtility'
   pod 'NLLogger', :path => '../../NLLogger'
-  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLModuleProtocols', :path => '../../NLModuleProtocols'
   pod 'NLRouterAction', :path => '../../NLRouterAction'
   pod 'NLUIComponent', :path => '../../NLUIComponent'
 

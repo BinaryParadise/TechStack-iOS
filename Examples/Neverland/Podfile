@@ -1,12 +1,12 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
-if Gem::Version.new(`pod --version`) >= Gem::Version.new('1.7.5')
+if Gem::Version.new(`pod --version`) >= Gem::Version.new('1.9.0')
     install! 'cocoapods',
     :generate_multiple_pod_projects => true,
     :incremental_installation => true
     else
-    raise 'cocoapods 最低要求1.7.5'
+    raise 'cocoapods 最低要求1.9.0'
     return
 end
 
@@ -20,7 +20,6 @@ target 'Neverland' do
   use_modular_headers!
 
   # Pods for Neverland
-  pod 'MBProgressHUD'
   pod 'NLRouterAction', :path => '../NLRouterAction'
   pod 'NLModuleService', :path => '../NLModuleService'
   pod 'NLModelService', :path => '../NLModelService'
@@ -30,7 +29,7 @@ target 'Neverland' do
   pod 'NLLogger', :path => '../NLLogger'
   pod 'NLUtility', :path => '../NLUtility'
   pod 'NLUIComponent', :path => '../NLUIComponent'
-  pod 'NLProtocols', :path => '../NLProtocols'
+  pod 'NLModuleProtocols', :path => '../NLModuleProtocols'
   pod 'NLExtension', :path => '../NLExtension'
   pod 'NLUIKit', :path => '../NLUIKit'
   pod 'Masonry'
@@ -44,5 +43,6 @@ post_install do |installer|
     require_relative 'Pods/Peregrine/Peregrine/PGGenerator.rb'
     PGGenerator::configure_project(installer, true)
 
-    # `efpodsanalyzer ../Neverland/Podfile`
+    # 依赖关系图
+     `efpodsanalyzer ../Neverland/Podfile`
 end

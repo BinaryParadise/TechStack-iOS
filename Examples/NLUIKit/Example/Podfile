@@ -6,7 +6,7 @@ target 'NLUIKit_Example' do
   pod 'NLUIKit', :path => '../'
   pod 'NLLogger', :path => '../../NLLogger'
   pod 'NLRouterAction', :path => '../../NLRouterAction'
-  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLModuleProtocols', :path => '../../NLModuleProtocols'
   pod 'NLUIComponent', :path => '../../NLUIComponent'
   pod 'NLModelService', :path => '../../NLModelService'
   pod 'NLModuleService', :path => '../../NLModuleService'

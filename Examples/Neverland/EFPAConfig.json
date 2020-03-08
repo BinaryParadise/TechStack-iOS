@@ -1,6 +1,16 @@
 {
     "config": {
-        "categories": ["组件服务","内部组件", "其它"],
-        "categoryRegexes": ["NLModuleService", "^NL.*", ".*"]
+        "categories": [
+            "模块服务",
+            "模型",
+            "内部组件",
+            "三方"
+        ],
+        "categoryRegexes": [
+            "^NLModule.*",
+            "NLModelService",
+            "^NL.*",
+            ".*"
+        ]
     }
-}
+}l

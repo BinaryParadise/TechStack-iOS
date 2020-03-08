@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <NLProtocols/NLProtocols.h>
+#import <NLModuleProtocols/NLModuleProtocols.h>
 
 #define NLModuleForProtocol(protocolName) ((id<protocolName>)[NLModuleService.new moduleForProtocol:@protocol(protocolName)])
 

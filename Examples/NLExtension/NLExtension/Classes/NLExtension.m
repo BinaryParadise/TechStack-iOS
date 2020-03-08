@@ -7,7 +7,7 @@
 //
 
 #import "NLExtension.h"
-#import <NLProtocols/NLExtensionProtocol.h>
+#import <NLModuleProtocols/NLExtensionProtocol.h>
 
 @interface NLExtension () <NLExtensionProtocol>
 

@@ -61,19 +61,19 @@ PODS:
   - NLFoundation (0.1.0):
     - NLModelService
     - NLModuleService
-    - NLProtocols
+    - NLModuleProtocols
     - NLRouterAction
   - NLLogger (0.1.0):
     - MCLogger (~> 0.5)
     - MLeaksFinder
-    - NLProtocols
+    - NLModuleProtocols
   - NLModelService (0.1.0):
     - MCJSONKit (~> 0.5)
     - NLUtility
   - NLModuleService (0.1.0):
     - NLLogger
-    - NLProtocols
-  - NLProtocols (0.1.0)
+    - NLModuleProtocols
+  - NLModuleProtocols (0.1.0)
   - NLRouterAction (0.1.0):
     - MCJSONKit
     - NLModelService
@@ -324,7 +324,7 @@ DEPENDENCIES:
   - NLLogger (from `../../NLLogger`)
   - NLModelService (from `../../NLModelService`)
   - NLModuleService (from `../../NLModuleService`)
-  - NLProtocols (from `../../NLProtocols`)
+  - NLModuleProtocols (from `../../NLModuleProtocols`)
   - NLRouterAction (from `../../NLRouterAction`)
   - NLUIComponent (from `../../NLUIComponent`)
   - NLUtility (from `../../NLUtility`)
@@ -400,8 +400,8 @@ EXTERNAL SOURCES:
     :path: "../../NLModelService"
   NLModuleService:
     :path: "../../NLModuleService"
-  NLProtocols:
-    :path: "../../NLProtocols"
+  NLModuleProtocols:
+    :path: "../../NLModuleProtocols"
   NLRouterAction:
     :path: "../../NLRouterAction"
   NLUIComponent:
@@ -478,7 +478,7 @@ SPEC CHECKSUMS:
   NLLogger: 0147d78e5530e8868a6379e3854a548695ff26ad
   NLModelService: 8e5ead1f3b62ac79a764c3390b3ccdf7c122bbfe
   NLModuleService: 02d39c759d5c353504ed6db09408c4bdeea02bac
-  NLProtocols: 3c98d3358586cd7eeb7ce740cd3d21fa85872c87
+  NLModuleProtocols: 3c98d3358586cd7eeb7ce740cd3d21fa85872c87
   NLRouterAction: 0ea0f02812ccae3d2a2b0419c409d9b101629f63
   NLUIComponent: 4ec6dbb9adc24d82321874d1d80ac8cff6f0cf73
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "NLProtocols_Example.app"
-               BlueprintName = "NLProtocols_Example"
-               ReferencedContainer = "container:NLProtocols.xcodeproj">
+               BuildableName = "NLModuleProtocols_Example.app"
+               BlueprintName = "NLModuleProtocols_Example"
+               ReferencedContainer = "container:NLModuleProtocols.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "NLProtocols_Tests.xctest"
-               BlueprintName = "NLProtocols_Tests"
-               ReferencedContainer = "container:NLProtocols.xcodeproj">
+               BuildableName = "NLModuleProtocols_Tests.xctest"
+               BlueprintName = "NLModuleProtocols_Tests"
+               ReferencedContainer = "container:NLModuleProtocols.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "NLProtocols_Example.app"
-            BlueprintName = "NLProtocols_Example"
-            ReferencedContainer = "container:NLProtocols.xcodeproj">
+            BuildableName = "NLModuleProtocols_Example.app"
+            BlueprintName = "NLModuleProtocols_Example"
+            ReferencedContainer = "container:NLModuleProtocols.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "NLProtocols_Example.app"
-            BlueprintName = "NLProtocols_Example"
-            ReferencedContainer = "container:NLProtocols.xcodeproj">
+            BuildableName = "NLModuleProtocols_Example.app"
+            BlueprintName = "NLModuleProtocols_Example"
+            ReferencedContainer = "container:NLModuleProtocols.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "NLProtocols_Example.app"
-            BlueprintName = "NLProtocols_Example"
-            ReferencedContainer = "container:NLProtocols.xcodeproj">
+            BuildableName = "NLModuleProtocols_Example.app"
+            BlueprintName = "NLModuleProtocols_Example"
+            ReferencedContainer = "container:NLModuleProtocols.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

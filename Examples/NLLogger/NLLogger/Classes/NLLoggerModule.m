@@ -8,16 +8,15 @@
 
 #import "NLLoggerModule.h"
 #import <MCFrontendKit/MCFrontendKit.h>
-#import <NLProtocols/NLProtocols.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
-@interface NLLoggerModule () <NLLoggerProtocol>
+@interface NLLoggerModule ()
 
 @end
 
 @implementation NLLoggerModule
 
-+ (void)initialize {
++ (void)configuration {
     [DDLog addLogger:DDTTYLogger.sharedInstance];
     MCFrontendKit.manager.baseURL = [NSURL URLWithString:@"http://127.0.0.1:9000"];
     MCFrontendKit.manager.enableDebug = DEBUG;

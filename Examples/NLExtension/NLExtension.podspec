@@ -41,4 +41,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'NLRouterAction'
   s.dependency 'NLModelService'
+  s.dependency 'NLModuleService'
 end

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lP9-c6-BIf">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lP9-c6-BIf">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,46 +39,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="20" minY="28" maxX="20" maxY="16"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dke-wY-xgp" customClass="NLActionCollectionCell">
-                                <rect key="frame" x="20" y="28" width="105" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oo7-sB-KPt">
-                                    <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doraemon_cpu" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-b3-5Sq">
-                                            <rect key="frame" x="27.5" y="10" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="0MK-eX-zb8"/>
-                                                <constraint firstAttribute="height" constant="50" id="MTb-HZ-MSw"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-Jb-neu">
-                                            <rect key="frame" x="36.5" y="68" width="32" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="cf5-b3-5Sq" firstAttribute="top" secondItem="oo7-sB-KPt" secondAttribute="top" constant="10" id="SVF-Mr-G7b"/>
-                                        <constraint firstItem="3hG-Jb-neu" firstAttribute="centerX" secondItem="cf5-b3-5Sq" secondAttribute="centerX" id="eoZ-hH-qv9"/>
-                                        <constraint firstItem="cf5-b3-5Sq" firstAttribute="centerX" secondItem="oo7-sB-KPt" secondAttribute="centerX" id="ipi-di-fib"/>
-                                        <constraint firstItem="3hG-Jb-neu" firstAttribute="top" secondItem="cf5-b3-5Sq" secondAttribute="bottom" constant="8" id="jwb-4Y-JUW"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kHR-re-CRi">
-                                <rect key="frame" x="154.5" y="28" width="105" height="105"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HPs-yN-eba">
-                                    <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="Ir0-rL-USY" id="mqC-if-h7d"/>
                             <outlet property="delegate" destination="Ir0-rL-USY" id="yx7-Rz-dZh"/>
@@ -92,7 +54,4 @@
             <point key="canvasLocation" x="-53.623188405797109" y="-702.45535714285711"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="doraemon_cpu" width="34" height="34"/>
-    </resources>
 </document>

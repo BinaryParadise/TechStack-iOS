@@ -4,7 +4,7 @@ platform :ios, '8.0'
 
 target 'NLFoundation_Example' do
   pod 'NLFoundation', :path => '../'
-  pod 'NLProtocols', :path => '../../NLProtocols'
+  pod 'NLModuleProtocols', :path => '../../NLModuleProtocols'
   pod 'NLModelService', :path => '../../NLModelService'
   pod 'NLModuleService', :path => '../../NLModuleService'
   pod 'NLUtility', :path => '../../NLUtility'

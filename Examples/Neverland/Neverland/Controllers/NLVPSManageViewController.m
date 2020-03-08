@@ -85,8 +85,10 @@
     NSString *url = [NSString stringWithFormat:@"https://api.64clouds.com/v1/getServiceInfo?veid=%@&api_key=%@", veid, api_key];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [UIApplication.sharedApplication setNetworkActivityIndicatorVisible:YES];
+    __weak typeof(self) self__weak = self;
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            __strong typeof(self__weak) self = self__weak;
             [UIApplication.sharedApplication setNetworkActivityIndicatorVisible:NO];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             if (error) {

@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint NLProtocols.podspec' to ensure this is a
+# Be sure to run `pod lib lint NLModuleProtocols.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'NLProtocols'
+  s.name             = 'NLModuleProtocols'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of NLProtocols.'
+  s.summary          = 'A short description of NLModuleProtocols.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,19 +21,19 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/rakeyang/NLProtocols'
+  s.homepage         = 'https://github.com/rakeyang/NLModuleProtocols'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'rakeyang' => 'fenglaijun@gmail.com' }
-  s.source           = { :git => 'https://github.com/rakeyang/NLProtocols.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/rakeyang/NLModuleProtocols.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'NLProtocols/Classes/**/*'
+  s.source_files = 'NLModuleProtocols/Classes/**/*'
 
   # s.resource_bundles = {
-  #   'NLProtocols' => ['NLProtocols/Assets/*.png']
+  #   'NLModuleProtocols' => ['NLModuleProtocols/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
