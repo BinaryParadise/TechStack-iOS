@@ -16,6 +16,8 @@ PGMethod(signInWithApple, "UIKit://General/SignInWithApple?c=使用苹果登录"
 
 PGMethod(darkMode, "UIKit://General/DarkMode?c=黑暗模式")
 
+PGMethod(fontFamily, "UIKit://General/FontFamilys?c=所有字体")
+
 @end
 
 NS_ASSUME_NONNULL_END

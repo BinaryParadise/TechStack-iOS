@@ -7,20 +7,9 @@
 //
 
 #import "NLLoggerModule.h"
-#import <MCLogger/MCLogger.h>
+#import <MCFrontendKit/MCFrontendKit.h>
 #import <NLProtocols/NLProtocols.h>
-
-@interface NLLogFormatter : NSObject <DDLogFormatter>
-
-@end
-
-@implementation NLLogFormatter
-
-- (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
-    return [NSString stringWithFormat:@"%@ +%lu %@", logMessage.function, logMessage.line, logMessage.message];
-}
-
-@end
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface NLLoggerModule () <NLLoggerProtocol>
 
@@ -28,13 +17,13 @@
 
 @implementation NLLoggerModule
 
-+ (void)load {
-    DDTTYLogger.sharedInstance.logFormatter = [NLLogFormatter new];
-}
-
 + (void)initialize {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [MCLogger startMonitor:[NSURL URLWithString:@"ws://127.0.0.1:8081"]];
+    [DDLog addLogger:DDTTYLogger.sharedInstance];
+    MCFrontendKit.manager.baseURL = [NSURL URLWithString:@"http://127.0.0.1:9000"];
+    MCFrontendKit.manager.enableDebug = DEBUG;
+    [MCFrontendKit.manager startLogMonitor:^NSDictionary<NSString *,NSString *> *{
+        return @{};
+    }];
 }
 
 - (NSBundle *)resourceBundle {

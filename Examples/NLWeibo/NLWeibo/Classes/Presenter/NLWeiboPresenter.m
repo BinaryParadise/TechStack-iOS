@@ -8,7 +8,6 @@
 
 #import "NLWeiboPresenter.h"
 #import <Weibo_SDK/WeiboSDK.h>
-#import <MCLogger/MCLogger.h>
 #import <NLRouterAction/NLRouterAction.h>
 #import "NLWeiboResponse.h"
 

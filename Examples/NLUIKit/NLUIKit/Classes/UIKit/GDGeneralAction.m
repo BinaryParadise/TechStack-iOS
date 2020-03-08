@@ -26,4 +26,9 @@
     [context finished];
 }
 
++ (void)fontFamily:(PGRouterContext *)context {
+    [self pushViewControllerWithIdentify:context.config.actionName];
+    [context finished];
+}
+
 @end

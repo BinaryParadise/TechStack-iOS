@@ -15,7 +15,7 @@
 }
 
 + (UIViewController *)controllerForIdentify:(NSString *)identify {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:[self storyBoardName] bundle:[NSBundle mainBundle]];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:[self storyBoardName] bundle:[NSBundle bundleForClass:self]];
     return [storyBoard instantiateViewControllerWithIdentifier:identify];
 }
 

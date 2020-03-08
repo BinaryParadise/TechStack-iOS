@@ -36,7 +36,8 @@ target 'Neverland' do
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
-  pod 'Peregrine', '~> 0.6.7'
+  pod 'Peregrine', '~> 0.6.8'
+  pod 'MCFrontendKit', :path => '../../../MCFrontendService/'
 end
 
 post_install do |installer|

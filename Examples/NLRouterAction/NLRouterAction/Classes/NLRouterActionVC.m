@@ -36,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.tabBarController.tabBar.selectedItem.badgeValue = @(PGRouterManager.routerMap.count).stringValue;
+    
     if (self.routerNode) {
         self.title = self.routerNode.name;
         self.data = @[self.routerNode];
