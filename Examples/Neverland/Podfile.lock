@@ -17,6 +17,7 @@ PODS:
   - CocoaLumberjack (3.6.1):
     - CocoaLumberjack/Core (= 3.6.1)
   - CocoaLumberjack/Core (3.6.1)
+  - Expecta (1.0.6)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
@@ -83,17 +84,19 @@ PODS:
     - NLModuleService
     - NLRouterAction
     - Weibo_SDK (~> 3.2)
-  - Peregrine (0.6.8)
+  - Peregrine (0.6.9)
   - SAMKeychain (1.5.3)
   - SDWebImage (5.6.0):
     - SDWebImage/Core (= 5.6.0)
   - SDWebImage/Core (5.6.0)
   - SnapKit (4.2.0)
   - SocketRocket (0.5.1)
+  - Specta (1.0.7)
   - Toast (4.0.0)
   - Weibo_SDK (3.2.6)
 
 DEPENDENCIES:
+  - Expecta (~> 1.0)
   - Masonry
   - MCFrontendKit (from `../../../MCFrontendService/`)
   - MCObserverKit
@@ -111,11 +114,13 @@ DEPENDENCIES:
   - NLUtility (from `../NLUtility`)
   - NLWeibo (from `../NLWeibo`)
   - Peregrine (~> 0.6.8)
+  - Specta (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - CocoaLumberjack
+    - Expecta
     - FBRetainCycleDetector
     - Masonry
     - MBProgressHUD
@@ -131,6 +136,7 @@ SPEC REPOS:
     - SDWebImage
     - SnapKit
     - SocketRocket
+    - Specta
     - Toast
     - Weibo_SDK
 
@@ -165,6 +171,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -188,14 +195,15 @@ SPEC CHECKSUMS:
   NLUIKit: 58e1634f9a7126d3fe3157d15fea94bb53e02886
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1
   NLWeibo: 7d3555a9af1c5ba9136deae9fd8e98ee8bab11b8
-  Peregrine: 757c64fe37e3dd604e8e2164d9fcdd3171627b27
+  Peregrine: ba354dbda16e982771a6dc2baf1f8b1f0f03a721
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Weibo_SDK: 13b51503b929ae645f52e5cf584093e6a269bcd9
 
-PODFILE CHECKSUM: 40829eb982124a2158ace434fca90a0d3ac6fb62
+PODFILE CHECKSUM: 603eb5a9bb0344273e8cfc60f9a4930a878d7ac4
 
 COCOAPODS: 1.9.0

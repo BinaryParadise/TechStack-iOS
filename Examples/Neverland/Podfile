@@ -37,6 +37,14 @@ target 'Neverland' do
   pod 'MLeaksFinder'
   pod 'Peregrine', '~> 0.6.8'
   pod 'MCFrontendKit', :path => '../../../MCFrontendService/'
+  
+  target 'NeverlandTests' do
+    inherit! :search_paths
+    
+    pod 'Specta', '~> 1.0'
+    pod 'Expecta', '~> 1.0'
+  end
+  
 end
 
 post_install do |installer|

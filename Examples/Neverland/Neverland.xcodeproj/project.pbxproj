@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1313734D28B839461A39B169 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91998FAECD8931176509C28 /* Pods_Neverland.framework */; };
 		241CE8DB23980E780007F22E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CE8DA23980E780007F22E /* File.swift */; };
 		248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D619E2386917B00CBBAC1 /* UIKit.framework */; };
 		248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D61A02386918100CBBAC1 /* Foundation.framework */; };
 		24912ADC2398AACD004E3DDA /* main1.m in Sources */ = {isa = PBXBuildFile; fileRef = 24912ADB2398AACD004E3DDA /* main1.m */; };
+		70D92180DEF1C67877CF7D64 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519A483A5650A9F839006410 /* Pods_Neverland.framework */; };
+		7597EC9AA77AE53841AB230A /* Pods_NeverlandTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CA61567894B3B6C95E683 /* Pods_NeverlandTests.framework */; };
+		C9493A992417585200A73F0D /* FoundationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9493A982417585200A73F0D /* FoundationDemoTests.m */; };
 		C9DE1689240B4B37007090D0 /* NLActionCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE1687240B4B37007090D0 /* NLActionCollectionCell.m */; };
 		C9DE168A240B4B37007090D0 /* NLActionCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DE1688240B4B37007090D0 /* NLActionCollectionCell.xib */; };
 		C9DE168D240B4CDB007090D0 /* NLRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE168C240B4CDB007090D0 /* NLRootCollectionViewController.m */; };
@@ -28,15 +30,30 @@
 		CE6E26F82202F745003AB8FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26F72202F745003AB8FB /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C949395C241756E100A73F0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE6E26DD2202F743003AB8FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE6E26E42202F743003AB8FB;
+			remoteInfo = Neverland;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		240F179B221D8C7600E4830D /* JSFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFoundationTests.m; sourceTree = "<group>"; };
 		241CE8D923980E780007F22E /* Neverland-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neverland-Bridging-Header.h"; sourceTree = "<group>"; };
 		241CE8DA23980E780007F22E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		248D619E2386917B00CBBAC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		248D61A02386918100CBBAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24912ADB2398AACD004E3DDA /* main1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main1.m; sourceTree = "<group>"; };
+		519A483A5650A9F839006410 /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2D91F2C527DD42EA25BB61 /* Pods-NeverlandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverlandTests.debug.xcconfig"; path = "Target Support Files/Pods-NeverlandTests/Pods-NeverlandTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
-		A91998FAECD8931176509C28 /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		821CA61567894B3B6C95E683 /* Pods_NeverlandTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeverlandTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9493957241756E100A73F0D /* NeverlandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeverlandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C949395B241756E100A73F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9493961241756FB00A73F0D /* TestPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestPrefix.h; path = NeverlandTests/TestPrefix.h; sourceTree = SOURCE_ROOT; };
+		C9493A982417585200A73F0D /* FoundationDemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationDemoTests.m; sourceTree = "<group>"; };
 		C9DE1686240B4B37007090D0 /* NLActionCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLActionCollectionCell.h; sourceTree = "<group>"; };
 		C9DE1687240B4B37007090D0 /* NLActionCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLActionCollectionCell.m; sourceTree = "<group>"; };
 		C9DE1688240B4B37007090D0 /* NLActionCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NLActionCollectionCell.xib; sourceTree = "<group>"; };
@@ -60,20 +77,26 @@
 		CE6E26F42202F745003AB8FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NLLaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6E26F62202F745003AB8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6E26F72202F745003AB8FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE6E27012202F745003AB8FB /* FoundationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationDemoTests.m; sourceTree = "<group>"; };
-		CE6E27032202F745003AB8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE6E27142203E750003AB8FB /* TestPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPrefix.h; sourceTree = "<group>"; };
+		F1EBB2837B9FF537246D4DD5 /* Pods-NeverlandTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverlandTests.release.xcconfig"; path = "Target Support Files/Pods-NeverlandTests/Pods-NeverlandTests.release.xcconfig"; sourceTree = "<group>"; };
 		F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.debug.xcconfig"; path = "Target Support Files/Pods-Neverland/Pods-Neverland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C9493954241756E100A73F0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7597EC9AA77AE53841AB230A /* Pods_NeverlandTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE6E26E22202F743003AB8FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				248D61A12386918100CBBAC1 /* Foundation.framework in Frameworks */,
 				248D619F2386917B00CBBAC1 /* UIKit.framework in Frameworks */,
-				1313734D28B839461A39B169 /* Pods_Neverland.framework in Frameworks */,
+				70D92180DEF1C67877CF7D64 /* Pods_Neverland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +108,8 @@
 			children = (
 				248D61A02386918100CBBAC1 /* Foundation.framework */,
 				248D619E2386917B00CBBAC1 /* UIKit.framework */,
-				A91998FAECD8931176509C28 /* Pods_Neverland.framework */,
+				821CA61567894B3B6C95E683 /* Pods_NeverlandTests.framework */,
+				519A483A5650A9F839006410 /* Pods_Neverland.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,8 +129,20 @@
 			children = (
 				F52705DD07376CAAEAC38AD4 /* Pods-Neverland.debug.xcconfig */,
 				7ACC86F0E0C8776759733B4F /* Pods-Neverland.release.xcconfig */,
+				7A2D91F2C527DD42EA25BB61 /* Pods-NeverlandTests.debug.xcconfig */,
+				F1EBB2837B9FF537246D4DD5 /* Pods-NeverlandTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9493958241756E100A73F0D /* NeverlandTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9493A982417585200A73F0D /* FoundationDemoTests.m */,
+				C9493961241756FB00A73F0D /* TestPrefix.h */,
+				C949395B241756E100A73F0D /* Info.plist */,
+			);
+			path = NeverlandTests;
 			sourceTree = "<group>";
 		};
 		CE17E780236BDF5A00F259C1 /* Controllers */ = {
@@ -126,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6E26E72202F743003AB8FB /* Neverland */,
-				CE6E27002202F745003AB8FB /* NeverlandTests */,
+				C9493958241756E100A73F0D /* NeverlandTests */,
 				0F0544F8C968687FC18B3AE7 /* Frameworks */,
 				CE6E26E62202F743003AB8FB /* Products */,
 				6431FF8E1F56A89D9E62F23B /* Pods */,
@@ -137,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6E26E52202F743003AB8FB /* Neverland.app */,
+				C9493957241756E100A73F0D /* NeverlandTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,20 +203,29 @@
 			path = Neverland;
 			sourceTree = "<group>";
 		};
-		CE6E27002202F745003AB8FB /* NeverlandTests */ = {
-			isa = PBXGroup;
-			children = (
-				CE6E27012202F745003AB8FB /* FoundationDemoTests.m */,
-				CE6E27032202F745003AB8FB /* Info.plist */,
-				CE6E27142203E750003AB8FB /* TestPrefix.h */,
-				240F179B221D8C7600E4830D /* JSFoundationTests.m */,
-			);
-			path = NeverlandTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C9493956241756E100A73F0D /* NeverlandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9493960241756E100A73F0D /* Build configuration list for PBXNativeTarget "NeverlandTests" */;
+			buildPhases = (
+				AFFE4F2A4E72C597D0E22DDA /* [CP] Check Pods Manifest.lock */,
+				C9493953241756E100A73F0D /* Sources */,
+				C9493954241756E100A73F0D /* Frameworks */,
+				C9493955241756E100A73F0D /* Resources */,
+				DBE5CDFDCF06604D2CAB9FEB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C949395D241756E100A73F0D /* PBXTargetDependency */,
+			);
+			name = NeverlandTests;
+			productName = NeverlandTests;
+			productReference = C9493957241756E100A73F0D /* NeverlandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE6E26E42202F743003AB8FB /* Neverland */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6E27062202F745003AB8FB /* Build configuration list for PBXNativeTarget "Neverland" */;
@@ -190,7 +236,7 @@
 				CE6E26E22202F743003AB8FB /* Frameworks */,
 				CE6E26E32202F743003AB8FB /* Resources */,
 				6E541EA635357CCD761B3C15 /* [CP] Copy Pods Resources */,
-				558C08DB89149BC83CB07FE6 /* [CP] Embed Pods Frameworks */,
+				2A75E00DBC5EFCA3615E4C9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,9 +254,14 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NL;
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = BinaryParadise;
 				TargetAttributes = {
+					C9493956241756E100A73F0D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = CE6E26E42202F743003AB8FB;
+					};
 					CE6E26E42202F743003AB8FB = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -231,11 +282,19 @@
 			projectRoot = "";
 			targets = (
 				CE6E26E42202F743003AB8FB /* Neverland */,
+				C9493956241756E100A73F0D /* NeverlandTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C9493955241756E100A73F0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE6E26E32202F743003AB8FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +311,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A75E00DBC5EFCA3615E4C9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		30251F0C5CE7F7F1E06FB4E5 /* [Peregrine] Generator Routing Table */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,23 +345,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb";
-		};
-		558C08DB89149BC83CB07FE6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -326,9 +385,56 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neverland/Pods-Neverland-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AFFE4F2A4E72C597D0E22DDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeverlandTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE5CDFDCF06604D2CAB9FEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeverlandTests/Pods-NeverlandTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeverlandTests/Pods-NeverlandTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeverlandTests/Pods-NeverlandTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C9493953241756E100A73F0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9493A992417585200A73F0D /* FoundationDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE6E26E12202F743003AB8FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +454,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C949395D241756E100A73F0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE6E26E42202F743003AB8FB /* Neverland */;
+			targetProxy = C949395C241756E100A73F0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CE6E26F32202F745003AB8FB /* NLLaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -360,6 +474,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C949395E241756E100A73F0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A2D91F2C527DD42EA25BB61 /* Pods-NeverlandTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NeverlandTests/TestPrefix.h;
+				INFOPLIST_FILE = NeverlandTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = XC.NeverlandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neverland.app/Neverland";
+			};
+			name = Debug;
+		};
+		C949395F241756E100A73F0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1EBB2837B9FF537246D4DD5 /* Pods-NeverlandTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NeverlandTests/TestPrefix.h;
+				INFOPLIST_FILE = NeverlandTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = XC.NeverlandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neverland.app/Neverland";
+			};
+			name = Release;
+		};
 		CE6E27042202F745003AB8FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -529,6 +689,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C9493960241756E100A73F0D /* Build configuration list for PBXNativeTarget "NeverlandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C949395E241756E100A73F0D /* Debug */,
+				C949395F241756E100A73F0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE6E26E02202F743003AB8FB /* Build configuration list for PBXProject "Neverland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

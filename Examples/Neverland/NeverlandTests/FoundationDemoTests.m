@@ -6,8 +6,8 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "NSNumber+JSConvert.h"
-#import "MCSingletonDemo.h"
+#import <NLDataType/NSNumber+JSConvert.h>
+@import NLFoundation;
 
 SpecBegin(NeverlandSpec)
 
@@ -49,13 +49,13 @@ describe(@"Foundation", ^{
     });
 
     context(@"单例模式", ^{
-        MCSingletonDemo *singleton = [[MCSingletonDemo alloc] init];
+    NLSingletonDemo *singleton = [[NLSingletonDemo alloc] init];
         it(@"校验", ^{
-            expect(singleton).equal([MCSingletonDemo sharedManager]);
-            expect(singleton).equal([MCSingletonDemo new]);
+            expect(singleton).equal([NLSingletonDemo sharedManager]);
+            expect(singleton).equal([NLSingletonDemo new]);
             expect(singleton).equal([singleton copy]);
             expect(singleton).equal([singleton mutableCopy]);
-            expect(singleton).equal([[MCSingletonDemo alloc] init]);
+            expect(singleton).equal([[NLSingletonDemo alloc] init]);
         });
     });
     

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NLMCSingletonDemo : NSObject
+@interface NLSingletonDemo : NSObject
 
 + (instancetype)sharedManager;
 

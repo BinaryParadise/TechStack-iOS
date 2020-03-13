@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lP9-c6-BIf">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lP9-c6-BIf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,5 +52,84 @@
             </objects>
             <point key="canvasLocation" x="-53.623188405797109" y="-702.45535714285711"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="nR1-FN-Qzc">
+            <objects>
+                <viewController id="57o-fv-85t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIV-g3-Ptr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6C-74-gjb">
+                                <rect key="frame" x="39" y="176" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="68X-rB-Gtv" userLabel="View1">
+                                        <rect key="frame" x="105" y="34.5" width="30" height="59"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="[doge].png" translatesAutoresizingMaskIntoConstraints="NO" id="GtX-nb-1in">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="0ON-bC-4iL"/>
+                                                    <constraint firstAttribute="height" constant="30" id="AT1-3p-Y1N"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自动布局标签" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK5-sn-GZZ">
+                                                <rect key="frame" x="-37" y="38" width="104" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WK5-sn-GZZ" firstAttribute="bottom" secondItem="68X-rB-Gtv" secondAttribute="bottom" id="PIx-d3-Jdx"/>
+                                            <constraint firstItem="GtX-nb-1in" firstAttribute="top" secondItem="68X-rB-Gtv" secondAttribute="top" id="Ptz-QT-Lel"/>
+                                            <constraint firstItem="GtX-nb-1in" firstAttribute="trailing" secondItem="68X-rB-Gtv" secondAttribute="trailing" id="UMZ-m0-s5g"/>
+                                            <constraint firstItem="GtX-nb-1in" firstAttribute="leading" secondItem="68X-rB-Gtv" secondAttribute="leading" id="Vch-GI-3y8"/>
+                                            <constraint firstItem="GtX-nb-1in" firstAttribute="bottom" secondItem="WK5-sn-GZZ" secondAttribute="top" constant="-8" id="yXB-0t-ZHP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="68X-rB-Gtv" firstAttribute="centerY" secondItem="a6C-74-gjb" secondAttribute="centerY" id="DKb-g0-dfP"/>
+                                    <constraint firstItem="68X-rB-Gtv" firstAttribute="centerX" secondItem="a6C-74-gjb" secondAttribute="centerX" id="mhl-9r-Glp"/>
+                                    <constraint firstItem="GtX-nb-1in" firstAttribute="centerX" secondItem="WK5-sn-GZZ" secondAttribute="centerX" id="oBi-qx-Mc3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这个比较长...f.amef.asekgaseg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1r-rA-L8b">
+                                <rect key="frame" x="26" y="44" width="234" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="优先压缩的jfaiejliejglaisejglaisjelgaisjelgisjelgaijseg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuI-Og-gAj">
+                                <rect key="frame" x="270" y="44" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="z1r-rA-L8b" firstAttribute="leading" secondItem="wMu-7n-kWS" secondAttribute="leading" constant="26" id="9sX-7c-Y8C"/>
+                            <constraint firstItem="NuI-Og-gAj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z1r-rA-L8b" secondAttribute="trailing" constant="10" id="DYb-b5-VG1"/>
+                            <constraint firstItem="z1r-rA-L8b" firstAttribute="top" secondItem="wMu-7n-kWS" secondAttribute="top" id="i9A-q7-6jE"/>
+                            <constraint firstItem="NuI-Og-gAj" firstAttribute="top" secondItem="wMu-7n-kWS" secondAttribute="top" id="mDc-vV-c3A"/>
+                            <constraint firstItem="NuI-Og-gAj" firstAttribute="trailing" secondItem="wMu-7n-kWS" secondAttribute="trailing" constant="-16" id="nOz-jX-9UE"/>
+                            <constraint firstItem="a6C-74-gjb" firstAttribute="top" secondItem="wMu-7n-kWS" secondAttribute="top" constant="132" id="uWG-aX-yEP"/>
+                            <constraint firstItem="a6C-74-gjb" firstAttribute="leading" secondItem="wMu-7n-kWS" secondAttribute="leading" constant="39" id="wsj-C4-SL5"/>
+                            <constraint firstItem="wMu-7n-kWS" firstAttribute="trailing" secondItem="a6C-74-gjb" secondAttribute="trailing" constant="135" id="xyr-7j-0FC"/>
+                            <constraint firstItem="wMu-7n-kWS" firstAttribute="bottom" secondItem="a6C-74-gjb" secondAttribute="bottom" constant="558" id="zEK-uY-hHA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wMu-7n-kWS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fp-Ty-IZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798.55072463768124" y="-802.23214285714278"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="[doge].png" width="36" height="36"/>
+    </resources>
 </document>

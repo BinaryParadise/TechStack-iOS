@@ -6,28 +6,20 @@
 //  Copyright © 2019 BinaryParadise. All rights reserved.
 //
 
-#import "NLMCSingletonDemo.h"
+#import "NLSingletonDemo.h"
 
-@implementation NLMCSingletonDemo
+@implementation NLSingletonDemo
 
 #pragma mark - Singleton
 
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
+- (instancetype)init
+{
     static id instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [super allocWithZone:zone];
+        instance = [super init];
     });
     return instance;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
 }
 
 + (instancetype)sharedManager {
