@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment version="101200" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LoginViewController" customModule="TopicExtractor_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="wkWebView" destination="CIp-es-11k" id="pEu-5l-PRa"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIp-es-11k">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                    <connections>
+                        <outlet property="UIDelegate" destination="-2" id="GZx-vP-CVv"/>
+                        <outlet property="navigationDelegate" destination="-2" id="joy-wz-QIt"/>
+                    </connections>
+                </wkWebView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CIp-es-11k" secondAttribute="trailing" id="XBY-K6-NvA"/>
+                <constraint firstAttribute="bottom" secondItem="CIp-es-11k" secondAttribute="bottom" id="pGd-LI-PtQ"/>
+                <constraint firstItem="CIp-es-11k" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="syM-iz-pL3"/>
+                <constraint firstItem="CIp-es-11k" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="zbZ-pA-1M3"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>
