@@ -11,6 +11,8 @@
 		24337F4124153FC3002C3E93 /* CMRCustomURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24337F4024153FC3002C3E93 /* CMRCustomURLProtocol.swift */; };
 		2471DB4A2415255F00336622 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2471DB482415255F00336622 /* LoginViewController.swift */; };
 		2471DB4B2415255F00336622 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2471DB492415255F00336622 /* LoginViewController.xib */; };
+		249BC5A2241D2734009904F3 /* TERequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249BC5A1241D2734009904F3 /* TERequest.swift */; };
+		24C12707241DDA6E00E55B7C /* CustomURLProtocol2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C12706241DDA6E00E55B7C /* CustomURLProtocol2.swift */; };
 		6268DB952031D3856D3B875A /* Pods_TopicExtractor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBD9DD698818D6DB73C497C /* Pods_TopicExtractor_Tests.framework */; };
 		C2451E599249AC7EC434A9D2 /* Pods_TopicExtractor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22023D9CD6AEA06C7DA0C095 /* Pods_TopicExtractor_Example.framework */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 		24337F4024153FC3002C3E93 /* CMRCustomURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRCustomURLProtocol.swift; sourceTree = "<group>"; };
 		2471DB482415255F00336622 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2471DB492415255F00336622 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		249BC5A1241D2734009904F3 /* TERequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TERequest.swift; sourceTree = "<group>"; };
+		24C12706241DDA6E00E55B7C /* CustomURLProtocol2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomURLProtocol2.swift; sourceTree = "<group>"; };
 		39D6FD3BBCF51021C15B3700 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4522D49066BC3F26ADA73731 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7BBD9DD698818D6DB73C497C /* Pods_TopicExtractor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicExtractor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +84,11 @@
 		24337F3F24153FA6002C3E93 /* CMR */ = {
 			isa = PBXGroup;
 			children = (
+				2471DB482415255F00336622 /* LoginViewController.swift */,
+				2471DB492415255F00336622 /* LoginViewController.xib */,
 				24337F4024153FC3002C3E93 /* CMRCustomURLProtocol.swift */,
+				24C12706241DDA6E00E55B7C /* CustomURLProtocol2.swift */,
+				249BC5A1241D2734009904F3 /* TERequest.swift */,
 			);
 			path = CMR;
 			sourceTree = "<group>";
@@ -138,8 +146,6 @@
 				ED83F68120348A760038D96B /* Main.storyboard */,
 				ED83F68420348A760038D96B /* Info.plist */,
 				ED83F68520348A760038D96B /* TopicExtractor.entitlements */,
-				2471DB482415255F00336622 /* LoginViewController.swift */,
-				2471DB492415255F00336622 /* LoginViewController.xib */,
 			);
 			path = TopicExtractor;
 			sourceTree = "<group>";
@@ -218,6 +224,9 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -353,6 +362,8 @@
 				24337F4124153FC3002C3E93 /* CMRCustomURLProtocol.swift in Sources */,
 				24215BB5241510C500DBA890 /* TopicAdapter.swift in Sources */,
 				ED83F67E20348A760038D96B /* ViewController.swift in Sources */,
+				24C12707241DDA6E00E55B7C /* CustomURLProtocol2.swift in Sources */,
+				249BC5A2241D2734009904F3 /* TERequest.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,12 +512,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TopicExtractor_Example.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V4T4T8D8H;
 				INFOPLIST_FILE = TopicExtractor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.TopicExtractor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -517,12 +531,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TopicExtractor_Example.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V4T4T8D8H;
 				INFOPLIST_FILE = TopicExtractor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.TopicExtractor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

@@ -25,23 +25,16 @@ class CMRCustomURLProtocol: URLProtocol, URLSessionTaskDelegate, URLSessionDataD
         if URLProtocol.property(forKey: "WKURLProtocolHandledKey", in: request) != nil {
             return false
         }
-        //只处理作业中心
-        return (request.url?.path.contains("/HomeworkCenter"))!
+        //只处理作业中心HomeworkCenter
+        if request.url?.host?.contains("cmr.com.cn") ?? false {
+            return true
+        }
+        return false
     }
     
     //回规范化的请求（通常只要返回原来的请求就可以）
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-        guard let m_url = request.mainDocumentURL else{
-            return request
-        }
-        
-        if m_url.absoluteString.contains("XXX"){
-            var mrequest  = request
-            mrequest.setValue("aaaa", forHTTPHeaderField: "ssdf")
-            return mrequest
-        }
-        
-        return request
+        return request.requestIncludeBody()
     }
     
     //判断两个请求是否为同一个请求，如果为同一个请求那么就会使用缓存数据。
@@ -84,7 +77,7 @@ class CMRCustomURLProtocol: URLProtocol, URLSessionTaskDelegate, URLSessionDataD
                     completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
         
         self.client?.urlProtocol(self, didReceive: response,
-                                 cacheStoragePolicy: .notAllowed)
+                                 cacheStoragePolicy: .allowed)
         self.urlResponse = response
         self.receivedData = NSMutableData()
         completionHandler(.allow)
@@ -120,4 +113,8 @@ extension URLProtocol {
         let wkbc = NSClassFromString("WKBrowsingContextController") as AnyObject
         _ = wkbc.perform(Selector(("registerSchemeForCustomProtocol:")), with: scheme)
     }
+}
+
+extension URLSessionDelegate {
+    
 }

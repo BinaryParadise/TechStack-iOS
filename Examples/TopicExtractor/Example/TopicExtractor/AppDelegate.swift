@@ -16,9 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
-    DDLog.add(DDTTYLogger.sharedInstance)
     MCFrontendKit.manager()?.appKey = "com.binaryparadise.neverland"
-    MCFrontendKit.manager()?.baseURL = URL.init(string: "http://127.0.0.1/api/full");
+    MCFrontendKit.manager()?.baseURL = URL.init(string: "http://frontend.xinc818.com/api/full");
     MCFrontendKit.manager()?.enableDebug = true
     MCFrontendKit.manager()?.startLogMonitor({ () -> [String : String]? in
         return [:]
@@ -27,8 +26,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     print("sandbox: \(NSHomeDirectory())")
     
     Alamofire.SessionManager.default.adapter = TopicAdapter();
-    CMRCustomURLProtocol.register()
-    URLProtocol.registerClass(CMRCustomURLProtocol.self)
+//    CMRCustomURLProtocol.register()
+//    URLProtocol.registerClass(CustomURLProtocol2.self)
+//    URLProtocol.registerClass(CMRCustomURLProtocol.self)
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {

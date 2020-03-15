@@ -13,10 +13,7 @@ import CocoaLumberjack
 class ViewController: NSViewController {
 
     override func viewDidLoad() {
-    super.viewDidLoad()
-
-    DDLog.add(DDTTYLogger.sharedInstance!)
-    
+    super.viewDidLoad()    
     // Do any additional setup after loading the view.
     
 
@@ -32,6 +29,11 @@ class ViewController: NSViewController {
         Alamofire.request("/student/acourse/HomeworkCenter/InstantRnd.asp?CourseID=bk134a&CID=05190001").responseData { (response) in
             DDLogDebug("\(response)")
         }
+        var mrequest = URLRequest.init(url: URL.init(string: "https://y.neverland.life/api")!) as? NSMutableURLRequest
+        mrequest?.httpMethod = "POST"
+        mrequest?.httpBody = "fjlaifajeligjsleijgslejg".data(using: String.Encoding.utf8)
+        var dataTask = URLSession.shared.dataTask(with: mrequest as! URLRequest)
+        dataTask.resume()
     }
     
   override var representedObject: Any? {

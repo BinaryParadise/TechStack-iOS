@@ -1,4 +1,4 @@
-platform :osx, '10.10'
+platform :osx, '10.11'
 
 if File::exist?("Podfile.lock")
   `rm Podfile.lock`
@@ -10,7 +10,7 @@ target 'TopicExtractor_Example' do
   supports_swift_versions '<= 4.2'
   pod 'TopicExtractor', :path => '../'
   pod 'Alamofire', '~> 4.9'
-  pod 'MCFrontendKit', :path => '../../../../MCFrontendService'
+  pod 'MCFrontendKit', :path => '~/GitHub/MCFrontendService'
 
   target 'TopicExtractor_Tests' do
     inherit! :search_paths

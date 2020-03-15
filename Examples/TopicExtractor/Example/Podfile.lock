@@ -16,7 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.9)
-  - MCFrontendKit (from `../../../../MCFrontendService`)
+  - MCFrontendKit (from `~/GitHub/MCFrontendService`)
   - TopicExtractor (from `../`)
 
 SPEC REPOS:
@@ -29,19 +29,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   MCFrontendKit:
-    :path: "../../../../MCFrontendService"
+    :path: "~/GitHub/MCFrontendService"
   TopicExtractor:
     :path: "../"
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
-  MCFrontendKit: 0dd7b47abb2f4d69a03d379b6a14d0516cd30190
+  MCFrontendKit: d73ca3ace56cd231c6c2db99b8eb6d09363a6faf
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   TopicExtractor: 0ab238f52a6dc67d2a8e5aee929f7ceba497b057
 
-PODFILE CHECKSUM: 77c35e10158ce86cd5374a906afba5f6fa14cca0
+PODFILE CHECKSUM: 2e686ce5aab87849f3e0e0156c17bd1f2c37138c
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.1
