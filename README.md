@@ -1,12 +1,44 @@
-# iOS入门指南
+# iOS程序员的杂货铺
 
-iOS重要知识点介绍、演示
 在线阅读：[https://binaryparadise.gitbook.io/objective-c](https://binaryparadise.gitbook.io/objective-c)
 
-## Demo目录
+## 开发环境搭建[Catalina]
 
-> Examples/*
+### 一、安装Xcode
 
-**预览**
+App Store或者自行谷歌，安装完成后打开并且初始化。
 
-![image](https://user-images.githubusercontent.com/8289395/69512756-381ee200-0f80-11ea-9b7f-45c1a00e3952.png)
+### 二、安装RVM
+
+```bash
+#先在系统ruby下安装xcodeproj
+sudo gem install -n /usr/local/bin xcodeproj
+```
+
+
+
+```bas
+curl -L get.rvm.io | bash -s stable
+source ~/.bashrc
+source ~/.bash_profile
+rvm install 2.6.3
+```
+
+
+
+### 三、安装Cocapods
+
+```shell
+gem install cocoapods
+```
+
+
+
+### 四、【可选】安装HomeBrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+
+

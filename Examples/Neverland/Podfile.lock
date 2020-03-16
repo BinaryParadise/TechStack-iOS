@@ -14,17 +14,17 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CocoaLumberjack (3.6.1):
-    - CocoaLumberjack/Core (= 3.6.1)
-  - CocoaLumberjack/Core (3.6.1)
+  - CocoaLumberjack (3.5.2):
+    - CocoaLumberjack/Core (= 3.5.2)
+  - CocoaLumberjack/Core (3.5.2)
   - Expecta (1.0.6)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MCFoundation (0.2.2)
-  - MCFrontendKit (0.2.7):
-    - CocoaLumberjack (~> 3.6)
-    - MCUIKit (~> 0.3)
+  - MCFrontendKit (0.3.0):
+    - CocoaLumberjack (= 3.5.2)
+    - CocoaLumberjack/Swift (= 3.5.2)
     - MJExtension
     - SAMKeychain (~> 1.5)
     - SocketRocket (~> 0.5)
@@ -170,13 +170,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MCFoundation: 1c05141cbc900ec15618d7d4c75fb88719d7b658
-  MCFrontendKit: bb2499ad328cbf8eb27f5b069ef5847c2ff48278
+  MCFrontendKit: d73ca3ace56cd231c6c2db99b8eb6d09363a6faf
   MCJSONKit: 64251bf517b756436c185735b6f4edfdede9ec8e
   MCObserverKit: e85df8596f0619a751dfc510e312f800b6ba1f70
   MCUIKit: fa0ce9bef926e53906f88276c68063d3ef5d949a
@@ -206,4 +206,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 603eb5a9bb0344273e8cfc60f9a4930a878d7ac4
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.1
