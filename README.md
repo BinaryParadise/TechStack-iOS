@@ -8,6 +8,7 @@
 
 #### 安装 [Visual Studio Code](https://code.visualstudio.com)
 
+#### 安装[SourceTree](https://www.sourcetreeapp.com/)
 
 #### 安装Oh My Zsh
 
