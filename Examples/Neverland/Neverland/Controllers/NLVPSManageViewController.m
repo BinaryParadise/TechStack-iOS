@@ -58,7 +58,7 @@
 @interface NLVPSManageViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, copy) NSArray *data;
+@property (nonatomic, copy) NSArray<NSArray *> *data;
 
 @end
 
@@ -94,9 +94,6 @@
             if (error) {
                 [self.view makeToast:error.localizedDescription];
             } else {
-                if (data) {
-                    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"CacheData"];
-                }
                 [self processData:data];
             }
 
@@ -109,15 +106,26 @@
 
 - (void)processData:(NSData *)data {
     if (!data) {
-        [self.view makeToast:@"数据解析失败"];
         return;
     }
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+    if ([dict mc_intForKey:@"error"] != 0) {
+        [self.view makeToast:[dict mc_stringForKey:@"message"]];
+        return;
+    }
+
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"CacheData"];
+    
     NLInfoModel *info = [NLInfoModel mc_objectFromKeyValues:dict];
     self.title = info.ip_addresses.firstObject;
     NSDateFormatter *fmt = [NSDateFormatter new];
     fmt.dateFormat = @"yyyy-MM-dd";
-    self.data = @[@[@"类型",info.vm_type],
+    NSMutableArray *marr = [NSMutableArray array];
+    [marr addObject:@[
+        @[@"使用流量",[NSString stringWithFormat:@"%@/%@", [self spaceSize:info.data_counter unit:NO], [self spaceSize:info.plan_monthly_data]]],
+        @[@"重置日期",[fmt stringFromDate:[NSDate dateWithTimeIntervalSince1970:info.data_next_reset]]]]];
+    [marr addObject:@[
+                  @[@"类型",info.vm_type],
                   @[@"主机名",info.hostname],
                   @[@"节点IP",info.node_ip],
                   @[@"节点别名",info.node_alias],
@@ -126,16 +134,15 @@
                   @[@"数据中心",info.node_datacenter],
                   @[@"IPV6",info.location_ipv6_ready?@"支持":@"不支持"],
                   @[@"计划",info.plan],
-                  @[@"使用流量",[NSString stringWithFormat:@"%@/%@", [self spaceSize:info.data_counter unit:NO], [self spaceSize:info.plan_monthly_data]]],
                   @[@"流量比例", [NSString stringWithFormat:@"x%ld", info.monthly_data_multiplier]],
                   @[@"磁盘空间",[self spaceSize:info.plan_disk]],
                   @[@"物理内存",[self spaceSize:info.plan_ram]],
                   @[@"虚拟内存",[self spaceSize:info.plan_swap]],
                   @[@"系统",info.os],
                   @[@"邮件",info.email],
-                  @[@"重置日期",[fmt stringFromDate:[NSDate dateWithTimeIntervalSince1970:info.data_next_reset]]],
                   @[@"IP地址",info.ip_addresses.firstObject],
-                  @[@"挂起",info.suspended?@"是":@"否"]];
+                  @[@"挂起",info.suspended?@"是":@"否"]]];
+    self.data = marr;
     [self.tableView reloadData];
 }
       
@@ -153,9 +160,12 @@
     }
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.data.count;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.data.count;
+    return self.data[section].count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -164,7 +174,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NLVPSInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-    NSArray *items = self.data[indexPath.row];
+    NSArray *items = self.data[indexPath.section][indexPath.row];
     cell.titleLabel.text = items.firstObject;
     cell.contentLabel.text = items.lastObject;
     return cell;

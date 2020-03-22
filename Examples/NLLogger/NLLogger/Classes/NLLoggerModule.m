@@ -7,8 +7,8 @@
 //
 
 #import "NLLoggerModule.h"
-#import <MCFrontendKit/MCFrontendKit.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import <Canary/CNManager.h>
 
 @interface NLLoggerModule ()
 
@@ -18,9 +18,9 @@
 
 + (void)configuration {
     [DDLog addLogger:DDTTYLogger.sharedInstance];
-    MCFrontendKit.manager.baseURL = [NSURL URLWithString:@"http://127.0.0.1:9000"];
-    MCFrontendKit.manager.enableDebug = DEBUG;
-    [MCFrontendKit.manager startLogMonitor:^NSDictionary<NSString *,NSString *> *{
+    CNManager.manager.baseURL = [NSURL URLWithString:@"https://y.neverland.life"];
+    CNManager.manager.enableDebug = DEBUG;
+    [CNManager.manager startLogMonitor:^NSDictionary<NSString *,NSString *> *{
         return @{};
     }];
 }

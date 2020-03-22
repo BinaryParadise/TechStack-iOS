@@ -35,8 +35,6 @@ target 'Neverland' do
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
-  pod 'Peregrine', '~> 0.6.8'
-  pod 'Canary', '~> 0.2.0'
   
   target 'NeverlandTests' do
     inherit! :search_paths
@@ -49,7 +47,7 @@ end
 
 post_install do |installer|
     require_relative 'Pods/Peregrine/Peregrine/PGGenerator.rb'
-    PGGenerator::configure_project(installer, true)
+    PGGenerator::configure_project(installer, {})
 
     # 依赖关系图
     which = `which efpodsanalyzer`
