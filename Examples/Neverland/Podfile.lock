@@ -14,15 +14,29 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Canary (0.2.0):
+    - Canary/Core (= 0.2.0)
+    - MJExtension
+    - SAMKeychain (~> 1.5)
+    - SocketRocket (~> 0.5)
+  - Canary/Core (0.2.0):
+    - CocoaLumberjack (<= 3.5.2)
+    - FMDB (~> 2.7.0)
+    - MJExtension
+    - SAMKeychain (~> 1.5)
+    - SocketRocket (~> 0.5)
   - CocoaLumberjack (3.5.2):
     - CocoaLumberjack/Core (= 3.5.2)
   - CocoaLumberjack/Core (3.5.2)
   - Expecta (1.0.6)
   - FBRetainCycleDetector (0.1.4)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MCFoundation (0.2.2)
-  - MCFrontendKit (0.3.0):
+  - MCFrontendKit (0.3.1):
     - CocoaLumberjack (= 3.5.2)
     - CocoaLumberjack/Swift (= 3.5.2)
     - MJExtension
@@ -86,19 +100,19 @@ PODS:
     - Weibo_SDK (~> 3.2)
   - Peregrine (0.6.9)
   - SAMKeychain (1.5.3)
-  - SDWebImage (5.6.0):
-    - SDWebImage/Core (= 5.6.0)
-  - SDWebImage/Core (5.6.0)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
   - SnapKit (4.2.0)
   - SocketRocket (0.5.1)
   - Specta (1.0.7)
   - Toast (4.0.0)
-  - Weibo_SDK (3.2.6)
+  - Weibo_SDK (3.2.7)
 
 DEPENDENCIES:
+  - Canary (~> 0.2.0)
   - Expecta (~> 1.0)
   - Masonry
-  - MCFrontendKit (from `../../../MCFrontendService/`)
   - MCObserverKit
   - MLeaksFinder
   - NLDataType (from `../NLDataType`)
@@ -119,12 +133,15 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - Canary
     - CocoaLumberjack
     - Expecta
     - FBRetainCycleDetector
+    - FMDB
     - Masonry
     - MBProgressHUD
     - MCFoundation
+    - MCFrontendKit
     - MCJSONKit
     - MCObserverKit
     - MCUIKit
@@ -141,8 +158,6 @@ SPEC REPOS:
     - Weibo_SDK
 
 EXTERNAL SOURCES:
-  MCFrontendKit:
-    :path: "../../../MCFrontendService/"
   NLDataType:
     :path: "../NLDataType"
   NLExtension:
@@ -170,13 +185,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Canary: 45e9ae4ccc448cf5f4ec76c29f00473046d5f9ca
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MCFoundation: 1c05141cbc900ec15618d7d4c75fb88719d7b658
-  MCFrontendKit: d73ca3ace56cd231c6c2db99b8eb6d09363a6faf
+  MCFrontendKit: 3ee90137700972cbb68a3bcdbb904e2c14ac1716
   MCJSONKit: 64251bf517b756436c185735b6f4edfdede9ec8e
   MCObserverKit: e85df8596f0619a751dfc510e312f800b6ba1f70
   MCUIKit: fa0ce9bef926e53906f88276c68063d3ef5d949a
@@ -197,13 +214,13 @@ SPEC CHECKSUMS:
   NLWeibo: 7d3555a9af1c5ba9136deae9fd8e98ee8bab11b8
   Peregrine: ba354dbda16e982771a6dc2baf1f8b1f0f03a721
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
-  SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  Weibo_SDK: 13b51503b929ae645f52e5cf584093e6a269bcd9
+  Weibo_SDK: 5a4d08f7e1fedbb635435e4585c8c0439c7da089
 
-PODFILE CHECKSUM: 603eb5a9bb0344273e8cfc60f9a4930a878d7ac4
+PODFILE CHECKSUM: 589f27e4139177be5959c16f9d62777f8ae5b7dc
 
 COCOAPODS: 1.9.1
