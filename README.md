@@ -4,6 +4,17 @@
 
 ## 开发环境搭建[Catalina]
 
+### 准备工作
+
+#### 安装 [Visual Studio Code](https://code.visualstudio.com)
+
+
+#### 安装Oh My Zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ### 一、安装Xcode
 
 App Store或者自行谷歌，安装完成后打开并且初始化。
