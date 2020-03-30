@@ -22,8 +22,10 @@ static DDLogLevel ddLogLevel = DDLogLevelVerbose;
     #define NLLogVerbose(frmt, ...)   DDLogVerbose(frmt, ##__VA_ARGS__)
 #else
     #define NLLogInfo(frmt, ...)
+    #define NLLogDebug(frmt, ...)
     #define NLLogWarn(frmt, ...)
     #define NLLogError(frmt, ...)
+    #define NLLogVerbose(frmt, ...)
     #define NSLog(...)
 #endif
 

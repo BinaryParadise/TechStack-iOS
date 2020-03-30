@@ -20,7 +20,7 @@ PGMethod(wkWebViewAction, "gd://UIView/WebView/WKWebView?wkwebview=1");
 
 PGMethod(labelDemo, "gd://UIView/UILabelInset");
 
-PGMethod(_UICollectionView, "gd://UIView/UIScrollView/UICollectionView?c=自适应宽度");
+PGMethod(entrance, "gd://UIView/entrance?c=总入口");
 
 @end
 
