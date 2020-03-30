@@ -26,7 +26,7 @@ target 'Neverland' do
   pod 'NLFoundation', :path => '../NLFoundation'
   pod 'NLDataType', :path => '../NLDataType'
   pod 'NLWeibo', :path => '../NLWeibo'
-  pod 'NLLogger', :path => '../NLLogger'
+  pod 'NLLogger', :path => '../NLLogger', :configurations => ['Debug']
   pod 'NLUtility', :path => '../NLUtility'
   pod 'NLUIComponent', :path => '../NLUIComponent'
   pod 'NLModuleProtocols', :path => '../NLModuleProtocols'
@@ -35,6 +35,7 @@ target 'Neverland' do
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
+  pod 'Peregrine', '~> 0.6.8'
   
   target 'NeverlandTests' do
     inherit! :search_paths
@@ -47,14 +48,8 @@ end
 
 post_install do |installer|
     require_relative 'Pods/Peregrine/Peregrine/PGGenerator.rb'
-    PGGenerator::configure_project(installer, {})
+    PGGenerator::configure_project(installer, true)
 
     # 依赖关系图
-    which = `which efpodsanalyzer`
-    puts which
-    if which.include?('not found')
-      `gem install pip
-      pip install efpodsanalyzer`
-    end
     #  `efpodsanalyzer ../Neverland/Podfile`
 end

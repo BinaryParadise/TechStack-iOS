@@ -37,9 +37,12 @@
     [context finished];
 }
 
-+ (void)_UICollectionView:(PGRouterContext *)context {
-    [self pushViewControllerWithIdentify:context.config.actionName];
-    [context finished];
++ (void)entrance:(PGRouterContext *)context {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:[self storyBoardName] bundle:[NSBundle bundleForClass:self]];
+    UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    [rootVC presentViewController:storyBoard.instantiateInitialViewController animated:YES completion:^{
+        [context finished];
+    }];
 }
 
 @end

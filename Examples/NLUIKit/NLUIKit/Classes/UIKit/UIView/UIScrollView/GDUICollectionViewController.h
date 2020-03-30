@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 自适应宽度
 @interface GDUICollectionViewController : UIViewController
 
 @end
