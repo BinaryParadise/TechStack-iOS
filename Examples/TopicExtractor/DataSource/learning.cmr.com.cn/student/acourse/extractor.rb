@@ -15,7 +15,11 @@ class Extractor
             File::exists?(path) && File.open(path,'r:gb2312') do |file|
                 lines = Array.new
                 file.lines.each do |line|
-                    lines.push(line.encode("utf-8"))
+                    begin
+                        lines.push(line.encode("utf-8"))
+                    rescue
+                        puts line
+                    end
                 end
                 lines = lines.join("")
                 lines.scan(/<div class="st_cont">[\s\S]+?\n([\s\S]+?)<\/div>/) do |match|
