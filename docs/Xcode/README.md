@@ -14,3 +14,9 @@
 | SOURCE_ROOT | `${PROJECT_DIR}`源码根目录 |
 | SRCROOT | `.xcodeproj`所在目录 |
 
+## 导报报错The data couldn’t be read because it isn’t in the correct format.
+
+```bash
+gem list | grep sqlite3
+gem install sqlite3 --platform=ruby
+```
