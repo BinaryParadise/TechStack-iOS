@@ -115,11 +115,11 @@ PGRouterURLKey const gd_UIView_Lifecycle = @"gd://UIView/Lifecycle?c=生命周�
 
 PGRouterURLKey const gd_UIView_UILabelInset = @"gd://UIView/UILabelInset";
 
-PGRouterURLKey const gd_UIView_UIScrollView_UICollectionView = @"gd://UIView/UIScrollView/UICollectionView?c=自适应宽度";
-
 PGRouterURLKey const gd_UIView_WebView_UIWebView = @"gd://UIView/WebView/UIWebView";
 
 PGRouterURLKey const gd_UIView_WebView_WKWebView = @"gd://UIView/WebView/WKWebView?wkwebview=1";
+
+PGRouterURLKey const gd_UIView_entrance = @"gd://UIView/entrance?c=总入口";
 
 #pragma - mark AutoLayout
 

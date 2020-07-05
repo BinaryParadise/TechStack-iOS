@@ -35,7 +35,6 @@ target 'Neverland' do
   pod 'Masonry'
   pod 'MCObserverKit'
   pod 'MLeaksFinder'
-  pod 'Peregrine', '~> 0.6.8'
   
   target 'NeverlandTests' do
     inherit! :search_paths
@@ -48,7 +47,7 @@ end
 
 post_install do |installer|
     require_relative 'Pods/Peregrine/Peregrine/PGGenerator.rb'
-    PGGenerator::configure_project(installer, true)
+    PGGenerator::configure_project(installer, {'expr' => true, 'name' => 'PGRouteDefine', 'path' => '${SRCROOT}'})
 
     # 依赖关系图
     #  `efpodsanalyzer ../Neverland/Podfile`

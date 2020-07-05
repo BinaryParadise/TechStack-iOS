@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
   s.dependency 'MCUIKit', '~> 0.3'
   s.dependency 'Masonry', '~> 1.0'
   s.dependency 'MBProgressHUD', '~> 1.0.0'
-  s.dependency 'SDWebImage'
+  s.dependency 'SDWebImage', '5.8.0'
   s.dependency 'MJRefresh'
   s.dependency 'Toast'
   s.dependency 'NLLogger'

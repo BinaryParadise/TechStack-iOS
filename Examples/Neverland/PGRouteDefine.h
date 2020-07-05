@@ -6,11 +6,11 @@
 //  Copyright © 2020 BinaryParadise. All rights reserved.
 
 /**
-  Generated automatic by Peregrine version 0.7.0 
+  Generated automatic by Peregrine version 0.8.1 
   Don't modify manual ⚠️
 */
-  
-/// Build Time 2020-03-23 07:44:13 +0800
+
+#import <Foundation/Foundation.h>
 
 typedef NSString *PGRouterURLKey;
 
@@ -169,14 +169,14 @@ FOUNDATION_EXPORT PGRouterURLKey const gd_UIView_Lifecycle;
 /// gd://UIView/UILabelInset
 FOUNDATION_EXPORT PGRouterURLKey const gd_UIView_UILabelInset;
 
-/// gd://UIView/UIScrollView/UICollectionView?c=自适应宽度
-FOUNDATION_EXPORT PGRouterURLKey const gd_UIView_UIScrollView_UICollectionView;
-
 /// gd://UIView/WebView/UIWebView
 FOUNDATION_EXPORT PGRouterURLKey const gd_UIView_WebView_UIWebView;
 
 /// gd://UIView/WebView/WKWebView?wkwebview=1
 FOUNDATION_EXPORT PGRouterURLKey const gd_UIView_WebView_WKWebView;
+
+/// gd://UIView/entrance?c=总入口
+FOUNDATION_EXPORT PGRouterURLKey const gd_UIView_entrance;
 
 
 #pragma - mark AutoLayout

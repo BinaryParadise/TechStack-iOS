@@ -344,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb  \n";
+			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb ${SRCROOT} PGRouteDefine";
 		};
 		56101A1AF689B0C08BDBA36E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
