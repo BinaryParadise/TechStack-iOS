@@ -14,12 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Canary (0.2.2):
-    - Canary/Core (= 0.2.2)
+  - Canary (0.2.3):
+    - Canary/Core (= 0.2.3)
     - MJExtension
     - SAMKeychain (~> 1.5)
     - SocketRocket (~> 0.5)
-  - Canary/Core (0.2.2):
+  - Canary/Core (0.2.3):
     - CocoaLumberjack (<= 3.5.2)
     - FMDB (~> 2.7.0)
     - MJExtension
@@ -176,7 +176,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Canary: add78c6e79fc58c365a5350603b04b37daa85ff6
+  Canary: 184a1acdf6bf0547ca89931554636622e547ea63
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015

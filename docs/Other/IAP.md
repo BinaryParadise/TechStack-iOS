@@ -1,6 +1,55 @@
 # In-App Purchase
 
-俗称内购
+苹果应用内购买俗称内购
+
+## 主要流程
+
+框架：StoreKit
+
+```swi
+//添加交易监听
+SKPaymentQueue.default().add(self)
+
+//获取产品信息
+let request = SKProductsRequest(productIdentifiers: ["productId"])
+request.delegate = self
+request.start()
+
+//获取完成回调
+extension [Class]: SKProductsRequestDelegate {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        guard let product = response.products.first else {
+            return
+        }
+        let payment = SKPayment(product: product)
+        //发起购买请求
+        SKPaymentQueue.default().add(payment)
+    }
+}
+
+//购买结果
+extension [Class]: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchased,//购买成功
+                 .restored://回复成功
+                //TODO: 需要和后端校验
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .failed://购买失败
+                SKPaymentQueue.default().finishTransaction(transaction)
+            default:
+                break
+            }
+        }
+        
+    }
+}
+```
+
+
+
+## 消耗型
 
 ## 自动续订周期
 

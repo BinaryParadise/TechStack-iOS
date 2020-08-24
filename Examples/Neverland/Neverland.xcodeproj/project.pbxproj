@@ -19,9 +19,6 @@
 		C9DE168D240B4CDB007090D0 /* NLRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE168C240B4CDB007090D0 /* NLRootCollectionViewController.m */; };
 		C9DE1691240B52FC007090D0 /* NLTitleCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE168F240B52FC007090D0 /* NLTitleCollectionReusableView.m */; };
 		C9DE1692240B52FC007090D0 /* NLTitleCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DE1690240B52FC007090D0 /* NLTitleCollectionReusableView.xib */; };
-		C9DE1695240B5C9D007090D0 /* NLVPSManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE1694240B5C9D007090D0 /* NLVPSManageViewController.m */; };
-		C9DE1699240B5D7D007090D0 /* NLVPSInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE1697240B5D7D007090D0 /* NLVPSInfoTableViewCell.m */; };
-		C9DE169A240B5D7D007090D0 /* NLVPSInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DE1698240B5D7D007090D0 /* NLVPSInfoTableViewCell.xib */; };
 		CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */; };
 		CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */; };
 		CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E26E92202F743003AB8FB /* NLAppDelegate.m */; };
@@ -62,11 +59,6 @@
 		C9DE168E240B52FC007090D0 /* NLTitleCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLTitleCollectionReusableView.h; sourceTree = "<group>"; };
 		C9DE168F240B52FC007090D0 /* NLTitleCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLTitleCollectionReusableView.m; sourceTree = "<group>"; };
 		C9DE1690240B52FC007090D0 /* NLTitleCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NLTitleCollectionReusableView.xib; sourceTree = "<group>"; };
-		C9DE1693240B5C9D007090D0 /* NLVPSManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLVPSManageViewController.h; sourceTree = "<group>"; };
-		C9DE1694240B5C9D007090D0 /* NLVPSManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLVPSManageViewController.m; sourceTree = "<group>"; };
-		C9DE1696240B5D7D007090D0 /* NLVPSInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLVPSInfoTableViewCell.h; sourceTree = "<group>"; };
-		C9DE1697240B5D7D007090D0 /* NLVPSInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLVPSInfoTableViewCell.m; sourceTree = "<group>"; };
-		C9DE1698240B5D7D007090D0 /* NLVPSInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NLVPSInfoTableViewCell.xib; sourceTree = "<group>"; };
 		CE17E77E236BDBEE00F259C1 /* NLMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NLMain.storyboard; sourceTree = "<group>"; };
 		CE17E781236BDF7A00F259C1 /* NLRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLRouterViewController.h; sourceTree = "<group>"; };
 		CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLRouterViewController.m; sourceTree = "<group>"; };
@@ -152,8 +144,6 @@
 				CE17E782236BDF7A00F259C1 /* NLRouterViewController.m */,
 				C9DE168B240B4CDB007090D0 /* NLRootCollectionViewController.h */,
 				C9DE168C240B4CDB007090D0 /* NLRootCollectionViewController.m */,
-				C9DE1693240B5C9D007090D0 /* NLVPSManageViewController.h */,
-				C9DE1694240B5C9D007090D0 /* NLVPSManageViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,9 +186,6 @@
 				C9DE168E240B52FC007090D0 /* NLTitleCollectionReusableView.h */,
 				C9DE168F240B52FC007090D0 /* NLTitleCollectionReusableView.m */,
 				C9DE1690240B52FC007090D0 /* NLTitleCollectionReusableView.xib */,
-				C9DE1696240B5D7D007090D0 /* NLVPSInfoTableViewCell.h */,
-				C9DE1697240B5D7D007090D0 /* NLVPSInfoTableViewCell.m */,
-				C9DE1698240B5D7D007090D0 /* NLVPSInfoTableViewCell.xib */,
 			);
 			path = Neverland;
 			sourceTree = "<group>";
@@ -300,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E26F52202F745003AB8FB /* NLLaunchScreen.storyboard in Resources */,
-				C9DE169A240B5D7D007090D0 /* NLVPSInfoTableViewCell.xib in Resources */,
 				CE6E26F22202F745003AB8FB /* Assets.xcassets in Resources */,
 				CE17E77F236BDBEE00F259C1 /* NLMain.storyboard in Resources */,
 				C9DE1692240B52FC007090D0 /* NLTitleCollectionReusableView.xib in Resources */,
@@ -440,12 +426,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DE1691240B52FC007090D0 /* NLTitleCollectionReusableView.m in Sources */,
-				C9DE1699240B5D7D007090D0 /* NLVPSInfoTableViewCell.m in Sources */,
 				CE6E26F82202F745003AB8FB /* main.m in Sources */,
 				C9DE168D240B4CDB007090D0 /* NLRootCollectionViewController.m in Sources */,
 				241CE8DB23980E780007F22E /* File.swift in Sources */,
 				CE6E26EA2202F743003AB8FB /* NLAppDelegate.m in Sources */,
-				C9DE1695240B5C9D007090D0 /* NLVPSManageViewController.m in Sources */,
 				24912ADC2398AACD004E3DDA /* main1.m in Sources */,
 				CE17E783236BDF7A00F259C1 /* NLRouterViewController.m in Sources */,
 				C9DE1689240B4B37007090D0 /* NLActionCollectionCell.m in Sources */,

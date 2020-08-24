@@ -28,6 +28,10 @@
  */
 - (void)fetchHomeTimeline:(FDActionCompletion)completion;
 
+/// 分享测试
+/// @param completion 回调
+- (void)shareTest:(FDActionCompletion)completion;
+
 + (NSDictionary *)authData;
 - (void)clearAuthData;
 

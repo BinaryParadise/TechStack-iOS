@@ -22,7 +22,6 @@
 @property (nonatomic, strong) NLWeiboPresenter *presenter;
 @property (nonatomic, strong) NLPlaceholderView *emptyView;
 
-
 @end
 
 @implementation NLMVPWeiboViewController
@@ -67,8 +66,17 @@
         });
     }];
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self refreshData:FDRefreshStateFirst];
+    if (![NLWeiboPresenter authData]) {
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"是否需要授权?" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStyleDone target:self action:@selector(shareButtonClick:)];
+        }]];
+        [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            [self refreshData:FDRefreshStateFirst];
+        }]];
+        [self.navigationController presentViewController:alertVC animated:YES completion:nil];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -82,6 +90,12 @@
     accountVC.presenter = self.presenter;
     accountVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:accountVC animated:YES];
+}
+
+- (void)shareButtonClick:(id)sender {
+    [self.presenter shareTest:^(id  _Nullable data, NSError * _Nullable error) {
+        
+    }];
 }
 
 - (void)refreshData:(FDRefreshState)state {

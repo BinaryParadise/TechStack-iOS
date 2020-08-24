@@ -55,6 +55,19 @@
     }];
 }
 
+- (void)shareTest:(FDActionCompletion)completion {
+    WBMessageObject *msg = [WBMessageObject message];
+    WBWebpageObject *webpage = [WBWebpageObject new];
+    webpage.objectID = NSUUID.UUID.UUIDString;
+    webpage.title = @"来看我直播CSGO吧";
+    webpage.description = @"不知道了";
+    webpage.webpageUrl = @"https://www.bilibili.com";
+    msg.mediaObject = webpage;
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:msg];
+    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
+    [WeiboSDK sendRequest:request];
+}
+
 + (void)fetchEmotions {
     [NLFWBRequestManager getDataWithURL:@"emotions.json" params:nil completion:^(id  _Nullable data, NSError * _Nullable error) {
         if (error) {

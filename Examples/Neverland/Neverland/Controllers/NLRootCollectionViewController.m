@@ -9,8 +9,8 @@
 #import "NLRootCollectionViewController.h"
 #import "NLActionCollectionCell.h"
 #import "NLTitleCollectionReusableView.h"
-#import "NLVPSManageViewController.h"
 #import "NLRouterViewController.h"
+#import <NLModuleService/NLModuleService.h>
 
 @interface NLRootCollectionViewController ()
 
@@ -28,8 +28,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
-    self.data = @[@{@"icon":@"doraemon_cpu",@"title":@"VPS"},
-                  @{@"icon":@"doraemon_h5",@"title":@"路由表"}];
+    self.data = @[@{@"icon":@"doraemon_h5",@"title":@"路由表"},
+                  @{@"icon":@"icon_sina",@"title":@"微博"}];
     
     // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:@"NLTitleCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header1"];
@@ -68,9 +68,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.item == 0) {
-        [self.navigationController pushViewController:NLVPSManageViewController.new animated:YES];
-    } else if (indexPath.item == 1) {
         [self.navigationController pushViewController:NLRouterViewController.new animated:YES];
+    } else if (indexPath.item == 1) {
+        [self.navigationController pushViewController:NLM_Weibo.nativeController animated:YES];
     }
 }
 
