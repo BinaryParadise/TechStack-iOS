@@ -18,16 +18,17 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 ### 一、安装Xcode
 
-App Store或者自行谷歌，安装完成后打开并且初始化。
+> PS: 安装完成后打开并且初始化
 
-### 二、安装RVM
+- Mac App Store下载安装【推荐】
+- 特定版本下载访问[苹果开发者下载中心](https://developer.apple.com/download/more)
+
+### 二、安装RVM[可选]
 
 ```bash
 #先在系统ruby下安装xcodeproj
 sudo gem install -n /usr/local/bin xcodeproj
 ```
-
-
 
 ```bas
 curl -L get.rvm.io | bash -s stable
@@ -37,20 +38,16 @@ rvm install 2.6.3
 ```
 
 
-
-### 三、安装Cocapods
-
-```shell
-gem install cocoapods
-```
-
-
-
-### 四、【可选】安装HomeBrew
+### 三、安装HomeBrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 
+### 四、安装Cocapods
+
+```shell
+sudo gem install cocoapods
+```
 
