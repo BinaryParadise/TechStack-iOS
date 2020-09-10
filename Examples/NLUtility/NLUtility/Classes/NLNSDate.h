@@ -16,4 +16,7 @@
 
 - (NSString *)localTimeString;
 
+/// 获取服务短时间（最优同步方案）
++ (instancetype)serverDate;
+
 @end

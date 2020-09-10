@@ -6,13 +6,19 @@
 //  Copyright © 2020 BinaryParadise. All rights reserved.
 
 /**
-  Generated automatic by Peregrine version 0.8.1 
+  Generated automatic by Peregrine version 0.8.2 
   Don't modify manual ⚠️
 */
 
 #import <Foundation/Foundation.h>
 
 typedef NSString *PGRouterURLKey;
+
+#pragma - mark helloworld
+
+/// pg://helloworld
+FOUNDATION_EXPORT PGRouterURLKey const pg_helloworld;
+
 
 #pragma - mark Foundation
 
@@ -156,6 +162,12 @@ FOUNDATION_EXPORT PGRouterURLKey const fd_Extension_DesignPattern_Factory_Simpif
 
 /// ft://Foundation/Lock/OSUnfairLock?c=自旋锁，iOS 10替代方案
 FOUNDATION_EXPORT PGRouterURLKey const ft_Foundation_Lock_OSUnfairLock;
+
+
+#pragma - mark Arithmetic
+
+/// fd://Arithmetic/NSDate
+FOUNDATION_EXPORT PGRouterURLKey const fd_Arithmetic_NSDate;
 
 
 #pragma - mark UIView

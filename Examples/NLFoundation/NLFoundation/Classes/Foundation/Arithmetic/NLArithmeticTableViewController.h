@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  算法
  */
-@interface NLMCArithmeticTableViewController : UITableViewController
+@interface NLArithmeticTableViewController : UIViewController
 
 @end
 

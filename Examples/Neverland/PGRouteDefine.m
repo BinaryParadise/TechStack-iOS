@@ -7,6 +7,11 @@
 
 #import "PGRouteDefine.h"
     
+#pragma - mark helloworld
+
+
+PGRouterURLKey const pg_helloworld = @"pg://helloworld";
+
 #pragma - mark Foundation
 
 
@@ -105,6 +110,11 @@ PGRouterURLKey const fd_Extension_DesignPattern_Factory_Simpify = @"fd://Extensi
 
 
 PGRouterURLKey const ft_Foundation_Lock_OSUnfairLock = @"ft://Foundation/Lock/OSUnfairLock?c=自旋锁，iOS 10替代方案";
+
+#pragma - mark Arithmetic
+
+
+PGRouterURLKey const fd_Arithmetic_NSDate = @"fd://Arithmetic/NSDate";
 
 #pragma - mark UIView
 

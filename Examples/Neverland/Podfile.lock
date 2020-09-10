@@ -43,7 +43,7 @@ PODS:
   - MCUIKit (0.3.8):
     - SDWebImage (~> 5.4)
   - MJExtension (3.2.2)
-  - MJRefresh (3.4.3)
+  - MJRefresh (3.5.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - NLDataType (0.1.0):
@@ -92,7 +92,7 @@ PODS:
     - NLModuleService
     - NLRouterAction
     - Weibo_SDK (~> 3.2)
-  - Peregrine (0.8.1)
+  - Peregrine (0.8.2)
   - SAMKeychain (1.5.3)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
@@ -188,7 +188,7 @@ SPEC CHECKSUMS:
   MCObserverKit: e85df8596f0619a751dfc510e312f800b6ba1f70
   MCUIKit: cc77732af1004c1ca071c8d9f318eba9fe0f19fd
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
-  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   NLDataType: 67c8dbe88b17246482801f122151e1c4a239e564
   NLExtension: 92dcd84d81198ebe8d4c51b80a2f6f40ba4ac88a
@@ -202,7 +202,7 @@ SPEC CHECKSUMS:
   NLUIKit: 58e1634f9a7126d3fe3157d15fea94bb53e02886
   NLUtility: a3a7c0d87c892aa4b6ff0b38e24d0c1d1ee35fa1
   NLWeibo: 7d3555a9af1c5ba9136deae9fd8e98ee8bab11b8
-  Peregrine: a6dc464455a56f3d80f99e416978dc6afde553c1
+  Peregrine: b780499e7fc8189debbf627a2c25e85f155ab76d
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
