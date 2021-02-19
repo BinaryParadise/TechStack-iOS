@@ -1,0 +1,69 @@
+PODS:
+  - BeSwifter (0.1.0)
+  - CocoaLumberjack/Core (3.7.0)
+  - CocoaLumberjack/Swift (3.7.0):
+    - CocoaLumberjack/Core
+  - FBRetainCycleDetector (0.1.4)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - Nimble (8.0.9)
+  - Quick (2.2.1)
+  - SnapKit (4.2.0)
+  - SwifterSwift (5.1.0):
+    - SwifterSwift/AppKit (= 5.1.0)
+    - SwifterSwift/CoreGraphics (= 5.1.0)
+    - SwifterSwift/CoreLocation (= 5.1.0)
+    - SwifterSwift/Dispatch (= 5.1.0)
+    - SwifterSwift/Foundation (= 5.1.0)
+    - SwifterSwift/MapKit (= 5.1.0)
+    - SwifterSwift/SceneKit (= 5.1.0)
+    - SwifterSwift/SpriteKit (= 5.1.0)
+    - SwifterSwift/SwiftStdlib (= 5.1.0)
+    - SwifterSwift/UIKit (= 5.1.0)
+  - SwifterSwift/AppKit (5.1.0)
+  - SwifterSwift/CoreGraphics (5.1.0)
+  - SwifterSwift/CoreLocation (5.1.0)
+  - SwifterSwift/Dispatch (5.1.0)
+  - SwifterSwift/Foundation (5.1.0)
+  - SwifterSwift/MapKit (5.1.0)
+  - SwifterSwift/SceneKit (5.1.0)
+  - SwifterSwift/SpriteKit (5.1.0)
+  - SwifterSwift/SwiftStdlib (5.1.0)
+  - SwifterSwift/UIKit (5.1.0)
+
+DEPENDENCIES:
+  - BeSwifter (from `../`)
+  - CocoaLumberjack/Swift
+  - MLeaksFinder
+  - Nimble (~> 8.0.7)
+  - Quick (~> 2.2.0)
+  - SnapKit
+  - SwifterSwift
+
+SPEC REPOS:
+  trunk:
+    - CocoaLumberjack
+    - FBRetainCycleDetector
+    - MLeaksFinder
+    - Nimble
+    - Quick
+    - SnapKit
+    - SwifterSwift
+
+EXTERNAL SOURCES:
+  BeSwifter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BeSwifter: 2fb75cb2ae705fa1f3b545d709fbc560bae6afc4
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+
+PODFILE CHECKSUM: 957453df79429ca4cdec157d23299164bad8046e
+
+COCOAPODS: 1.10.1

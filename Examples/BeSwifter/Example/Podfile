@@ -1,0 +1,18 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'BeSwifter_Example' do
+  pod 'BeSwifter', :path => '../'
+  pod 'SnapKit'
+  pod 'SwifterSwift'
+  pod 'CocoaLumberjack/Swift'
+  pod 'MLeaksFinder'
+  
+  target 'BeSwifter_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 2.2.0'
+    pod 'Nimble', '~> 8.0.7'
+  end
+end
