@@ -13,6 +13,7 @@ class ARCViewController: ContentViewController {
     @IBOutlet var label2: UILabel?
     @IBOutlet var cycleSwitch: UISwitch?
     var knife: Knife?
+    weak var picker: UIImagePickerController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +34,21 @@ class ARCViewController: ContentViewController {
         label1?.text = knife?.description
         label2?.text = knife?.matchRifle?.description
         
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        navigationController?.present(picker, animated: true, completion: nil)
+        self.picker = picker
+        
     }
     
     deinit {
+        picker?.delegate = nil
         if cycleSwitch?.isOn ?? false {            
             knife?.matchRifle = nil
         }
     }
+}
+
+extension ARCViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
 }

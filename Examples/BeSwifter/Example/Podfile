@@ -2,12 +2,19 @@ use_frameworks!
 
 platform :ios, '9.0'
 
+if File.exists?('Podfile.lock')
+  `rm Podfile.lock`
+end
+
 target 'BeSwifter_Example' do
-  pod 'BeSwifter', :path => '../'
+  pod 'BeSwifter', :path => '../BeSwifter'
   pod 'SnapKit'
   pod 'SwifterSwift'
   pod 'CocoaLumberjack/Swift'
   pod 'MLeaksFinder'
+  pod 'Starscream'
+  pod 'SwiftyJSON'
+  pod 'Peregrine', :path => '../../../../Peregrine'
   
   target 'BeSwifter_Tests' do
     inherit! :search_paths
@@ -15,4 +22,10 @@ target 'BeSwifter_Example' do
     pod 'Quick', '~> 2.2.0'
     pod 'Nimble', '~> 8.0.7'
   end
+end
+
+post_install do |installer|
+  # 添加编译脚本，每次编译时都会重新收集路由表
+  require_relative '../../../../Peregrine/Sources/PGGenerator.rb'
+    PGGenerator::configure_project(installer, {'expr' => true, 'name' => 'PGRouteDefine', 'path' => '${SRCROOT}/Peregrine'})
 end

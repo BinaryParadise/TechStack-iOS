@@ -17,6 +17,12 @@
 		C98EECC325DF9E750049EF9C /* ARCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EECC225DF9E750049EF9C /* ARCViewController.swift */; };
 		C98EECCA25DF9EFF0049EF9C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */; };
 		C98EED1625DFA1EF0049EF9C /* Accessories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EED1525DFA1EF0049EF9C /* Accessories.swift */; };
+		C98EEE8925E0FA0C0049EF9C /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */; };
+		C9F7B65225F0C98E00F33304 /* SemaphoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */; };
+		C9F7B65625F0C9C300F33304 /* LoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */; };
+		C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */; };
+		C9F7B79525F0D1D300F33304 /* PGRouteDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B79425F0D1D300F33304 /* PGRouteDefine.m */; };
+		C9F7B81325F1CA2300F33304 /* WrapperFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B81225F1CA2300F33304 /* WrapperFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,14 @@
 		C98EECC225DF9E750049EF9C /* ARCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCViewController.swift; sourceTree = "<group>"; };
 		C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		C98EED1525DFA1EF0049EF9C /* Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessories.swift; sourceTree = "<group>"; };
+		C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaphoreViewController.swift; sourceTree = "<group>"; };
+		C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerViewController.swift; sourceTree = "<group>"; };
+		C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillPointsViewController.swift; sourceTree = "<group>"; };
+		C9F7B79225F0D1D300F33304 /* BeSwifter_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeSwifter_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9F7B79325F0D1D300F33304 /* PGRouteDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PGRouteDefine.h; path = Peregrine/PGRouteDefine.h; sourceTree = SOURCE_ROOT; };
+		C9F7B79425F0D1D300F33304 /* PGRouteDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PGRouteDefine.m; path = Peregrine/PGRouteDefine.m; sourceTree = SOURCE_ROOT; };
+		C9F7B81225F1CA2300F33304 /* WrapperFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperFlowLayout.swift; sourceTree = "<group>"; };
 		CBD6BAF1F9B9BCB889C73779 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DAC32BC4BDCE2D711DBE9456 /* Pods_BeSwifter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeSwifter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB884286DB2E2D6626499D5 /* Pods-BeSwifter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Tests.release.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Tests/Pods-BeSwifter_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +124,9 @@
 			children = (
 				C98EECC825DF9EF00049EF9C /* Base */,
 				C98EECC125DF9E560049EF9C /* AutoReferenceCount */,
+				C9FA3BE225F0C7AD00A1F274 /* ThreadLock */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -176,9 +192,23 @@
 		C98EECC825DF9EF00049EF9C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C9F7B79325F0D1D300F33304 /* PGRouteDefine.h */,
+				C9F7B79425F0D1D300F33304 /* PGRouteDefine.m */,
 				C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */,
+				C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */,
+				C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */,
+				C9F7B79225F0D1D300F33304 /* BeSwifter_Example-Bridging-Header.h */,
+				C9F7B81225F1CA2300F33304 /* WrapperFlowLayout.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		C9FA3BE225F0C7AD00A1F274 /* ThreadLock */ = {
+			isa = PBXGroup;
+			children = (
+				C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */,
+			);
+			path = ThreadLock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +219,7 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BeSwifter_Example" */;
 			buildPhases = (
 				BA40E95E02B88EFC9B138A4C /* [CP] Check Pods Manifest.lock */,
+				A7C2C4C6D9D300BA83DF63EE /* [Peregrine] Generator Routing Table */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -235,7 +266,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1240;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -327,6 +358,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A7C2C4C6D9D300BA83DF63EE /* [Peregrine] Generator Routing Table */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Peregrine] Generator Routing Table";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby /Users/rakeyang/Github/Peregrine/Sources/PGGenerator.rb ${SRCROOT}/Peregrine PGRouteDefine";
+		};
 		BA40E95E02B88EFC9B138A4C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,8 +409,11 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Peregrine/Peregrine.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -369,8 +421,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Peregrine.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -384,10 +439,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */,
 				C98EED1625DFA1EF0049EF9C /* Accessories.swift in Sources */,
 				C98EECCA25DF9EFF0049EF9C /* ContentViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C9F7B65625F0C9C300F33304 /* LoggerViewController.swift in Sources */,
+				C9F7B81325F1CA2300F33304 /* WrapperFlowLayout.swift in Sources */,
+				C9F7B65225F0C98E00F33304 /* SemaphoreViewController.swift in Sources */,
+				C9F7B79525F0D1D300F33304 /* PGRouteDefine.m in Sources */,
 				C98EECC325DF9E750049EF9C /* ARCViewController.swift in Sources */,
+				C98EEE8925E0FA0C0049EF9C /* CodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,11 +596,14 @@
 			baseConfigurationReference = C1038518AF27A53CA7E92A73 /* Pods-BeSwifter_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeSwifter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeSwifter/BeSwifter_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -550,11 +614,13 @@
 			baseConfigurationReference = 320424A4355D5083514072C7 /* Pods-BeSwifter_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeSwifter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeSwifter/BeSwifter_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

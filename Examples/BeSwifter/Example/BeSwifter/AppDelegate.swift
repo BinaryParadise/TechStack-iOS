@@ -9,6 +9,12 @@
 import UIKit
 import CocoaLumberjack
 
+class SwiftLogFormatter: NSObject, DDLogFormatter {
+    func format(message logMessage: DDLogMessage) -> String? {
+        return "\(logMessage.timestamp) \(logMessage.fileName).\(logMessage.function ?? "")+\(logMessage.line) \(logMessage.message)"
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        DDTTYLogger.sharedInstance?.logFormatter = SwiftLogFormatter()
         DDLog.add(DDTTYLogger.sharedInstance!)
         return true
     }

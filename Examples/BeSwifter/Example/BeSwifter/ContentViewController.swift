@@ -8,11 +8,21 @@
 
 import UIKit
 import CocoaLumberjack
+import SnapKit
+
+func ScreenWidth() -> CGFloat {
+    return UIScreen.main.bounds.width
+}
+
+func ScreenHeight() -> CGFloat {
+    return UIScreen.main.bounds.height
+}
 
 class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(hex: 0xF4F5F6)
         
     }
     
