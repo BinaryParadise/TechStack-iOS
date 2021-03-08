@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Peregrine
+import BeSwifter
 import SwifterSwift
 
 /// 技能点入口
@@ -50,8 +50,6 @@ class SkillPointsViewController: ContentViewController {
                 }
             }
         }
-        
-        print("")
     }
 }
 
@@ -93,7 +91,7 @@ extension SkillPointsViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let node = routes[safe: indexPath.section]![safe: indexPath.row] {
             RouteManager.shared.openURL(node.url) { (ret, data) in
-                print("\(ret) \(data)")
+                print("\(#function) \(ret),\(data)")
             }
         }
     }

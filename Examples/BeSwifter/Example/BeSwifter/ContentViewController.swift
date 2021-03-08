@@ -18,6 +18,10 @@ func ScreenHeight() -> CGFloat {
     return UIScreen.main.bounds.height
 }
 
+func NavHeight() -> CGFloat {
+    return 44 + UIApplication.shared.statusBarFrame.height
+}
+
 class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,5 +32,10 @@ class ContentViewController: UIViewController {
     
     deinit {
         DDLogDebug("\(URL(string: #file)?.lastPathComponent ?? "") \(#function) +\(#line) \(NSStringFromClass(Self.self))")
+    }
+    
+    static func pushViewController(controller: UIViewController) {
+        guard let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
+        nav.pushViewController(controller, animated: true)
     }
 }

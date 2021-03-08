@@ -1,5 +1,6 @@
 PODS:
-  - BeSwifter (0.1.0)
+  - BeSwifter (0.1.0):
+    - Peregrine
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
@@ -7,7 +8,7 @@ PODS:
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - Nimble (8.0.9)
-  - Peregrine (0.9.0)
+  - Peregrine (0.8.6)
   - Quick (2.2.1)
   - SnapKit (4.2.0)
   - Starscream (4.0.4)
@@ -39,7 +40,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift
   - MLeaksFinder
   - Nimble (~> 8.0.7)
-  - Peregrine (from `../../../../Peregrine`)
+  - Peregrine
   - Quick (~> 2.2.0)
   - SnapKit
   - Starscream
@@ -52,6 +53,7 @@ SPEC REPOS:
     - FBRetainCycleDetector
     - MLeaksFinder
     - Nimble
+    - Peregrine
     - Quick
     - SnapKit
     - Starscream
@@ -61,22 +63,20 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   BeSwifter:
     :path: "../BeSwifter"
-  Peregrine:
-    :path: "../../../../Peregrine"
 
 SPEC CHECKSUMS:
-  BeSwifter: 4ea3e485ea600bab52c483fa2ceb23902696892f
+  BeSwifter: c3a2c8516495fa2ca1009962886658a0bfc2eb87
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
-  Peregrine: 1a2fd218d78af05c1f6f48962ed31d4fea9dc948
+  Peregrine: 06e82c5037377dc4500d79af0e454ad2f4c5fdbd
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 15b06d47edb29049bcc437dd41c558c604267959
+PODFILE CHECKSUM: 169d1900bd0d45b85c67e549fd015ea8e1c130fe
 
 COCOAPODS: 1.10.1

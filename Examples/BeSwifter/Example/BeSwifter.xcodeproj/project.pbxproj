@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		235A25AF32C2DE10C6E11EE8 /* Pods_BeSwifter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeSwifter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		320424A4355D5083514072C7 /* Pods-BeSwifter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Example.release.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3951E7F683ABF21346F610A8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BeSwifter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeSwifter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +49,6 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		80FCF1787C02569FAC20FEC8 /* Pods-BeSwifter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Tests/Pods-BeSwifter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1038518AF27A53CA7E92A73 /* Pods-BeSwifter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C1CEDE0EFBD91781AEA115AF /* BeSwifter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BeSwifter.podspec; path = ../BeSwifter.podspec; sourceTree = "<group>"; };
 		C98EECC225DF9E750049EF9C /* ARCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCViewController.swift; sourceTree = "<group>"; };
 		C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		C98EED1525DFA1EF0049EF9C /* Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessories.swift; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 		C9F7B79325F0D1D300F33304 /* PGRouteDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PGRouteDefine.h; path = Peregrine/PGRouteDefine.h; sourceTree = SOURCE_ROOT; };
 		C9F7B79425F0D1D300F33304 /* PGRouteDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PGRouteDefine.m; path = Peregrine/PGRouteDefine.m; sourceTree = SOURCE_ROOT; };
 		C9F7B81225F1CA2300F33304 /* WrapperFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperFlowLayout.swift; sourceTree = "<group>"; };
-		CBD6BAF1F9B9BCB889C73779 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DAC32BC4BDCE2D711DBE9456 /* Pods_BeSwifter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeSwifter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB884286DB2E2D6626499D5 /* Pods-BeSwifter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Tests.release.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Tests/Pods-BeSwifter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +98,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for BeSwifter */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -159,16 +155,6 @@
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				C1CEDE0EFBD91781AEA115AF /* BeSwifter.podspec */,
-				CBD6BAF1F9B9BCB889C73779 /* README.md */,
-				3951E7F683ABF21346F610A8 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		B67073EA2F8A35381F423910 /* Frameworks */ = {
@@ -374,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby /Users/rakeyang/Github/Peregrine/Sources/PGGenerator.rb ${SRCROOT}/Peregrine PGRouteDefine";
+			shellScript = "export LANG=en_US.UTF-8 export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8 \nruby ${PODS_ROOT}/Peregrine/Peregrine/PGGenerator.rb ${SRCROOT}/Peregrine PGRouteDefine";
 		};
 		BA40E95E02B88EFC9B138A4C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

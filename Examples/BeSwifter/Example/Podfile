@@ -14,7 +14,7 @@ target 'BeSwifter_Example' do
   pod 'MLeaksFinder'
   pod 'Starscream'
   pod 'SwiftyJSON'
-  pod 'Peregrine', :path => '../../../../Peregrine'
+  pod 'Peregrine'
   
   target 'BeSwifter_Tests' do
     inherit! :search_paths
@@ -26,6 +26,6 @@ end
 
 post_install do |installer|
   # 添加编译脚本，每次编译时都会重新收集路由表
-  require_relative '../../../../Peregrine/Sources/PGGenerator.rb'
+  require_relative '../../../../Peregrine/Peregrine/PGGenerator.rb'
     PGGenerator::configure_project(installer, {'expr' => true, 'name' => 'PGRouteDefine', 'path' => '${SRCROOT}/Peregrine'})
 end
