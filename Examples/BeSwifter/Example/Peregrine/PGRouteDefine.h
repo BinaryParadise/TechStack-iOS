@@ -16,8 +16,14 @@ typedef NSString *PGRouterURLKey;
 
 #pragma - mark thread
 
-/// swift://thread/lock/semaphore
-FOUNDATION_EXPORT PGRouterURLKey const swift_thread_lock_semaphore;
+/// swift://thread/barrier
+FOUNDATION_EXPORT PGRouterURLKey const swift_thread_barrier;
+
+/// swift://thread/multi
+FOUNDATION_EXPORT PGRouterURLKey const swift_thread_multi;
+
+/// swift://thread/semaphore
+FOUNDATION_EXPORT PGRouterURLKey const swift_thread_semaphore;
 
 
 #pragma - mark helloworld

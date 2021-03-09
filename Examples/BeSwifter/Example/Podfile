@@ -15,7 +15,8 @@ target 'BeSwifter_Example' do
   pod 'Starscream'
   pod 'SwiftyJSON'
   pod 'Peregrine'
-  
+  pod 'MLeaksFinder', :configurations => ['Debug']
+
   target 'BeSwifter_Tests' do
     inherit! :search_paths
 

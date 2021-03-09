@@ -18,6 +18,8 @@
 		C98EECCA25DF9EFF0049EF9C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */; };
 		C98EED1625DFA1EF0049EF9C /* Accessories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EED1525DFA1EF0049EF9C /* Accessories.swift */; };
 		C98EEE8925E0FA0C0049EF9C /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */; };
+		C9AAEDE325F7083A00D0AC85 /* MultiThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AAEDE225F7083A00D0AC85 /* MultiThreadViewController.swift */; };
+		C9AAEDE725F7530400D0AC85 /* BarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AAEDE625F7530400D0AC85 /* BarrierViewController.swift */; };
 		C9F7B65225F0C98E00F33304 /* SemaphoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */; };
 		C9F7B65625F0C9C300F33304 /* LoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */; };
 		C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */; };
@@ -53,6 +55,8 @@
 		C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		C98EED1525DFA1EF0049EF9C /* Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessories.swift; sourceTree = "<group>"; };
 		C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		C9AAEDE225F7083A00D0AC85 /* MultiThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiThreadViewController.swift; sourceTree = "<group>"; };
+		C9AAEDE625F7530400D0AC85 /* BarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrierViewController.swift; sourceTree = "<group>"; };
 		C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaphoreViewController.swift; sourceTree = "<group>"; };
 		C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerViewController.swift; sourceTree = "<group>"; };
 		C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillPointsViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */,
+				C9AAEDE225F7083A00D0AC85 /* MultiThreadViewController.swift */,
+				C9AAEDE625F7530400D0AC85 /* BarrierViewController.swift */,
 			);
 			path = ThreadLock;
 			sourceTree = "<group>";
@@ -425,6 +431,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AAEDE725F7530400D0AC85 /* BarrierViewController.swift in Sources */,
+				C9AAEDE325F7083A00D0AC85 /* MultiThreadViewController.swift in Sources */,
 				C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */,
 				C98EED1625DFA1EF0049EF9C /* Accessories.swift in Sources */,
 				C98EECCA25DF9EFF0049EF9C /* ContentViewController.swift in Sources */,

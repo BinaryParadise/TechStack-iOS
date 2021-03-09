@@ -10,10 +10,10 @@ import Foundation
 import BeSwifter
 import Peregrine
 
-let player1 = "电脑玩家炸鱼哥"
-let player2 = "电脑玩家垃圾君"
-let player3 = "电脑玩家菜的抠脚"
-let player4 = "电脑玩家句号哥"
+let player1 = "【1】电脑玩家炸鱼哥"
+let player2 = "【2】电脑玩家垃圾君"
+let player3 = "【3】电脑玩家菜的抠脚"
+let player4 = "【4】电脑玩家句号哥"
 
 /// 信号量
 class SemaphoreViewController: LoggerViewController {
@@ -22,7 +22,7 @@ class SemaphoreViewController: LoggerViewController {
     }
     
     override func onActionButton() {
-        appendText(text: "表演开始...")
+        appendText(text: "匹配开始...")
         
         let sema = DispatchSemaphore(value: 0)
         DispatchQueue.global().async { [weak self] in
@@ -58,7 +58,7 @@ class SemaphoreViewController: LoggerViewController {
 }
 
 extension SemaphoreViewController {
-    @available(*, renamed: "route", message: "swift://thread/lock/semaphore")
+    @available(*, renamed: "route", message: "swift://thread/semaphore")
     @objc static func semaphoreDemo(context: PGRouterContext) -> Void {
         pushViewController(controller: SemaphoreViewController())
         context.finished()

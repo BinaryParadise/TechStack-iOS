@@ -10,7 +10,11 @@
 #pragma - mark thread
 
 
-PGRouterURLKey const swift_thread_lock_semaphore = @"swift://thread/lock/semaphore";
+PGRouterURLKey const swift_thread_barrier = @"swift://thread/barrier";
+
+PGRouterURLKey const swift_thread_multi = @"swift://thread/multi";
+
+PGRouterURLKey const swift_thread_semaphore = @"swift://thread/semaphore";
 
 #pragma - mark helloworld
 
