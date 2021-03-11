@@ -29,9 +29,9 @@ class BarrierViewController: LoggerViewController {
             self?.appendText(text: "\(player2) 上车了")
         }
         
-        queue.async(group: nil, qos: .default, flags: .barrier) { [weak self] in
+        queue.async(flags: .barrier) { [weak self] in
             sleep(3)
-            self?.appendText(text: "\(player3) 具有优先上车权")
+            self?.appendText(text: "\(player3) 强行插队，年轻人不讲武德")
         }
         
         queue.async { [weak self] in

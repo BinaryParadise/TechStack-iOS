@@ -31,7 +31,7 @@ class LoggerViewController: ContentViewController {
         loggerView.isEditable = false
         view.addSubview(loggerView)
         loggerView.snp.makeConstraints { (make) in
-            make.height.equalToSuperview().multipliedBy(0.5)
+            make.height.equalToSuperview().multipliedBy(0.7)
             make.left.right.bottom.equalToSuperview()
         }
         
@@ -44,15 +44,15 @@ class LoggerViewController: ContentViewController {
             make.bottom.equalTo(loggerView.snp.top)
         }
         
-        timeLabel.textColor = .orange
-        timeLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        timeLabel.textColor = .systemPink
+        timeLabel.font = UIFont(name: "DINAlternate-Bold", size: 18)
         view.addSubview(timeLabel)
         timeLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(actionButton)
-            make.right.equalToSuperview().offset(-20)
+            make.bottom.equalTo(loggerView.snp.top).offset(-10)
+            make.left.equalToSuperview().offset(20)
         }
         
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
     }
     
     func appendText(text: String) {
@@ -73,6 +73,6 @@ class LoggerViewController: ContentViewController {
     }
     
     @objc func onTimer() {
-        timeLabel.text = "\(Date().string(withFormat: "yy.MM.dd HH:mm:ss.SSS"))"
+        timeLabel.text = "\(Date().string(withFormat: "yyyy.MM.dd HH:mm:ss.SSS"))"
     }
 }

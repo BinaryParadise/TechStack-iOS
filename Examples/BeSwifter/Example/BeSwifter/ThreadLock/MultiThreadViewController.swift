@@ -42,7 +42,7 @@ class MultiThreadViewController: LoggerViewController {
         alert.addAction(UIAlertAction(title: "全局并行队列-同步", style: .default, handler: { [weak self] (action) in
             self?.queueGlobalSync()
         }))
-        alert.addAction(UIAlertAction(title: "全局并行队列-同步", style: .default, handler: { [weak self] (action) in
+        alert.addAction(UIAlertAction(title: "全局并行队列-异步", style: .default, handler: { [weak self] (action) in
             self?.queueGlobalAsync()
         }))
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))

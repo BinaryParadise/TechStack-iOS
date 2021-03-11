@@ -20,6 +20,7 @@
 		C98EEE8925E0FA0C0049EF9C /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */; };
 		C9AAEDE325F7083A00D0AC85 /* MultiThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AAEDE225F7083A00D0AC85 /* MultiThreadViewController.swift */; };
 		C9AAEDE725F7530400D0AC85 /* BarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AAEDE625F7530400D0AC85 /* BarrierViewController.swift */; };
+		C9AAF86225F9B21400D0AC85 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AAF86125F9B21400D0AC85 /* GroupViewController.swift */; };
 		C9F7B65225F0C98E00F33304 /* SemaphoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */; };
 		C9F7B65625F0C9C300F33304 /* LoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */; };
 		C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */; };
@@ -57,6 +58,7 @@
 		C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
 		C9AAEDE225F7083A00D0AC85 /* MultiThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiThreadViewController.swift; sourceTree = "<group>"; };
 		C9AAEDE625F7530400D0AC85 /* BarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrierViewController.swift; sourceTree = "<group>"; };
+		C9AAF86125F9B21400D0AC85 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaphoreViewController.swift; sourceTree = "<group>"; };
 		C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerViewController.swift; sourceTree = "<group>"; };
 		C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillPointsViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				C9F7B65125F0C98E00F33304 /* SemaphoreViewController.swift */,
 				C9AAEDE225F7083A00D0AC85 /* MultiThreadViewController.swift */,
 				C9AAEDE625F7530400D0AC85 /* BarrierViewController.swift */,
+				C9AAF86125F9B21400D0AC85 /* GroupViewController.swift */,
 			);
 			path = ThreadLock;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				C9F7B81325F1CA2300F33304 /* WrapperFlowLayout.swift in Sources */,
 				C9F7B65225F0C98E00F33304 /* SemaphoreViewController.swift in Sources */,
 				C9F7B79525F0D1D300F33304 /* PGRouteDefine.m in Sources */,
+				C9AAF86225F9B21400D0AC85 /* GroupViewController.swift in Sources */,
 				C98EECC325DF9E750049EF9C /* ARCViewController.swift in Sources */,
 				C98EEE8925E0FA0C0049EF9C /* CodableExtensions.swift in Sources */,
 			);

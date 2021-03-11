@@ -12,6 +12,8 @@
 
 PGRouterURLKey const swift_thread_barrier = @"swift://thread/barrier";
 
+PGRouterURLKey const swift_thread_group = @"swift://thread/group";
+
 PGRouterURLKey const swift_thread_multi = @"swift://thread/multi";
 
 PGRouterURLKey const swift_thread_semaphore = @"swift://thread/semaphore";

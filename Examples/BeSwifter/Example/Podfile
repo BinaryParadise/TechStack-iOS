@@ -3,6 +3,7 @@ use_frameworks!
 platform :ios, '9.0'
 
 if File.exists?('Podfile.lock')
+  puts "\033[33mPodfile.lock removed\033[0m"
   `rm Podfile.lock`
 end
 
