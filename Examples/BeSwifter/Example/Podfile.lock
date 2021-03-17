@@ -1,14 +1,22 @@
 PODS:
   - BeSwifter (0.1.0):
+    - HybridLib
     - Peregrine
+    - PureObjCLib
+    - PureSwiftLib
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
   - FBRetainCycleDetector (0.1.4)
+  - HybridLib (0.1.0):
+    - WechatOpenSDK
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - Nimble (8.0.9)
   - Peregrine (0.8.6)
+  - PureObjCLib (0.1.0):
+    - WechatOpenSDK
+  - PureSwiftLib (0.1.0)
   - Quick (2.2.1)
   - SnapKit (4.2.0)
   - Starscream (4.0.4)
@@ -34,13 +42,17 @@ PODS:
   - SwifterSwift/SwiftStdlib (5.1.0)
   - SwifterSwift/UIKit (5.1.0)
   - SwiftyJSON (5.0.0)
+  - WechatOpenSDK (1.8.7.1)
 
 DEPENDENCIES:
   - BeSwifter (from `../BeSwifter`)
   - CocoaLumberjack/Swift
+  - HybridLib (from `../../HybridLib`)
   - MLeaksFinder
   - Nimble (~> 8.0.7)
   - Peregrine
+  - PureObjCLib (from `../../PureObjCLib`)
+  - PureSwiftLib (from `../../PureSwiftLib`)
   - Quick (~> 2.2.0)
   - SnapKit
   - Starscream
@@ -59,24 +71,35 @@ SPEC REPOS:
     - Starscream
     - SwifterSwift
     - SwiftyJSON
+    - WechatOpenSDK
 
 EXTERNAL SOURCES:
   BeSwifter:
     :path: "../BeSwifter"
+  HybridLib:
+    :path: "../../HybridLib"
+  PureObjCLib:
+    :path: "../../PureObjCLib"
+  PureSwiftLib:
+    :path: "../../PureSwiftLib"
 
 SPEC CHECKSUMS:
-  BeSwifter: c3a2c8516495fa2ca1009962886658a0bfc2eb87
+  BeSwifter: c39c925839afb47d4ac3358fd96fb4ffc0e76dd1
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  HybridLib: c9ef7a65d5348495be82985dedc7af72d131e8c3
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Peregrine: 06e82c5037377dc4500d79af0e454ad2f4c5fdbd
+  PureObjCLib: 472078a5017ff881601196f044dfc355773a1584
+  PureSwiftLib: 4d120418ebde6dac9e9c35ac43ee9a2aab57aed2
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: 1cc6dfb0553f07a3483da94553132d5df7245a4f
+PODFILE CHECKSUM: cc0d2472569b2036af9116aa29a5aac746fcefc9
 
 COCOAPODS: 1.10.1

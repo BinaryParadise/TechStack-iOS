@@ -32,6 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Classes/**/*'
   
+  s.pod_target_xcconfig = {'DEFINES_MODULE' => 'YES'}
   # s.resource_bundles = {
   #   'BeSwifter' => ['BeSwifter/Assets/*.png']
   # }
@@ -39,4 +40,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Peregrine'
+  s.dependency 'PureObjCLib'
+  s.dependency 'PureSwiftLib'
+  s.dependency 'HybridLib'
+  
 end

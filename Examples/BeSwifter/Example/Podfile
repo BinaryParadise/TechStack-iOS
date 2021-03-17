@@ -1,11 +1,16 @@
-use_frameworks!
-
 platform :ios, '9.0'
 
 if File.exists?('Podfile.lock')
   puts "\033[33mPodfile.lock removed\033[0m"
   `rm Podfile.lock`
 end
+
+#use_frameworks!
+inhibit_all_warnings!
+
+install! 'cocoapods',
+  :generate_multiple_pod_projects => true,
+  :incremental_installation => true
 
 target 'BeSwifter_Example' do
   pod 'BeSwifter', :path => '../BeSwifter'
@@ -15,8 +20,12 @@ target 'BeSwifter_Example' do
   pod 'MLeaksFinder'
   pod 'Starscream'
   pod 'SwiftyJSON'
-  pod 'Peregrine'
+  pod 'Peregrine', :modular_headers => true
   pod 'MLeaksFinder', :configurations => ['Debug']
+  
+  pod 'PureObjCLib', :path =>  '../../PureObjCLib', :modular_headers => true
+  pod 'PureSwiftLib', :path => '../../PureSwiftLib'
+  pod 'HybridLib', :path => '../../HybridLib'
 
   target 'BeSwifter_Tests' do
     inherit! :search_paths
@@ -29,5 +38,9 @@ end
 post_install do |installer|
   # 添加编译脚本，每次编译时都会重新收集路由表
   require_relative '../../../../Peregrine/Peregrine/PGGenerator.rb'
-    PGGenerator::configure_project(installer, {'expr' => true, 'name' => 'PGRouteDefine', 'path' => '${SRCROOT}/Peregrine'})
+  PGGenerator::configure_project(installer, {'expr' => true, 'name' => 'PGRouteDefine', 'path' => '${SRCROOT}/Peregrine'})
+    
+    # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+    
 end

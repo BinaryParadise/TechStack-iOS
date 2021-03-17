@@ -9,6 +9,9 @@
 import UIKit
 import BeSwifter
 import SwifterSwift
+import PureObjCLib
+import PureSwiftLib
+import HybridLib
 
 /// 技能点入口
 class SkillPointsViewController: ContentViewController {
@@ -50,6 +53,9 @@ class SkillPointsViewController: ContentViewController {
                 }
             }
         }
+        
+        assert(YHPureObjCVersion.verification())
+        assert(PureSwiftVersion.verification())
     }
 }
 

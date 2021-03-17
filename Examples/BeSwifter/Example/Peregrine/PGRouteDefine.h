@@ -22,6 +22,9 @@ FOUNDATION_EXPORT PGRouterURLKey const swift_thread_barrier;
 /// swift://thread/group
 FOUNDATION_EXPORT PGRouterURLKey const swift_thread_group;
 
+/// swift://thread/lock
+FOUNDATION_EXPORT PGRouterURLKey const swift_thread_lock;
+
 /// swift://thread/multi
 FOUNDATION_EXPORT PGRouterURLKey const swift_thread_multi;
 
