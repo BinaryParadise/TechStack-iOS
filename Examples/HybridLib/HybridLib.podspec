@@ -31,17 +31,16 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
-  s.source_files = 'HybridLib/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'HybridLib' => ['HybridLib/Assets/*.png']
   # }
 
-  s.private_header_files = 'Pod/Classes/HybridLib.h'
+  s.private_header_files = 'Sources/HybridLib/HybridLib.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'WechatOpenSDK'
   s.dependency 'YYCategories'
   s.dependency 'SwiftPodLib'
-  s.dependency 'CocoaLumberjack/Swift'
 
 end
