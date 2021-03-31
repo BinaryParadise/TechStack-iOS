@@ -1,0 +1,16 @@
+PODS:
+  - SwiftPodLib (0.1.0)
+
+DEPENDENCIES:
+  - SwiftPodLib (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftPodLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftPodLib: 9441687c2f1a23fdcaf0db770fe8308dcc60649e
+
+PODFILE CHECKSUM: e3053ce7e1e21e4f5dbbed6fab78865bd4a45bc1
+
+COCOAPODS: 1.10.1

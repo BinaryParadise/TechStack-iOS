@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint HybridLib.podspec' to ensure this is a
+# Be sure to run `pod lib lint SwiftPodLib.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'HybridLib'
+  s.name             = 'SwiftPodLib'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HybridLib.'
+  s.summary          = 'A short description of SwiftPodLib.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,27 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Rake Yang/HybridLib'
+  s.homepage         = 'https://github.com/Rake Yang/SwiftPodLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Rake Yang' => 'fenglaijun@gmail.com' }
-  s.source           = { :git => 'https://github.com/Rake Yang/HybridLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Rake Yang/SwiftPodLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.swift_version = '5.0'
 
-  s.source_files = 'HybridLib/Classes/**/*'
+  s.source_files = 'SwiftPodLib/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'HybridLib' => ['HybridLib/Assets/*.png']
+  #   'SwiftPodLib' => ['SwiftPodLib/Assets/*.png']
   # }
 
-  s.private_header_files = 'Pod/Classes/HybridLib.h'
+  # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'WechatOpenSDK'
-  s.dependency 'YYCategories'
-  s.dependency 'SwiftPodLib'
-  s.dependency 'CocoaLumberjack/Swift'
-
+  # s.dependency 'AFNetworking', '~> 2.3'
 end

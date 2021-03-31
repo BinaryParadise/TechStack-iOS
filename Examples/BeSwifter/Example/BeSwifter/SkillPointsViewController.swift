@@ -37,7 +37,7 @@ class SkillPointsViewController: ContentViewController {
             make.edges.equalToSuperview()
         }
         
-        collectView.register(supplementaryViewOfKind: UICollectionElementKindSectionHeader, withClass: RouteSectionView.self)
+        collectView.register(supplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withClass: RouteSectionView.self)
         collectView.register(cellWithClass: RouteItemCell.self)
         
         let routeMap = RouteManager.shared.routeMap
@@ -83,7 +83,7 @@ extension SkillPointsViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionHeader {
             let sectionView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withClass: RouteSectionView.self, for: indexPath)
             if let node = routes[safe: indexPath.section]![safe: indexPath.row] {
                 let url = URL(string: node.url)

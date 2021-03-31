@@ -32,11 +32,10 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'PureSwiftLib/Classes/**/*'
 
-  # s.resource_bundles = {
-  #   'PureSwiftLib' => ['PureSwiftLib/Assets/*.png']
-  # }
+  s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  
+  s.dependency 'WechatOpenSDK'
+  s.dependency 'SwiftPodLib'
+  s.dependency 'CocoaLumberjack/Swift'
+
 end

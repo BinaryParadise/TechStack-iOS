@@ -7,6 +7,7 @@
 
 #import "YHHybridLib.h"
 #import <WechatOpenSDK/WXApi.h>
+#import "HybridLib-Swift.h"
 
 @implementation YHHybridLib
 

@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SwiftPodLib_Tests' do
+  pod 'SwiftPodLib', :path => '../'
+  
+  
+end

@@ -12,6 +12,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		C922E5012614158E0064599B /* Bridgeport.m in Sources */ = {isa = PBXBuildFile; fileRef = C922E5002614158E0064599B /* Bridgeport.m */; };
 		C9469FCB26019D7D000BBB92 /* MixedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9469FCA26019D7D000BBB92 /* MixedSpec.swift */; };
 		C98EECC325DF9E750049EF9C /* ARCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EECC225DF9E750049EF9C /* ARCViewController.swift */; };
 		C98EECCA25DF9EFF0049EF9C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */; };
@@ -53,6 +54,8 @@
 		629D541D6D1B2A63FADB1F78 /* libPods-BeSwifter_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeSwifter_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FCF1787C02569FAC20FEC8 /* Pods-BeSwifter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Tests/Pods-BeSwifter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1038518AF27A53CA7E92A73 /* Pods-BeSwifter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C922E4FF2614158E0064599B /* Bridgeport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridgeport.h; sourceTree = "<group>"; };
+		C922E5002614158E0064599B /* Bridgeport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridgeport.m; sourceTree = "<group>"; };
 		C9469FCA26019D7D000BBB92 /* MixedSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedSpec.swift; sourceTree = "<group>"; };
 		C98EECC225DF9E750049EF9C /* ARCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCViewController.swift; sourceTree = "<group>"; };
 		C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				C922E4FF2614158E0064599B /* Bridgeport.h */,
+				C922E5002614158E0064599B /* Bridgeport.m */,
 			);
 			name = "Example for BeSwifter";
 			path = BeSwifter;
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				C9F7B79225F0D1D300F33304 /* BeSwifter_Example-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,7 +197,6 @@
 				C98EECC925DF9EFF0049EF9C /* ContentViewController.swift */,
 				C98EEE8825E0FA0C0049EF9C /* CodableExtensions.swift */,
 				C9F7B65525F0C9C300F33304 /* LoggerViewController.swift */,
-				C9F7B79225F0D1D300F33304 /* BeSwifter_Example-Bridging-Header.h */,
 				C9F7B81225F1CA2300F33304 /* WrapperFlowLayout.swift */,
 			);
 			name = Base;
@@ -381,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C922E5012614158E0064599B /* Bridgeport.m in Sources */,
 				C9AAEDE725F7530400D0AC85 /* BarrierViewController.swift in Sources */,
 				C9AAEDE325F7083A00D0AC85 /* MultiThreadViewController.swift in Sources */,
 				C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */,
@@ -551,7 +557,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "BeSwifter/BeSwifter_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -568,7 +574,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeSwifter/BeSwifter_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

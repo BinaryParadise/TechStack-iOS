@@ -9,14 +9,22 @@ PODS:
     - CocoaLumberjack/Core
   - FBRetainCycleDetector (0.1.4)
   - HybridLib (0.1.0):
+    - CocoaLumberjack/Swift
+    - SwiftPodLib
     - WechatOpenSDK
+    - YYCategories
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - Nimble (8.0.9)
   - Peregrine (0.8.6)
   - PureObjCLib (0.1.0):
+    - SwiftPodLib
     - WechatOpenSDK
-  - PureSwiftLib (0.1.0)
+    - YYCategories
+  - PureSwiftLib (0.1.0):
+    - CocoaLumberjack/Swift
+    - SwiftPodLib
+    - WechatOpenSDK
   - Quick (2.2.1)
   - SnapKit (4.2.0)
   - Starscream (4.0.4)
@@ -41,12 +49,15 @@ PODS:
   - SwifterSwift/SpriteKit (5.1.0)
   - SwifterSwift/SwiftStdlib (5.1.0)
   - SwifterSwift/UIKit (5.1.0)
-  - SwiftyJSON (5.0.0)
+  - SwiftPodLib (0.1.0)
+  - SwiftyJSON (5.0.1)
   - WechatOpenSDK (1.8.7.1)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
   - BeSwifter (from `../BeSwifter`)
-  - CocoaLumberjack/Swift
   - HybridLib (from `../../HybridLib`)
   - MLeaksFinder
   - Nimble (~> 8.0.7)
@@ -57,6 +68,7 @@ DEPENDENCIES:
   - SnapKit
   - Starscream
   - SwifterSwift
+  - SwiftPodLib (from `../../SwiftPodLib`)
   - SwiftyJSON
 
 SPEC REPOS:
@@ -72,6 +84,7 @@ SPEC REPOS:
     - SwifterSwift
     - SwiftyJSON
     - WechatOpenSDK
+    - YYCategories
 
 EXTERNAL SOURCES:
   BeSwifter:
@@ -82,24 +95,28 @@ EXTERNAL SOURCES:
     :path: "../../PureObjCLib"
   PureSwiftLib:
     :path: "../../PureSwiftLib"
+  SwiftPodLib:
+    :path: "../../SwiftPodLib"
 
 SPEC CHECKSUMS:
   BeSwifter: c39c925839afb47d4ac3358fd96fb4ffc0e76dd1
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  HybridLib: c9ef7a65d5348495be82985dedc7af72d131e8c3
+  HybridLib: 51611024955c889222219acd3f13d2219a9acb96
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Peregrine: 06e82c5037377dc4500d79af0e454ad2f4c5fdbd
-  PureObjCLib: 472078a5017ff881601196f044dfc355773a1584
-  PureSwiftLib: 4d120418ebde6dac9e9c35ac43ee9a2aab57aed2
+  PureObjCLib: 9a53273d2d988c418f9a87968688dc4200b6249e
+  PureSwiftLib: c588d60c58fd5b3c6d32ea5c05e7ee0dc7e39272
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftPodLib: 9441687c2f1a23fdcaf0db770fe8308dcc60649e
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: cc0d2472569b2036af9116aa29a5aac746fcefc9
+PODFILE CHECKSUM: ce63cb03bee8b0dc5b476c63f744a694633df288
 
 COCOAPODS: 1.10.1

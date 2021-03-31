@@ -7,6 +7,7 @@ end
 
 #use_frameworks!
 inhibit_all_warnings!
+use_modular_headers!
 
 install! 'cocoapods',
   :generate_multiple_pod_projects => true,
@@ -16,7 +17,6 @@ target 'BeSwifter_Example' do
   pod 'BeSwifter', :path => '../BeSwifter'
   pod 'SnapKit'
   pod 'SwifterSwift'
-  pod 'CocoaLumberjack/Swift'
   pod 'MLeaksFinder'
   pod 'Starscream'
   pod 'SwiftyJSON'
@@ -26,6 +26,7 @@ target 'BeSwifter_Example' do
   pod 'PureObjCLib', :path =>  '../../PureObjCLib', :modular_headers => true
   pod 'PureSwiftLib', :path => '../../PureSwiftLib'
   pod 'HybridLib', :path => '../../HybridLib'
+  pod 'SwiftPodLib', :path => '../../SwiftPodLib'
 
   target 'BeSwifter_Tests' do
     inherit! :search_paths

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CocoaLumberjack
 
 class SwiftLogFormatter: NSObject, DDLogFormatter {
     func format(message logMessage: DDLogMessage) -> String? {
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         DDTTYLogger.sharedInstance?.logFormatter = SwiftLogFormatter()
         DDLog.add(DDTTYLogger.sharedInstance!)
