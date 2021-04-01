@@ -6,6 +6,7 @@ PODS:
     - CocoaLumberjack/Core
   - FBRetainCycleDetector (0.1.4)
   - HybridLib (0.1.0):
+    - CocoaLumberjack/Swift
     - SwiftPodLib
     - WechatOpenSDK
     - YYCategories
@@ -21,6 +22,7 @@ PODS:
     - CocoaLumberjack/Swift
     - SwiftPodLib
     - WechatOpenSDK
+    - YYCategories
   - Quick (2.2.1)
   - SnapKit (4.2.0)
   - Starscream (4.0.4)
@@ -54,6 +56,7 @@ PODS:
 
 DEPENDENCIES:
   - BeSwifter (from `../BeSwifter`)
+  - CocoaLumberjack/Swift
   - HybridLib (from `../../HybridLib`)
   - MLeaksFinder
   - Nimble (~> 8.0.7)
@@ -98,12 +101,12 @@ SPEC CHECKSUMS:
   BeSwifter: 27512847791c173c5ec1fd87aca49446d4f9e768
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  HybridLib: dc3c28bb362ee3a23bb721204115eecfa1c18b81
+  HybridLib: f2e6e535f67972e0345f2d13dd82c5d60829c2aa
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Peregrine: 06e82c5037377dc4500d79af0e454ad2f4c5fdbd
   PureObjCLib: 9a53273d2d988c418f9a87968688dc4200b6249e
-  PureSwiftLib: c588d60c58fd5b3c6d32ea5c05e7ee0dc7e39272
+  PureSwiftLib: 258da880676632abbbb92cab9e235c9ac008414e
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
@@ -113,6 +116,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: ce63cb03bee8b0dc5b476c63f744a694633df288
+PODFILE CHECKSUM: 9266b4519b383228b4d029e744fca0fbffb538ea
 
 COCOAPODS: 1.10.1

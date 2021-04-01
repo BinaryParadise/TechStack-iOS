@@ -33,14 +33,19 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Sources/**/*'
   
+  s.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES', 'DEFINES_MODULE' => 'YES'}
+  
+  s.static_framework = true
+
   # s.resource_bundles = {
   #   'HybridLib' => ['HybridLib/Assets/*.png']
   # }
 
-  s.private_header_files = 'Sources/HybridLib/HybridLib.h'
+#  s.private_header_files = 'Sources/HybridLib/HybridLibDependency.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'WechatOpenSDK'
   s.dependency 'YYCategories'
   s.dependency 'SwiftPodLib'
+  s.dependency 'CocoaLumberjack/Swift'
 
 end

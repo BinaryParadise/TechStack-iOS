@@ -56,6 +56,7 @@ class SkillPointsViewController: ContentViewController {
         
         assert(YHPureObjCVersion.verification())
         assert(PureSwiftVersion.verification())
+        assert(HybridSwiftVersion.verification())
     }
 }
 

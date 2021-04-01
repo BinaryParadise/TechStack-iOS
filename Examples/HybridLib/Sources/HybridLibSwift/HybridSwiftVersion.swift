@@ -7,11 +7,13 @@
 
 import Foundation
 import SwiftPodLib
+//import CocoaLumberjack
 
-public class HybridSwiftVersion: NSObject {
+@objc public class HybridSwiftVersion: NSObject {
     
     /// 验证
     @objc public static func verification() -> Bool {
+        DDLogWarn("")
         return YHHybridLib.verification() && SwiftPodLib.verification() && NSDate(string: "2021-03-31", format: "yyyy-MM-dd")!.year == 2021
     }
     

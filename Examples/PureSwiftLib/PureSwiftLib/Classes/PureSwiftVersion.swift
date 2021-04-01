@@ -11,6 +11,7 @@ import SwiftPodLib
 public class PureSwiftVersion {
     /// 验证
     public static func verification() -> Bool {
+        DDLogError("verification")
         return SwiftPodLib.verification() && NSDate(string: "2021-03-31", format: "yyyy-MM-dd")?.year == 2021
     }
 }
