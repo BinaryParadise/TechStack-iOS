@@ -43,6 +43,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'WechatOpenSDK'
   s.dependency 'YYCategories'
-  s.dependency 'SwiftPodLib'
   
 end

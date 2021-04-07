@@ -32,12 +32,18 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'PureSwiftLib/Classes/**/*'
   s.static_framework = true
+  s.swift_version = "5.0"
 
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
+  
+  s.private_header_files = 'PureSwiftLib/Classes/Dependency.h'
 
-  s.dependency 'WechatOpenSDK'
-  s.dependency 'SwiftPodLib'
-  s.dependency 'CocoaLumberjack/Swift'
+#  s.dependency 'WechatOpenSDK'
+  s.dependency 'PureObjCLib'
   s.dependency 'YYCategories'
+  
+  s.prefix_header_contents = <<-EOS
+    #import <YYCategories/YYCategories.h>
+  EOS
 
 end

@@ -71,7 +71,7 @@ class LockViewController: LoggerViewController {
 
 extension LockViewController {
     @available(*, renamed: "route", message: "swift://thread/lock")
-    @objc static func lockDemo(context: PGRouterContext) -> Void {
+    @objc static func lockDemo(context: RouteContext) -> Void {
         pushViewController(controller: LockViewController())
     }
 }

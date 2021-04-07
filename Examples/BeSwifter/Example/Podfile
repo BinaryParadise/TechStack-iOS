@@ -5,7 +5,7 @@ if File.exists?('Podfile.lock')
   `rm Podfile.lock`
 end
 
-use_frameworks!
+#use_frameworks!
 inhibit_all_warnings!
 use_modular_headers!
 
@@ -14,20 +14,20 @@ install! 'cocoapods',
   :incremental_installation => true
 
 target 'BeSwifter_Example' do
-  pod 'BeSwifter', :path => '../BeSwifter'
   pod 'SnapKit'
   pod 'SwifterSwift'
-  pod 'MLeaksFinder'
   pod 'Starscream'
   pod 'SwiftyJSON'
-  pod 'CocoaLumberjack/Swift'
-  pod 'Peregrine', :modular_headers => true
-  pod 'MLeaksFinder', :configurations => ['Debug']
+  pod 'CocoaLumberjack'
+  pod 'Peregrine', '~> 0.9.0'
+#  pod 'MLeaksFinder', :configurations => ['Debug']
   
-  pod 'PureObjCLib', :path =>  '../../PureObjCLib', :modular_headers => true
+  pod 'PureObjCLib', :path =>  '../../PureObjCLib'
   pod 'PureSwiftLib', :path => '../../PureSwiftLib'
   pod 'HybridLib', :path => '../../HybridLib'
-  pod 'SwiftPodLib', :path => '../../SwiftPodLib'
+  pod 'MixedLib', :path => '../../MixedLib'
+  pod 'LibSwifter', :path => '../LibSwifter'
+  pod 'LibObjectivec', :path => '../LibObjectivec'
 
   target 'BeSwifter_Tests' do
     inherit! :search_paths
@@ -39,8 +39,8 @@ end
 
 post_install do |installer|
   # 添加编译脚本，每次编译时都会重新收集路由表
-  require_relative '../../../../Peregrine/Peregrine/PGGenerator.rb'
-  PGGenerator::configure_project(installer, {'expr' => true, 'name' => 'PGRouteDefine', 'path' => '${SRCROOT}/Peregrine'})
+  require_relative 'Pods/Peregrine/Sources/Configuration.rb'
+  PGGenerator::configure_project(installer, {'name' => 'RouteKeys', 'path' => '${SRCROOT}/Peregrine'})
     
     # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
     Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
@@ -55,6 +55,11 @@ post_install do |installer|
       ditto "${COMPATIBILITY_HEADER_PATH}" "${PODS_ROOT}/Headers/Public/${PRODUCT_MODULE_NAME}/${PRODUCT_MODULE_NAME}-Swift.h"
       SH
     end
+
+  end
+
+  if `which efpodsanalyzer`.include?('/usr')
+    `sudo efpodsanalyzer ../Example/Podfile`
   end
     
 end

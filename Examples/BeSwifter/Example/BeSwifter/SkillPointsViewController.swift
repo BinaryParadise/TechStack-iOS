@@ -7,11 +7,12 @@
 //
 
 import UIKit
-import BeSwifter
 import SwifterSwift
 import PureObjCLib
 import PureSwiftLib
 import HybridLib
+import Peregrine
+import MixedLib
 
 /// 技能点入口
 class SkillPointsViewController: ContentViewController {
@@ -46,7 +47,7 @@ class SkillPointsViewController: ContentViewController {
         }).forEach { (rkey) in
             if let item = routeMap[rkey] {
                 let arr = item.childs.values.sorted { (node1, node2) -> Bool in
-                    return node1.url.compare(node2.url) == .orderedAscending
+                    return node1.url.absoluteString.compare(node2.url.absoluteString) == .orderedAscending
                 }
                 if arr.count > 0 {
                     routes.append(arr)
@@ -56,7 +57,10 @@ class SkillPointsViewController: ContentViewController {
         
         assert(YHPureObjCVersion.verification())
         assert(PureSwiftVersion.verification())
+        assert(YHHybridLib.verification())
         assert(HybridSwiftVersion.verification())
+        assert(MixedLibVersion.verification())
+        assert(MixedLibSwift.verification())
     }
 }
 
@@ -72,9 +76,7 @@ extension SkillPointsViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: RouteItemCell.self, for: indexPath)
         if let node = routes[safe: indexPath.section] {
-            if let url = URL(string: node[safe: indexPath.row]!.url) {
-                cell.titleLabel.text = url.path ?? ""
-            }
+            cell.titleLabel.text = node[safe: indexPath.row]!.url.path
         }
         return cell
     }
@@ -87,8 +89,7 @@ extension SkillPointsViewController: UICollectionViewDataSource, UICollectionVie
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withClass: RouteSectionView.self, for: indexPath)
             if let node = routes[safe: indexPath.section]![safe: indexPath.row] {
-                let url = URL(string: node.url)
-                sectionView.titleLabel.text = "\(url!.scheme!)://\(url!.host!)"
+                sectionView.titleLabel.text = "\(node.url.scheme!)://\(node.url.host!)"
             }
             return sectionView
         }
@@ -97,7 +98,7 @@ extension SkillPointsViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let node = routes[safe: indexPath.section]![safe: indexPath.row] {
-            RouteManager.shared.openURL(node.url) { (ret, data) in
+            RouteManager.openURL(node.url.absoluteString) { (ret, data) in
                 print("\(#function) \(ret),\(data)")
             }
         }

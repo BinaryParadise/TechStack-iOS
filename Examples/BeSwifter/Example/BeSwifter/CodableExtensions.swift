@@ -15,7 +15,7 @@ extension Data {
         do {
             return try JSONDecoder().decode(type, from: self)
         } catch {
-            DDLogError("\(error)")
+//            DDLogError("\(error)")
         }
         return nil
     }

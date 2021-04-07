@@ -30,22 +30,24 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
-
-  s.source_files = 'Sources/**/*'
   
-  s.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES', 'DEFINES_MODULE' => 'YES'}
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES'}
+  s.user_target_xcconfig = { 'DEFINES_MODULE' => 'YES'}
   
   s.static_framework = true
-
-  # s.resource_bundles = {
-  #   'HybridLib' => ['HybridLib/Assets/*.png']
-  # }
-
-#  s.private_header_files = 'Sources/HybridLib/HybridLibDependency.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  
+  s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
+  
+  s.source_files = 'Sources/**/*'
+  s.public_header_files = 'Sources/**/*.h'
   s.dependency 'WechatOpenSDK'
+  s.dependency 'SnapKit'
   s.dependency 'YYCategories'
-  s.dependency 'SwiftPodLib'
   s.dependency 'CocoaLumberjack/Swift'
+  
+  s.prefix_header_contents = <<-EOS
+    #import <WechatOpenSDK/WXApi.h>
+    #import <YYCategories/YYCategories.h>
+  EOS
 
 end

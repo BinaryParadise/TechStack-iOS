@@ -22,7 +22,7 @@ class Rifle {
     }
     
     deinit {
-        DDLogWarn("\(#function) +\(#line) \(self)")
+//        DDLogWarn("\(#function) +\(#line) \(self)")
     }
 }
 
@@ -38,6 +38,6 @@ class Knife {
     }
     
     deinit {
-        DDLogWarn("\(#function) +\(#line) \(self)")
+//        DDLogWarn("\(#function) +\(#line) \(self)")
     }
 }

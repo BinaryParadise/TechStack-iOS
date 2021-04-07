@@ -42,7 +42,7 @@ class BarrierViewController: LoggerViewController {
 
 extension BarrierViewController {
     @available(*, renamed: "route", message: "swift://thread/barrier")
-    @objc static func barrierDemo(context: PGRouterContext) -> Void {
+    @objc static func barrierDemo(context: RouteContext) -> Void {
         pushViewController(controller: BarrierViewController())
     }
 }

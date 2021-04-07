@@ -31,7 +31,7 @@ class ContentViewController: UIViewController {
     }
     
     deinit {
-        DDLogDebug("\(URL(string: #file)?.lastPathComponent ?? "") \(#function) +\(#line) \(NSStringFromClass(Self.self))")
+//        DDLogDebug("\(URL(string: #file)?.lastPathComponent ?? "") \(#function) +\(#line) \(NSStringFromClass(Self.self))")
     }
     
     static func pushViewController(controller: UIViewController) {

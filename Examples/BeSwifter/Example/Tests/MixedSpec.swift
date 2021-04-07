@@ -8,7 +8,6 @@
 
 import Quick
 import Nimble
-import BeSwifter
 import PureObjCLib
 @testable import PureSwiftLib
 @testable import HybridLib

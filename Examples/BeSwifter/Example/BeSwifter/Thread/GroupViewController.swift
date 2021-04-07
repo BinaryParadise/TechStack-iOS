@@ -47,7 +47,7 @@ class GroupViewController: LoggerViewController {
 
 extension GroupViewController {
     @available(*, renamed: "route", message: "swift://thread/group")
-    @objc static func groupDemo(context: PGRouterContext) -> Void {
+    @objc static func groupDemo(context: RouteContext) -> Void {
         pushViewController(controller: GroupViewController())
     }
 }

@@ -189,7 +189,7 @@ class MultiThreadViewController: LoggerViewController {
 
 extension MultiThreadViewController {
     @available(*, renamed: "route", message: "swift://thread/multi")
-    @objc static func multi(context: PGRouterContext) -> Void {
+    @objc static func multi(context: RouteContext) -> Void {
         pushViewController(controller: MultiThreadViewController())
     }
 }

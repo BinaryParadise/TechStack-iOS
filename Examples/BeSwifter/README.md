@@ -99,3 +99,20 @@ import SwiftPodLib
 ### 使用其它混编Pod库
 
 > CocoaLumberjack暂未找到解决办法
+
+
+## Test库为纯oc本地库，@import方式引入其他pod lib本地库(命名不带‘-’)
+
+- lib库以Swift创建，纯swift，没问题，Test能正常访问到swift类
+- lib库以Swift创建，加入oc类混编，Test库编译不通过
+
+- lib库以OC创建，纯oc，没问题，Test能正常访问oc类
+- lib库以OC创建，加入swift类混编，Test库编译通过，只能访问oc类，不能访问swift类
+
+
+## Test库为纯oc本地库，@import方式引入其他pod lib本地库(命名带‘-’)
+
+- lib库以Swift创建，纯swift，没问题，Test能正常访问到swift类
+- lib库以Swift创建，加入oc类混编，Test库编译不通过
+
+- lib库以OC创建，纯oc或混编，Test库编译都不通过

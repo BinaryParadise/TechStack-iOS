@@ -1,0 +1,27 @@
+PODS:
+  - Expecta (1.0.6)
+  - MixedLib (0.1.0)
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - Expecta
+  - MixedLib (from `../`)
+  - Specta
+
+SPEC REPOS:
+  trunk:
+    - Expecta
+    - Specta
+
+EXTERNAL SOURCES:
+  MixedLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  MixedLib: 347e9456df6aa333d0964f4259aabb9827a70bb8
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: 5cf1333923ea3316946058a2b366ee396d55dfef
+
+COCOAPODS: 1.10.1

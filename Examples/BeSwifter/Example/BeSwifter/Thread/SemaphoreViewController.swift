@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import BeSwifter
 import Peregrine
 
 let player1 = "【1】电脑玩家炸鱼哥"
@@ -59,8 +58,8 @@ class SemaphoreViewController: LoggerViewController {
 
 extension SemaphoreViewController {
     @available(*, renamed: "route", message: "swift://thread/semaphore")
-    @objc static func semaphoreDemo(context: PGRouterContext) -> Void {
+    @objc static func semaphoreDemo(context: RouteContext) -> Void {
         pushViewController(controller: SemaphoreViewController())
-        context.finished()
+        context.onFinished()
     }
 }

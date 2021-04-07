@@ -1,0 +1,14 @@
+{
+    "config": {
+        "categories": [
+            "基础组件",
+            "业务组件",
+            "三方"
+        ],
+        "categoryRegexes": [
+            ".*(Lib)$",
+            "BeSwifter",
+            ".*"
+        ]
+    }
+}

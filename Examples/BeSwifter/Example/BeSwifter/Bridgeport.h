@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Bridgeport : NSObject
+@interface Bridgeport<__covariant ObjectType> : NSObject
 
 @end
 
