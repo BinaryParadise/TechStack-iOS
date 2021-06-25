@@ -1,17 +1,21 @@
 platform :ios, '9.0'
+require 'pry'
 
 if File.exists?('Podfile.lock')
   puts "\033[33mPodfile.lock removed\033[0m"
   `rm Podfile.lock`
 end
 
-#use_frameworks!
+# use_frameworks!
 inhibit_all_warnings!
 use_modular_headers!
 
-install! 'cocoapods',
-  :generate_multiple_pod_projects => true,
-  :incremental_installation => true
+isProject = true
+if isProject
+  install! 'cocoapods',
+    :generate_multiple_pod_projects => true,
+    :incremental_installation => true
+end
 
 target 'BeSwifter_Example' do
   pod 'SnapKit'
@@ -26,8 +30,6 @@ target 'BeSwifter_Example' do
   pod 'PureSwiftLib', :path => '../../PureSwiftLib'
   pod 'HybridLib', :path => '../../HybridLib'
   pod 'MixedLib', :path => '../../MixedLib'
-  pod 'LibSwifter', :path => '../LibSwifter'
-  pod 'LibObjectivec', :path => '../LibObjectivec'
 
   target 'BeSwifter_Tests' do
     inherit! :search_paths
@@ -42,24 +44,32 @@ post_install do |installer|
   require_relative 'Pods/Peregrine/Sources/Configuration.rb'
   PGGenerator::configure_project(installer, {'name' => 'RouteKeys', 'path' => '${SRCROOT}/Peregrine'})
     
-    # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
-    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+  # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+#  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
   
-  # 解决混编Pod使用CocoaLumberjack的问题(需要使用动态库方式)
-  installer.pods_project&.targets&.each do |target|
-    compatibilityPhase = target.build_phases.find { |ph| ph.display_name == 'Copy generated compatibility header' }
-    if compatibilityPhase
-      build_phase = target.new_shell_script_build_phase('Copy Swift Header')
-      build_phase.shell_script = <<-SH.strip_heredoc
-      COMPATIBILITY_HEADER_PATH="${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h"
-      ditto "${COMPATIBILITY_HEADER_PATH}" "${PODS_ROOT}/Headers/Public/${PRODUCT_MODULE_NAME}/${PRODUCT_MODULE_NAME}-Swift.h"
-      SH
+  # 解决在Pod中使用混编Pod时import module报错问题?
+  if isProject
+    #  binding.pry
+     installer.pod_targets do |target|
+      puts Project::new("Pods/#{target.project_name}.xcodeproj")
+     end
+  else
+    puts installer.pods_project
+    installer.pods_project.targets.each do |target|
+      compatibilityPhase = target.build_phases.find { |ph| ph.display_name == 'Copy generated compatibility header' }
+      puts target.class
+      if compatibilityPhase
+        build_phase = target.new_shell_script_build_phase('Copy Swift Header')
+        build_phase.shell_script = <<-SH.strip_heredoc
+        COMPATIBILITY_HEADER_PATH="${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h"
+        ditto "${COMPATIBILITY_HEADER_PATH}" "${PODS_ROOT}/Headers/Public/${PRODUCT_MODULE_NAME}/${PRODUCT_MODULE_NAME}-Swift.h"
+        SH
+      end
     end
-
   end
 
   if `which efpodsanalyzer`.include?('/usr')
-    `sudo efpodsanalyzer ../Example/Podfile`
+#    `sudo efpodsanalyzer ../Example/Podfile`
   end
     
 end

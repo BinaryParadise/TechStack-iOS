@@ -34,7 +34,7 @@ class ContentViewController: UIViewController {
 //        DDLogDebug("\(URL(string: #file)?.lastPathComponent ?? "") \(#function) +\(#line) \(NSStringFromClass(Self.self))")
     }
     
-    static func pushViewController(controller: UIViewController) {
+    class func pushViewController(controller: UIViewController) {
         guard let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
         nav.pushViewController(controller, animated: true)
     }

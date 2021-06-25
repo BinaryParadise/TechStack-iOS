@@ -57,6 +57,11 @@ struct ContentView: View {
                             OptionSetRow(title: "CalculatorView", subtitle: "自定义简易计算器")
                         }
                     )
+                    NavigationLink(
+                        destination: CustomNavigation(),
+                        label: {
+                            OptionSetRow(title: "CustomNavigation", subtitle: "自定义导航栏控件")
+                        })
                 }
             }
             .listStyle(GroupedListStyle())

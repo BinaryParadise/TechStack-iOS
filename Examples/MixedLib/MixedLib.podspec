@@ -43,8 +43,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'HybridLib'
   s.dependency 'PureSwiftLib'
-  s.dependency 'LibObjectivec'
-  s.dependency 'LibSwifter'
   
   s.prefix_header_contents = <<-EOS
   EOS

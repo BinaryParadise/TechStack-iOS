@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A989DF88E2AEC09C5A0BF103 /* Pods_SwiftUIDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9488F444E12323BEB4843C72 /* Pods_SwiftUIDemo.framework */; };
+		C9751D3E264CBEFA00EC09AE /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9751D3D264CBEFA00EC09AE /* CustomNavigation.swift */; };
+		C9751D40264CC5FF00EC09AE /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9751D3F264CC5FF00EC09AE /* UIScreenExtension.swift */; };
 		C9BF70B2264B7C3F007A6B08 /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF70B1264B7C3F007A6B08 /* SwiftUIDemoApp.swift */; };
 		C9BF70B4264B7C3F007A6B08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF70B3264B7C3F007A6B08 /* ContentView.swift */; };
 		C9BF70B6264B7C41007A6B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BF70B5264B7C41007A6B08 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		396D07D686FEDB449A49F423 /* Pods-SwiftUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIDemo/Pods-SwiftUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9488F444E12323BEB4843C72 /* Pods_SwiftUIDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9751D3D264CBEFA00EC09AE /* CustomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		C9751D3F264CC5FF00EC09AE /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		C9BF70AE264B7C3F007A6B08 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BF70B1264B7C3F007A6B08 /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		C9BF70B3264B7C3F007A6B08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				C9BF70B5264B7C41007A6B08 /* Assets.xcassets */,
 				C9BF70BA264B7C41007A6B08 /* Info.plist */,
 				C9BF70B7264B7C41007A6B08 /* Preview Content */,
+				C9751D3F264CC5FF00EC09AE /* UIScreenExtension.swift */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				C9BF70C7264BBAA7007A6B08 /* WebImagePage.swift */,
 				C9BF70C5264BA84E007A6B08 /* Calculator.swift */,
 				C9BF70CB264BD093007A6B08 /* CalculatorModel.swift */,
+				C9751D3D264CBEFA00EC09AE /* CustomNavigation.swift */,
 			);
 			path = ControlPage;
 			sourceTree = "<group>";
@@ -230,9 +236,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BF70B4264B7C3F007A6B08 /* ContentView.swift in Sources */,
+				C9751D40264CC5FF00EC09AE /* UIScreenExtension.swift in Sources */,
 				C9BF70C8264BBAA7007A6B08 /* WebImagePage.swift in Sources */,
 				C9BF70B2264B7C3F007A6B08 /* SwiftUIDemoApp.swift in Sources */,
 				C9BF70C4264B85EE007A6B08 /* TextFieldPage.swift in Sources */,
+				C9751D3E264CBEFA00EC09AE /* CustomNavigation.swift in Sources */,
 				C9BF70C6264BA84E007A6B08 /* Calculator.swift in Sources */,
 				C9BF70C1264B8105007A6B08 /* OptionSetRow.swift in Sources */,
 				C9BF70CC264BD093007A6B08 /* CalculatorModel.swift in Sources */,

@@ -176,8 +176,60 @@ dispatch_group_t group = dispatch_group_create();
 
 > 基于GCD更高级的封装，更加面向对象
 >
-> 支持添加依赖操作
+> 支持添加依赖任务
 
+```swift
+// 示例
+let oq = OperationQueue()
+        
+let o1 = BlockOperation(block: {
+    print("1、doing \(Thread.current)")
+})
+
+let o2 = BlockOperation(block: {
+    print("2、doing \(Thread.current)")
+})
+
+let o3 = BlockOperation(block: {
+    print("3、doing \(Thread.current)")
+})
+
+let o4 = BlockOperation(block: {
+    print("4、doing \(Thread.current)")
+})
+
+let o5 = BlockOperation {
+    print("5、finished \(Thread.current)")
+}
+
+o5.addDependency(o1)
+o5.addDependency(o2)
+o5.addDependency(o3)
+o5.addDependency(o4)
+
+/*
+    不使用OperationQueue
+
+    o2.addDependency(o3)
+
+    o1.start()
+    o3.start()
+    o2.start()
+    o4.start()
+    o5.start()
+    
+    */
+
+o2.addDependency(o3)
+
+oq.addOperation(o5)
+oq.addOperation(o2)
+oq.addOperation(o1)
+oq.addOperation(o4)
+oq.addOperation(o3)
+
+print("current \(Thread.current)")
+```
 
 
 ## RunLoop

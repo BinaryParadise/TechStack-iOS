@@ -38,16 +38,17 @@ TODO: Add long description of the pod here.
   
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
   
-  s.source_files = 'Sources/**/*'
-  s.public_header_files = 'Sources/**/*.h'
-  s.dependency 'WechatOpenSDK'
-  s.dependency 'SnapKit'
-  s.dependency 'YYCategories'
-  s.dependency 'CocoaLumberjack/Swift'
+  s.subspec 'Swift' do |ss|
+    ss.source_files = 'Sources/OC/**/*'
+    ss.dependency 'CocoaLumberjack'
+  end
   
-  s.prefix_header_contents = <<-EOS
-    #import <WechatOpenSDK/WXApi.h>
-    #import <YYCategories/YYCategories.h>
-  EOS
+  s.subspec 'ObjectiveC' do |ss|
+    ss.source_files = 'Sources/Swift/**/*'
+    ss.dependency 'CocoaLumberjack/Swift'
+    ss.dependency 'WechatOpenSDK'
+    ss.dependency 'SnapKit'
+    ss.dependency 'YYCategories'
+  end
 
 end

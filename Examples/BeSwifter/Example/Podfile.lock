@@ -5,17 +5,17 @@ PODS:
   - CocoaLumberjack/Swift (3.7.2):
     - CocoaLumberjack/Core
   - HybridLib (0.1.0):
+    - HybridLib/ObjectiveC (= 0.1.0)
+    - HybridLib/Swift (= 0.1.0)
+  - HybridLib/ObjectiveC (0.1.0):
     - CocoaLumberjack/Swift
     - SnapKit
     - WechatOpenSDK
     - YYCategories
-  - LibObjectivec (0.1.0)
-  - LibSwifter (0.1.0):
-    - CocoaLumberjack/Swift
+  - HybridLib/Swift (0.1.0):
+    - CocoaLumberjack
   - MixedLib (0.1.0):
     - HybridLib
-    - LibObjectivec
-    - LibSwifter
     - PureSwiftLib
   - Nimble (8.0.9)
   - Peregrine (0.9.0)
@@ -58,8 +58,6 @@ PODS:
 DEPENDENCIES:
   - CocoaLumberjack
   - HybridLib (from `../../HybridLib`)
-  - LibObjectivec (from `../LibObjectivec`)
-  - LibSwifter (from `../LibSwifter`)
   - MixedLib (from `../../MixedLib`)
   - Nimble (~> 8.0.7)
   - Peregrine (~> 0.9.0)
@@ -87,10 +85,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   HybridLib:
     :path: "../../HybridLib"
-  LibObjectivec:
-    :path: "../LibObjectivec"
-  LibSwifter:
-    :path: "../LibSwifter"
   MixedLib:
     :path: "../../MixedLib"
   PureObjCLib:
@@ -100,10 +94,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
-  HybridLib: d52d5c1e8977b1a4b9dc82c2e1fa6eb90967e1b3
-  LibObjectivec: ff858e792b6b064fc9a1ca9b6430aa6c9c2da178
-  LibSwifter: 82875da41eddaf35fde94cd07f94dff40f47572f
-  MixedLib: e90c568b303d302f5318887234bcd0bbe01ec42b
+  HybridLib: 9e5320bb6aa638fb230e59bdbf1dd18d861984cf
+  MixedLib: 0370f62fa85126bde3a389a7e107fd840e87f6d1
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Peregrine: 29093f1dc872b4201478dcc59da5b0054e7aa88a
   PureObjCLib: a6727062f3f6bd28e642943f8f5f850eff3a77b5
@@ -116,6 +108,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 504f70dc8ace3d4de374bc9b18f2243b3972c5b3
+PODFILE CHECKSUM: 1ca47b1ae7ecbb3bcaec8ecd53919cbc997e7bae
 
 COCOAPODS: 1.10.1

@@ -8,17 +8,17 @@
 import Foundation
 import PureSwiftLib
 import YYCategories
-// 验证
-//import lib_objectivec //Could not build Objective-C module 'lib_objectivec'
-import LibObjectivec
-import LibSwifter
+
+@objc public enum FollowStatus: Int {
+    case none = 0
+    case follow = 1
+}
 
 public class MixedLibSwift: NSObject {
     @objc public static func verification() -> Bool {
         return PureSwiftVersion.verification()
             && NSDate().isToday
-            && LibObjectivec.LOFactory.verify()
-            && LibSwifterVersion.verify()
+            && YHHybridLib.verification()
     }
 }
  

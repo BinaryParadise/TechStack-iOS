@@ -7,6 +7,7 @@
 
 #import "YHHybridLib.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import <WechatOpenSDK/WXApi.h>
 //#import <HybridLib/HybridLib-Swift.h> //动态库模式有效
 //#import "HybridLib-Swift.h" //静态库模式有效
 
