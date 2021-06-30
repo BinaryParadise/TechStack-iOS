@@ -34,6 +34,10 @@ class ContentViewController: UIViewController {
 //        DDLogDebug("\(URL(string: #file)?.lastPathComponent ?? "") \(#function) +\(#line) \(NSStringFromClass(Self.self))")
     }
     
+    @objc func onBackButton(sender: UIButton) {
+        navigationController?.popViewController()
+    }
+    
     class func pushViewController(controller: UIViewController) {
         guard let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
         nav.pushViewController(controller, animated: true)

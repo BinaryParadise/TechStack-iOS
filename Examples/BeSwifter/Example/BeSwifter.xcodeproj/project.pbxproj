@@ -12,7 +12,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B0ABC21ACF88C4540E2CF977 /* libPods-BeSwifter_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0F32C491A731ADD79051C0 /* libPods-BeSwifter_Tests.a */; };
+		C91BA2E8268C7385006DB96E /* SwifterJSExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91BA2E7268C7385006DB96E /* SwifterJSExport.swift */; };
 		C922E5012614158E0064599B /* Bridgeport.m in Sources */ = {isa = PBXBuildFile; fileRef = C922E5002614158E0064599B /* Bridgeport.m */; };
+		C938880B268C570E00362E52 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938880A268C570E00362E52 /* WKWebViewController.swift */; };
+		C938880E268C572000362E52 /* bridging.js in Resources */ = {isa = PBXBuildFile; fileRef = C938880C268C572000362E52 /* bridging.js */; };
+		C938880F268C572000362E52 /* enter.html in Resources */ = {isa = PBXBuildFile; fileRef = C938880D268C572000362E52 /* enter.html */; };
 		C9469FCB26019D7D000BBB92 /* MixedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9469FCA26019D7D000BBB92 /* MixedSpec.swift */; };
 		C984D0802653B98A0009FFFB /* GoObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = C984D07F2653B98A0009FFFB /* GoObjC.m */; };
 		C98B74D226857E36000310C2 /* OperationQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B74D126857E36000310C2 /* OperationQueueController.swift */; };
@@ -57,8 +61,12 @@
 		80B99D5B42F1692802C1D525 /* Pods-BeSwifter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF9F1942725199E0B1F6DC9 /* Pods-BeSwifter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Tests/Pods-BeSwifter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD932F3594D8A46767E778DF /* Pods-BeSwifter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeSwifter_Example.release.xcconfig"; path = "Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C91BA2E7268C7385006DB96E /* SwifterJSExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterJSExport.swift; sourceTree = "<group>"; };
 		C922E4FF2614158E0064599B /* Bridgeport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridgeport.h; sourceTree = "<group>"; };
 		C922E5002614158E0064599B /* Bridgeport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridgeport.m; sourceTree = "<group>"; };
+		C938880A268C570E00362E52 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		C938880C268C572000362E52 /* bridging.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bridging.js; sourceTree = "<group>"; };
+		C938880D268C572000362E52 /* enter.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = enter.html; sourceTree = "<group>"; };
 		C9469FCA26019D7D000BBB92 /* MixedSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedSpec.swift; sourceTree = "<group>"; };
 		C984D07E2653B98A0009FFFB /* GoObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoObjC.h; sourceTree = "<group>"; };
 		C984D07F2653B98A0009FFFB /* GoObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoObjC.m; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 				C9D85F8D266F460B00B97A0C /* UIKit */,
 				C9FA3BE225F0C7AD00A1F274 /* Thread */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				C9388809268C570E00362E52 /* WebKit */,
 				C9F7B69525F0CCD000F33304 /* SkillPointsViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -187,6 +196,17 @@
 				4B0F32C491A731ADD79051C0 /* libPods-BeSwifter_Tests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9388809268C570E00362E52 /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				C938880C268C572000362E52 /* bridging.js */,
+				C938880D268C572000362E52 /* enter.html */,
+				C938880A268C570E00362E52 /* WKWebViewController.swift */,
+				C91BA2E7268C7385006DB96E /* SwifterJSExport.swift */,
+			);
+			path = WebKit;
 			sourceTree = "<group>";
 		};
 		C93BF8CA266F637D00A60938 /* UIStackView */ = {
@@ -251,6 +271,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				9EF2054BA7657FD38F1BC597 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +351,8 @@
 				C9D85F93266F46C600B97A0C /* UIKit.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				C938880E268C572000362E52 /* bridging.js in Resources */,
+				C938880F268C572000362E52 /* enter.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +386,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF2054BA7657FD38F1BC597 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example-resources.sh",
+				"${PODS_ROOT}/Canary/iOS/Assets/Canary.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Canary.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeSwifter_Example/Pods-BeSwifter_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5646F9575C0F528986165F0 /* [Peregrine] Generator Routing Table */ = {
@@ -413,8 +454,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C922E5012614158E0064599B /* Bridgeport.m in Sources */,
+				C91BA2E8268C7385006DB96E /* SwifterJSExport.swift in Sources */,
 				C9AAEDE725F7530400D0AC85 /* BarrierViewController.swift in Sources */,
 				C9AAEDE325F7083A00D0AC85 /* MultiThreadViewController.swift in Sources */,
+				C938880B268C570E00362E52 /* WKWebViewController.swift in Sources */,
 				C9F7B69625F0CCD000F33304 /* SkillPointsViewController.swift in Sources */,
 				C98EED1625DFA1EF0049EF9C /* Accessories.swift in Sources */,
 				C98EECCA25DF9EFF0049EF9C /* ContentViewController.swift in Sources */,

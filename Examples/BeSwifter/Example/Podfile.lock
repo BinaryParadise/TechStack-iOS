@@ -1,4 +1,14 @@
 PODS:
+  - Canary (0.7.0):
+    - Canary/Core (= 0.7.0)
+  - Canary/CanaryProto (0.7.0):
+    - SwiftyJSON
+  - Canary/Core (0.7.0):
+    - Canary/CanaryProto
+    - SnapKit
+    - Starscream (~> 4.0)
+    - SwifterSwift
+    - SwiftyJSON
   - CocoaLumberjack (3.7.2):
     - CocoaLumberjack/Core (= 3.7.2)
   - CocoaLumberjack/Core (3.7.2)
@@ -56,6 +66,7 @@ PODS:
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
+  - Canary (~> 0.7.0)
   - CocoaLumberjack
   - HybridLib (from `../../HybridLib`)
   - MixedLib (from `../../MixedLib`)
@@ -71,6 +82,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Canary
     - CocoaLumberjack
     - Nimble
     - Peregrine
@@ -93,6 +105,7 @@ EXTERNAL SOURCES:
     :path: "../../PureSwiftLib"
 
 SPEC CHECKSUMS:
+  Canary: 0cc5f20e79552b498582802a32a7586aba4fb29e
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   HybridLib: 9e5320bb6aa638fb230e59bdbf1dd18d861984cf
   MixedLib: 0370f62fa85126bde3a389a7e107fd840e87f6d1
@@ -108,6 +121,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 1ca47b1ae7ecbb3bcaec8ecd53919cbc997e7bae
+PODFILE CHECKSUM: 2b74831a501538172a7def67ac218a0c3335ee35
 
 COCOAPODS: 1.10.1

@@ -24,6 +24,7 @@ target 'BeSwifter_Example' do
   pod 'SwiftyJSON'
   pod 'CocoaLumberjack'
   pod 'Peregrine', '~> 0.9.0'
+  pod 'Canary', '~> 0.7.0'
 #  pod 'MLeaksFinder', :configurations => ['Debug']
   
   pod 'PureObjCLib', :path =>  '../../PureObjCLib'

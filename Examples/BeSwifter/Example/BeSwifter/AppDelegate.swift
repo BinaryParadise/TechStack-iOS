@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Canary
 
 class SwiftLogFormatter: NSObject, DDLogFormatter {
     func format(message logMessage: DDLogMessage) -> String? {
@@ -22,9 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configCanary()
         DDTTYLogger.sharedInstance?.logFormatter = SwiftLogFormatter()
         DDLog.add(DDTTYLogger.sharedInstance!)
         return true
+    }
+    
+    func configCanary() {
+        CanarySwift.shared.deviceId = "1c1984ee-d986-11eb-b8bc-0242ac130003"
+        CanarySwift.shared.appSecret = "fbc8714f459c771348e2de0ac7bac3d6"
+        CanarySwift.shared.baseURL = "http://127.0.0.1:10048"
+        DDLog.sharedInstance.add(CanaryTTYLogger())
+        CanarySwift.shared.startLogger()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -52,3 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+class CanaryTTYLogger: DDAbstractLogger {
+    override func log(message logMessage: DDLogMessage) {
+        CanarySwift.shared.storeLogMessage(dict: logMessage.dictionaryWithValues(forKeys: CanarySwift.StoreLogKeys), timestamp: logMessage.timestamp.timeIntervalSince1970)
+    }
+}

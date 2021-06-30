@@ -2,7 +2,7 @@
 //  RouteKeys.swift
 //  Peregrine
 //
-//  Created by Rake Yang on 2021/06/25.
+//  Created by Rake Yang on 2021/06/30.
 //  Copyright © 2020 BinaryParadise. All rights reserved.
 
 /**
@@ -13,6 +13,7 @@
 import Foundation
 
 public class RouteKeys: NSObject {
+	@objc static let swift_wkwebview_noraml = "swift://wkwebview/noraml"
 	@objc static let swift_UIKit_UIStackView = "swift://UIKit/UIStackView"
 	@objc static let swift_thread_OperationQueue = "swift://thread/OperationQueue"
 	@objc static let swift_thread_barrier = "swift://thread/barrier"

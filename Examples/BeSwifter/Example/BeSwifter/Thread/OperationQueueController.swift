@@ -18,23 +18,23 @@ class OperationQueueController: ContentViewController {
         let oq = OperationQueue()
         
         let o1 = BlockOperation(block: {
-            print("1、doing \(Thread.current)")
+            DDLogDebug("1、doing \(Thread.current)")
         })
         
         let o2 = BlockOperation(block: {
-            print("2、doing \(Thread.current)")
+            DDLogDebug("2、doing \(Thread.current)")
         })
         
         let o3 = BlockOperation(block: {
-            print("3、doing \(Thread.current)")
+            DDLogDebug("3、doing \(Thread.current)")
         })
         
         let o4 = BlockOperation(block: {
-            print("4、doing \(Thread.current)")
+            DDLogDebug("4、doing \(Thread.current)")
         })
         
         let o5 = BlockOperation {
-            print("5、finished \(Thread.current)")
+            DDLogDebug("5、finished \(Thread.current)")
         }
         
         o5.addDependency(o1)
@@ -63,7 +63,7 @@ class OperationQueueController: ContentViewController {
         oq.addOperation(o4)
         oq.addOperation(o3)
         
-        print("current \(Thread.current)")
+        DDLogDebug("current \(Thread.current)")
     }
 }
 

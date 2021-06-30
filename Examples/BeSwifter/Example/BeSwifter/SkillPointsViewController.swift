@@ -99,7 +99,7 @@ extension SkillPointsViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let node = routes[safe: indexPath.section]![safe: indexPath.row] {
             RouteManager.openURL(node.url.absoluteString) { (ret, data) in
-                print("\(#function) \(ret),\(data)")
+                DDLogInfo("\(ret),\(data)")
             }
         }
     }
